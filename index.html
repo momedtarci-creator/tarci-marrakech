@@ -2,250 +2,744 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TARCI Marrakech | Entreprise de construction, bâtiment et rénovation</title>
+<title>TARCI Marrakech | Construction, bâtiment et rénovation</title>
 
-  <meta name="description" content="TARCI Marrakech est une entreprise spécialisée dans la construction de maisons, villas, bâtiments, rénovation et travaux de construction à Marrakech.">
+<meta name="description" content="TARCI - شركة الطرسي، entreprise de construction, bâtiment et rénovation à Marrakech. Construction de maisons, villas, bâtiments et travaux de rénovation.">
 
-  <meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
+<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
-  <meta name="author" content="TARCI">
+<meta name="author" content="TARCI">
 
-  <!-- Logo du site -->
-  <link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
+<link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
 
-  <!-- Données structurées pour Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TARCI",
-    "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
-    "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Marrakech",
-      "addressCountry": "MA"
-    }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TARCI",
+  "alternateName": "شركة الطرسي",
+  "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
+  "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
+  "telephone": "+212678774597",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Marrakech",
+    "addressCountry": "MA"
   }
-  </script>
+}
+</script>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      color: #222;
-      background: #f7f7f7;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    header {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 35px 20px 45px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .logo {
-      width: 150px;
-      max-width: 60%;
-      height: auto;
-      margin-bottom: 20px;
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: #20242a;
+  background: #f4f6f8;
+}
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+/* HEADER */
 
-    header p {
-      font-size: 20px;
-    }
+header {
+  background:
+    linear-gradient(135deg, rgba(12,25,42,.97), rgba(25,43,65,.94));
+  color: white;
+  text-align: center;
+  padding: 25px 20px 70px;
+  position: relative;
+  overflow: hidden;
+}
 
-    section {
-      max-width: 1000px;
-      margin: 25px auto;
-      padding: 30px 25px;
-      background: white;
-      border-radius: 10px;
-    }
+.topbar {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 45px;
+}
 
-    h2 {
-      color: #222;
-      margin-bottom: 15px;
-      font-size: 28px;
-    }
+.brand {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-    h3 {
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
+.phone-top {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    p {
-      margin-bottom: 12px;
-    }
+.logo {
+  width: 165px;
+  max-width: 65%;
+  background: white;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
 
-    ul {
-      padding-left: 25px;
-    }
+header h1 {
+  font-size: 58px;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+}
 
-    li {
-      margin-bottom: 8px;
-    }
+.fr-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
 
-    .contact {
-      background: #222;
-      color: white;
-    }
+.ar-title {
+  font-size: 22px;
+  direction: rtl;
+  color: #f2c94c;
+  font-weight: bold;
+}
 
-    .contact h2 {
-      color: white;
-    }
+.hero-text {
+  max-width: 750px;
+  margin: 20px auto 0;
+  color: #e4e8ed;
+  font-size: 17px;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #111;
-      color: white;
-      margin-top: 30px;
-    }
+/* BUTTONS */
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 34px;
-      }
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-      header p {
-        font-size: 17px;
-      }
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
 
-      section {
-        margin: 15px 10px;
-        padding: 25px 18px;
-      }
+.btn-main {
+  background: #f2c94c;
+  color: #17202b;
+}
 
-      h2 {
-        font-size: 24px;
-      }
+.btn-main:hover {
+  transform: translateY(-3px);
+}
 
-      .logo {
-        width: 130px;
-      }
-    }
-  </style>
+.btn-dark {
+  border: 1px solid rgba(255,255,255,.5);
+  color: white;
+}
+
+.btn-dark:hover {
+  background: white;
+  color: #17202b;
+}
+
+/* SECTIONS */
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  color: #172b42;
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: #69727d;
+}
+
+.section-title .arabic {
+  direction: rtl;
+  color: #9b7a17;
+  font-weight: bold;
+}
+
+/* ABOUT */
+
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-box {
+  padding: 30px;
+  border-radius: 14px;
+  background: #f5f7f9;
+  border-left: 5px solid #f2c94c;
+}
+
+.about-box h3 {
+  font-size: 24px;
+  color: #172b42;
+  margin-bottom: 15px;
+}
+
+.arabic-text {
+  direction: rtl;
+  text-align: right;
+  margin-top: 18px;
+}
+
+/* SERVICES */
+
+.services {
+  background: #f4f6f8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+  border-top: 4px solid #f2c94c;
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b08b1c;
+}
+
+.service-card h3 {
+  margin: 12px 0 10px;
+  color: #172b42;
+  font-size: 21px;
+}
+
+.service-card p {
+  color: #626b75;
+}
+
+.service-card .ar {
+  direction: rtl;
+  text-align: right;
+  margin-top: 12px;
+}
+
+/* WHY */
+
+.why {
+  background: #172b42;
+  color: white;
+}
+
+.why .section-title h2 {
+  color: white;
+}
+
+.why .section-title p {
+  color: #d7dde4;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 25px 18px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+}
+
+.why-card strong {
+  display: block;
+  color: #f2c94c;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+
+.cta {
+  background: #f2c94c;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  color: #172b42;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 25px;
+}
+
+.cta-phone {
+  display: inline-block;
+  background: #172b42;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact {
+  background: white;
+}
+
+.contact-box {
+  max-width: 750px;
+  margin: auto;
+  background: #172b42;
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.contact-info strong {
+  color: #f2c94c;
+}
+
+.contact-phone {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0d1724;
+  color: #bfc7d1;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer strong {
+  color: white;
+}
+
+.footer-ar {
+  direction: rtl;
+  margin-top: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 45px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  header {
+    padding-bottom: 50px;
+  }
+
+  header h1 {
+    font-size: 39px;
+  }
+
+  .fr-title {
+    font-size: 19px;
+  }
+
+  .ar-title {
+    font-size: 19px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .contact-box {
+    padding: 30px 20px;
+  }
+
+  .contact-phone {
+    font-size: 22px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <img
-      class="logo"
-      src="tarci-logo-sans-sarl.png"
-      alt="Logo TARCI Marrakech - entreprise de construction"
-    >
+  <div class="topbar">
+    <div class="brand">TARCI</div>
 
-    <h1>TARCI</h1>
+    <a class="phone-top" href="tel:+212678774597">
+      ☎ 0678 77 45 97
+    </a>
+  </div>
 
-    <p>
-      Entreprise de construction, bâtiment et rénovation à Marrakech
-    </p>
+  <img
+    class="logo"
+    src="tarci-logo-sans-sarl.png"
+    alt="Logo TARCI - شركة الطرسي"
+  >
 
-  </header>
+  <h1>TARCI</h1>
 
-  <section>
+  <div class="fr-title">
+    Entreprise de construction, bâtiment et rénovation
+  </div>
+
+  <div class="ar-title">
+    شركة الطرسي للبناء والأشغال والتجديد
+  </div>
+
+  <p class="hero-text">
+    Construction de maisons, villas, bâtiments et travaux de rénovation
+    à Marrakech et dans les environs.
+  </p>
+
+  <div class="buttons">
+    <a href="#services" class="btn btn-main">
+      Nos services
+    </a>
+
+    <a href="#contact" class="btn btn-dark">
+      Contactez-nous
+    </a>
+  </div>
+
+</header>
+
+
+<section class="about">
+
+<div class="container">
+
+  <div class="section-title">
     <h2>À propos de TARCI</h2>
+    <p class="arabic">عن شركة الطرسي</p>
+  </div>
 
-    <p>
-      TARCI est une entreprise spécialisée dans les travaux de construction,
-      le bâtiment et la rénovation à Marrakech et dans les environs.
-    </p>
+  <div class="about-grid">
 
-    <p>
-      Nous accompagnons nos clients dans différents projets de construction
-      et de rénovation, avec une attention particulière portée à la qualité
-      des travaux et au respect des besoins du client.
-    </p>
-  </section>
+    <div>
+      <p>
+        <strong>TARCI</strong> est une entreprise spécialisée dans
+        les travaux de construction, le bâtiment et la rénovation.
+      </p>
 
-  <section>
+      <p>
+        Nous accompagnons nos clients dans leurs projets de construction
+        de maisons, villas, bâtiments et dans différents travaux
+        de rénovation.
+      </p>
+
+      <p>
+        Notre objectif est de réaliser chaque projet selon les besoins
+        du client et les exigences du chantier.
+      </p>
+    </div>
+
+    <div class="about-box">
+
+      <h3>شركة الطرسي</h3>
+
+      <p class="arabic-text">
+        شركة الطرسي متخصصة في البناء والأشغال والتجديد،
+        ونرافق عملاءنا في مشاريع بناء المنازل والفلل
+        والمباني وأعمال الترميم.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<div class="container">
+
+  <div class="section-title">
     <h2>Nos services</h2>
+    <p class="arabic">خدماتنا</p>
+  </div>
 
-    <h3>Construction de maisons</h3>
-    <p>
-      TARCI réalise des travaux de construction de maisons avec une attention
-      particulière à la qualité et aux besoins de chaque projet.
-    </p>
+  <div class="services-grid">
 
-    <h3>Construction de villas</h3>
-    <p>
-      Nous réalisons également des projets de construction de villas
-      à Marrakech et dans les environs.
-    </p>
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <h3>Construction de maisons</h3>
+      <p>
+        Travaux de construction de maisons adaptés aux besoins
+        de chaque projet.
+      </p>
+      <p class="ar">
+        بناء المنازل حسب متطلبات المشروع.
+      </p>
+    </div>
 
-    <h3>Construction de bâtiments</h3>
-    <p>
-      TARCI intervient dans différents travaux de construction de bâtiments
-      et de projets immobiliers.
-    </p>
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <h3>Construction de villas</h3>
+      <p>
+        Réalisation de travaux de construction de villas
+        à Marrakech et dans les environs.
+      </p>
+      <p class="ar">
+        بناء الفلل في مراكش والنواحي.
+      </p>
+    </div>
 
-    <h3>Rénovation</h3>
-    <p>
-      Nous proposons des travaux de rénovation et d'amélioration
-      pour les maisons, villas et bâtiments.
-    </p>
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <h3>Construction de bâtiments</h3>
+      <p>
+        Travaux liés à la construction de bâtiments
+        et différents projets immobiliers.
+      </p>
+      <p class="ar">
+        أشغال بناء المباني والمشاريع العقارية.
+      </p>
+    </div>
 
-    <h3>Travaux de construction</h3>
-    <p>
-      TARCI accompagne ses clients dans différents travaux liés au bâtiment
-      et à la construction.
-    </p>
-  </section>
+    <div class="service-card">
+      <span class="service-number">04</span>
+      <h3>Rénovation</h3>
+      <p>
+        Travaux de rénovation et d'amélioration
+        des maisons, villas et bâtiments.
+      </p>
+      <p class="ar">
+        الترميم وإصلاح وتحسين المنازل والفلل والمباني.
+      </p>
+    </div>
 
-  <section>
-    <h2>Pourquoi choisir TARCI ?</h2>
+    <div class="service-card">
+      <span class="service-number">05</span>
+      <h3>Travaux de construction</h3>
+      <p>
+        Accompagnement dans différents travaux
+        liés au bâtiment et à la construction.
+      </p>
+      <p class="ar">
+        مختلف أشغال البناء والتشييد.
+      </p>
+    </div>
 
-    <ul>
-      <li>Entreprise spécialisée dans le bâtiment et la construction</li>
-      <li>Intervention à Marrakech et dans les environs</li>
-      <li>Construction de maisons et de villas</li>
-      <li>Travaux de rénovation</li>
-      <li>Accompagnement des clients dans leurs projets</li>
-    </ul>
-  </section>
+    <div class="service-card">
+      <span class="service-number">06</span>
+      <h3>Travaux divers</h3>
+      <p>
+        Des solutions adaptées aux besoins
+        spécifiques de chaque chantier.
+      </p>
+      <p class="ar">
+        أشغال متنوعة حسب احتياجات الورش.
+      </p>
+    </div>
 
-  <section class="contact">
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="why">
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Pourquoi TARCI ?</h2>
+    <p>Une entreprise orientée vers les besoins de ses clients.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <strong>Construction</strong>
+      <span>Maisons, villas et bâtiments</span>
+    </div>
+
+    <div class="why-card">
+      <strong>Rénovation</strong>
+      <span>Amélioration et rénovation</span>
+    </div>
+
+    <div class="why-card">
+      <strong>Marrakech</strong>
+      <span>Intervention à Marrakech et environs</span>
+    </div>
+
+    <div class="why-card">
+      <strong>TARCI</strong>
+      <span>شركة الطرسي</span>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Vous avez un projet ?</h2>
+
+  <p>
+    Contactez TARCI pour discuter de votre projet
+    de construction ou de rénovation.
+  </p>
+
+  <a class="cta-phone" href="tel:+212678774597">
+    ☎ 0678 77 45 97
+  </a>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+  <div class="contact-box">
+
     <h2>Contactez TARCI</h2>
 
-    <p>
-      Vous avez un projet de construction ou de rénovation à Marrakech ?
-      Contactez TARCI pour plus d'informations.
-    </p>
-
-    <p>
+    <div class="contact-info">
       <strong>Entreprise :</strong> TARCI
-    </p>
+    </div>
 
-    <p>
+    <div class="contact-info">
+      <strong>العربية :</strong> شركة الطرسي
+    </div>
+
+    <div class="contact-info">
       <strong>Localisation :</strong> Marrakech, Maroc
-    </p>
-  </section>
+    </div>
 
-  <footer>
-    <p>© 2026 TARCI Marrakech - Entreprise de construction</p>
-  </footer>
+    <div class="contact-info">
+      <strong>Téléphone :</strong>
+    </div>
+
+    <a class="contact-phone" href="tel:+212678774597">
+      0678 77 45 97
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>TARCI</strong> - Entreprise de construction
+  </p>
+
+  <p class="footer-ar">
+    شركة الطرسي للبناء والأشغال والتجديد
+  </p>
+
+</footer>
 
 </body>
 </html>
