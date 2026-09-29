@@ -68,45 +68,51 @@
       background: #f4f6f8;
     }
 
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       background: linear-gradient(
         135deg,
         #0c192a,
         #192b41
       );
+
       color: white;
       text-align: center;
-      padding: 25px 20px 70px;
+      padding: 22px 20px 65px;
     }
 
     .topbar {
       max-width: 1150px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding-bottom: 40px;
+      gap: 20px;
+      padding-bottom: 45px;
     }
 
     .brand {
-      font-size: 25px;
+      font-size: 30px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
 
     .phones {
       display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      gap: 22px;
+      align-items: center;
       justify-content: center;
     }
 
     .phone {
       color: white;
       text-decoration: none;
+      font-size: 20px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .phone:hover {
@@ -114,33 +120,41 @@
     }
 
     .logo {
-      width: 165px;
-      max-width: 70%;
+      display: block;
+      width: 170px;
+      max-width: 80%;
       background: white;
       padding: 12px;
-      border-radius: 16px;
-      margin-bottom: 22px;
+      border-radius: 18px;
+      margin: 0 auto 25px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
     }
 
     h1 {
       font-size: 58px;
       letter-spacing: 5px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 23px;
-      font-weight: bold;
       margin-bottom: 12px;
     }
 
+    .subtitle {
+      max-width: 850px;
+      margin: 0 auto 15px;
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+
     .hero-text {
-      max-width: 750px;
+      max-width: 780px;
       margin: 20px auto 0;
       color: #e4e8ed;
-      font-size: 17px;
+      font-size: 18px;
+      line-height: 1.8;
     }
+
+    /* =========================
+       BUTTONS
+    ========================= */
 
     .buttons {
       margin-top: 30px;
@@ -152,8 +166,8 @@
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
-      border-radius: 8px;
+      padding: 14px 27px;
+      border-radius: 9px;
       text-decoration: none;
       font-weight: bold;
       transition: .3s;
@@ -169,7 +183,7 @@
     }
 
     .btn-dark {
-      border: 1px solid rgba(255,255,255,.5);
+      border: 1px solid rgba(255,255,255,.6);
       color: white;
     }
 
@@ -177,6 +191,10 @@
       background: white;
       color: #172b42;
     }
+
+    /* =========================
+       GENERAL
+    ========================= */
 
     .container {
       max-width: 1150px;
@@ -203,6 +221,10 @@
       color: #666;
     }
 
+    /* =========================
+       SERVICES
+    ========================= */
+
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -215,6 +237,11 @@
       border-radius: 14px;
       text-align: center;
       box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -227,6 +254,10 @@
       color: #555;
     }
 
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about {
       background: white;
     }
@@ -237,7 +268,12 @@
       text-align: center;
       font-size: 18px;
       color: #555;
+      line-height: 1.9;
     }
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       background: #172b42;
@@ -246,6 +282,7 @@
     }
 
     .contact h2 {
+      color: white;
       font-size: 34px;
       margin-bottom: 15px;
     }
@@ -260,6 +297,10 @@
       font-weight: bold;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: #0c192a;
       color: #ddd;
@@ -268,37 +309,132 @@
       font-size: 14px;
     }
 
+    /* =========================
+       TABLET
+    ========================= */
+
     @media (max-width: 800px) {
 
+      header {
+        padding: 20px 15px 55px;
+      }
+
+      .topbar {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 35px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .phones {
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .phone {
+        font-size: 18px;
+      }
+
       h1 {
-        font-size: 42px;
+        font-size: 44px;
       }
 
       .subtitle {
-        font-size: 19px;
+        font-size: 21px;
       }
 
       .services {
         grid-template-columns: 1fr;
       }
-
-      .topbar {
-        justify-content: center;
-      }
-
     }
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 500px) {
 
-      h1 {
-        font-size: 34px;
-        letter-spacing: 3px;
+      header {
+        padding: 18px 15px 50px;
+      }
+
+      .topbar {
+        padding-bottom: 30px;
+      }
+
+      .brand {
+        font-size: 26px;
+      }
+
+      .phones {
+        width: 100%;
+        gap: 7px;
+      }
+
+      .phone {
+        font-size: 17px;
       }
 
       .logo {
-        width: 140px;
+        width: 145px;
+        padding: 10px;
+        margin-bottom: 20px;
       }
 
+      h1 {
+        font-size: 38px;
+        letter-spacing: 4px;
+        margin-bottom: 12px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      .hero-text {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-title {
+        margin-bottom: 30px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .card {
+        padding: 25px 20px;
+      }
+
+      .about-text {
+        font-size: 16px;
+      }
+
+      .contact h2 {
+        font-size: 29px;
+      }
     }
 
   </style>
@@ -307,7 +443,10 @@
 
 <body>
 
-  <!-- الصفحة الرئيسية -->
+  <!-- =========================
+       PAGE PRINCIPALE
+  ========================== -->
+
   <header>
 
     <div class="topbar">
@@ -318,11 +457,15 @@
 
       <div class="phones">
 
-        <a class="phone" href="tel:+212678774597">
+        <a
+          class="phone"
+          href="tel:+212678774597">
           0678 77 45 97
         </a>
 
-        <a class="phone" href="tel:+212676289076">
+        <a
+          class="phone"
+          href="tel:+212676289076">
           0676 28 90 76
         </a>
 
@@ -330,14 +473,219 @@
 
     </div>
 
+
     <img
       class="logo"
       src="tarci-logo-sans-sarl.png"
       alt="Logo TARCI Marrakech">
 
+
     <h1>
       TARCI
     </h1>
 
+
     <div class="subtitle">
-     
+      Construction, bâtiment et rénovation à Marrakech
+    </div>
+
+
+    <p class="hero-text">
+      TARCI est une entreprise spécialisée dans la construction,
+      le bâtiment, la construction de maisons et villas,
+      ainsi que les travaux de rénovation à Marrakech.
+    </p>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn btn-main"
+        href="tel:+212678774597">
+        Appeler TARCI
+      </a>
+
+      <a
+        class="btn btn-dark"
+        href="https://wa.me/212678774597"
+        target="_blank"
+        rel="noopener">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       SERVICES
+  ========================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Nos services
+        </h2>
+
+        <p>
+          Construction et rénovation à Marrakech
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+
+        <div class="card">
+
+          <h3>
+            Construction
+          </h3>
+
+          <p>
+            Construction de maisons, villas et bâtiments
+            avec un travail professionnel et soigné.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Bâtiment
+          </h3>
+
+          <p>
+            Travaux de bâtiment et réalisation de différents
+            projets de construction à Marrakech.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Rénovation
+          </h3>
+
+          <p>
+            Travaux de rénovation et amélioration des maisons,
+            villas et bâtiments.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       À PROPOS
+  ========================== -->
+
+  <section class="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          À propos de TARCI
+        </h2>
+
+      </div>
+
+
+      <p class="about-text">
+
+        TARCI est une entreprise de construction située à Marrakech,
+        spécialisée dans les travaux de bâtiment, la construction
+        de maisons et villas ainsi que la rénovation.
+
+        Notre objectif est de réaliser des travaux sérieux,
+        soignés et adaptés aux besoins de nos clients.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact">
+
+    <div class="container">
+
+      <h2>
+        Contactez TARCI
+      </h2>
+
+
+      <p>
+        Pour vos projets de construction,
+        bâtiment ou rénovation à Marrakech.
+      </p>
+
+
+      <p>
+        Téléphone :
+        <a href="tel:+212678774597">
+          0678 77 45 97
+        </a>
+      </p>
+
+
+      <p>
+        Téléphone 2 :
+        <a href="tel:+212676289076">
+          0676 28 90 76
+        </a>
+      </p>
+
+
+      <p>
+        WhatsApp :
+        <a
+          href="https://wa.me/212678774597"
+          target="_blank"
+          rel="noopener">
+          0678 77 45 97
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026 TARCI Marrakech -
+    Construction, bâtiment et rénovation
+
+  </footer>
+
+
+</body>
+
+</html>
