@@ -1,685 +1,1073 @@
  <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TARCI | Construction, bâtiment et rénovation à Marrakech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="TARCI, entreprise de construction, bâtiment et rénovation à Marrakech. Construction de maisons, villas, bâtiments et travaux de rénovation.">
+<title>TARCI | Construction, bâtiment et rénovation à Marrakech</title>
 
-  <meta name="robots" content="index, follow">
+<meta name="description" content="TARCI est une entreprise de construction, bâtiment et rénovation à Marrakech. Construction de maisons, villas, bâtiments et travaux de rénovation.">
 
-  <link rel="canonical"
-    href="https://momedtarci-creator.github.io/tarci-marrakech/">
+<meta name="robots" content="index, follow">
 
-  <meta name="author" content="TARCI">
+<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
-  <link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
+<style>
 
-  <meta name="theme-color" content="#101820">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <!-- Google / Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TARCI",
-    "alternateName": "شركة الطرسي",
-    "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
-    "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
-    "telephone": "+212678774597",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+212678774597",
-        "contactType": "customer service"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+212676289076",
-        "contactType": "customer service"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Marrakech",
-      "addressCountry": "MA"
-    }
-  }
-  </script>
+html {
+    scroll-behavior: smooth;
+}
 
-  <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #172033;
+    line-height: 1.6;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* HEADER */
 
-    html {
-      scroll-behavior: smooth;
-    }
+header {
+    background: #101a2d;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #20252b;
-      background: #f5f6f7;
-      line-height: 1.7;
-    }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 80px;
+    padding: 12px 20px;
 
-    a {
-      text-decoration: none;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-    /* =========================
-       HEADER
-    ========================= */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-    header {
-      background:
-        radial-gradient(circle at top right, rgba(221,166,55,.18), transparent 35%),
-        linear-gradient(135deg, #0b151f, #172b3d 60%, #0c1925);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
+.logo-area img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 4px;
+}
 
-    .header-inner {
-      max-width: 1180px;
-      margin: auto;
-      padding: 18px 22px 90px;
-    }
+.logo-name {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-    /* =========================
-       NAVBAR
-    ========================= */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #d9ad55;
+}
+
+.languages {
+    display: flex;
+    gap: 5px;
+}
+
+.lang {
+    border: 1px solid rgba(255,255,255,0.5);
+    background: transparent;
+    color: white;
+    padding: 6px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lang:hover,
+.lang.active {
+    background: #d9ad55;
+    color: #101a2d;
+    border-color: #d9ad55;
+}
+
+/* HERO */
+
+.hero {
+    background:
+        linear-gradient(rgba(16,26,45,0.88), rgba(16,26,45,0.88)),
+        url("tarci-logo-sans-sarl.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.hero-logo {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    color: #d9ad55;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+    color: #e8ebf0;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #d9ad55;
+    color: #101a2d;
+}
+
+.btn-primary:hover {
+    background: #edc979;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #101a2d;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 45px;
+    color: #101a2d;
+}
+
+.section-title span {
+    color: #d09f45;
+}
+
+/* SERVICES */
+
+.services {
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: #f7f8fa;
+    padding: 30px 22px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e4e6ea;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #101a2d;
+}
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-box {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.about-box h3 {
+    color: #101a2d;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* WHY */
+
+.why {
+    background: #101a2d;
+    color: white;
+}
+
+.why .section-title {
+    color: white;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 25px;
+}
+
+.why-card div {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.why-card h3 {
+    color: #d9ad55;
+    margin-bottom: 10px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: white;
+}
+
+.contact-box {
+    max-width: 750px;
+    margin: auto;
+    background: #f7f8fa;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 18px 0;
+    font-size: 18px;
+}
+
+.contact-item a {
+    color: #101a2d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    color: #c6953c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1220;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 6px 0;
+    color: #cbd0d8;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 2000;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
 
     .navbar {
-      min-height: 65px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-      padding-bottom: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px;
     }
 
-    .brand {
-      color: white;
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: 4px;
+    .logo-area {
+        width: 100%;
+        justify-content: center;
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 22px;
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
+    nav a {
+        font-size: 14px;
     }
-
-    .nav-links a {
-      color: #e8edf2;
-      font-size: 14px;
-      font-weight: bold;
-      transition: .25s;
-    }
-
-    .nav-links a:hover {
-      color: #e0b84f;
-    }
-
-    /* =========================
-       LANGUAGE
-    ========================= */
 
     .languages {
-      display: flex;
-      gap: 5px;
-      background: rgba(255,255,255,.08);
-      padding: 5px;
-      border-radius: 10px;
+        width: 100%;
+        justify-content: center;
     }
-
-    .lang-btn {
-      border: 0;
-      background: transparent;
-      color: #dce3e9;
-      padding: 7px 9px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .lang-btn.active,
-    .lang-btn:hover {
-      background: #e0b84f;
-      color: #111820;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
 
     .hero {
-      max-width: 920px;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 75px;
-    }
-
-    .logo {
-      width: 145px;
-      background: white;
-      padding: 10px;
-      border-radius: 18px;
-      box-shadow: 0 20px 55px rgba(0,0,0,.28);
-      margin-bottom: 28px;
+        padding: 65px 18px;
     }
 
     .hero h1 {
-      font-size: 72px;
-      letter-spacing: 10px;
-      line-height: 1;
-      margin-bottom: 20px;
+        font-size: 40px;
     }
 
-    .hero-title {
-      font-size: 27px;
-      font-weight: 700;
-      color: #f4f6f8;
-      margin-bottom: 18px;
+    .hero h2 {
+        font-size: 21px;
     }
 
-    .hero-text {
-      max-width: 760px;
-      margin: auto;
-      color: #cdd6df;
-      font-size: 17px;
-      line-height: 1.9;
+    .hero p {
+        font-size: 16px;
     }
 
-    /* =========================
-       HERO BUTTONS
-    ========================= */
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 30px;
+    .services-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 175px;
-      padding: 14px 23px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: .25s;
+    .about-content {
+        grid-template-columns: 1fr;
     }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn-gold {
-      background: #e0b84f;
-      color: #101820;
-    }
-
-    .btn-whatsapp {
-      background: #1fa463;
-      color: white;
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.45);
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #101820;
-    }
-
-    /* =========================
-       PHONE BAR
-    ========================= */
-
-    .phone-bar {
-      margin-top: 45px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    .phone-bar a {
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .phone-bar a:hover {
-      color: #e0b84f;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
 
     section {
-      padding: 85px 20px;
+        padding: 55px 18px;
     }
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
+    .section-title {
+        font-size: 29px;
     }
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 48px;
+    .contact-box {
+        padding: 25px 18px;
     }
+}
+
+/* ARABIC */
+
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .hero,
+[dir="rtl"] .contact-box,
+[dir="rtl"] footer {
+    text-align: center;
+}
+
+[dir="rtl"] nav {
+    direction: rtl;
+}
+
+</style>
+
+<!-- GOOGLE / SEO -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TARCI",
+  "alternateName": "شركة الطرسي",
+  "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
+  "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
+  "telephone": [
+    "+212678774597",
+    "+212676289076"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Marrakech",
+    "addressCountry": "MA"
+  }
+}
+</script>
 
-    .section-heading span {
-      display: block;
-      color: #b18727;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .section-heading h2 {
-      font-size: 38px;
-      color: #142638;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: #69727b;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .service {
-      background: white;
-      border-radius: 18px;
-      padding: 35px 28px;
-      box-shadow: 0 10px 35px rgba(20,38,56,.08);
-      border: 1px solid #edf0f2;
-      transition: .3s;
-      text-align: center;
-    }
-
-    .service:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 18px 40px rgba(20,38,56,.13);
-    }
-
-    .service-icon {
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f7edcf;
-      color: #a77b19;
-      font-size: 27px;
-    }
-
-    .service h3 {
-      color: #142638;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .service p {
-      color: #626a72;
-      font-size: 15px;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background: white;
-    }
-
-    .about-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box p {
-      color: #555f68;
-      font-size: 18px;
-      line-height: 2;
-    }
-
-    /* =========================
-       WHY TARCI
-    ========================= */
-
-    .advantages {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .advantage {
-      padding: 28px;
-      background: #fff;
-      border-radius: 15px;
-      text-align: center;
-      border: 1px solid #edf0f2;
-    }
-
-    .advantage strong {
-      display: block;
-      color: #142638;
-      font-size: 19px;
-      margin-bottom: 8px;
-    }
-
-    .advantage p {
-      color: #69727b;
-      font-size: 14px;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      background:
-        radial-gradient(circle at center, rgba(224,184,79,.12), transparent 45%),
-        #132536;
-      color: white;
-      text-align: center;
-    }
-
-    .contact .section-heading h2 {
-      color: white;
-    }
-
-    .contact .section-heading p {
-      color: #c9d2da;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .contact-card {
-      min-width: 230px;
-      padding: 22px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.1);
-    }
-
-    .contact-card small {
-      display: block;
-      color: #aebbc6;
-      margin-bottom: 5px;
-    }
-
-    .contact-card a {
-      color: #e0b84f;
-      font-size: 19px;
-      font-weight: bold;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #09131d;
-      color: #aeb7bf;
-      text-align: center;
-      padding: 28px 15px;
-      font-size: 13px;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #1fa463;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 25px;
-      font-weight: bold;
-      box-shadow: 0 8px 25px rgba(0,0,0,.25);
-      z-index: 1000;
-    }
-
-    /* =========================
-       ARABIC
-    ========================= */
-
-    html[dir="rtl"] .nav-links {
-      direction: rtl;
-    }
-
-    html[dir="rtl"] body {
-      font-family: Arial, Tahoma, sans-serif;
-    }
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .nav-right {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      .services,
-      .advantages {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero h1 {
-        font-size: 58px;
-      }
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 600px) {
-
-      .header-inner {
-        padding: 14px 15px 65px;
-      }
-
-      .navbar {
-        gap: 14px;
-      }
-
-      .brand {
-        font-size: 25px;
-      }
-
-      .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        font-size: 13px;
-      }
-
-      .languages {
-        margin-top: 3px;
-      }
-
-      .hero {
-        padding-top: 45px;
-      }
-
-      .logo {
-        width: 125px;
-        margin-bottom: 24px;
-      }
-
-      .hero h1 {
-        font-size: 49px;
-        letter-spacing: 7px;
-      }
-
-      .hero-title {
-        font-size: 21px;
-        line-height: 1.5;
-      }
-
-      .hero-text {
-        font-size: 15px;
-        line-height: 1.85;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      .phone-bar {
-        flex-direction: column;
-        gap: 7px;
-      }
-
-      section {
-        padding: 65px 16px;
-      }
-
-      .section-heading {
-        margin-bottom: 35px;
-      }
-
-      .section-heading h2 {
-        font-size: 30px;
-      }
-
-      .service {
-        padding: 30px 22px;
-      }
-
-      .about-box p {
-        font-size: 16px;
-        line-height: 1.9;
-      }
-
-      .contact-info {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-card {
-        width: 100%;
-        max-width: 340px;
-      }
-
-      .floating-whatsapp {
-        width: 54px;
-        height: 54px;
-        right: 14px;
-        bottom: 14px;
-      }
-    }
-
-  </style>
 </head>
-
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+<header>
 
-  <header>
+<div class="navbar">
 
-    <div class="header-inner">
+<div class="logo-area">
 
-      <nav class="navbar">
+<img src="tarci-logo-sans-sarl.png" alt="TARCI Logo">
 
-        <a href="#" class="brand">TARCI</a>
+<div class="logo-name">TARCI</div>
 
-        <div class="nav-right">
+</div>
 
-          <div class="nav-links">
-            <a href="#services" data-i18n="navServices">Services</a>
-            <a href="#about" data-i18n="navAbout">À propos</a>
-            <a href="#contact" data-i18n="navContact">Contact</a>
-          </div>
+<nav>
 
-          <div class="languages">
+<a href="#services" data-fr="Services" data-ar="الخدمات" data-en="Services" data-es="Servicios">Services</a>
 
-            <button class="lang-btn active" data-lang="fr">FR</button>
-            <button class="lang-btn" data-lang="ar">AR</button>
-            <button class="lang-btn"
+<a href="#about" data-fr="À propos" data-ar="من نحن" data-en="About us" data-es="Sobre nosotros">À propos</a>
+
+<a href="#contact" data-fr="Contact" data-ar="اتصل بنا" data-en="Contact" data-es="Contacto">Contact</a>
+
+</nav>
+
+<div class="languages">
+
+<button class="lang active" onclick="setLanguage('fr')">FR</button>
+<button class="lang" onclick="setLanguage('ar')">AR</button>
+<button class="lang" onclick="setLanguage('en')">EN</button>
+<button class="lang" onclick="setLanguage('es')">ES</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img class="hero-logo" src="tarci-logo-sans-sarl.png" alt="TARCI">
+
+<h1>TARCI</h1>
+
+<h2
+data-fr="Construction, bâtiment et rénovation"
+data-ar="البناء والأشغال والتجديد"
+data-en="Construction, building and renovation"
+data-es="Construcción, edificación y renovación">
+Construction, bâtiment et rénovation
+</h2>
+
+<p
+data-fr="TARCI vous accompagne dans vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc."
+data-ar="ترافقكم TARCI في مشاريع البناء والأشغال والتجديد بمراكش والمغرب."
+data-en="TARCI supports you with your construction, building and renovation projects in Marrakech and Morocco."
+data-es="TARCI le acompaña en sus proyectos de construcción, edificación y renovación en Marrakech y Marruecos.">
+TARCI vous accompagne dans vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="tel:+212678774597"
+data-fr="Appeler TARCI"
+data-ar="اتصل بـ TARCI"
+data-en="Call TARCI"
+data-es="Llamar a TARCI">
+Appeler TARCI
+</a>
+
+<a class="btn btn-secondary" href="https://wa.me/212678774597">
+WhatsApp
+</a>
+
+<a class="btn btn-secondary" href="#services"
+data-fr="Découvrir nos services"
+data-ar="اكتشف خدماتنا"
+data-en="Discover our services"
+data-es="Descubra nuestros servicios">
+Découvrir nos services
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+<div class="container">
+
+<h2 class="section-title">
+<span data-fr="Nos services" data-ar="خدماتنا" data-en="Our services" data-es="Nuestros servicios">
+Nos services
+</span>
+</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">🏠</div>
+
+<h3
+data-fr="Construction de maisons"
+data-ar="بناء المنازل"
+data-en="House construction"
+data-es="Construcción de casas">
+Construction de maisons
+</h3>
+
+<p
+data-fr="Construction de maisons selon vos besoins et votre projet."
+data-ar="بناء المنازل حسب احتياجاتكم ومشروعكم."
+data-en="House construction according to your needs and project."
+data-es="Construcción de casas según sus necesidades y proyecto.">
+Construction de maisons selon vos besoins et votre projet.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🏡</div>
+
+<h3
+data-fr="Construction de villas"
+data-ar="بناء الفيلات"
+data-en="Villa construction"
+data-es="Construcción de villas">
+Construction de villas
+</h3>
+
+<p
+data-fr="Réalisation de villas et projets résidentiels."
+data-ar="إنجاز الفيلات والمشاريع السكنية."
+data-en="Construction of villas and residential projects."
+data-es="Construcción de villas y proyectos residenciales.">
+Réalisation de villas et projets résidentiels.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🏗️</div>
+
+<h3
+data-fr="Travaux de bâtiment"
+data-ar="أشغال البناء"
+data-en="Building works"
+data-es="Trabajos de construcción">
+Travaux de bâtiment
+</h3>
+
+<p
+data-fr="Travaux de construction et de bâtiment avec sérieux et professionnalisme."
+data-ar="أشغال البناء والتشييد بجدية واحترافية."
+data-en="Construction and building works with professionalism."
+data-es="Trabajos de construcción con profesionalidad.">
+Travaux de construction et de bâtiment avec sérieux et professionnalisme.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🔨</div>
+
+<h3
+data-fr="Rénovation"
+data-ar="التجديد والترميم"
+data-en="Renovation"
+data-es="Renovación">
+Rénovation
+</h3>
+
+<p
+data-fr="Rénovation et amélioration des maisons et bâtiments."
+data-ar="تجديد وتحسين المنازل والمباني."
+data-en="Renovation and improvement of houses and buildings."
+data-es="Renovación y mejora de casas y edificios.">
+Rénovation et amélioration des maisons et bâtiments.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🧱</div>
+
+<h3
+data-fr="Travaux de construction"
+data-ar="أعمال التشييد"
+data-en="Construction works"
+data-es="Obras de construcción">
+Travaux de construction
+</h3>
+
+<p
+data-fr="Différents travaux liés à la construction et au bâtiment."
+data-ar="مختلف الأشغال المتعلقة بالبناء والتشييد."
+data-en="Various works related to construction and building."
+data-es="Diferentes trabajos relacionados con la construcción.">
+Différents travaux liés à la construction et au bâtiment.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🏢</div>
+
+<h3
+data-fr="Projets professionnels"
+data-ar="المشاريع المهنية"
+data-en="Professional projects"
+data-es="Proyectos profesionales">
+Projets professionnels
+</h3>
+
+<p
+data-fr="Accompagnement des projets professionnels et immobiliers."
+data-ar="مواكبة المشاريع المهنية والعقارية."
+data-en="Support for professional and real estate projects."
+data-es="Acompañamiento de proyectos profesionales e inmobiliarios.">
+Accompagnement des projets professionnels et immobiliers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+
+<span
+data-fr="À propos de TARCI"
+data-ar="من نحن"
+data-en="About TARCI"
+data-es="Sobre TARCI">
+À propos de TARCI
+</span>
+
+</h2>
+
+<div class="about-content">
+
+<div class="about-box">
+
+<h3
+data-fr="Votre projet, notre engagement"
+data-ar="مشروعكم هو التزامنا"
+data-en="Your project, our commitment"
+data-es="Su proyecto, nuestro compromiso">
+Votre projet, notre engagement
+</h3>
+
+<p
+data-fr="TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech."
+data-ar="ترافق TARCI زبناءها في مشاريع البناء والأشغال والتجديد بمراكش."
+data-en="TARCI supports its clients in construction, building and renovation projects in Marrakech."
+data-es="TARCI acompaña a sus clientes en proyectos de construcción, edificación y renovación en Marrakech.">
+TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech.
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<h3
+data-fr="Une approche professionnelle"
+data-ar="مقاربة احترافية"
+data-en="A professional approach"
+data-es="Un enfoque profesional">
+Une approche professionnelle
+</h3>
+
+<p
+data-fr="Nous accordons une grande importance à la qualité du travail, au sérieux et au respect du projet du client."
+data-ar="نهتم بجودة العمل والجدية واحترام مشروع الزبون."
+data-en="We focus on quality, professionalism and respect for the client's project."
+data-es="Nos centramos en la calidad, la profesionalidad y el respeto por el proyecto del cliente.">
+Nous accordons une grande importance à la qualité du travail, au sérieux et au respect du projet du client.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+
+<section class="why">
+
+<div class="container">
+
+<h2 class="section-title">
+
+<span
+data-fr="Pourquoi TARCI ?"
+data-ar="لماذا TARCI؟"
+data-en="Why TARCI?"
+data-es="¿Por qué TARCI?">
+Pourquoi TARCI ?
+</span>
+
+</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div>⭐</div>
+
+<h3
+data-fr="Sérieux"
+data-ar="الجدية"
+data-en="Professionalism"
+data-es="Seriedad">
+Sérieux
+</h3>
+
+<p
+data-fr="Une approche sérieuse de chaque projet."
+data-ar="مقاربة جادة لكل مشروع."
+data-en="A serious approach to every project."
+data-es="Un enfoque serio para cada proyecto.">
+Une approche sérieuse de chaque projet.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>🏗️</div>
+
+<h3
+data-fr="Construction"
+data-ar="البناء"
+data-en="Construction"
+data-es="Construcción">
+Construction
+</h3>
+
+<p
+data-fr="Des solutions adaptées aux projets de construction."
+data-ar="حلول مناسبة لمشاريع البناء."
+data-en="Solutions adapted to construction projects."
+data-es="Soluciones adaptadas a los proyectos de construcción.">
+Des solutions adaptées aux projets de construction.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>🤝</div>
+
+<h3
+data-fr="Accompagnement"
+data-ar="المواكبة"
+data-en="Support"
+data-es="Acompañamiento">
+Accompagnement
+</h3>
+
+<p
+data-fr="Un accompagnement tout au long de votre projet."
+data-ar="مواكبة طوال مراحل المشروع."
+data-en="Support throughout your project."
+data-es="Acompañamiento durante todo el proyecto.">
+Un accompagnement tout au long de votre projet.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+
+<span
+data-fr="Contactez TARCI"
+data-ar="تواصل مع TARCI"
+data-en="Contact TARCI"
+data-es="Contacte con TARCI">
+Contactez TARCI
+</span>
+
+</h2>
+
+
+<div class="contact-box">
+
+<div class="contact-item">
+
+📞
+
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+📞
+
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+📧
+
+<a href="mailto:tarcitravaux@gmail.com">
+tarcitravaux@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+📍 Marrakech, Maroc
+
+</div>
+
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="https://wa.me/212678774597">
+WhatsApp
+</a>
+
+<a class="btn btn-primary" href="tel:+212678774597"
+data-fr="Appeler maintenant"
+data-ar="اتصل الآن"
+data-en="Call now"
+data-es="Llamar ahora">
+Appeler maintenant
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p><strong>TARCI</strong></p>
+
+<p
+data-fr="Construction • Bâtiment • Rénovation"
+data-ar="البناء • الأشغال • التجديد"
+data-en="Construction • Building • Renovation"
+data-es="Construcción • Edificación • Renovación">
+Construction • Bâtiment • Rénovation
+</p>
+
+<p>© 2026 TARCI - Marrakech, Maroc</p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/212678774597"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+
+function setLanguage(lang) {
+
+    const elements = document.querySelectorAll("[data-" + lang + "]");
+
+    elements.forEach(function(element) {
+        element.textContent = element.getAttribute("data-" + lang);
+    });
+
+    document.documentElement.lang = lang;
+
+    if (lang === "ar") {
+        document.documentElement.dir = "rtl";
+    } else {
+        document.documentElement.dir = "ltr";
+    }
+
+    document.querySelectorAll(".lang").forEach(function(button) {
+        button.classList.remove("active");
+    });
+
+    const activeButton = document.querySelector(
+        '.lang[onclick="setLanguage(\'' + lang + '\')"]'
+    );
+
+    if (activeButton) {
+        activeButton.classList.add("active");
+    }
+
+    try {
+        localStorage.setItem("tarci-language", lang);
+    } catch (e) {}
+
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    let savedLanguage = "fr";
+
+    try {
+        savedLanguage = localStorage.getItem("tarci-language") || "fr";
+    } catch (e) {}
+
+    if (
+        savedLanguage !== "fr" &&
+        savedLanguage !== "ar" &&
+        savedLanguage !== "en" &&
+        savedLanguage !== "es"
+    ) {
+        savedLanguage = "fr";
+    }
+
+    setLanguage(savedLanguage);
+
+});
+
+</script>
+
+</body>
+</html>
