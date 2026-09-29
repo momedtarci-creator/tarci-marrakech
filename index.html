@@ -15,6 +15,25 @@
 
   <meta name="author" content="TARCI">
 
+  <!-- Logo du site -->
+  <link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
+
+  <!-- Données structurées pour Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TARCI",
+    "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
+    "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marrakech",
+      "addressCountry": "MA"
+    }
+  }
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -33,7 +52,17 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 35px 20px 45px;
+    }
+
+    .logo {
+      width: 150px;
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 20px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
     }
 
     header h1 {
@@ -85,12 +114,6 @@
       color: white;
     }
 
-    .contact a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     footer {
       text-align: center;
       padding: 25px;
@@ -116,6 +139,10 @@
       h2 {
         font-size: 24px;
       }
+
+      .logo {
+        width: 130px;
+      }
     }
   </style>
 </head>
@@ -123,8 +150,19 @@
 <body>
 
   <header>
+
+    <img
+      class="logo"
+      src="tarci-logo-sans-sarl.png"
+      alt="Logo TARCI Marrakech - entreprise de construction"
+    >
+
     <h1>TARCI</h1>
-    <p>Entreprise de construction, bâtiment et rénovation à Marrakech</p>
+
+    <p>
+      Entreprise de construction, bâtiment et rénovation à Marrakech
+    </p>
+
   </header>
 
   <section>
