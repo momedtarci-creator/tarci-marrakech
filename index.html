@@ -1,197 +1,333 @@
  <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TARCI Marrakech | Construction, bâtiment et rénovation</title>
+  <title>TARCI Marrakech | Construction, bâtiment et rénovation</title>
 
-<meta name="description" content="TARCI Marrakech, entreprise de construction, bâtiment et rénovation. Construction de maisons, villas, bâtiments et travaux de rénovation à Marrakech.">
+  <meta name="description"
+    content="TARCI Marrakech, entreprise de construction, bâtiment et rénovation. Construction de maisons, villas, bâtiments et travaux de rénovation à Marrakech.">
 
-<meta name="robots" content="index, follow"> 
+  <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
+  <link rel="canonical"
+    href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
-<meta name="author" content="TARCI">
+  <meta name="author" content="TARCI">
 
-<link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
+  <link rel="icon" type="image/png" href="tarci-logo-sans-sarl.png">
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"TARCI",
-  "alternateName":"شركة الطرسي",
-  "url":"https://momedtarci-creator.github.io/tarci-marrakech/",
-  "logo":"https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
-  "telephone":"+212678774597",
-  "contactPoint":[
-    {
-      "@type":"ContactPoint",
-      "telephone":"+212678774597",
-      "contactType":"customer service"
-    },
-    {
-      "@type":"ContactPoint",
-      "telephone":"+212676289076",
-      "contactType":"customer service"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TARCI",
+    "alternateName": "شركة الطرسي",
+    "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
+    "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
+    "telephone": "+212678774597",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+212678774597",
+        "contactType": "customer service"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+212676289076",
+        "contactType": "customer service"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marrakech",
+      "addressCountry": "MA"
     }
-  ],
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Marrakech",
-    "addressCountry":"MA"
   }
-}
-</script>
+  </script>
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html{
-  scroll-behavior:smooth
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #20242a;
+      background: #f4f6f8;
+    }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.7;
-  color:#20242a;
-  background:#f4f6f8
-}
+    header {
+      background: linear-gradient(135deg, #0c192a, #192b41);
+      color: white;
+      text-align: center;
+      padding: 25px 20px 70px;
+    }
 
-header{
-  background:linear-gradient(135deg,rgba(12,25,42,.97),rgba(25,43,65,.94));
-  color:#fff;
-  text-align:center;
-  padding:25px 20px 70px;
-  position:relative;
-  overflow:hidden
-}
+    .topbar {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding-bottom: 40px;
+    }
 
-.topbar{
-  max-width:1150px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding-bottom:45px
-}
+    .brand {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-.brand{
-  font-size:25px;
-  font-weight:bold;
-  letter-spacing:2px
-}
+    .phones {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.phone-top{
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  margin-right:8px
-}
+    .phone {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.phone-top.second{
-  margin-left:8px
-}
+    .phone:hover {
+      color: #f2c94c;
+    }
 
-.language-select{
-  background:#fff;
-  color:#172b42;
-  border:0;
-  border-radius:7px;
-  padding:9px 12px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-left:12px
-}
+    .logo {
+      width: 165px;
+      max-width: 70%;
+      background: white;
+      padding: 12px;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+    }
 
-.logo{
-  width:165px;
-  max-width:65%;
-  background:#fff;
-  padding:12px;
-  border-radius:16px;
-  margin-bottom:22px;
-  box-shadow:0 15px 40px rgba(0,0,0,.25)
-}
+    h1 {
+      font-size: 58px;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
 
-header h1{
-  font-size:58px;
-  letter-spacing:5px;
-  margin-bottom:8px
-}
+    .subtitle {
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
 
-.fr-title{
-  font-size:23px;
-  font-weight:bold;
-  margin-bottom:8px
-}
+    .hero-text {
+      max-width: 750px;
+      margin: 20px auto 0;
+      color: #e4e8ed;
+      font-size: 17px;
+    }
 
-.hero-text{
-  max-width:750px;
-  margin:20px auto 0;
-  color:#e4e8ed;
-  font-size:17px
-}
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.buttons{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
 
-.btn{
-  display:inline-block;
-  padding:14px 25px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s
-}
+    .btn-main {
+      background: #f2c94c;
+      color: #17202b;
+    }
 
-.btn-main{
-  background:#f2c94c;
-  color:#17202b
-}
+    .btn-main:hover {
+      transform: translateY(-3px);
+    }
 
-.btn-main:hover{
-  transform:translateY(-3px)
-}
+    .btn-dark {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
 
-.btn-dark{
-  border:1px solid rgba(255,255,255,.5);
-  color:#fff
-}
+    .btn-dark:hover {
+      background: white;
+      color: #172b42;
+    }
 
-.btn-dark:hover{
-  background:#fff;
-  color:#17202b
-}
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 0 20px;
+    }
 
-.container{
-  max-width:1150px;
-  margin:auto;
-  padding:0 20px
-}
+    section {
+      padding: 70px 0;
+    }
 
-section{
-  padding:70px 0
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-.section-title{
-  text-align:center;
-  margin-bottom:45px
-}
+    .section-title h2 {
+      font-size: 34px;
+      color: #172b42;
+      margin-bottom: 8px;
+    }
 
-.section-title h2{
-  font-size:34px;
-  color:#172b42;
-  margin-bottom:8px
-}
+    .section-title p {
+      color: #666;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .card h3 {
+      color: #172b42;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-text {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .contact {
+      background: #172b42;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #f2c94c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0c192a;
+      color: #ddd;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 42px;
+      }
+
+      .subtitle {
+        font-size: 19px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 34px;
+        letter-spacing: 3px;
+      }
+
+      .logo {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="topbar">
+      <div class="brand">TARCI</div>
+
+      <div class="phones">
+        <a class="phone" href="tel:+212678774597">
+          0678 77 45 97
+        </a>
+
+        <a class="phone" href="tel:+212676289076">
+          0676 28 90 76
+        </a>
+      </div>
+    </div>
+
+    <img
+      class="logo"
+      src="tarci-logo-sans-sarl.png"
+      alt="Logo TARCI Marrakech">
+
+    <h1>TARCI</h1>
+
+    <div class="subtitle">
+      Construction, bâtiment et rénovation à Marrakech
+    </div>
+
+    <p class="hero-text">
+      TARCI est une entreprise spécialisée dans la construction,
+      le bâtiment, la construction de maisons et villas,
+      ainsi que les travaux de rénovation à Marrakech.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-main" href="tel
