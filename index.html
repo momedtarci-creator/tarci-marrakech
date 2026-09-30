@@ -7,479 +7,827 @@
 
 <title>TARCI | Construction, bâtiment et rénovation à Marrakech</title>
 
-<meta name="description" content="TARCI est une entreprise de construction, bâtiment et rénovation à Marrakech. Construction de maisons, villas, bâtiments et travaux de rénovation.">
+<meta name="description"
+content="TARCI - Construction, bâtiment, rénovation, villas et projets professionnels à Marrakech et au Maroc.">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
+<link rel="canonical"
+href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --navy:#0b1b32;
+    --navy2:#122744;
+    --gold:#d6a94c;
+    --gold-light:#f0cf7a;
+    --white:#ffffff;
+    --light:#f5f7fa;
+    --text:#182235;
+    --muted:#687386;
+    --shadow:0 15px 40px rgba(8,25,48,.10);
 }
 
-html {
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f6f8;
-    color: #172033;
-    line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-/* HEADER */
-
-header {
-    background: #101a2d;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.6;
 }
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    min-height: 80px;
-    padding: 12px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+img{
+    max-width:100%;
+    display:block;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+a{
+    text-decoration:none;
 }
 
-.logo-area img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    background: white;
-    border-radius: 8px;
-    padding: 4px;
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(11,27,50,.97);
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
 }
 
-.logo-name {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.navbar{
+    max-width:1250px;
+    min-height:76px;
+    margin:auto;
+    padding:10px 22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 22px;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+.logo-area img{
+    width:53px;
+    height:53px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:9px;
+    padding:4px;
 }
 
-nav a:hover {
-    color: #d9ad55;
+.logo-name{
+    color:#fff;
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:3px;
 }
 
-.languages {
-    display: flex;
-    gap: 5px;
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-.lang {
-    border: 1px solid rgba(255,255,255,0.5);
-    background: transparent;
-    color: white;
-    padding: 6px 9px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+nav a{
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.lang:hover,
-.lang.active {
-    background: #d9ad55;
-    color: #101a2d;
-    border-color: #d9ad55;
+nav a:hover{
+    color:var(--gold-light);
 }
 
-/* HERO */
+.languages{
+    display:flex;
+    gap:5px;
+}
 
-.hero {
+.lang{
+    border:1px solid rgba(255,255,255,.4);
+    background:transparent;
+    color:#fff;
+    padding:6px 8px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.lang.active,
+.lang:hover{
+    background:var(--gold);
+    color:var(--navy);
+    border-color:var(--gold);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:700px;
+
     background:
-        linear-gradient(rgba(16,26,45,0.88), rgba(16,26,45,0.88)),
-        url("tarci-logo-sans-sarl.png");
+        linear-gradient(
+            90deg,
+            rgba(7,20,38,.94) 0%,
+            rgba(7,20,38,.76) 45%,
+            rgba(7,20,38,.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85");
 
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center;
 
-    color: white;
-    text-align: center;
-
-    padding: 90px 20px;
+    display:flex;
+    align-items:center;
 }
 
-.hero-logo {
-    width: 115px;
-    height: 115px;
-    object-fit: contain;
-    background: white;
-    padding: 8px;
-    border-radius: 15px;
-    margin-bottom: 25px;
+.hero-content{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+    padding:90px 25px;
 }
 
-.hero h1 {
-    font-size: 52px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+.hero-logo{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    background:white;
+    border-radius:14px;
+    padding:8px;
+    margin-bottom:25px;
 }
 
-.hero h2 {
-    color: #d9ad55;
-    font-size: 25px;
-    margin-bottom: 20px;
+.hero h1{
+    color:white;
+    font-size:72px;
+    line-height:1;
+    letter-spacing:7px;
+    font-weight:900;
+    margin-bottom:18px;
 }
 
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 18px;
-    color: #e8ebf0;
+.hero h2{
+    color:var(--gold-light);
+    font-size:30px;
+    max-width:700px;
+    margin-bottom:18px;
 }
 
-.buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+.hero p{
+    color:#edf1f7;
+    max-width:700px;
+    font-size:18px;
+    margin-bottom:30px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
 }
 
-.btn-primary {
-    background: #d9ad55;
-    color: #101a2d;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:50px;
+    padding:0 24px;
+    border-radius:7px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.btn-primary:hover {
-    background: #edc979;
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
 }
 
-.btn-secondary {
-    border: 1px solid white;
-    color: white;
+.btn-primary:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
 }
 
-.btn-secondary:hover {
-    background: white;
-    color: #101a2d;
+.btn-outline{
+    border:1px solid rgba(255,255,255,.8);
+    color:white;
 }
 
-/* SECTIONS */
-
-section {
-    padding: 75px 20px;
+.btn-outline:hover{
+    background:white;
+    color:var(--navy);
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
+/* ================= INTRO ================= */
+
+.intro{
+    background:white;
+    padding:70px 20px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 45px;
-    color: #101a2d;
+.container{
+    max-width:1150px;
+    margin:auto;
 }
 
-.section-title span {
-    color: #d09f45;
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
 }
 
-/* SERVICES */
-
-.services {
-    background: white;
+.intro-card{
+    padding:30px;
+    border-radius:15px;
+    background:white;
+    box-shadow:var(--shadow);
+    border-top:4px solid var(--gold);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.intro-icon{
+    font-size:38px;
+    margin-bottom:12px;
 }
 
-.service-card {
-    background: #f7f8fa;
-    padding: 30px 22px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid #e4e6ea;
-    transition: 0.3s;
+.intro-card h3{
+    font-size:21px;
+    color:var(--navy);
+    margin-bottom:8px;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.intro-card p{
+    color:var(--muted);
 }
 
-.service-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+/* ================= SECTION ================= */
+
+section{
+    padding:85px 20px;
 }
 
-.service-card h3 {
-    margin-bottom: 10px;
-    color: #101a2d;
+.section-heading{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
 }
 
-/* ABOUT */
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.section-heading .small{
+    color:var(--gold);
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
-.about-box {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+.section-heading h2{
+    color:var(--navy);
+    font-size:40px;
+    margin:8px 0 12px;
 }
 
-.about-box h3 {
-    color: #101a2d;
-    margin-bottom: 15px;
-    font-size: 24px;
+.section-heading p{
+    color:var(--muted);
 }
 
-/* WHY */
+/* ================= SERVICES ================= */
 
-.why {
-    background: #101a2d;
-    color: white;
+.services{
+    background:var(--light);
 }
 
-.why .section-title {
-    color: white;
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
 }
 
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.service-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.35s;
 }
 
-.why-card {
-    text-align: center;
-    padding: 25px;
+.service-card:hover{
+    transform:translateY(-7px);
 }
 
-.why-card div {
-    font-size: 38px;
-    margin-bottom: 12px;
+.service-image{
+    height:190px;
+    overflow:hidden;
 }
 
-.why-card h3 {
-    color: #d9ad55;
-    margin-bottom: 10px;
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
 }
 
-/* CONTACT */
-
-.contact {
-    background: white;
+.service-card:hover .service-image img{
+    transform:scale(1.07);
 }
 
-.contact-box {
-    max-width: 750px;
-    margin: auto;
-    background: #f7f8fa;
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
+.service-content{
+    padding:25px;
 }
 
-.contact-item {
-    margin: 18px 0;
-    font-size: 18px;
+.service-content h3{
+    color:var(--navy);
+    margin-bottom:9px;
+    font-size:21px;
 }
 
-.contact-item a {
-    color: #101a2d;
-    text-decoration: none;
-    font-weight: bold;
+.service-content p{
+    color:var(--muted);
 }
 
-.contact-item a:hover {
-    color: #c6953c;
+/* ================= ABOUT ================= */
+
+.about{
+    background:white;
 }
 
-/* FOOTER */
-
-footer {
-    background: #0b1220;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
 }
 
-footer p {
-    margin: 6px 0;
-    color: #cbd0d8;
+.about-image{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-/* WHATSAPP */
-
-.whatsapp {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-
-    width: 58px;
-    height: 58px;
-
-    border-radius: 50%;
-    background: #25D366;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 29px;
-    text-decoration: none;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    z-index: 2000;
+.about-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
 
-/* MOBILE */
+.about-text .small{
+    color:var(--gold);
+    font-weight:bold;
+    letter-spacing:2px;
+}
 
-@media (max-width: 800px) {
+.about-text h2{
+    color:var(--navy);
+    font-size:40px;
+    margin:10px 0 20px;
+}
 
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 12px;
+.about-text p{
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.about-list{
+    list-style:none;
+    margin:25px 0;
+}
+
+.about-list li{
+    margin:12px 0;
+    font-weight:bold;
+}
+
+.about-list span{
+    color:var(--gold);
+    margin-right:8px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    background:var(--navy);
+}
+
+.projects .section-heading h2{
+    color:white;
+}
+
+.projects .section-heading p{
+    color:#c8d0dc;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.project{
+    height:280px;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+}
+
+.project img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.project:hover img{
+    transform:scale(1.08);
+}
+
+.project-overlay{
+    position:absolute;
+    inset:auto 0 0 0;
+    padding:45px 20px 20px;
+    color:white;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+}
+
+.project-overlay h3{
+    color:white;
+}
+
+/* ================= WHY ================= */
+
+.why{
+    background:#f7f8fa;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why-card{
+    text-align:center;
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.why-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    color:var(--navy);
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:var(--muted);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:75px 20px;
+
+    background:
+        linear-gradient(
+            rgba(11,27,50,.92),
+            rgba(11,27,50,.92)
+        ),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.cta-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:white;
+}
+
+.cta-box h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.cta-box p{
+    color:#d9e0ea;
+    margin-bottom:28px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-info{
+    background:var(--navy);
+    color:white;
+    border-radius:18px;
+    padding:40px;
+}
+
+.contact-info h3{
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.contact-item:last-child{
+    border-bottom:0;
+}
+
+.contact-item strong{
+    display:block;
+    color:var(--gold-light);
+    margin-bottom:4px;
+}
+
+.contact-item a{
+    color:white;
+}
+
+.contact-card{
+    background:var(--light);
+    border-radius:18px;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.contact-card h3{
+    color:var(--navy);
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.contact-card p{
+    color:var(--muted);
+    margin-bottom:25px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071222;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+footer .gold{
+    color:var(--gold);
+}
+
+footer p{
+    color:#aeb8c6;
+    margin:8px 0;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:29px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:9998;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .navbar{
+        min-height:68px;
+        padding:8px 15px;
     }
 
-    .logo-area {
-        width: 100%;
-        justify-content: center;
+    .logo-area img{
+        width:46px;
+        height:46px;
     }
 
-    nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
+    .logo-name{
+        font-size:23px;
     }
 
-    nav a {
-        font-size: 14px;
+    .menu-btn{
+        display:block;
     }
 
-    .languages {
-        width: 100%;
-        justify-content: center;
+    nav{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:0;
+        padding:10px 0 5px;
     }
 
-    .hero {
-        padding: 65px 18px;
+    nav.open{
+        display:flex;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:12px;
+        border-top:1px solid rgba(255,255,255,.08);
     }
 
-    .hero h2 {
-        font-size: 21px;
+    .languages{
+        display:none;
+        width:100%;
+        justify-content:center;
+        padding-bottom:8px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .languages.open{
+        display:flex;
     }
 
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .hero{
+        min-height:650px;
+        background-position:center;
+    }
+
+    .hero-content{
+        padding:70px 18px;
+    }
+
+    .hero-logo{
+        width:82px;
+        height:82px;
+    }
+
+    .hero h1{
+        font-size:50px;
+        letter-spacing:5px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .intro-grid,
     .services-grid,
-    .why-grid {
-        grid-template-columns: 1fr;
+    .why-grid,
+    .projects-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
+    section{
+        padding:65px 17px;
     }
 
-    section {
-        padding: 55px 18px;
+    .section-heading h2,
+    .about-text h2{
+        font-size:31px;
     }
 
-    .section-title {
-        font-size: 29px;
+    .about-image img{
+        height:330px;
     }
 
-    .contact-box {
-        padding: 25px 18px;
+    .project{
+        height:250px;
     }
+
+    .cta-box h2{
+        font-size:31px;
+    }
+
 }
 
-/* ARABIC */
+/* ================= RTL ================= */
 
-[dir="rtl"] body {
-    text-align: right;
+[dir="rtl"]{
+    direction:rtl;
 }
 
-[dir="rtl"] .hero,
-[dir="rtl"] .contact-box,
-[dir="rtl"] footer {
-    text-align: center;
+[dir="rtl"] .hero-content{
+    text-align:right;
 }
 
-[dir="rtl"] nav {
-    direction: rtl;
+[dir="rtl"] .about-text{
+    text-align:right;
+}
+
+[dir="rtl"] .contact-info{
+    text-align:right;
 }
 
 </style>
 
-<!-- GOOGLE / SEO -->
+<!-- ================= SEO STRUCTURED DATA ================= -->
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "TARCI",
-  "alternateName": "شركة الطرسي",
-  "url": "https://momedtarci-creator.github.io/tarci-marrakech/",
-  "logo": "https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
-  "telephone": [
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"TARCI",
+  "alternateName":"شركة الطرسي",
+  "url":"https://momedtarci-creator.github.io/tarci-marrakech/",
+  "logo":"https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png",
+  "telephone":[
     "+212678774597",
     "+212676289076"
   ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Marrakech",
-    "addressCountry": "MA"
+  "email":"tarcitravaux@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Marrakech",
+    "addressCountry":"MA"
   }
 }
 </script>
@@ -488,29 +836,58 @@ footer p {
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <div class="navbar">
 
 <div class="logo-area">
-
-<img src="tarci-logo-sans-sarl.png" alt="TARCI Logo">
-
+<img src="tarci-logo-sans-sarl.png" alt="TARCI">
 <div class="logo-name">TARCI</div>
-
 </div>
 
-<nav>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+☰
+</button>
 
-<a href="#services" data-fr="Services" data-ar="الخدمات" data-en="Services" data-es="Servicios">Services</a>
+<nav id="mainNav">
 
-<a href="#about" data-fr="À propos" data-ar="من نحن" data-en="About us" data-es="Sobre nosotros">À propos</a>
+<a href="#services"
+data-fr="Services"
+data-ar="الخدمات"
+data-en="Services"
+data-es="Servicios">
+Services
+</a>
 
-<a href="#contact" data-fr="Contact" data-ar="اتصل بنا" data-en="Contact" data-es="Contacto">Contact</a>
+<a href="#about"
+data-fr="À propos"
+data-ar="من نحن"
+data-en="About"
+data-es="Sobre nosotros">
+À propos
+</a>
+
+<a href="#projects"
+data-fr="Réalisations"
+data-ar="المشاريع"
+data-en="Projects"
+data-es="Proyectos">
+Réalisations
+</a>
+
+<a href="#contact"
+data-fr="Contact"
+data-ar="اتصل بنا"
+data-en="Contact"
+data-es="Contacto">
+Contact
+</a>
 
 </nav>
 
-<div class="languages">
+<div class="languages" id="languages">
 
 <button class="lang active" onclick="setLanguage('fr')">FR</button>
 <button class="lang" onclick="setLanguage('ar')">AR</button>
@@ -524,45 +901,56 @@ footer p {
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<img class="hero-logo" src="tarci-logo-sans-sarl.png" alt="TARCI">
+<div class="hero-content">
+
+<img
+class="hero-logo"
+src="tarci-logo-sans-sarl.png"
+alt="Logo TARCI">
 
 <h1>TARCI</h1>
 
 <h2
-data-fr="Construction, bâtiment et rénovation"
-data-ar="البناء والأشغال والتجديد"
-data-en="Construction, building and renovation"
-data-es="Construcción, edificación y renovación">
-Construction, bâtiment et rénovation
+data-fr="Construction • Bâtiment • Rénovation"
+data-ar="البناء • الأشغال • التجديد"
+data-en="Construction • Building • Renovation"
+data-es="Construcción • Edificación • Renovación">
+Construction • Bâtiment • Rénovation
 </h2>
 
 <p
-data-fr="TARCI vous accompagne dans vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc."
-data-ar="ترافقكم TARCI في مشاريع البناء والأشغال والتجديد بمراكش والمغرب."
-data-en="TARCI supports you with your construction, building and renovation projects in Marrakech and Morocco."
-data-es="TARCI le acompaña en sus proyectos de construcción, edificación y renovación en Marrakech y Marruecos.">
-TARCI vous accompagne dans vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc.
+data-fr="Construire aujourd'hui les espaces de demain."
+data-ar="نبني اليوم مساحات الغد."
+data-en="Building today's spaces for tomorrow."
+data-es="Construimos hoy los espacios del mañana.">
+Construire aujourd'hui les espaces de demain.
 </p>
 
 <div class="buttons">
 
-<a class="btn btn-primary" href="tel:+212678774597"
-data-fr="Appeler TARCI"
-data-ar="اتصل بـ TARCI"
-data-en="Call TARCI"
-data-es="Llamar a TARCI">
-Appeler TARCI
+<a
+class="btn btn-primary"
+href="tel:+212678774597"
+data-fr="📞 Appeler TARCI"
+data-ar="📞 اتصل بـ TARCI"
+data-en="📞 Call TARCI"
+data-es="📞 Llamar a TARCI">
+📞 Appeler TARCI
 </a>
 
-<a class="btn btn-secondary" href="https://wa.me/212678774597">
-WhatsApp
+<a
+class="btn btn-outline"
+href="https://wa.me/212678774597">
+💬 WhatsApp
 </a>
 
-<a class="btn btn-secondary" href="#services"
+<a
+class="btn btn-outline"
+href="#services"
 data-fr="Découvrir nos services"
 data-ar="اكتشف خدماتنا"
 data-en="Discover our services"
@@ -572,26 +960,140 @@ Découvrir nos services
 
 </div>
 
+</div>
+
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+<div class="container">
+
+<div class="intro-grid">
+
+<div class="intro-card">
+
+<div class="intro-icon">🏗️</div>
+
+<h3
+data-fr="Construction"
+data-ar="البناء"
+data-en="Construction"
+data-es="Construcción">
+Construction
+</h3>
+
+<p
+data-fr="Des solutions adaptées à vos projets."
+data-ar="حلول مناسبة لمشاريعكم."
+data-en="Solutions adapted to your projects."
+data-es="Soluciones adaptadas a sus proyectos.">
+Des solutions adaptées à vos projets.
+</p>
+
+</div>
+
+
+<div class="intro-card">
+
+<div class="intro-icon">🏠</div>
+
+<h3
+data-fr="Résidentiel"
+data-ar="السكن"
+data-en="Residential"
+data-es="Residencial">
+Résidentiel
+</h3>
+
+<p
+data-fr="Maisons, villas et projets résidentiels."
+data-ar="منازل وفيلات ومشاريع سكنية."
+data-en="Houses, villas and residential projects."
+data-es="Casas, villas y proyectos residenciales.">
+Maisons, villas et projets résidentiels.
+</p>
+
+</div>
+
+
+<div class="intro-card">
+
+<div class="intro-icon">🔨</div>
+
+<h3
+data-fr="Rénovation"
+data-ar="التجديد"
+data-en="Renovation"
+data-es="Renovación">
+Rénovation
+</h3>
+
+<p
+data-fr="Transformation et amélioration des espaces."
+data-ar="تحسين وتجديد المساحات."
+data-en="Transformation and improvement of spaces."
+data-es="Transformación y mejora de espacios.">
+Transformation et amélioration des espaces.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
 
 <section id="services" class="services">
 
 <div class="container">
 
-<h2 class="section-title">
-<span data-fr="Nos services" data-ar="خدماتنا" data-en="Our services" data-es="Nuestros servicios">
+<div class="section-heading">
+
+<div class="small"
+data-fr="Nos services"
+data-ar="خدماتنا"
+data-en="Our services"
+data-es="Nuestros servicios">
 Nos services
-</span>
+</div>
+
+<h2
+data-fr="Des solutions pour vos projets"
+data-ar="حلول لمشاريعكم"
+data-en="Solutions for your projects"
+data-es="Soluciones para sus proyectos">
+Des solutions pour vos projets
 </h2>
+
+<p
+data-fr="TARCI vous accompagne dans vos projets de construction et de rénovation."
+data-ar="TARCI ترافقكم في مشاريع البناء والتجديد."
+data-en="TARCI supports you with your construction and renovation projects."
+data-es="TARCI le acompaña en sus proyectos de construcción y renovación.">
+TARCI vous accompagne dans vos projets de construction et de rénovation.
+</p>
+
+</div>
+
 
 <div class="services-grid">
 
 <div class="service-card">
 
-<div class="service-icon">🏠</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+alt="Villa moderne">
+</div>
+
+<div class="service-content">
 
 <h3
 data-fr="Construction de maisons"
@@ -602,42 +1104,58 @@ Construction de maisons
 </h3>
 
 <p
-data-fr="Construction de maisons selon vos besoins et votre projet."
-data-ar="بناء المنازل حسب احتياجاتكم ومشروعكم."
-data-en="House construction according to your needs and project."
-data-es="Construcción de casas según sus necesidades y proyecto.">
-Construction de maisons selon vos besoins et votre projet.
+data-fr="Construction de maisons adaptées à votre projet."
+data-ar="بناء المنازل حسب مشروعكم."
+data-en="House construction adapted to your project."
+data-es="Construcción de casas adaptadas a su proyecto.">
+Construction de maisons adaptées à votre projet.
 </p>
+
+</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🏡</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+alt="Villa et architecture">
+</div>
+
+<div class="service-content">
 
 <h3
-data-fr="Construction de villas"
-data-ar="بناء الفيلات"
-data-en="Villa construction"
-data-es="Construcción de villas">
-Construction de villas
+data-fr="Villas"
+data-ar="الفيلات"
+data-en="Villas"
+data-es="Villas">
+Villas
 </h3>
 
 <p
 data-fr="Réalisation de villas et projets résidentiels."
 data-ar="إنجاز الفيلات والمشاريع السكنية."
-data-en="Construction of villas and residential projects."
-data-es="Construcción de villas y proyectos residenciales.">
+data-en="Villas and residential projects."
+data-es="Villas y proyectos residenciales.">
 Réalisation de villas et projets résidentiels.
 </p>
+
+</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🏗️</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+alt="Travaux de bâtiment">
+</div>
+
+<div class="service-content">
 
 <h3
 data-fr="Travaux de bâtiment"
@@ -648,19 +1166,27 @@ Travaux de bâtiment
 </h3>
 
 <p
-data-fr="Travaux de construction et de bâtiment avec sérieux et professionnalisme."
-data-ar="أشغال البناء والتشييد بجدية واحترافية."
-data-en="Construction and building works with professionalism."
-data-es="Trabajos de construcción con profesionalidad.">
-Travaux de construction et de bâtiment avec sérieux et professionnalisme.
+data-fr="Travaux de construction et de bâtiment."
+data-ar="مختلف أشغال البناء والتشييد."
+data-en="Construction and building works."
+data-es="Trabajos de construcción y edificación.">
+Travaux de construction et de bâtiment.
 </p>
+
+</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🔨</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80"
+alt="Rénovation">
+</div>
+
+<div class="service-content">
 
 <h3
 data-fr="Rénovation"
@@ -671,42 +1197,58 @@ Rénovation
 </h3>
 
 <p
-data-fr="Rénovation et amélioration des maisons et bâtiments."
+data-fr="Rénovation et amélioration des bâtiments."
 data-ar="تجديد وتحسين المنازل والمباني."
-data-en="Renovation and improvement of houses and buildings."
-data-es="Renovación y mejora de casas y edificios.">
-Rénovation et amélioration des maisons et bâtiments.
+data-en="Renovation and improvement of buildings."
+data-es="Renovación y mejora de edificios.">
+Rénovation et amélioration des bâtiments.
 </p>
+
+</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🧱</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=900&q=80"
+alt="Chantier construction">
+</div>
+
+<div class="service-content">
 
 <h3
-data-fr="Travaux de construction"
-data-ar="أعمال التشييد"
-data-en="Construction works"
-data-es="Obras de construcción">
-Travaux de construction
+data-fr="Chantiers"
+data-ar="أوراش البناء"
+data-en="Construction sites"
+data-es="Obras">
+Chantiers
 </h3>
 
 <p
-data-fr="Différents travaux liés à la construction et au bâtiment."
-data-ar="مختلف الأشغال المتعلقة بالبناء والتشييد."
-data-en="Various works related to construction and building."
-data-es="Diferentes trabajos relacionados con la construcción.">
-Différents travaux liés à la construction et au bâtiment.
+data-fr="Organisation et réalisation des travaux."
+data-ar="تنظيم وإنجاز الأشغال."
+data-en="Organization and execution of works."
+data-es="Organización y ejecución de obras.">
+Organisation et réalisation des travaux.
 </p>
+
+</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🏢</div>
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80"
+alt="Projet immobilier">
+</div>
+
+<div class="service-content">
 
 <h3
 data-fr="Projets professionnels"
@@ -717,12 +1259,14 @@ Projets professionnels
 </h3>
 
 <p
-data-fr="Accompagnement des projets professionnels et immobiliers."
-data-ar="مواكبة المشاريع المهنية والعقارية."
+data-fr="Accompagnement de projets immobiliers et professionnels."
+data-ar="مواكبة المشاريع العقارية والمهنية."
 data-en="Support for professional and real estate projects."
-data-es="Acompañamiento de proyectos profesionales e inmobiliarios.">
-Accompagnement des projets professionnels et immobiliers.
+data-es="Acompañamiento de proyectos inmobiliarios y profesionales.">
+Accompagnement de projets immobiliers et professionnels.
 </p>
+
+</div>
 
 </div>
 
@@ -733,64 +1277,103 @@ Accompagnement des projets professionnels et immobiliers.
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
-<section id="about">
+<section id="about" class="about">
 
 <div class="container">
 
-<h2 class="section-title">
+<div class="about-grid">
 
-<span
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+alt="Équipe et chantier de construction">
+
+</div>
+
+
+<div class="about-text">
+
+<div class="small"
 data-fr="À propos de TARCI"
 data-ar="من نحن"
 data-en="About TARCI"
 data-es="Sobre TARCI">
 À propos de TARCI
-</span>
+</div>
 
-</h2>
-
-<div class="about-content">
-
-<div class="about-box">
-
-<h3
+<h2
 data-fr="Votre projet, notre engagement"
 data-ar="مشروعكم هو التزامنا"
 data-en="Your project, our commitment"
 data-es="Su proyecto, nuestro compromiso">
 Votre projet, notre engagement
-</h3>
+</h2>
 
 <p
 data-fr="TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech."
 data-ar="ترافق TARCI زبناءها في مشاريع البناء والأشغال والتجديد بمراكش."
-data-en="TARCI supports its clients in construction, building and renovation projects in Marrakech."
+data-en="TARCI supports its clients with construction, building and renovation projects in Marrakech."
 data-es="TARCI acompaña a sus clientes en proyectos de construcción, edificación y renovación en Marrakech.">
 TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech.
 </p>
 
-</div>
-
-
-<div class="about-box">
-
-<h3
-data-fr="Une approche professionnelle"
-data-ar="مقاربة احترافية"
-data-en="A professional approach"
-data-es="Un enfoque profesional">
-Une approche professionnelle
-</h3>
-
 <p
-data-fr="Nous accordons une grande importance à la qualité du travail, au sérieux et au respect du projet du client."
-data-ar="نهتم بجودة العمل والجدية واحترام مشروع الزبون."
-data-en="We focus on quality, professionalism and respect for the client's project."
-data-es="Nos centramos en la calidad, la profesionalidad y el respeto por el proyecto del cliente.">
-Nous accordons une grande importance à la qualité du travail, au sérieux et au respect du projet du client.
+data-fr="Nous accordons une grande importance au sérieux, à la qualité du travail et au respect du projet du client."
+data-ar="نهتم بالجدية وجودة العمل واحترام مشروع الزبون."
+data-en="We focus on professionalism, quality and respect for the client's project."
+data-es="Nos centramos en la profesionalidad, la calidad y el respeto por el proyecto del cliente.">
+Nous accordons une grande importance au sérieux, à la qualité du travail et au respect du projet du client.
 </p>
+
+<ul class="about-list">
+
+<li>
+<span>✓</span>
+<span
+data-fr="Construction et bâtiment"
+data-ar="البناء والتشييد"
+data-en="Construction and building"
+data-es="Construcción y edificación">
+Construction et bâtiment
+</span>
+</li>
+
+<li>
+<span>✓</span>
+<span
+data-fr="Villas et maisons"
+data-ar="الفيلات والمنازل"
+data-en="Villas and houses"
+data-es="Villas y casas">
+Villas et maisons
+</span>
+</li>
+
+<li>
+<span>✓</span>
+<span
+data-fr="Rénovation"
+data-ar="التجديد والترميم"
+data-en="Renovation"
+data-es="Renovación">
+Rénovation
+</span>
+</li>
+
+</ul>
+
+<a
+href="#contact"
+class="btn btn-primary"
+data-fr="Parler de votre projet"
+data-ar="تحدث معنا عن مشروعكم"
+data-en="Discuss your project"
+data-es="Hable de su proyecto">
+Parler de votre projet
+</a>
 
 </div>
 
@@ -801,29 +1384,207 @@ Nous accordons une grande importance à la qualité du travail, au sérieux et a
 </section>
 
 
-<!-- WHY -->
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="projects">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small"
+data-fr="Réalisations"
+data-ar="مشاريعنا"
+data-en="Projects"
+data-es="Proyectos">
+Réalisations
+</div>
+
+<h2
+data-fr="Des espaces construits avec soin"
+data-ar="مساحات تُنجز بعناية"
+data-en="Spaces built with care"
+data-es="Espacios construidos con cuidado">
+Des espaces construits avec soin
+</h2>
+
+<p
+data-fr="Découvrez quelques exemples de projets et d'environnements liés au bâtiment."
+data-ar="اكتشفوا بعض الأمثلة من مشاريع البناء."
+data-en="Discover examples of construction projects and environments."
+data-es="Descubra ejemplos de proyectos de construcción.">
+Découvrez quelques exemples de projets et d'environnements liés au bâtiment.
+</p>
+
+</div>
+
+
+<div class="projects-grid">
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+alt="Chantier">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Construction"
+data-ar="البناء"
+data-en="Construction"
+data-es="Construcción">
+Construction
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=85"
+alt="Maison moderne">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Projet résidentiel"
+data-ar="مشروع سكني"
+data-en="Residential project"
+data-es="Proyecto residencial">
+Projet résidentiel
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+alt="Architecture moderne">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Architecture"
+data-ar="الهندسة المعمارية"
+data-en="Architecture"
+data-es="Arquitectura">
+Architecture
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+alt="Travaux">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Travaux"
+data-ar="الأشغال"
+data-en="Works"
+data-es="Trabajos">
+Travaux
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&q=85"
+alt="Villa">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Villa"
+data-ar="فيلا"
+data-en="Villa"
+data-es="Villa">
+Villa
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=85"
+alt="Maison">
+
+<div class="project-overlay">
+
+<h3
+data-fr="Projet immobilier"
+data-ar="مشروع عقاري"
+data-en="Real estate project"
+data-es="Proyecto inmobiliario">
+Projet immobilier
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY ================= -->
 
 <section class="why">
 
 <div class="container">
 
-<h2 class="section-title">
+<div class="section-heading">
 
-<span
-data-fr="Pourquoi TARCI ?"
-data-ar="لماذا TARCI؟"
-data-en="Why TARCI?"
-data-es="¿Por qué TARCI?">
-Pourquoi TARCI ?
-</span>
+<div class="small"
+data-fr="Pourquoi TARCI"
+data-ar="لماذا TARCI"
+data-en="Why TARCI"
+data-es="Por qué TARCI">
+Pourquoi TARCI
+</div>
 
+<h2
+data-fr="Une approche professionnelle"
+data-ar="مقاربة احترافية"
+data-en="A professional approach"
+data-es="Un enfoque profesional">
+Une approche professionnelle
 </h2>
+
+</div>
+
 
 <div class="why-grid">
 
 <div class="why-card">
 
-<div>⭐</div>
+<div class="why-icon">⭐</div>
 
 <h3
 data-fr="Sérieux"
@@ -846,22 +1607,22 @@ Une approche sérieuse de chaque projet.
 
 <div class="why-card">
 
-<div>🏗️</div>
+<div class="why-icon">🏗️</div>
 
 <h3
-data-fr="Construction"
-data-ar="البناء"
-data-en="Construction"
-data-es="Construcción">
-Construction
+data-fr="Qualité"
+data-ar="الجودة"
+data-en="Quality"
+data-es="Calidad">
+Qualité
 </h3>
 
 <p
-data-fr="Des solutions adaptées aux projets de construction."
-data-ar="حلول مناسبة لمشاريع البناء."
-data-en="Solutions adapted to construction projects."
-data-es="Soluciones adaptadas a los proyectos de construcción.">
-Des solutions adaptées aux projets de construction.
+data-fr="Une attention particulière portée au travail réalisé."
+data-ar="اهتمام خاص بجودة الأشغال المنجزة."
+data-en="Special attention to the quality of the work."
+data-es="Atención especial a la calidad del trabajo.">
+Une attention particulière portée au travail réalisé.
 </p>
 
 </div>
@@ -869,7 +1630,7 @@ Des solutions adaptées aux projets de construction.
 
 <div class="why-card">
 
-<div>🤝</div>
+<div class="why-icon">🤝</div>
 
 <h3
 data-fr="Accompagnement"
@@ -880,11 +1641,11 @@ Accompagnement
 </h3>
 
 <p
-data-fr="Un accompagnement tout au long de votre projet."
-data-ar="مواكبة طوال مراحل المشروع."
-data-en="Support throughout your project."
-data-es="Acompañamiento durante todo el proyecto.">
-Un accompagnement tout au long de votre projet.
+data-fr="Un accompagnement pendant les différentes étapes du projet."
+data-ar="مواكبة خلال مختلف مراحل المشروع."
+data-en="Support throughout the different stages of the project."
+data-es="Acompañamiento durante las diferentes etapas del proyecto.">
+Un accompagnement pendant les différentes étapes du projet.
 </p>
 
 </div>
@@ -896,30 +1657,85 @@ Un accompagnement tout au long de votre projet.
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2
+data-fr="Vous avez un projet ?"
+data-ar="عندكم مشروع؟"
+data-en="Have a project?"
+data-es="¿Tiene un proyecto?">
+Vous avez un projet ?
+</h2>
+
+<p
+data-fr="Parlez-nous de votre projet de construction ou de rénovation."
+data-ar="تحدثوا معنا عن مشروع البناء أو التجديد."
+data-en="Tell us about your construction or renovation project."
+data-es="Cuéntenos sobre su proyecto de construcción o renovación.">
+Parlez-nous de votre projet de construction ou de rénovation.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+class="btn btn-primary"
+href="tel:+212678774597">
+📞 0678 77 45 97
+</a>
+
+<a
+class="btn btn-outline"
+href="https://wa.me/212678774597">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
 
 <section id="contact" class="contact">
 
 <div class="container">
 
-<h2 class="section-title">
+<div class="section-heading">
 
-<span
-data-fr="Contactez TARCI"
-data-ar="تواصل مع TARCI"
-data-en="Contact TARCI"
-data-es="Contacte con TARCI">
-Contactez TARCI
-</span>
+<div class="small"
+data-fr="Contact"
+data-ar="تواصل معنا"
+data-en="Contact"
+data-es="Contacto">
+Contact
+</div>
 
+<h2
+data-fr="Parlons de votre projet"
+data-ar="لنتحدث عن مشروعكم"
+data-en="Let's discuss your project"
+data-es="Hablemos de su proyecto">
+Parlons de votre projet
 </h2>
 
+</div>
 
-<div class="contact-box">
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>TARCI</h3>
 
 <div class="contact-item">
 
-📞
+<strong>📞 Téléphone</strong>
 
 <a href="tel:+212678774597">
 0678 77 45 97
@@ -930,7 +1746,7 @@ Contactez TARCI
 
 <div class="contact-item">
 
-📞
+<strong>📞 Téléphone</strong>
 
 <a href="tel:+212676289076">
 0676 28 90 76
@@ -941,7 +1757,7 @@ Contactez TARCI
 
 <div class="contact-item">
 
-📧
+<strong>📧 Email</strong>
 
 <a href="mailto:tarcitravaux@gmail.com">
 tarcitravaux@gmail.com
@@ -952,24 +1768,52 @@ tarcitravaux@gmail.com
 
 <div class="contact-item">
 
-📍 Marrakech, Maroc
+<strong>📍 Localisation</strong>
+
+Marrakech, Maroc
+
+</div>
 
 </div>
 
 
+<div class="contact-card">
+
+<h3
+data-fr="Demandez votre devis"
+data-ar="اطلبوا عرض السعر"
+data-en="Request a quote"
+data-es="Solicite un presupuesto">
+Demandez votre devis
+</h3>
+
+<p
+data-fr="Contactez TARCI directement par téléphone ou WhatsApp."
+data-ar="تواصلوا مع TARCI مباشرة عبر الهاتف أو WhatsApp."
+data-en="Contact TARCI directly by phone or WhatsApp."
+data-es="Contacte con TARCI directamente por teléfono o WhatsApp.">
+Contactez TARCI directement par téléphone ou WhatsApp.
+</p>
+
 <div class="buttons">
 
-<a class="btn btn-primary" href="https://wa.me/212678774597">
-WhatsApp
-</a>
-
-<a class="btn btn-primary" href="tel:+212678774597"
+<a
+class="btn btn-primary"
+href="tel:+212678774597"
 data-fr="Appeler maintenant"
 data-ar="اتصل الآن"
 data-en="Call now"
 data-es="Llamar ahora">
 Appeler maintenant
 </a>
+
+<a
+class="btn btn-primary"
+href="https://wa.me/212678774597">
+WhatsApp
+</a>
+
+</div>
 
 </div>
 
@@ -980,11 +1824,11 @@ Appeler maintenant
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<p><strong>TARCI</strong></p>
+<div class="footer-logo">TARCI</div>
 
 <p
 data-fr="Construction • Bâtiment • Rénovation"
@@ -994,12 +1838,14 @@ data-es="Construcción • Edificación • Renovación">
 Construction • Bâtiment • Rénovation
 </p>
 
-<p>© 2026 TARCI - Marrakech, Maroc</p>
+<p>
+© 2026 TARCI — Marrakech, Maroc
+</p>
 
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- ================= WHATSAPP ================= -->
 
 <a
 class="whatsapp"
@@ -1011,56 +1857,76 @@ aria-label="WhatsApp">
 
 <script>
 
-function setLanguage(lang) {
+/* MENU MOBILE */
 
-    const elements = document.querySelectorAll("[data-" + lang + "]");
+function toggleMenu(){
 
-    elements.forEach(function(element) {
-        element.textContent = element.getAttribute("data-" + lang);
-    });
+    document.getElementById("mainNav")
+        .classList.toggle("open");
 
-    document.documentElement.lang = lang;
-
-    if (lang === "ar") {
-        document.documentElement.dir = "rtl";
-    } else {
-        document.documentElement.dir = "ltr";
-    }
-
-    document.querySelectorAll(".lang").forEach(function(button) {
-        button.classList.remove("active");
-    });
-
-    const activeButton = document.querySelector(
-        '.lang[onclick="setLanguage(\'' + lang + '\')"]'
-    );
-
-    if (activeButton) {
-        activeButton.classList.add("active");
-    }
-
-    try {
-        localStorage.setItem("tarci-language", lang);
-    } catch (e) {}
+    document.getElementById("languages")
+        .classList.toggle("open");
 
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+/* LANGUAGES */
 
-    let savedLanguage = "fr";
+function setLanguage(lang){
 
-    try {
-        savedLanguage = localStorage.getItem("tarci-language") || "fr";
-    } catch (e) {}
+    const elements =
+        document.querySelectorAll("[data-" + lang + "]");
 
-    if (
-        savedLanguage !== "fr" &&
-        savedLanguage !== "ar" &&
-        savedLanguage !== "en" &&
-        savedLanguage !== "es"
-    ) {
-        savedLanguage = "fr";
+    elements.forEach(function(element){
+
+        element.textContent =
+            element.getAttribute("data-" + lang);
+
+    });
+
+    document.documentElement.lang = lang;
+
+    if(lang === "ar"){
+        document.documentElement.dir = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+    }
+
+    document.querySelectorAll(".lang").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    const active =
+        document.querySelector(
+            '.lang[onclick="setLanguage(\'' + lang + '\')"]'
+        );
+
+    if(active){
+        active.classList.add("active");
+    }
+
+    try{
+        localStorage.setItem("tarci-language",lang);
+    }catch(e){}
+
+}
+
+
+/* LOAD LANGUAGE */
+
+document.addEventListener("DOMContentLoaded",function(){
+
+    let savedLanguage="fr";
+
+    try{
+        savedLanguage =
+            localStorage.getItem("tarci-language") || "fr";
+    }catch(e){}
+
+    if(
+        !["fr","ar","en","es"].includes(savedLanguage)
+    ){
+        savedLanguage="fr";
     }
 
     setLanguage(savedLanguage);
