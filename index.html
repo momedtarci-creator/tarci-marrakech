@@ -13,14 +13,23 @@ content="TARCI - Entreprise de construction, bâtiment, rénovation, villas et p
 content="TARCI, TARCI Marrakech, entreprise construction Marrakech, bâtiment Marrakech, villas Marrakech, rénovation Marrakech">
 
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
-<meta property="og:title" content="TARCI Marrakech | Construction, bâtiment et rénovation">
-<meta property="og:description" content="TARCI accompagne vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc.">
+<link rel="canonical"
+href="https://momedtarci-creator.github.io/tarci-marrakech/">
+
+<meta property="og:title"
+content="TARCI Marrakech | Construction, bâtiment et rénovation">
+
+<meta property="og:description"
+content="TARCI accompagne vos projets de construction, bâtiment et rénovation à Marrakech et au Maroc.">
+
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://momedtarci-creator.github.io/tarci-marrakech/">
+
+<meta property="og:url"
+content="https://momedtarci-creator.github.io/tarci-marrakech/">
 
 <style>
+
 :root{
   --navy:#08233f;
   --navy2:#0d3155;
@@ -47,6 +56,7 @@ body{
   color:var(--text);
   background:#fff;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 a{
@@ -64,7 +74,8 @@ img{
   margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
   position:sticky;
   top:0;
@@ -83,6 +94,7 @@ header{
 
 .logo img{
   width:150px;
+  height:auto;
 }
 
 .nav-links{
@@ -125,11 +137,13 @@ header{
 .menu-btn{
   display:none;
   color:#fff;
-  font-size:27px;
+  font-size:28px;
   cursor:pointer;
+  user-select:none;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
   min-height:650px;
   display:flex;
@@ -203,7 +217,8 @@ header{
   color:var(--navy);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 section{
   padding:80px 0;
 }
@@ -230,7 +245,8 @@ section{
   margin-bottom:35px;
 }
 
-/* INTRO */
+/* ================= INTRO ================= */
+
 .intro{
   background:#fff;
 }
@@ -250,4 +266,1947 @@ section{
 
 .intro-card h3{
   color:var(--navy);
-  margin
+  margin-bottom:10px;
+}
+
+.intro-card p{
+  color:var(--muted);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:var(--light);
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+}
+
+.service-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.service-content{
+  padding:24px;
+}
+
+.service-content h3{
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:21px;
+}
+
+.service-content p{
+  color:var(--muted);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#fff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-image img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.about-list{
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+
+.about-list li{
+  position:relative;
+  padding-left:28px;
+  color:var(--text);
+  font-weight:600;
+}
+
+.about-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--gold);
+  font-weight:800;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  background:var(--light);
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.project-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  height:280px;
+  background:#ddd;
+}
+
+.project-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.project-card:hover img{
+  transform:scale(1.05);
+}
+
+.project-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:45px 20px 18px;
+  color:#fff;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+
+.project-overlay h3{
+  font-size:20px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+  background:#fff;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.why-card{
+  text-align:center;
+  padding:25px 18px;
+  border:1px solid #e7ebef;
+  border-radius:10px;
+}
+
+.why-icon{
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#111;
+  font-size:23px;
+  font-weight:800;
+}
+
+.why-card h3{
+  color:var(--navy);
+  margin-bottom:8px;
+  font-size:18px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  padding:65px 0;
+  background:
+    linear-gradient(rgba(8,35,63,.92),rgba(8,35,63,.92)),
+    url("tarci-hero-bg.png") center/cover no-repeat;
+  color:#fff;
+}
+
+.cta-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  color:#e7edf3;
+  max-width:700px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:var(--light);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+
+.contact-card{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+.contact-card h3{
+  color:var(--navy);
+  margin-bottom:18px;
+  font-size:24px;
+}
+
+.contact-item{
+  display:flex;
+  gap:15px;
+  margin-bottom:18px;
+  align-items:flex-start;
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--gold);
+  color:#111;
+  font-weight:800;
+}
+
+.contact-item strong{
+  display:block;
+  color:var(--navy);
+}
+
+.contact-item span,
+.contact-item a{
+  color:var(--muted);
+}
+
+.contact-form{
+  display:grid;
+  gap:14px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:13px 15px;
+  border:1px solid #dfe4e9;
+  border-radius:6px;
+  font-family:inherit;
+  font-size:15px;
+  outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--gold);
+}
+
+.contact-form textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.contact-form button{
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#061b30;
+  color:#fff;
+  padding:35px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:30px;
+  padding-bottom:25px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.footer-logo img{
+  width:145px;
+  margin-bottom:15px;
+}
+
+.footer p{
+  color:#b9c5d0;
+  font-size:14px;
+}
+
+.footer h3{
+  margin-bottom:13px;
+  color:#fff;
+  font-size:17px;
+}
+
+.footer-links{
+  display:grid;
+  gap:8px;
+}
+
+.footer-links a{
+  color:#b9c5d0;
+  font-size:14px;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+.copyright{
+  text-align:center;
+  padding-top:20px;
+  color:#91a0ae;
+  font-size:13px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  font-weight:bold;
+  z-index:999;
+  box-shadow:0 5px 18px rgba(0,0,0,.25);
+}
+
+.whatsapp:hover{
+  transform:scale(1.06);
+}
+
+/* ================= RTL ================= */
+
+html[dir="rtl"] body{
+  text-align:right;
+}
+
+html[dir="rtl"] .about-list li{
+  padding-left:0;
+  padding-right:28px;
+}
+
+html[dir="rtl"] .about-list li::before{
+  left:auto;
+  right:0;
+}
+
+html[dir="rtl"] .contact-item{
+  flex-direction:row;
+}
+
+html[dir="rtl"] .nav-links{
+  direction:rtl;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .navbar{
+    min-height:68px;
+  }
+
+  .logo img{
+    width:125px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:68px;
+    left:0;
+    right:0;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    background:var(--navy);
+    padding:10px 5%;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px 5px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .languages{
+    padding:13px 5px;
+    justify-content:flex-start;
+  }
+
+  .hero{
+    min-height:590px;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .hero-subtitle{
+    font-size:19px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .intro-grid,
+  .services-grid,
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-image img{
+    height:380px;
+  }
+
+  .cta-content{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:60px 0;
+  }
+
+  .container{
+    width:90%;
+  }
+
+  .hero{
+    min-height:560px;
+    background-position:center;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-subtitle{
+    font-size:18px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+
+  .intro-grid,
+  .services-grid,
+  .projects-grid,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card img{
+    height:210px;
+  }
+
+  .project-card{
+    height:250px;
+  }
+
+  .about-image img{
+    height:300px;
+  }
+
+  .cta h2{
+    font-size:28px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .whatsapp{
+    width:54px;
+    height:54px;
+    right:15px;
+    bottom:15px;
+  }
+
+}
+
+/* ================= ARABIC MOBILE ================= */
+
+@media(max-width:600px){
+
+  html[dir="rtl"] .nav-links{
+    text-align:right;
+  }
+
+  html[dir="rtl"] .languages{
+    justify-content:flex-start;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+<img src="tarci-logo-sans-sarl.png" alt="TARCI Marrakech">
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home" data-i18n="nav_home">Accueil</a>
+<a href="#services" data-i18n="nav_services">Services</a>
+<a href="#about" data-i18n="nav_about">À propos</a>
+<a href="#projects" data-i18n="nav_projects">Projets</a>
+<a href="#contact" data-i18n="nav_contact">Contact</a>
+
+<div class="languages">
+
+<button class="lang-btn active" data-lang="fr" onclick="applyLanguage('fr')">FR</button>
+<button class="lang-btn" data-lang="ar" onclick="applyLanguage('ar')">AR</button>
+<button class="lang-btn" data-lang="en" onclick="applyLanguage('en')">EN</button>
+<button class="lang-btn" data-lang="es" onclick="applyLanguage('es')">ES</button>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+TARCI <span>Marrakech</span>
+</h1>
+
+<div class="hero-subtitle" data-i18n="hero_subtitle">
+Construction • Bâtiment • Rénovation
+</div>
+
+<p data-i18n="hero_text">
+Votre partenaire pour la construction de maisons, villas et bâtiments professionnels à Marrakech et au Maroc.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn btn-primary" data-i18n="hero_btn">
+Demander un devis
+</a>
+
+<a href="#projects" class="btn btn-outline" data-i18n="hero_btn2">
+Voir nos projets
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+<div class="container">
+
+<div class="section-label" data-i18n="intro_label">
+TARCI Marrakech
+</div>
+
+<h2 class="section-title" data-i18n="intro_title">
+Construction et rénovation à Marrakech
+</h2>
+
+<p class="section-intro" data-i18n="intro_text">
+TARCI vous accompagne dans vos projets de construction, rénovation et bâtiment avec une organisation adaptée à chaque projet.
+</p>
+
+<div class="intro-grid">
+
+<div class="intro-card">
+
+<h3 data-i18n="intro1_title">
+Construction
+</h3>
+
+<p data-i18n="intro1_text">
+Bâtiment de maisons, villas et bâtiments professionnels avec une organisation adaptée à chaque projet.
+</p>
+
+</div>
+
+
+<div class="intro-card">
+
+<h3 data-i18n="intro2_title">
+Qualité
+</h3>
+
+<p data-i18n="intro2_text">
+Un travail soigné et un suivi sérieux pour assurer la qualité de chaque réalisation.
+</p>
+
+</div>
+
+
+<div class="intro-card">
+
+<h3 data-i18n="intro3_title">
+Marrakech
+</h3>
+
+<p data-i18n="intro3_text">
+Une entreprise basée à Marrakech et disponible pour différents projets au Maroc.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-label" data-i18n="services_label">
+Nos services
+</div>
+
+<h2 class="section-title" data-i18n="services_title">
+Nos domaines d'intervention
+</h2>
+
+<p class="section-intro" data-i18n="services_intro">
+TARCI intervient dans plusieurs domaines de la construction et de la rénovation.
+</p>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+alt="Construction de maison">
+
+<div class="service-content">
+
+<h3 data-i18n="service1_title">
+Construction de maisons
+</h3>
+
+<p data-i18n="service1_text">
+Construction et réalisation de maisons modernes selon les besoins du client.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+alt="Construction de villa">
+
+<div class="service-content">
+
+<h3 data-i18n="service2_title">
+Construction de villas
+</h3>
+
+<p data-i18n="service2_text">
+Construction et réalisation de villas et projets résidentiels modernes à Marrakech.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
+alt="Bâtiment professionnel">
+
+<div class="service-content">
+
+<h3 data-i18n="service3_title">
+Bâtiments professionnels
+</h3>
+
+<p data-i18n="service3_text">
+Construction et travaux pour bâtiments professionnels et différents projets.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1000&q=85"
+alt="Rénovation">
+
+<div class="service-content">
+
+<h3 data-i18n="service4_title">
+Rénovation
+</h3>
+
+<p data-i18n="service4_text">
+Rénovation et amélioration de maisons, villas et bâtiments.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+alt="Travaux de construction">
+
+<div class="service-content">
+
+<h3 data-i18n="service5_title">
+Travaux de construction
+</h3>
+
+<p data-i18n="service5_text">
+Organisation et réalisation des différents travaux nécessaires au projet.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85"
+alt="Suivi de chantier">
+
+<div class="service-content">
+
+<h3 data-i18n="service6_title">
+Suivi de chantier
+</h3>
+
+<p data-i18n="service6_text">
+Suivi et coordination des travaux pour une réalisation organisée.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85"
+alt="Chantier de construction TARCI">
+
+</div>
+
+
+<div class="about-text">
+
+<div class="section-label" data-i18n="about_label">
+À propos de TARCI
+</div>
+
+<h2 class="section-title" data-i18n="about_title">
+Une entreprise de construction à Marrakech
+</h2>
+
+<p data-i18n="about_text">
+TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech et au Maroc.
+</p>
+
+<ul class="about-list">
+
+<li data-i18n="about_list1">
+Construction des maisons et des villas
+</li>
+
+<li data-i18n="about_list2">
+Travaux de bâtiment
+</li>
+
+<li data-i18n="about_list3">
+Rénovation et amélioration
+</li>
+
+<li data-i18n="about_list4">
+Suivi et organisation des travaux
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-label" data-i18n="projects_label">
+Nos réalisations
+</div>
+
+<h2 class="section-title" data-i18n="projects_title">
+Quelques projets
+</h2>
+
+<p class="section-intro" data-i18n="projects_intro">
+Découvrez quelques exemples de projets et de réalisations dans le domaine du bâtiment.
+</p>
+
+
+<div class="projects-grid">
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
+alt="Maison moderne">
+
+<div class="project-overlay">
+
+<h3 data-i18n="project1">
+Maison moderne
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
+alt="Villa moderne">
+
+<div class="project-overlay">
+
+<h3 data-i18n="project2">
+Villa moderne
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+alt="Projet professionnel">
+
+<div class="project-overlay">
+
+<h3 data-i18n="project3">
+Projet professionnel
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY ================= -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-label" data-i18n="why_label">
+Pourquoi TARCI
+</div>
+
+<h2 class="section-title" data-i18n="why_title">
+Un accompagnement adapté à votre projet
+</h2>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<div class="why-icon">✓</div>
+
+<h3 data-i18n="why1_title">
+Sérieux
+</h3>
+
+<p data-i18n="why1_text">
+Une organisation professionnelle pour chaque projet.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">◆</div>
+
+<h3 data-i18n="why2_title">
+Qualité
+</h3>
+
+<p data-i18n="why2_text">
+Une attention particulière portée aux détails.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">⌂</div>
+
+<h3 data-i18n="why3_title">
+Expérience
+</h3>
+
+<p data-i18n="why3_text">
+Des solutions adaptées aux besoins du chantier.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">★</div>
+
+<h3 data-i18n="why4_title">
+Proximité
+</h3>
+
+<p data-i18n="why4_text">
+Une entreprise basée à Marrakech.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container cta-content">
+
+<div>
+
+<h2 data-i18n="cta_title">
+Un projet de construction ?
+</h2>
+
+<p data-i18n="cta_text">
+Parlez-nous de votre projet et découvrez comment TARCI peut vous accompagner.
+</p>
+
+</div>
+
+<a href="#contact" class="btn btn-primary" data-i18n="cta_button">
+Nous contacter
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-label" data-i18n="contact_label">
+Contact
+</div>
+
+<h2 class="section-title" data-i18n="contact_title">
+Parlons de votre projet
+</h2>
+
+<p class="section-intro" data-i18n="contact_intro">
+Construction d'une maison, d'une villa, d'un bâtiment professionnel ou rénovation à Marrakech ? Contactez TARCI.
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3 data-i18n="contact_info">
+Informations
+</h3>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">☎</div>
+
+<div>
+
+<strong data-i18n="phone_label">
+Téléphone
+</strong>
+
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+
+<br>
+
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">✉</div>
+
+<div>
+
+<strong>Email</strong>
+
+<a href="mailto:tarcitravaux@gmail.com">
+tarcitravaux@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">⌂</div>
+
+<div>
+
+<strong data-i18n="location_label">
+Localisation
+</strong>
+
+<span>
+Marrakech, Maroc
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="contact-card">
+
+<h3 data-i18n="contact_project">
+Votre projet
+</h3>
+
+<p style="color:var(--muted);margin-bottom:20px"
+data-i18n="contact_project_text">
+
+Construction d'une maison, d'une villa ou d'un bâtiment professionnel à Marrakech ? Contactez TARCI pour parler de vos besoins.
+
+</p>
+
+
+<form class="contact-form"
+action="mailto:tarcitravaux@gmail.com"
+method="post"
+enctype="text/plain">
+
+<input
+type="text"
+name="Nom"
+placeholder="Nom"
+data-placeholder="name_placeholder"
+required>
+
+<input
+type="tel"
+name="Téléphone"
+placeholder="Téléphone"
+data-placeholder="phone_placeholder"
+required>
+
+<input
+type="email"
+name="Email"
+placeholder="Email"
+data-placeholder="email_placeholder">
+
+<textarea
+name="Projet"
+placeholder="Décrivez votre projet"
+data-placeholder="message_placeholder"></textarea>
+
+<button type="submit" class="btn btn-primary"
+data-i18n="send_button">
+Envoyer
+</button>
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+
+<img src="tarci-logo-sans-sarl.png"
+alt="TARCI">
+
+</div>
+
+<p data-i18n="footer_text">
+TARCI, entreprise de construction, bâtiment et rénovation à Marrakech.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 data-i18n="footer_links_title">
+Navigation
+</h3>
+
+<div class="footer-links">
+
+<a href="#home" data-i18n="nav_home">
+Accueil
+</a>
+
+<a href="#services" data-i18n="nav_services">
+Services
+</a>
+
+<a href="#about" data-i18n="nav_about">
+À propos
+</a>
+
+<a href="#projects" data-i18n="nav_projects">
+Projets
+</a>
+
+<a href="#contact" data-i18n="nav_contact">
+Contact
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3 data-i18n="footer_contact_title">
+Contact
+</h3>
+
+<div class="footer-links">
+
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+
+<a href="mailto:tarcitravaux@gmail.com">
+tarcitravaux@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span> STE TARCI SARL AU — Marrakech, Maroc
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/212678774597"
+target="_blank"
+aria-label="WhatsApp">
+
+☎
+
+</a>
+
+
+<script>
+
+/* ================= MENU ================= */
+
+function toggleMenu(){
+
+  const nav = document.getElementById("navLinks");
+
+  nav.classList.toggle("show");
+
+}
+
+
+/* ================= TRANSLATIONS ================= */
+
+const translations = {
+
+fr:{
+
+nav_home:"Accueil",
+nav_services:"Services",
+nav_about:"À propos",
+nav_projects:"Projets",
+nav_contact:"Contact",
+
+hero_subtitle:"Construction • Bâtiment • Rénovation",
+
+hero_text:"Votre partenaire pour la construction de maisons, villas et bâtiments professionnels à Marrakech et au Maroc.",
+
+hero_btn:"Demander un devis",
+hero_btn2:"Voir nos projets",
+
+intro_label:"TARCI Marrakech",
+intro_title:"Construction et rénovation à Marrakech",
+
+intro_text:"TARCI vous accompagne dans vos projets de construction, rénovation et bâtiment avec une organisation adaptée à chaque projet.",
+
+intro1_title:"Construction",
+intro1_text:"Bâtiment de maisons, villas et bâtiments professionnels avec une organisation adaptée à chaque projet.",
+
+intro2_title:"Qualité",
+intro2_text:"Un travail soigné et un suivi sérieux pour assurer la qualité de chaque réalisation.",
+
+intro3_title:"Marrakech",
+intro3_text:"Une entreprise basée à Marrakech et disponible pour différents projets au Maroc.",
+
+services_label:"Nos services",
+services_title:"Nos domaines d'intervention",
+
+services_intro:"TARCI intervient dans plusieurs domaines de la construction et de la rénovation.",
+
+service1_title:"Construction de maisons",
+service1_text:"Construction et réalisation de maisons modernes selon les besoins du client.",
+
+service2_title:"Construction de villas",
+service2_text:"Construction et réalisation de villas et projets résidentiels modernes à Marrakech.",
+
+service3_title:"Bâtiments professionnels",
+service3_text:"Construction et travaux pour bâtiments professionnels et différents projets.",
+
+service4_title:"Rénovation",
+service4_text:"Rénovation et amélioration de maisons, villas et bâtiments.",
+
+service5_title:"Travaux de construction",
+service5_text:"Organisation et réalisation des différents travaux nécessaires au projet.",
+
+service6_title:"Suivi de chantier",
+service6_text:"Suivi et coordination des travaux pour une réalisation organisée.",
+
+about_label:"À propos de TARCI",
+about_title:"Une entreprise de construction à Marrakech",
+
+about_text:"TARCI accompagne ses clients dans leurs projets de construction, bâtiment et rénovation à Marrakech et au Maroc.",
+
+about_list1:"Construction des maisons et des villas",
+about_list2:"Travaux de bâtiment",
+about_list3:"Rénovation et amélioration",
+about_list4:"Suivi et organisation des travaux",
+
+projects_label:"Nos réalisations",
+projects_title:"Quelques projets",
+
+projects_intro:"Découvrez quelques exemples de projets et de réalisations dans le domaine du bâtiment.",
+
+project1:"Maison moderne",
+project2:"Villa moderne",
+project3:"Projet professionnel",
+
+why_label:"Pourquoi TARCI",
+why_title:"Un accompagnement adapté à votre projet",
+
+why1_title:"Sérieux",
+why1_text:"Une organisation professionnelle pour chaque projet.",
+
+why2_title:"Qualité",
+why2_text:"Une attention particulière portée aux détails.",
+
+why3_title:"Expérience",
+why3_text:"Des solutions adaptées aux besoins du chantier.",
+
+why4_title:"Proximité",
+why4_text:"Une entreprise basée à Marrakech.",
+
+cta_title:"Un projet de construction ?",
+cta_text:"Parlez-nous de votre projet et découvrez comment TARCI peut vous accompagner.",
+cta_button:"Nous contacter",
+
+contact_label:"Contact",
+contact_title:"Parlons de votre projet",
+
+contact_intro:"Construction d'une maison, d'une villa, d'un bâtiment professionnel ou rénovation à Marrakech ? Contactez TARCI.",
+
+contact_info:"Informations",
+phone_label:"Téléphone",
+location_label:"Localisation",
+
+contact_project:"Votre projet",
+
+contact_project_text:"Construction d'une maison, d'une villa ou d'un bâtiment professionnel à Marrakech ? Contactez TARCI pour parler de vos besoins.",
+
+name_placeholder:"Nom",
+phone_placeholder:"Téléphone",
+email_placeholder:"Email",
+message_placeholder:"Décrivez votre projet",
+
+send_button:"Envoyer",
+
+footer_text:"TARCI, entreprise de construction, bâtiment et rénovation à Marrakech.",
+
+footer_links_title:"Navigation",
+footer_contact_title:"Contact"
+
+},
+
+
+ar:{
+
+nav_home:"الرئيسية",
+nav_services:"الخدمات",
+nav_about:"من نحن",
+nav_projects:"المشاريع",
+nav_contact:"اتصل بنا",
+
+hero_subtitle:"البناء • الأشغال • التجديد",
+
+hero_text:"شريككم في بناء المنازل والڤيلات والمباني المهنية بمراكش والمغرب.",
+
+hero_btn:"طلب عرض سعر",
+hero_btn2:"مشاهدة مشاريعنا",
+
+intro_label:"TARCI مراكش",
+intro_title:"البناء والتجديد في مراكش",
+
+intro_text:"ترافقكم TARCI في مشاريع البناء والتجديد والأشغال، مع تنظيم مناسب لكل مشروع.",
+
+intro1_title:"البناء",
+intro1_text:"بناء المنازل والڤيلات والمباني المهنية مع تنظيم مناسب لكل مشروع.",
+
+intro2_title:"الجودة",
+intro2_text:"عمل متقن وتتبع جدي لضمان جودة كل مشروع.",
+
+intro3_title:"مراكش",
+intro3_text:"شركة مقرها مراكش وتعمل على مختلف المشاريع بالمغرب.",
+
+services_label:"خدماتنا",
+services_title:"مجالات تدخلنا",
+
+services_intro:"تقدم TARCI مجموعة من الخدمات في مجال البناء والتجديد.",
+
+service1_title:"بناء المنازل",
+service1_text:"بناء وإنجاز المنازل الحديثة حسب احتياجات الزبون.",
+
+service2_title:"بناء الڤيلات",
+service2_text:"بناء وتجهيز الڤيلات والمشاريع السكنية الحديثة بمراكش.",
+
+service3_title:"المباني المهنية",
+service3_text:"بناء وإنجاز المباني المهنية ومختلف المشاريع.",
+
+service4_title:"التجديد",
+service4_text:"تجديد وتحسين المنازل والڤيلات والمباني.",
+
+service5_title:"أشغال البناء",
+service5_text:"تنظيم وإنجاز مختلف الأشغال الضرورية للمشروع.",
+
+service6_title:"تتبع الورش",
+service6_text:"تتبع وتنسيق الأشغال من أجل إنجاز منظم.",
+
+about_label:"عن TARCI",
+about_title:"شركة بناء في مراكش",
+
+about_text:"ترافق TARCI زبناءها في مشاريع البناء والأشغال والتجديد في مراكش والمغرب.",
+
+about_list1:"بناء المنازل والڤيلات",
+about_list2:"أشغال البناء",
+about_list3:"التجديد والتحسين",
+about_list4:"تتبع وتنظيم الأشغال",
+
+projects_label:"إنجازاتنا",
+projects_title:"بعض المشاريع",
+
+projects_intro:"اكتشفوا بعض الأمثلة عن مشاريع وإنجازات في مجال البناء.",
+
+project1:"منزل عصري",
+project2:"ڤيلا عصرية",
+project3:"مشروع مهني",
+
+why_label:"لماذا TARCI",
+why_title:"مواكبة مناسبة لمشروعكم",
+
+why1_title:"الجدية",
+why1_text:"تنظيم مهني لكل مشروع.",
+
+why2_title:"الجودة",
+why2_text:"اهتمام خاص بالتفاصيل.",
+
+why3_title:"الخبرة",
+why3_text:"حلول مناسبة لاحتياجات الورش.",
+
+why4_title:"القرب",
+why4_text:"شركة مقرها مراكش.",
+
+cta_title:"عندك مشروع بناء؟",
+cta_text:"تواصل معنا وتحدث عن مشروعك واكتشف كيف يمكن لـ TARCI مواكبتك.",
+cta_button:"تواصل معنا",
+
+contact_label:"اتصل بنا",
+contact_title:"لنتحدث عن مشروعكم",
+
+contact_intro:"بناء منزل أو ڤيلا أو مبنى مهني أو تجديد بمراكش؟ تواصل مع TARCI للحديث عن احتياجاتك.",
+
+contact_info:"معلومات الاتصال",
+phone_label:"الهاتف",
+location_label:"الموقع",
+
+contact_project:"مشروعكم",
+
+contact_project_text:"بناء منزل أو ڤيلا أو مبنى مهني أو تجديد بمراكش؟ تواصل مع TARCI للحديث عن احتياجاتك.",
+
+name_placeholder:"الاسم",
+phone_placeholder:"الهاتف",
+email_placeholder:"البريد الإلكتروني",
+message_placeholder:"صف مشروعك",
+
+send_button:"إرسال",
+
+footer_text:"TARCI، شركة البناء والأشغال والتجديد في مراكش.",
+
+footer_links_title:"التنقل",
+footer_contact_title:"اتصل بنا"
+
+},
+
+
+en:{
+
+nav_home:"Home",
+nav_services:"Services",
+nav_about:"About",
+nav_projects:"Projects",
+nav_contact:"Contact",
+
+hero_subtitle:"Construction • Building • Renovation",
+
+hero_text:"Your partner for the construction of homes, villas and professional buildings in Marrakech and Morocco.",
+
+hero_btn:"Request a quote",
+hero_btn2:"Our projects",
+
+intro_label:"TARCI Marrakech",
+intro_title:"Construction and renovation in Marrakech",
+
+intro_text:"TARCI supports you in your construction, building and renovation projects with an organization adapted to each project.",
+
+intro1_title:"Construction",
+intro1_text:"Construction of homes, villas and professional buildings with an organization adapted to each project.",
+
+intro2_title:"Quality",
+intro2_text:"Careful work and serious follow-up to ensure the quality of every project.",
+
+intro3_title:"Marrakech",
+intro3_text:"A company based in Marrakech and available for different projects in Morocco.",
+
+services_label:"Our services",
+services_title:"Our areas of expertise",
+
+services_intro:"TARCI operates in several areas of construction and renovation.",
+
+service1_title:"House construction",
+service1_text:"Construction and realization of modern homes according to the client's needs.",
+
+service2_title:"Villa construction",
+service2_text:"Construction and realization of villas and modern residential projects in Marrakech.",
+
+service3_title:"Professional buildings",
+service3_text:"Construction and work for professional buildings and various projects.",
+
+service4_title:"Renovation",
+service4_text:"Renovation and improvement of homes, villas and buildings.",
+
+service5_title:"Construction works",
+service5_text:"Organization and execution of the various works required for the project.",
+
+service6_title:"Site supervision",
+service6_text:"Monitoring and coordination of works for an organized project.",
+
+about_label:"About TARCI",
+about_title:"A construction company in Marrakech",
+
+about_text:"TARCI supports its clients in construction, building and renovation projects in Marrakech and Morocco.",
+
+about_list1:"Construction of homes and villas",
+about_list2:"Building works",
+about_list3:"Renovation and improvement",
+about_list4:"Work monitoring and organization",
+
+projects_label:"Our projects",
+projects_title:"Some projects",
+
+projects_intro:"Discover some examples of projects and achievements in the construction field.",
+
+project1:"Modern house",
+project2:"Modern villa",
+project3:"Professional project",
+
+why_label:"Why TARCI",
+why_title:"Support adapted to your project",
+
+why1_title:"Professionalism",
+why1_text:"Professional organization for every project.",
+
+why2_title:"Quality",
+why2_text:"Special attention to details.",
+
+why3_title:"Experience",
+why3_text:"Solutions adapted to site requirements.",
+
+why4_title:"Local",
+why4_text:"A company based in Marrakech.",
+
+cta_title:"Have a construction project?",
+cta_text:"Tell us about your project and discover how TARCI can support you.",
+cta_button:"Contact us",
+
+contact_label:"Contact",
+contact_title:"Let's talk about your project",
+
+contact_intro:"Building a home, villa, professional building or renovation in Marrakech? Contact TARCI.",
+
+contact_info:"Information",
+phone_label:"Phone",
+location_label:"Location",
+
+contact_project:"Your project",
+
+contact_project_text:"Building a home, villa or professional building in Marrakech? Contact TARCI to discuss your needs.",
+
+name_placeholder:"Name",
+phone_placeholder:"Phone",
+email_placeholder:"Email",
+message_placeholder:"Describe your project",
+
+send_button:"Send",
+
+footer_text:"TARCI, construction, building and renovation company in Marrakech.",
+
+footer_links_title:"Navigation",
+footer_contact_title:"Contact"
+
+},
+
+
+es:{
+
+nav_home:"Inicio",
+nav_services:"Servicios",
+nav_about:"Nosotros",
+nav_projects:"Proyectos",
+nav_contact:"Contacto",
+
+hero_subtitle:"Construcción • Edificación • Renovación",
+
+hero_text:"Su socio para la construcción de casas, villas y edificios profesionales en Marrakech y Marruecos.",
+
+hero_btn:"Solicitar presupuesto",
+hero_btn2:"Ver proyectos",
+
+intro_label:"TARCI Marrakech",
+intro_title:"Construcción y renovación en Marrakech",
+
+intro_text:"TARCI le acompaña en sus proyectos de construcción, edificación y renovación con una organización adaptada a cada proyecto.",
+
+intro1_title:"Construcción",
+intro1_text:"Construcción de casas, villas y edificios profesionales con una organización adaptada a cada proyecto.",
+
+intro2_title:"Calidad",
+intro2_text:"Trabajo cuidadoso y seguimiento serio para garantizar la calidad de cada proyecto.",
+
+intro3_title:"Marrakech",
+intro3_text:"Una empresa con sede en Marrakech y disponible para diferentes proyectos en Marruecos.",
+
+services_label:"Nuestros servicios",
+services_title:"Nuestras áreas de trabajo",
+
+services_intro:"TARCI trabaja en diferentes áreas de construcción y renovación.",
+
+service1_title:"Construcción de casas",
+service1_text:"Construcción de casas modernas según las necesidades del cliente.",
+
+service2_title:"Construcción de villas",
+service2_text:"Construcción de villas y proyectos residenciales modernos en Marrakech.",
+
+service3_title:"Edificios profesionales",
+service3_text:"Construcción y trabajos para edificios profesionales y diferentes proyectos.",
+
+service4_title:"Renovación",
+service4_text:"Renovación y mejora de casas, villas y edificios.",
+
+service5_title:"Trabajos de construcción",
+service5_text:"Organización y realización de los trabajos necesarios para el proyecto.",
+
+service6_title:"Seguimiento de obra",
+service6_text:"Seguimiento y coordinación de los trabajos.",
+
+about_label:"Sobre TARCI",
+about_title:"Una empresa de construcción en Marrakech",
+
+about_text:"TARCI acompaña a sus clientes en proyectos de construcción, edificación y renovación en Marrakech y Marruecos.",
+
+about_list1:"Construcción de casas y villas",
+about_list2:"Trabajos de construcción",
+about_list3:"Renovación y mejora",
+about_list4:"Seguimiento y organización de los trabajos",
+
+projects_label:"Nuestros proyectos",
+projects_title:"Algunos proyectos",
+
+projects_intro:"Descubra algunos ejemplos de proyectos y realizaciones en el sector de la construcción.",
+
+project1:"Casa moderna",
+project2:"Villa moderna",
+project3:"Proyecto profesional",
+
+why_label:"Por qué TARCI",
+why_title:"Un acompañamiento adaptado a su proyecto",
+
+why1_title:"Seriedad",
+why1_text:"Organización profesional para cada proyecto.",
+
+why2_title:"Calidad",
+why2_text:"Atención especial a los detalles.",
+
+why3_title:"Experiencia",
+why3_text:"Soluciones adaptadas a las necesidades de la obra.",
+
+why4_title:"Cercanía",
+why4_text:"Una empresa con sede en Marrakech.",
+
+cta_title:"¿Tiene un proyecto de construcción?",
+cta_text:"Háblenos de su proyecto y descubra cómo TARCI puede ayudarle.",
+cta_button:"Contactar",
+
+contact_label:"Contacto",
+contact_title:"Hablemos de su proyecto",
+
+contact_intro:"¿Construcción de una casa, villa, edificio profesional o renovación en Marrakech? Contacte con TARCI.",
+
+contact_info:"Información",
+phone_label:"Teléfono",
+location_label:"Ubicación",
+
+contact_project:"Su proyecto",
+
+contact_project_text:"¿Construcción de una casa, villa o edificio profesional en Marrakech? Contacte con TARCI para hablar de sus necesidades.",
+
+name_placeholder:"Nombre",
+phone_placeholder:"Teléfono",
+email_placeholder:"Email",
+message_placeholder:"Describa su proyecto",
+
+send_button:"Enviar",
+
+footer_text:"TARCI, empresa de construcción, edificación y renovación en Marrakech.",
+
+footer_links_title:"Navegación",
+footer_contact_title:"Contacto"
+
+}
+
+};
+
+
+/* ================= LANGUAGE ================= */
+
+function applyLanguage(lang){
+
+  const t = translations[lang];
+
+  if(!t) return;
+
+  document.documentElement.lang = lang;
+
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+    const key = el.getAttribute("data-i18n");
+
+    if(t[key] !== undefined){
+      el.textContent = t[key];
+    }
+
+  });
+
+
+  document.querySelectorAll("[data-placeholder]").forEach(el=>{
+
+    const key = el.getAttribute("data-placeholder");
+
+    if(t[key] !== undefined){
+      el.placeholder = t[key];
+    }
+
+  });
+
+
+  document.querySelectorAll(".lang-btn").forEach(btn=>{
+
+    btn.classList.toggle(
+      "active",
+      btn.dataset.lang === lang
+    );
+
+  });
+
+
+  localStorage.setItem("tarci-language",lang);
+
+  document.getElementById("navLinks").classList.remove("show");
+
+}
+
+
+/* ================= YEAR ================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* ================= LOAD LANGUAGE ================= */
+
+const savedLanguage =
+localStorage.getItem("tarci-language") || "fr";
+
+applyLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
