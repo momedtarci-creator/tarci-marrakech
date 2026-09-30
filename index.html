@@ -19,6 +19,10 @@ href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
 <style>
 
+/* =========================
+   VARIABLES
+========================= */
+
 :root{
   --navy:#071a33;
   --navy2:#0d294b;
@@ -29,6 +33,10 @@ href="https://momedtarci-creator.github.io/tarci-marrakech/">
   --muted:#657384;
   --border:#e3e8ee;
 }
+
+/* =========================
+   RESET
+========================= */
 
 *{
   margin:0;
@@ -57,12 +65,18 @@ a{
   color:inherit;
 }
 
+button{
+  font-family:inherit;
+}
+
 .container{
   width:min(1180px,92%);
   margin:auto;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
   position:fixed;
@@ -131,9 +145,12 @@ header{
   color:#fff;
   font-size:30px;
   cursor:pointer;
+  user-select:none;
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   min-height:720px;
@@ -141,8 +158,12 @@ header{
   display:flex;
   align-items:center;
   position:relative;
+
   background:
-    linear-gradient(rgba(4,19,37,.68),rgba(4,19,37,.68)),
+    linear-gradient(
+      rgba(4,19,37,.68),
+      rgba(4,19,37,.68)
+    ),
     url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85")
     center/cover no-repeat;
 }
@@ -207,7 +228,9 @@ header{
   color:var(--navy);
 }
 
-/* ================= SECTIONS ================= */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
   padding:85px 0;
@@ -230,7 +253,9 @@ section{
   margin:auto;
 }
 
-/* ================= SERVICES ================= */
+/* =========================
+   SERVICES
+========================= */
 
 .services{
   background:var(--light);
@@ -276,7 +301,9 @@ section{
   color:var(--muted);
 }
 
-/* ================= ABOUT ================= */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
   display:grid;
@@ -317,338 +344,4 @@ section{
   content:"✓";
   color:var(--gold);
   font-weight:900;
-  margin-right:10px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects{
-  background:var(--light);
-}
-
-.project-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.project{
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  height:300px;
-}
-
-.project img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.4s;
-}
-
-.project:hover img{
-  transform:scale(1.06);
-}
-
-.project-overlay{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:30px 20px 20px;
-  color:#fff;
-  background:linear-gradient(transparent,rgba(0,0,0,.85));
-}
-
-.project-overlay h3{
-  font-size:20px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-  background:var(--navy);
-  color:#fff;
-}
-
-.contact .section-title h2{
-  color:#fff;
-}
-
-.contact .section-title p{
-  color:#cbd5e1;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.contact-box{
-  padding:30px 20px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:12px;
-  background:rgba(255,255,255,.05);
-}
-
-.contact-box .icon{
-  font-size:32px;
-  margin-bottom:12px;
-}
-
-.contact-box h3{
-  margin-bottom:8px;
-  color:var(--gold);
-}
-
-.contact-box p,
-.contact-box a{
-  color:#e4eaf1;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  background:#041221;
-  color:#aeb8c5;
-  padding:28px 0;
-  text-align:center;
-  font-size:14px;
-}
-
-footer strong{
-  color:#fff;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  z-index:999;
-  box-shadow:0 5px 20px rgba(0,0,0,.25);
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:900px){
-
-  .navbar{
-    min-height:64px;
-  }
-
-  .logo img{
-    width:118px;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .nav-links{
-    position:absolute;
-    top:64px;
-    left:0;
-    width:100%;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    background:var(--navy);
-    padding:10px 0 18px;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-links li{
-    width:100%;
-  }
-
-  .nav-links a{
-    display:block;
-    padding:13px 25px;
-  }
-
-  .language{
-    padding:10px 25px;
-  }
-
-  .hero{
-    min-height:600px;
-    background-position:center center;
-  }
-
-  .hero h1{
-    font-size:44px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  .grid,
-  .project-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
-
-  section{
-    padding:65px 0;
-  }
-
-  .hero{
-    min-height:560px;
-  }
-
-  .hero h1{
-    font-size:38px;
-    line-height:1.08;
-  }
-
-  .hero p{
-    font-size:15px;
-    line-height:1.6;
-  }
-
-  .buttons{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-    min-height:48px;
-  }
-
-  .grid,
-  .project-grid{
-    grid-template-columns:1fr;
-  }
-
-  .section-title h2{
-    font-size:31px;
-  }
-
-  .about-image img{
-    height:330px;
-  }
-
-  .about-text h2{
-    font-size:32px;
-  }
-
-  .whatsapp{
-    width:54px;
-    height:54px;
-    right:15px;
-    bottom:15px;
-  }
-}
-
-/* ================= RTL ================= */
-
-html[dir="rtl"] body{
-  font-family:Arial,Tahoma,sans-serif;
-}
-
-html[dir="rtl"] .points li::before{
-  margin-right:0;
-  margin-left:10px;
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="container navbar">
-
-    <a href="#home" class="logo">
-      <img src="tarci-logo-sans-sarl.png" alt="TARCI Marrakech">
-    </a>
-
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-    <nav>
-      <ul class="nav-links" id="navLinks">
-
-        <li><a href="#home" data-i18n="home">Accueil</a></li>
-        <li><a href="#services" data-i18n="services">Services</a></li>
-        <li><a href="#about" data-i18n="about">À propos</a></li>
-        <li><a href="#projects" data-i18n="projects">Projets</a></li>
-        <li><a href="#contact" data-i18n="contact">Contact</a></li>
-
-        <li class="language">
-          <button onclick="setLanguage('fr')">FR</button>
-          <button onclick="setLanguage('ar')">AR</button>
-          <button onclick="setLanguage('en')">EN</button>
-          <button onclick="setLanguage('es')">ES</button>
-        </li>
-
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-
-      <h1>
-        <span>TARCI</span> Marrakech
-      </h1>
-
-      <p data-i18n="heroText">
-        Construction, bâtiment et rénovation à Marrakech.
-        Nous vous accompagnons dans la réalisation de vos maisons,
-        villas et projets professionnels.
-      </p>
-
-      <div class="buttons">
-        <a href="#contact" class="btn btn-primary" data-i18n="quote">
-          Demander un devis
-        </a>
-
-        <a href="https://wa.me/212678774597"
-           target="_blank"
-           class="btn btn-outline">
-          WhatsApp
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-
-<section class="services"
+  margin-right:
