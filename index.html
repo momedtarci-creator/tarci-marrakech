@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
@@ -8,3 +8,1628 @@
 content="TARCI — Construction, bâtiment, villas, rénovation et nettoyage. Des solutions professionnelles pour vos projets au Maroc.">
 
 <title>TARCI | Construction, Bâtiment & Rénovation</title>
+
+<style>
+:root{
+--navy:#063b78;
+--blue:#0757a5;
+--gold:#f4c542;
+--ink:#10233d;
+--muted:#66758a;
+--light:#f5f8fc;
+--white:#fff;
+--line:#e6edf5;
+--shadow:0 18px 50px rgba(7,39,78,.12)
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+color:var(--ink);
+background:#fff;
+line-height:1.6
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+img{
+max-width:100%;
+display:block
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:50;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(8,57,112,.08)
+}
+
+.nav{
+height:82px;
+display:flex;
+align-items:center;
+gap:28px
+}
+
+.logo{
+width:135px;
+height:48px;
+object-fit:contain;
+object-position:center
+}
+
+.links{
+display:flex;
+align-items:center;
+gap:26px;
+margin-left:auto;
+font-size:14px;
+font-weight:700
+}
+
+.links a{
+color:#16304f;
+transition:.2s
+}
+
+.links a:hover,
+.links a.active{
+color:var(--blue)
+}
+
+.head-contact{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:13px;
+font-weight:800
+}
+
+.phones{
+line-height:1.3;
+text-align:right
+}
+
+.wa,
+.primary{
+background:var(--navy);
+color:#fff;
+padding:12px 18px;
+border-radius:30px;
+font-weight:800;
+display:inline-flex;
+align-items:center;
+gap:8px
+}
+
+.wa:hover,
+.primary:hover{
+background:var(--blue)
+}
+
+.langs{
+display:flex;
+gap:5px
+}
+
+.lang{
+border:0;
+background:#eef3f9;
+color:var(--navy);
+border-radius:20px;
+padding:8px 11px;
+font-weight:800;
+cursor:pointer
+}
+
+.lang.active{
+background:var(--navy);
+color:#fff
+}
+
+.menu{
+display:none;
+border:0;
+background:none;
+font-size:27px;
+color:var(--navy)
+}
+
+/* HERO */
+
+.hero{
+padding-top:82px;
+min-height:690px;
+display:flex;
+align-items:stretch;
+background:#fff
+}
+
+.hero-inner{
+position:relative;
+width:100%;
+min-height:610px;
+background-image:url('assets/hero-construction.png');
+background-size:cover;
+background-position:center right;
+overflow:hidden
+}
+
+.hero-inner:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(255,255,255,.99) 0%,
+rgba(255,255,255,.96) 29%,
+rgba(255,255,255,.45) 48%,
+rgba(255,255,255,0) 67%
+)
+}
+
+.hero-copy{
+position:relative;
+z-index:2;
+width:min(600px,92%);
+padding-top:85px
+}
+
+.hero-logo{
+width:205px;
+height:74px;
+object-fit:contain;
+object-position:left center;
+margin-bottom:25px
+}
+
+.eyebrow{
+font-size:14px;
+letter-spacing:2.5px;
+font-weight:900;
+color:var(--blue);
+text-transform:uppercase;
+margin-bottom:12px
+}
+
+.hero h1{
+font-size:clamp(38px,5vw,68px);
+line-height:1.02;
+letter-spacing:-2px;
+color:var(--navy);
+max-width:620px;
+margin-bottom:22px
+}
+
+.hero p{
+font-size:18px;
+max-width:530px;
+color:#38506d;
+margin-bottom:30px
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.secondary{
+border:1.5px solid var(--navy);
+padding:11px 18px;
+border-radius:30px;
+font-weight:800;
+color:var(--navy);
+background:#fff
+}
+
+.secondary:hover{
+background:#eef5fc
+}
+
+.hero-note{
+position:absolute;
+right:5%;
+bottom:45px;
+z-index:3;
+background:rgba(6,59,120,.9);
+color:#fff;
+padding:16px 20px;
+border-radius:18px;
+box-shadow:var(--shadow);
+font-size:13px;
+font-weight:800;
+max-width:240px
+}
+
+.hero-note strong{
+display:block;
+color:var(--gold);
+font-size:20px;
+margin-bottom:3px
+}
+
+/* SECTIONS */
+
+.section{
+padding:90px 0
+}
+
+.section.alt{
+background:var(--light)
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+gap:40px;
+align-items:end;
+margin-bottom:35px
+}
+
+.kicker{
+font-size:12px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--blue);
+margin-bottom:8px
+}
+
+.section h2{
+font-size:clamp(30px,4vw,46px);
+line-height:1.08;
+color:var(--navy);
+letter-spacing:-1px
+}
+
+.lead{
+max-width:530px;
+color:var(--muted)
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px
+}
+
+.card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(9,40,75,.05);
+transition:.25s
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:var(--shadow)
+}
+
+.card-img{
+height:150px;
+object-fit:cover;
+width:100%
+}
+
+.card-body{
+padding:18px
+}
+
+.icon{
+width:42px;
+height:42px;
+border-radius:12px;
+background:#eaf3fc;
+color:var(--blue);
+display:grid;
+place-items:center;
+font-size:21px;
+margin-bottom:13px
+}
+
+.card h3{
+font-size:18px;
+color:var(--navy);
+margin-bottom:5px
+}
+
+.card p{
+font-size:13px;
+color:var(--muted)
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:55px;
+align-items:center
+}
+
+.about-photo{
+border-radius:25px;
+overflow:hidden;
+box-shadow:var(--shadow);
+min-height:450px;
+background:url('assets/hero-construction.png') center/cover
+}
+
+.checks{
+display:grid;
+gap:18px;
+margin-top:28px
+}
+
+.check{
+display:flex;
+gap:14px;
+align-items:flex-start
+}
+
+.check b{
+display:block;
+color:var(--navy);
+margin-bottom:2px
+}
+
+.check p{
+color:var(--muted);
+font-size:14px
+}
+
+.tick{
+width:31px;
+height:31px;
+flex:0 0 31px;
+border-radius:50%;
+background:#e9f3ff;
+color:var(--blue);
+display:grid;
+place-items:center;
+font-weight:900
+}
+
+/* VALUES */
+
+.values{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+
+.value{
+padding:28px;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px
+}
+
+.value .big{
+font-size:30px;
+margin-bottom:12px
+}
+
+.value h3{
+color:var(--navy);
+margin-bottom:6px
+}
+
+.value p{
+font-size:13px;
+color:var(--muted)
+}
+
+/* CTA */
+
+.cta{
+padding:70px 0
+}
+
+.cta-box{
+background:linear-gradient(120deg,var(--navy),#0b63b7);
+color:#fff;
+border-radius:28px;
+padding:48px 55px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+overflow:hidden;
+position:relative
+}
+
+.cta h2{
+color:#fff;
+margin-bottom:10px
+}
+
+.cta p{
+color:#dce9f8
+}
+
+.cta .primary{
+background:#fff;
+color:var(--navy);
+position:relative;
+z-index:2
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:22px
+}
+
+.contact-card{
+padding:30px;
+border:1px solid var(--line);
+border-radius:20px;
+background:#fff
+}
+
+.contact-card h3{
+color:var(--navy);
+margin-bottom:10px
+}
+
+.contact-card a{
+display:block;
+font-size:19px;
+font-weight:900;
+color:var(--blue);
+margin:5px 0
+}
+
+.small{
+font-size:13px;
+color:var(--muted)
+}
+
+/* FOOTER */
+
+footer{
+background:#061f3f;
+color:#dbe8f6;
+padding:45px 0 25px
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr;
+gap:40px
+}
+
+.footer-logo{
+width:145px;
+height:55px;
+object-fit:contain;
+background:#fff;
+border-radius:8px;
+padding:4px;
+margin-bottom:15px
+}
+
+.footer h3{
+color:#fff;
+font-size:15px;
+margin-bottom:12px
+}
+
+.footer a{
+display:block;
+font-size:13px;
+margin:7px 0;
+color:#cbd9e8
+}
+
+.copy{
+border-top:1px solid rgba(255,255,255,.12);
+margin-top:30px;
+padding-top:18px;
+font-size:12px;
+color:#9fb2c8;
+display:flex;
+justify-content:space-between;
+gap:15px
+}
+
+/* WHATSAPP */
+
+.float-wa{
+position:fixed;
+right:18px;
+bottom:18px;
+width:57px;
+height:57px;
+border-radius:50%;
+background:#20b85a;
+color:#fff;
+display:grid;
+place-items:center;
+font-size:25px;
+z-index:60;
+box-shadow:0 12px 30px rgba(0,0,0,.2)
+}
+
+/* TABLET */
+
+@media(max-width:1050px){
+
+.links{
+gap:14px
+}
+
+.head-contact{
+display:none
+}
+
+.services{
+grid-template-columns:repeat(3,1fr)
+}
+
+.values{
+grid-template-columns:repeat(2,1fr)
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+header{
+position:fixed
+}
+
+.nav{
+height:70px
+}
+
+.logo{
+width:115px
+}
+
+.menu{
+display:block;
+margin-left:auto
+}
+
+.links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+right:0;
+background:#fff;
+padding:20px;
+flex-direction:column;
+align-items:flex-start;
+border-bottom:1px solid var(--line)
+}
+
+.links.open{
+display:flex
+}
+
+.langs{
+margin-left:8px
+}
+
+.hero{
+padding-top:70px
+}
+
+.hero-inner{
+min-height:700px;
+background-position:66% center
+}
+
+.hero-inner:after{
+background:
+linear-gradient(
+90deg,
+rgba(255,255,255,.99) 0%,
+rgba(255,255,255,.92) 56%,
+rgba(255,255,255,.2) 100%
+)
+}
+
+.hero-copy{
+padding-top:55px
+}
+
+.hero h1{
+font-size:43px;
+letter-spacing:-1.5px
+}
+
+.hero p{
+font-size:16px
+}
+
+.hero-logo{
+width:170px;
+height:60px
+}
+
+.hero-note{
+left:5%;
+right:auto;
+bottom:22px
+}
+
+.section{
+padding:65px 0
+}
+
+.section-head,
+.about,
+.cta-box{
+display:block
+}
+
+.section-head .lead{
+margin-top:16px
+}
+
+.services{
+grid-template-columns:1fr 1fr
+}
+
+.card-img{
+height:135px
+}
+
+.about-photo{
+min-height:300px;
+margin-bottom:30px
+}
+
+.values{
+grid-template-columns:1fr
+}
+
+.cta-box{
+padding:35px 28px
+}
+
+.cta .primary{
+margin-top:24px
+}
+
+.contact-grid{
+grid-template-columns:1fr
+}
+
+.footer-grid{
+grid-template-columns:1fr
+}
+
+.copy{
+display:block
+}
+
+.copy span{
+display:block;
+margin-top:6px
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.services{
+grid-template-columns:1fr
+}
+
+.actions a{
+width:100%;
+justify-content:center
+}
+
+.hero-inner{
+min-height:720px
+}
+
+.hero h1{
+font-size:38px
+}
+
+.langs{
+margin-left:0
+}
+
+.lang{
+padding:7px 9px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="#home">
+<img class="logo" src="assets/tarci-logo.jpg" alt="TARCI">
+</a>
+
+<button class="menu" id="menu">☰</button>
+
+<nav class="links" id="links">
+
+<a class="active"
+href="#home"
+data-fr="Accueil"
+data-ar="الرئيسية"
+data-en="Home">
+Accueil
+</a>
+
+<a href="#about"
+data-fr="À propos"
+data-ar="من نحن"
+data-en="About">
+À propos
+</a>
+
+<a href="#services"
+data-fr="Nos services"
+data-ar="خدماتنا"
+data-en="Services">
+Nos services
+</a>
+
+<a href="#why"
+data-fr="Pourquoi TARCI ?"
+data-ar="لماذا TARCI؟"
+data-en="Why TARCI?">
+Pourquoi TARCI ?
+</a>
+
+<a href="#contact"
+data-fr="Contact"
+data-ar="اتصل بنا"
+data-en="Contact">
+Contact
+</a>
+
+</nav>
+
+<div class="head-contact">
+<div class="phones">
+0678 77 45 97<br>
+0676 28 90 76
+</div>
+
+<a class="wa"
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener">
+WhatsApp
+</a>
+</div>
+
+<div class="langs">
+<button class="lang active" data-lang="fr">FR</button>
+<button class="lang" data-lang="ar">AR</button>
+<button class="lang" data-lang="en">EN</button>
+</div>
+
+</div>
+</header>
+
+
+<main id="home">
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="container hero-copy">
+
+<img
+class="hero-logo"
+src="assets/tarci-logo.jpg"
+alt="Logo TARCI">
+
+<div
+class="eyebrow"
+data-fr="Construction • Bâtiment • Rénovation"
+data-ar="البناء • الأشغال • التجديد"
+data-en="Construction • Building • Renovation">
+Construction • Bâtiment • Rénovation
+</div>
+
+<h1
+data-fr="Construire aujourd’hui, les projets de demain."
+data-ar="نبنيو اليوم مشاريع الغد."
+data-en="Building today, the projects of tomorrow.">
+Construire aujourd’hui,
+les projets de demain.
+</h1>
+
+<p
+data-fr="Spécialistes en construction, bâtiment, rénovation et aménagement, nous mettons notre expertise au service de vos projets."
+data-ar="متخصصون في البناء والتجديد والتهيئة، كنحطّو الخبرة ديالنا فخدمة مشاريعكم."
+data-en="Specialists in construction, building, renovation and fit-out, we put our expertise at the service of your projects.">
+Spécialistes en construction, bâtiment, rénovation et aménagement,
+nous mettons notre expertise au service de vos projets.
+</p>
+
+<div class="actions">
+
+<a
+class="primary"
+href="#services"
+data-fr="Nos services →"
+data-ar="خدماتنا ←"
+data-en="Our services →">
+Nos services →
+</a>
+
+<a
+class="secondary"
+href="#contact"
+data-fr="Demander un devis"
+data-ar="طلب عرض ثمن"
+data-en="Request a quote">
+Demander un devis
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+TARCI
+</div>
+
+<h2
+data-fr="Des solutions complètes pour vos projets."
+data-ar="حلول متكاملة لمشاريعكم."
+data-en="Complete solutions for your projects.">
+Des solutions complètes pour vos projets.
+</h2>
+
+</div>
+
+<p
+class="lead"
+data-fr="De la conception à la réalisation, TARCI vous accompagne dans les différentes étapes de votre projet."
+data-ar="من البداية حتى النهاية، TARCI كترافقكم فمختلف مراحل المشروع."
+data-en="From planning to completion, TARCI supports you through every stage of your project.">
+De la conception à la réalisation,
+TARCI vous accompagne dans les différentes étapes de votre projet.
+</p>
+
+</div>
+
+
+<div class="services">
+
+<article class="card">
+
+<img
+class="card-img"
+src="assets/hero-construction.png"
+style="object-position:20% center"
+alt="Gros œuvre">
+
+<div class="card-body">
+
+<div class="icon">◈</div>
+
+<h3
+data-fr="Gros œuvre"
+data-ar="الأشغال الكبرى"
+data-en="Structural work">
+Gros œuvre
+</h3>
+
+<p
+data-fr="Fondations, structures, maçonnerie et béton."
+data-ar="الأساسات، الهياكل، البناء والخرسانة."
+data-en="Foundations, structures, masonry and concrete.">
+Fondations, structures, maçonnerie et béton.
+</p>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img
+class="card-img"
+src="assets/hero-construction.png"
+style="object-position:55% center"
+alt="Second œuvre">
+
+<div class="card-body">
+
+<div class="icon">⌂</div>
+
+<h3
+data-fr="Second œuvre"
+data-ar="الأشغال الثانوية"
+data-en="Finishing work">
+Second œuvre
+</h3>
+
+<p
+data-fr="Cloisons, enduits, finitions et aménagements."
+data-ar="القواطع، التلييس، التشطيبات والتهيئة."
+data-en="Partitions, plastering, finishes and fit-outs.">
+Cloisons, enduits, finitions et aménagements.
+</p>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img
+class="card-img"
+src="assets/hero-construction.png"
+style="object-position:85% center"
+alt="Construction de villas">
+
+<div class="card-body">
+
+<div class="icon">⌂</div>
+
+<h3
+data-fr="Construction de villas"
+data-ar="بناء الفيلات"
+data-en="Villa construction">
+Construction de villas
+</h3>
+
+<p
+data-fr="Des villas modernes pensées pour votre projet."
+data-ar="فيلات عصرية مصممة حسب مشروعكم."
+data-en="Modern villas designed around your project.">
+Des villas modernes pensées pour votre projet.
+</p>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img
+class="card-img"
+src="assets/hero-construction.png"
+style="object-position:42% center"
+alt="Rénovation">
+
+<div class="card-body">
+
+<div class="icon">↻</div>
+
+<h3
+data-fr="Rénovation"
+data-ar="التجديد"
+data-en="Renovation">
+Rénovation
+</h3>
+
+<p
+data-fr="Rénovation de bâtiments et espaces professionnels."
+data-ar="تجديد المباني والفضاءات المهنية."
+data-en="Renovation of buildings and professional spaces.">
+Rénovation de bâtiments et espaces professionnels.
+</p>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img
+class="card-img"
+src="assets/hero-construction.png"
+style="object-position:100% center"
+alt="Ménage et nettoyage">
+
+<div class="card-body">
+
+<div class="icon">✦</div>
+
+<h3
+data-fr="Ménage / Nettoyage"
+data-ar="النظافة والتنظيف"
+data-en="Cleaning">
+Ménage / Nettoyage
+</h3>
+
+<p
+data-fr="Nettoyage résidentiel et professionnel avec soin."
+data-ar="خدمات النظافة للمنازل والفضاءات المهنية بعناية."
+data-en="Residential and professional cleaning, handled with care.">
+Nettoyage résidentiel et professionnel avec soin.
+</p>
+
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt" id="about">
+
+<div class="container about">
+
+<div class="about-photo"></div>
+
+<div>
+
+<div class="kicker">
+À propos de TARCI
+</div>
+
+<h2
+data-fr="Une équipe engagée autour de votre projet."
+data-ar="فريق ملتزم بمشروعكم."
+data-en="A team committed to your project.">
+Une équipe engagée autour de votre projet.
+</h2>
+
+<p
+class="lead"
+style="margin-top:18px"
+data-fr="Nous mettons l’expérience du terrain, la coordination et le suivi au service de vos projets de construction, rénovation et aménagement."
+data-ar="كنحطّو تجربة الميدان، التنسيق وتتبع الأشغال في خدمة مشاريع البناء والتجديد والتهيئة."
+data-en="We bring field experience, coordination and project follow-up to your construction, renovation and fit-out projects.">
+Nous mettons l’expérience du terrain,
+la coordination et le suivi au service de vos projets.
+</p>
+
+<div class="checks">
+
+<div class="check">
+<div class="tick">✓</div>
+<div>
+<b
+data-fr="Suivi du projet"
+data-ar="تتبع المشروع"
+data-en="Project follow-up">
+Suivi du projet
+</b>
+
+<p
+data-fr="Une coordination claire à chaque étape."
+data-ar="تنسيق واضح في كل مرحلة."
+data-en="Clear coordination at every stage.">
+Une coordination claire à chaque étape.
+</p>
+</div>
+</div>
+
+
+<div class="check">
+<div class="tick">✓</div>
+
+<div>
+
+<b
+data-fr="Équipes qualifiées"
+data-ar="فريق مؤهل"
+data-en="Qualified teams">
+Équipes qualifiées
+</b>
+
+<p
+data-fr="Des professionnels pour des travaux soignés."
+data-ar="مهنيون لإنجاز أشغال متقنة."
+data-en="Professionals delivering careful workmanship.">
+Des professionnels pour des travaux soignés.
+</p>
+
+</div>
+</div>
+
+
+<div class="check">
+
+<div class="tick">✓</div>
+
+<div>
+
+<b
+data-fr="Solutions sur mesure"
+data-ar="حلول حسب الطلب"
+data-en="Tailored solutions">
+Solutions sur mesure
+</b>
+
+<p
+data-fr="Des réponses adaptées à votre besoin et à votre budget."
+data-ar="حلول مناسبة للحاجة والميزانية."
+data-en="Solutions adapted to your needs and budget.">
+Des réponses adaptées à votre besoin et à votre budget.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section" id="why">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Pourquoi TARCI ?
+</div>
+
+<h2
+data-fr="Une façon simple de construire mieux."
+data-ar="طريقة واضحة لبناء أفضل."
+data-en="A clear way to build better.">
+Une façon simple de construire mieux.
+</h2>
+
+</div>
+</div>
+
+
+<div class="values">
+
+<div class="value">
+
+<div class="big">🛡️</div>
+
+<h3
+data-fr="Qualité"
+data-ar="الجودة"
+data-en="Quality">
+Qualité
+</h3>
+
+<p
+data-fr="Des travaux suivis avec attention et exigence."
+data-ar="أشغال متتبعة بعناية وجودة."
+data-en="Work followed with care and high standards.">
+Des travaux suivis avec attention et exigence.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<div class="big">👷</div>
+
+<h3
+data-fr="Sécurité"
+data-ar="السلامة"
+data-en="Safety">
+Sécurité
+</h3>
+
+<p
+data-fr="Une culture de sécurité au cœur du chantier."
+data-ar="السلامة جزء أساسي من طريقة العمل."
+data-en="Safety is at the heart of the worksite.">
+Une culture de sécurité au cœur du chantier.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<div class="big">🤝</div>
+
+<h3
+data-fr="Engagement"
+data-ar="الالتزام"
+data-en="Commitment">
+Engagement
+</h3>
+
+<p
+data-fr="Une communication directe et un suivi régulier."
+data-ar="تواصل مباشر وتتبع منتظم."
+data-en="Direct communication and regular follow-up.">
+Une communication directe et un suivi régulier.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<div class="big">🏠</div>
+
+<h3
+data-fr="Villas & projets"
+data-ar="فيلات ومشاريع"
+data-en="Villas & projects">
+Villas & projets
+</h3>
+
+<p
+data-fr="Des réalisations pensées pour durer et valoriser votre projet."
+data-ar="إنجازات مصممة باش تدوم وتعطي قيمة لمشروعكم."
+data-en="Projects designed to last and add value.">
+Des réalisations pensées pour durer et valoriser votre projet.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<div class="kicker" style="color:var(--gold)">
+TARCI
+</div>
+
+<h2
+data-fr="Vous avez un projet ? Parlons-en."
+data-ar="عندكم مشروع؟ تواصلوا معنا."
+data-en="Have a project? Let's talk.">
+Vous avez un projet ? Parlons-en.
+</h2>
+
+<p
+data-fr="Construction, villa, rénovation ou nettoyage — contactez-nous directement."
+data-ar="بناء، فيلا، تجديد أو تنظيف — تواصلوا معنا مباشرة."
+data-en="Construction, villas, renovation or cleaning — contact us directly.">
+Construction, villa, rénovation ou nettoyage — contactez-nous directement.
+</p>
+
+</div>
+
+<a
+class="primary"
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener"
+data-fr="Nous contacter →"
+data-ar="تواصل معنا ←"
+data-en="Contact us →">
+Nous contacter →
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt" id="contact">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Contact
+</div>
+
+<h2
+data-fr="Parlons de votre projet"
+data-ar="خلينا نهضرو على مشروعكم"
+data-en="Let's talk about your project">
+Parlons de votre projet
+</h2>
+
+</div>
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3
+data-fr="Téléphone / WhatsApp"
+data-ar="الهاتف / واتساب"
+data-en="Phone / WhatsApp">
+Téléphone / WhatsApp
+</h3>
+
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+
+<p
+class="small"
+data-fr="Disponible pour vos demandes et informations."
+data-ar="متاحين لطلباتكم واستفساراتكم."
+data-en="Available for your requests and enquiries.">
+Disponible pour vos demandes et informations.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3
+data-fr="Demander un devis"
+data-ar="طلب عرض ثمن"
+data-en="Request a quote">
+Demander un devis
+</h3>
+
+<p
+class="small"
+style="margin-bottom:15px"
+data-fr="Envoyez-nous votre besoin directement sur WhatsApp pour un premier échange."
+data-ar="صيفطو لينا الطلب ديالكم مباشرة فواتساب باش نبداو التواصل."
+data-en="Send us your request directly on WhatsApp to start the conversation.">
+Envoyez-nous votre besoin directement sur WhatsApp pour un premier échange.
+</p>
+
+<a
+class="primary"
+style="width:max-content"
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener">
+WhatsApp →
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<img
+class="footer-logo"
+src="assets/tarci-logo.jpg"
+alt="TARCI">
+
+<p
+style="font-size:13px;max-width:380px"
+data-fr="Construction, bâtiment, villas, rénovation et nettoyage. TARCI accompagne vos projets avec sérieux et proximité."
+data-ar="البناء، المباني، الفيلات، التجديد والنظافة. TARCI كترافق مشاريعكم بجدية وقرب."
+data-en="Construction, building, villas, renovation and cleaning. TARCI supports your projects with professionalism and proximity.">
+Construction, bâtiment, villas, rénovation et nettoyage.
+TARCI accompagne vos projets avec sérieux et proximité.
+</p>
+
+</div>
+
+
+<div>
+
+<h3
+data-fr="Navigation"
+data-ar="التنقل"
+data-en="Navigation">
+Navigation
+</h3>
+
+<a href="#services"
+data-fr="Nos services"
+data-ar="خدماتنا"
+data-en="Services">
+Nos services
+</a>
+
+<a href="#about"
+data-fr="À propos"
+data-ar="من نحن"
+data-en="About">
+À propos
+</a>
+
+<a href="#contact"
+data-fr="Contact"
+data-ar="اتصل بنا"
+data-en="Contact">
+Contact
+</a>
+
+</div>
+
+
+<div>
+
+<h3
+data-fr="Contact"
+data-ar="اتصل بنا"
+data-en="Contact">
+Contact
+</h3>
+
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+
+<a
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="container copy">
+
+<span>
+© 2026 TARCI — Tous droits réservés.
+</span>
+
+<span>
+Construction • Bâtiment • Rénovation
+</span>
+
+</div>
+
+</footer>
+
+
+<a
+class="float-wa"
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener"
+aria-label="WhatsApp">
+◔
+</a>
+
+
+<script>
+
+const menu=document.getElementById('menu');
+const links=document.getElementById('links');
+
+menu.addEventListener(
+'click',
+()=>links.classList.toggle('open')
+);
+
+document.querySelectorAll('#links a').forEach(
+a=>a.addEventListener(
+'click',
+()=>links.classList.remove('open')
+)
+);
+
+
+const buttons=document.querySelectorAll('.lang');
+const els=document.querySelectorAll('[data-fr]');
+
+function setLang(lang){
+
+document.documentElement.lang=lang;
+
+document.documentElement.dir=
+lang==='ar'?'rtl':'ltr';
+
+els.forEach(el=>{
+
+const value=el.getAttribute('data-'+lang);
+
+if(value!==null)
+el.textContent=value;
+
+});
+
+buttons.forEach(
+b=>b.classList.toggle(
+'active',
+b.dataset.lang===lang
+)
+);
+
+localStorage.setItem('tarci-lang',lang);
+
+}
+
+buttons.forEach(
+b=>b.addEventListener(
+'click',
+()=>setLang(b.dataset.lang)
+)
+);
+
+setLang(
+localStorage.getItem('tarci-lang')||'fr'
+);
+
+</script>
+
+</body>
+</html>
