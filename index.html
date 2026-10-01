@@ -4,36 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>STE TARCI | Construction, Villas & Rénovation</title>
+<title>TARCI | Construction, Villas, Rénovation & Ménage</title>
 
 <meta name="description"
-content="STE TARCI - Construction, villas, rénovation, gros œuvre, finitions et bâtiments professionnels.">
+content="TARCI accompagne vos projets de construction, villas, rénovation, finitions et ménage avec une approche professionnelle et soignée.">
 
 <meta name="keywords"
-content="TARCI, construction Marrakech, villas Marrakech, rénovation, bâtiment, gros œuvre, finitions">
+content="TARCI, construction, villa, rénovation, bâtiment, finition, ménage, Maroc">
 
-<meta name="theme-color" content="#111827">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#111111">
 
 <style>
-
 :root{
-  --dark:#111827;
-  --dark2:#1f2937;
-  --gold:#d6a84f;
-  --gold2:#efc76b;
+  --dark:#111;
+  --dark2:#191919;
+  --cream:#f5f3ef;
   --white:#fff;
-  --light:#f7f7f5;
-  --text:#20242b;
-  --muted:#6b7280;
-  --border:#e8e8e5;
-  --green:#25d366;
-  --shadow:0 15px 45px rgba(0,0,0,.10);
-  --radius:22px;
+  --gold:#c5a46d;
+  --text:#252525;
+  --muted:#777;
+  --line:#e5e2dc;
+  --radius:18px;
+  --shadow:0 18px 55px rgba(0,0,0,.10);
 }
 
 *{
@@ -47,18 +39,15 @@ html{
 }
 
 body{
-  font-family:Inter,Arial,sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#fff;
   color:var(--text);
   line-height:1.6;
-}
-
-body[dir="rtl"]{
-  font-family:Cairo,Arial,sans-serif;
+  overflow-x:hidden;
 }
 
 img{
-  max-width:100%;
+  width:100%;
   display:block;
 }
 
@@ -68,7 +57,7 @@ a{
 }
 
 button{
-  font-family:inherit;
+  font:inherit;
 }
 
 .container{
@@ -82,92 +71,84 @@ header{
   position:fixed;
   top:0;
   left:0;
-  width:100%;
+  right:0;
   z-index:1000;
-  background:rgba(17,24,39,.94);
-  backdrop-filter:blur(14px);
+  background:rgba(17,17,17,.94);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
-  height:78px;
+  height:76px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
+  gap:20px;
 }
 
 .logo{
-  font-size:25px;
+  color:#fff;
+  font-size:29px;
   font-weight:800;
   letter-spacing:2px;
-  color:#fff;
-  white-space:nowrap;
 }
 
 .logo span{
-  color:var(--gold2);
+  color:var(--gold);
 }
 
-.nav-links{
+.menu{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:28px;
 }
 
-.nav-links a{
-  color:#fff;
+.menu a{
+  color:#ddd;
   font-size:14px;
-  font-weight:600;
-  opacity:.9;
   transition:.25s;
 }
 
-.nav-links a:hover{
-  color:var(--gold2);
+.menu a:hover{
+  color:#fff;
 }
 
-.nav-actions{
+.langs{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:5px;
+  margin-left:5px;
 }
 
-.lang-btn{
-  border:1px solid rgba(255,255,255,.22);
+.lang{
+  border:1px solid rgba(255,255,255,.16);
   background:transparent;
-  color:#fff;
-  padding:7px 9px;
-  border-radius:8px;
+  color:#ddd;
+  padding:6px 8px;
+  border-radius:7px;
   cursor:pointer;
-  font-size:12px;
-  font-weight:700;
-  transition:.25s;
+  font-size:11px;
 }
 
-.lang-btn:hover,
-.lang-btn.active{
-  background:var(--gold);
+.lang.active,
+.lang:hover{
+  background:#fff;
   color:#111;
-  border-color:var(--gold);
 }
 
-.header-cta{
+.header-btn{
   background:var(--gold);
   color:#111;
   padding:11px 17px;
-  border-radius:10px;
-  font-weight:800;
+  border-radius:8px;
+  font-weight:700;
   font-size:13px;
-  margin-left:8px;
 }
 
-.menu-btn{
+.mobile-btn{
   display:none;
-  border:0;
-  background:none;
   color:#fff;
-  font-size:28px;
+  font-size:27px;
   cursor:pointer;
 }
 
@@ -178,97 +159,86 @@ header{
   position:relative;
   display:flex;
   align-items:center;
-  overflow:hidden;
-  background:#111827;
-}
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(90deg,rgba(10,14,20,.88),rgba(10,14,20,.42)),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85");
-  background-size:cover;
-  background-position:center;
-  animation:heroZoom 14s ease-in-out infinite alternate;
-}
-
-body[dir="rtl"] .hero-bg{
-  background-image:
-    linear-gradient(270deg,rgba(10,14,20,.88),rgba(10,14,20,.42)),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85");
-}
-
-@keyframes heroZoom{
-  from{transform:scale(1)}
-  to{transform:scale(1.06)}
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.40),rgba(0,0,0,.18)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=90")
+    center/cover no-repeat;
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
-  padding-top:78px;
-  max-width:760px;
-  color:#fff;
+  padding-top:70px;
+  max-width:730px;
 }
 
-.hero-kicker{
-  color:var(--gold2);
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:2px;
-  margin-bottom:16px;
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#ddd;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  margin-bottom:22px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:34px;
+  height:1px;
+  background:var(--gold);
 }
 
 .hero h1{
-  font-size:clamp(42px,7vw,78px);
-  line-height:1.04;
-  margin-bottom:24px;
+  font-size:clamp(42px,7vw,82px);
+  line-height:1.02;
   letter-spacing:-2px;
+  margin-bottom:24px;
+  font-weight:700;
 }
 
 .hero h1 span{
-  color:var(--gold2);
+  color:var(--gold);
 }
 
 .hero p{
-  max-width:690px;
+  max-width:650px;
+  color:#ddd;
   font-size:18px;
-  color:rgba(255,255,255,.83);
-  margin-bottom:32px;
+  line-height:1.8;
+  margin-bottom:34px;
 }
 
-.hero-buttons{
+.hero-actions{
   display:flex;
-  gap:13px;
   flex-wrap:wrap;
+  gap:12px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  padding:14px 22px;
-  border-radius:12px;
+  min-height:50px;
+  padding:0 23px;
+  border-radius:8px;
+  font-weight:700;
   font-size:14px;
-  font-weight:800;
   transition:.25s;
 }
 
-.btn-gold{
-  background:var(--gold);
+.btn-primary{
+  background:#fff;
   color:#111;
 }
 
-.btn-gold:hover{
-  background:var(--gold2);
+.btn-primary:hover{
   transform:translateY(-2px);
 }
 
 .btn-outline{
+  border:1px solid rgba(255,255,255,.45);
   color:#fff;
-  border:1px solid rgba(255,255,255,.4);
 }
 
 .btn-outline:hover{
@@ -276,101 +246,96 @@ body[dir="rtl"] .hero-bg{
   color:#111;
 }
 
-.hero-stats{
-  display:flex;
-  gap:35px;
-  margin-top:45px;
-  flex-wrap:wrap;
+.hero-bottom{
+  position:absolute;
+  bottom:28px;
+  left:0;
+  right:0;
 }
 
-.stat strong{
-  display:block;
-  font-size:25px;
-  color:#fff;
-}
-
-.stat span{
-  color:rgba(255,255,255,.65);
+.hero-note{
+  color:rgba(255,255,255,.72);
   font-size:12px;
+  letter-spacing:.5px;
 }
 
-/* ================= COMMON ================= */
+/* ================= SECTIONS ================= */
 
 section{
-  padding:100px 0;
+  padding:105px 0;
 }
 
 .section-head{
-  max-width:700px;
-  margin-bottom:50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:48px;
 }
 
-.eyebrow{
-  color:#b3832e;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:2px;
+.kicker{
+  color:var(--gold);
   text-transform:uppercase;
-  margin-bottom:10px;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:12px;
 }
 
-.section-head h2{
-  font-size:clamp(32px,5vw,48px);
-  line-height:1.12;
-  color:var(--dark);
-  margin-bottom:15px;
+.section-title{
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.08;
+  letter-spacing:-1px;
+  color:#171717;
 }
 
-.section-head p{
+.section-text{
+  max-width:520px;
   color:var(--muted);
+  line-height:1.8;
 }
 
 /* ================= SERVICES ================= */
 
 .services{
-  background:var(--light);
+  background:var(--cream);
 }
 
-.services-grid{
+.service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
 
 .service{
   background:#fff;
-  padding:30px;
-  border:1px solid var(--border);
+  padding:32px;
+  border:1px solid var(--line);
   border-radius:var(--radius);
+  min-height:245px;
   transition:.3s;
 }
 
 .service:hover{
-  transform:translateY(-7px);
+  transform:translateY(-5px);
   box-shadow:var(--shadow);
-  border-color:#ddd;
 }
 
-.service-icon{
-  width:52px;
-  height:52px;
-  display:grid;
-  place-items:center;
-  background:#f7efd9;
-  border-radius:15px;
-  font-size:25px;
-  margin-bottom:22px;
+.service-number{
+  color:#aaa;
+  font-size:12px;
+  margin-bottom:35px;
 }
 
 .service h3{
-  color:var(--dark);
-  margin-bottom:9px;
-  font-size:20px;
+  font-size:22px;
+  margin-bottom:12px;
 }
 
 .service p{
   color:var(--muted);
   font-size:14px;
+  line-height:1.75;
 }
 
 /* ================= ABOUT ================= */
@@ -384,114 +349,96 @@ section{
 
 .about-image{
   position:relative;
-  border-radius:28px;
-  overflow:hidden;
-  min-height:530px;
 }
 
 .about-image img{
-  width:100%;
-  height:100%;
+  height:610px;
   object-fit:cover;
+  border-radius:20px;
 }
 
-.about-badge{
+.image-label{
   position:absolute;
-  bottom:25px;
-  left:25px;
-  background:rgba(17,24,39,.92);
+  bottom:22px;
+  left:22px;
+  background:rgba(17,17,17,.90);
   color:#fff;
-  padding:18px 22px;
-  border-radius:16px;
-  backdrop-filter:blur(10px);
+  padding:15px 18px;
+  border-radius:10px;
+  font-size:13px;
 }
 
-body[dir="rtl"] .about-badge{
-  left:auto;
-  right:25px;
-}
-
-.about-badge strong{
-  color:var(--gold2);
-  display:block;
-  font-size:22px;
-}
-
-.about-text h2{
-  font-size:44px;
-  line-height:1.15;
-  color:var(--dark);
-  margin-bottom:20px;
-}
-
-.about-text p{
+.about-copy p{
   color:var(--muted);
-  margin-bottom:22px;
+  margin:20px 0;
+  line-height:1.9;
 }
 
-.checks{
+.about-list{
+  margin-top:28px;
   display:grid;
   gap:12px;
 }
 
-.check{
+.about-list div{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
   gap:12px;
   font-weight:600;
-  font-size:14px;
 }
 
-.check i{
-  color:#b3832e;
-  font-style:normal;
-  font-weight:900;
+.about-list span{
+  width:8px;
+  height:8px;
+  background:var(--gold);
+  border-radius:50%;
 }
 
 /* ================= PROCESS ================= */
 
 .process{
-  background:var(--dark);
+  background:#111;
   color:#fff;
 }
 
-.process .section-head h2{
+.process .section-title{
   color:#fff;
 }
 
-.process .section-head p{
-  color:#aeb5bf;
+.process .section-text{
+  color:#aaa;
 }
 
 .process-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:1px;
-  background:#374151;
-  border:1px solid #374151;
-  border-radius:22px;
-  overflow:hidden;
+  border-top:1px solid #333;
 }
 
 .step{
-  background:var(--dark);
-  padding:30px 25px;
+  padding:35px 25px 10px;
+  border-right:1px solid #333;
 }
 
-.step-number{
-  color:var(--gold2);
-  font-size:14px;
-  font-weight:900;
-  margin-bottom:30px;
+.step:last-child{
+  border-right:0;
+}
+
+.step small{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:2px;
 }
 
 .step h3{
-  margin-bottom:10px;
+  margin:20px 0 12px;
+  font-size:20px;
 }
 
 .step p{
-  color:#aeb5bf;
+  color:#aaa;
   font-size:14px;
+  line-height:1.75;
 }
 
 /* ================= PROJECTS ================= */
@@ -500,182 +447,164 @@ body[dir="rtl"] .about-badge{
   background:#fff;
 }
 
-.projects-grid{
+.project-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
 }
 
 .project{
   position:relative;
   overflow:hidden;
-  border-radius:22px;
-  min-height:410px;
-  background:#111;
+  border-radius:16px;
+  min-height:340px;
+  background:#ddd;
+}
+
+.project:nth-child(1),
+.project:nth-child(4){
+  grid-column:span 7;
+}
+
+.project:nth-child(2),
+.project:nth-child(3),
+.project:nth-child(5),
+.project:nth-child(6){
+  grid-column:span 5;
 }
 
 .project img{
-  width:100%;
   height:100%;
-  min-height:410px;
+  min-height:340px;
   object-fit:cover;
   transition:transform .7s;
 }
 
 .project:hover img{
-  transform:scale(1.07);
+  transform:scale(1.045);
 }
 
 .project-overlay{
   position:absolute;
-  inset:auto 0 0 0;
-  padding:28px 24px;
-  background:linear-gradient(transparent,rgba(0,0,0,.9));
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:end;
+  padding:27px;
+  background:linear-gradient(transparent 35%,rgba(0,0,0,.78));
   color:#fff;
-  padding-top:90px;
 }
 
-.project-tag{
-  display:inline-block;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.3px;
-  color:var(--gold2);
-  margin-bottom:6px;
+.project-overlay small{
+  color:#ddd;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
 }
 
-.project h3{
-  font-size:21px;
+.project-overlay h3{
+  font-size:25px;
+  margin-top:6px;
 }
 
-/* ================= TEAM / WOMEN ================= */
+/* ================= TEAM / EXPERTISE ================= */
 
-.team-section{
-  background:#f7f7f5;
+.expertise{
+  background:var(--cream);
 }
 
-.team-grid{
+.expertise-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
+  gap:18px;
 }
 
-.team-card{
-  position:relative;
-  min-height:420px;
-  border-radius:24px;
+.expert-card{
+  background:#fff;
+  border-radius:18px;
   overflow:hidden;
+  border:1px solid var(--line);
 }
 
-.team-card img{
-  width:100%;
-  height:100%;
-  min-height:420px;
+.expert-card img{
+  height:420px;
   object-fit:cover;
 }
 
-.team-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 45%,rgba(0,0,0,.82));
+.expert-info{
+  padding:25px;
 }
 
-.team-info{
-  position:absolute;
-  z-index:2;
-  bottom:25px;
-  left:25px;
-  right:25px;
-  color:#fff;
+.expert-info h3{
+  margin-bottom:7px;
+  font-size:22px;
 }
 
-body[dir="rtl"] .team-info{
-  text-align:right;
-}
-
-.team-info h3{
-  margin-bottom:5px;
-}
-
-.team-info p{
-  color:#ddd;
-  font-size:13px;
+.expert-info p{
+  color:var(--muted);
+  font-size:14px;
 }
 
 /* ================= WHY ================= */
 
-.why{
-  background:#fff;
-}
-
 .why-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-.why-card{
-  padding:28px;
-  border:1px solid var(--border);
-  border-radius:20px;
+.why-item{
+  padding:32px;
+  border:1px solid var(--line);
+  border-radius:15px;
 }
 
-.why-card .icon{
-  font-size:27px;
-  margin-bottom:18px;
+.why-item h3{
+  margin-bottom:10px;
+  font-size:20px;
 }
 
-.why-card h3{
-  margin-bottom:8px;
-}
-
-.why-card p{
+.why-item p{
   color:var(--muted);
-  font-size:13px;
+  font-size:14px;
+  line-height:1.75;
 }
 
 /* ================= FAQ ================= */
 
 .faq{
-  background:var(--light);
+  background:var(--cream);
 }
 
 .faq-list{
-  max-width:850px;
+  max-width:900px;
+  margin:auto;
 }
 
 .faq-item{
   background:#fff;
-  border:1px solid var(--border);
-  border-radius:15px;
-  margin-bottom:12px;
-  overflow:hidden;
+  border-bottom:1px solid var(--line);
 }
 
 .faq-question{
   width:100%;
-  padding:20px;
-  background:#fff;
+  background:none;
   border:0;
+  padding:24px 5px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
   text-align:left;
   cursor:pointer;
-  font-size:15px;
-  font-weight:800;
-  color:var(--dark);
-}
-
-body[dir="rtl"] .faq-question{
-  text-align:right;
+  font-weight:700;
+  font-size:16px;
+  color:#222;
 }
 
 .faq-answer{
   display:none;
-  padding:0 20px 20px;
+  padding:0 5px 24px;
   color:var(--muted);
+  line-height:1.8;
   font-size:14px;
 }
 
@@ -683,14 +612,21 @@ body[dir="rtl"] .faq-question{
   display:block;
 }
 
+.faq-item.open .faq-question span{
+  transform:rotate(45deg);
+}
+
+.faq-question span{
+  font-size:25px;
+  font-weight:300;
+  transition:.2s;
+}
+
 /* ================= CTA ================= */
 
 .cta{
-  padding:70px 0;
-  background:
-    linear-gradient(90deg,rgba(17,24,39,.96),rgba(17,24,39,.82)),
-    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80")
-    center/cover;
+  padding:90px 0;
+  background:#171717;
   color:#fff;
 }
 
@@ -698,234 +634,239 @@ body[dir="rtl"] .faq-question{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:35px;
 }
 
 .cta h2{
-  font-size:clamp(30px,5vw,46px);
-  line-height:1.15;
-  margin-bottom:10px;
+  font-size:clamp(32px,5vw,58px);
+  line-height:1.1;
+  margin-bottom:14px;
 }
 
 .cta p{
-  color:#c6cbd2;
+  color:#aaa;
+  max-width:650px;
 }
 
 /* ================= CONTACT ================= */
 
-.contact{
-  background:#fff;
-}
-
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:70px;
 }
 
 .contact-info h2{
-  font-size:43px;
-  line-height:1.15;
-  margin-bottom:18px;
+  font-size:45px;
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-.contact-info > p{
+.contact-info>p{
   color:var(--muted);
-  margin-bottom:30px;
+  line-height:1.8;
+  max-width:550px;
 }
 
-.contact-items{
+.contact-links{
+  margin-top:35px;
   display:grid;
-  gap:15px;
+  gap:13px;
 }
 
-.contact-item{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  padding:16px;
-  border:1px solid var(--border);
-  border-radius:16px;
-}
-
-.contact-icon{
-  width:45px;
-  height:45px;
-  display:grid;
-  place-items:center;
+.contact-link{
+  padding:18px 20px;
+  border:1px solid var(--line);
   border-radius:12px;
-  background:#f7efd9;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.25s;
 }
 
-.contact-item small{
-  display:block;
+.contact-link:hover{
+  border-color:var(--gold);
+  transform:translateX(3px);
+}
+
+.contact-link small{
   color:var(--muted);
-  font-size:11px;
-}
-
-.contact-item strong{
   display:block;
-  color:var(--dark);
 }
 
-.contact-card{
-  background:var(--dark);
-  color:#fff;
-  border-radius:25px;
-  padding:38px;
+.contact-link strong{
+  font-size:17px;
 }
 
-.contact-card h3{
-  font-size:27px;
+.contact-form{
+  background:var(--cream);
+  padding:35px;
+  border-radius:18px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.input,
+textarea{
+  width:100%;
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:9px;
+  padding:14px;
   margin-bottom:12px;
+  outline:none;
+  font:inherit;
 }
 
-.contact-card p{
-  color:#b9c0c9;
-  margin-bottom:25px;
-  font-size:14px;
+textarea{
+  min-height:135px;
+  resize:vertical;
 }
 
-.whatsapp-big{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:var(--green);
+.form-button{
+  width:100%;
+  border:0;
+  background:#111;
   color:#fff;
-  padding:16px;
-  border-radius:12px;
-  font-weight:900;
-}
-
-.phone-links{
-  margin-top:15px;
-  display:grid;
-  gap:10px;
-}
-
-.phone-links a{
-  text-align:center;
-  padding:12px;
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:10px;
-  color:#fff;
+  padding:15px;
+  border-radius:9px;
+  cursor:pointer;
+  font-weight:700;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-  background:#0b111c;
+  background:#111;
+  color:#aaa;
+  padding:35px 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.footer-logo{
   color:#fff;
-  padding:45px 0 25px;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:50px;
-  padding-bottom:35px;
+.footer-logo span{
+  color:var(--gold);
 }
 
-footer h3{
-  margin-bottom:14px;
-}
-
-footer p,
-footer a{
-  color:#9da5b1;
-  font-size:13px;
-}
-
-.footer-links{
-  display:grid;
-  gap:8px;
-}
-
-.copyright{
-  padding-top:22px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#777f8b;
+.footer-copy{
   font-size:12px;
 }
 
-/* ================= FLOATING WHATSAPP ================= */
+/* ================= WHATSAPP ================= */
 
-.whatsapp-float{
+.whatsapp{
   position:fixed;
   right:20px;
   bottom:20px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:var(--green);
+  width:57px;
+  height:57px;
+  background:#25D366;
   color:#fff;
-  display:grid;
-  place-items:center;
-  font-size:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
   z-index:999;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
-  animation:pulse 2s infinite;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
-body[dir="rtl"] .whatsapp-float{
-  right:auto;
-  left:20px;
+/* ================= RTL ================= */
+
+html[dir="rtl"] body{
+  font-family:Arial,Tahoma,sans-serif;
 }
 
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35)}
-  50%{box-shadow:0 0 0 12px rgba(37,211,102,0)}
+html[dir="rtl"] .menu{
+  direction:rtl;
+}
+
+html[dir="rtl"] .hero{
+  background:
+    linear-gradient(270deg,rgba(0,0,0,.78),rgba(0,0,0,.40),rgba(0,0,0,.18)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=90")
+    center/cover no-repeat;
+}
+
+html[dir="rtl"] .faq-question{
+  text-align:right;
+}
+
+html[dir="rtl"] .contact-link:hover{
+  transform:translateX(-3px);
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:950px){
 
-  .nav{
-    height:70px;
-  }
-
-  .nav-links{
+  .menu{
+    display:none;
     position:absolute;
-    top:70px;
+    top:76px;
     left:0;
     right:0;
-    display:none;
+    background:#111;
+    padding:22px 5%;
     flex-direction:column;
     align-items:stretch;
-    background:#111827;
-    padding:20px;
-    border-top:1px solid rgba(255,255,255,.1);
+    gap:0;
+    border-top:1px solid #292929;
   }
 
-  .nav-links.open{
+  .menu.open{
     display:flex;
   }
 
-  .nav-links a{
-    padding:12px 5px;
+  .menu a{
+    padding:13px 0;
+    border-bottom:1px solid #292929;
   }
 
-  .menu-btn{
+  .langs{
+    padding:16px 0;
+    margin:0;
+  }
+
+  .header-btn{
+    text-align:center;
+    margin-top:5px;
+  }
+
+  .mobile-btn{
     display:block;
   }
 
-  .header-cta{
-    display:none;
-  }
-
-  .services-grid,
-  .projects-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
+  .service-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .process-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
+  }
+
+  .step{
+    border-bottom:1px solid #333;
+  }
+
+  .project:nth-child(n){
+    grid-column:span 6;
   }
 
   .about-grid,
@@ -934,15 +875,14 @@ body[dir="rtl"] .whatsapp-float{
     gap:40px;
   }
 
-  .team-grid{
-    grid-template-columns:1fr 1fr;
+  .about-image img{
+    height:500px;
   }
 
   .cta-box{
     flex-direction:column;
     align-items:flex-start;
   }
-
 }
 
 @media(max-width:650px){
@@ -955,1611 +895,80 @@ body[dir="rtl"] .whatsapp-float{
     width:90%;
   }
 
-  .nav-actions{
-    gap:4px;
+  .nav{
+    height:68px;
   }
 
-  .lang-btn{
-    padding:6px 7px;
-    font-size:10px;
-  }
-
-  .logo{
-    font-size:21px;
+  .menu{
+    top:68px;
   }
 
   .hero{
     min-height:760px;
   }
 
-  .hero-bg{
-    background-position:60% center;
-  }
-
   .hero-content{
-    padding-top:80px;
+    padding-top:55px;
   }
 
   .hero h1{
-    font-size:45px;
+    font-size:46px;
     letter-spacing:-1.5px;
   }
 
   .hero p{
     font-size:15px;
+    line-height:1.7;
   }
 
-  .hero-buttons{
-    display:grid;
-    width:100%;
+  .section-head{
+    display:block;
+    margin-bottom:32px;
   }
 
-  .btn{
-    width:100%;
+  .section-text{
+    margin-top:20px;
   }
 
-  .hero-stats{
-    gap:20px;
-  }
-
-  .services-grid,
-  .projects-grid,
-  .why-grid,
-  .process-grid,
-  .team-grid{
+  .service-grid,
+  .expertise-grid,
+  .why-grid{
     grid-template-columns:1fr;
   }
 
   .service{
-    padding:25px;
+    min-height:auto;
   }
 
-  .about-image{
-    min-height:380px;
-  }
-
-  .about-text h2,
-  .contact-info h2{
-    font-size:34px;
-  }
-
-  .project,
-  .project img{
-    min-height:360px;
-  }
-
-  .team-card,
-  .team-card img{
-    min-height:390px;
-  }
-
-  .contact-card{
-    padding:27px;
-  }
-
-  .footer-grid{
+  .process-grid{
     grid-template-columns:1fr;
-    gap:30px;
   }
 
-  .whatsapp-float{
-    width:54px;
-    height:54px;
-    bottom:16px;
+  .step{
+    border-right:0;
   }
 
-}
-
-/* ================= RTL ================= */
-
-body[dir="rtl"] .nav-links a,
-body[dir="rtl"] .hero-content,
-body[dir="rtl"] .section-head,
-body[dir="rtl"] .service,
-body[dir="rtl"] .about-text,
-body[dir="rtl"] .step,
-body[dir="rtl"] .project-overlay,
-body[dir="rtl"] .why-card,
-body[dir="rtl"] .faq,
-body[dir="rtl"] .contact-info,
-body[dir="rtl"] .contact-card,
-body[dir="rtl"] footer{
-  text-align:right;
-}
-
-body[dir="rtl"] .hero-buttons{
-  justify-content:flex-start;
-}
-
-body[dir="rtl"] .check{
-  flex-direction:row;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-
-<header>
-<div class="container nav">
-
-<a href="#home" class="logo">TARCI<span>.</span></a>
-
-<nav class="nav-links" id="navLinks">
-<a href="#home" data-i18n="nav_home">Accueil</a>
-<a href="#services" data-i18n="nav_services">Services</a>
-<a href="#about" data-i18n="nav_about">À propos</a>
-<a href="#projects" data-i18n="nav_projects">Projets</a>
-<a href="#faq" data-i18n="nav_faq">FAQ</a>
-<a href="#contact" data-i18n="nav_contact">Contact</a>
-</nav>
-
-<div class="nav-actions">
-
-<button class="lang-btn active" data-lang="fr">FR</button>
-<button class="lang-btn" data-lang="ar">AR</button>
-<button class="lang-btn" data-lang="en">EN</button>
-<button class="lang-btn" data-lang="es">ES</button>
-
-<a class="header-cta"
-href="https://wa.me/212678774597"
-target="_blank"
-data-i18n="quote">
-Demander un devis
-</a>
-
-<button class="menu-btn" id="menuBtn">☰</button>
-
-</div>
-</div>
-</header>
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-<div class="hero-bg"></div>
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="hero-kicker" data-i18n="hero_kicker">
-STE TARCI • CONSTRUCTION & RÉNOVATION
-</div>
-
-<h1>
-<span data-i18n="hero_title1">Construire aujourd'hui.</span><br>
-<span data-i18n="hero_title2">Créer pour demain.</span>
-</h1>
-
-<p data-i18n="hero_text">
-STE TARCI accompagne vos projets de construction, rénovation,
-villas et bâtiments professionnels avec une approche sérieuse,
-moderne et soignée.
-</p>
-
-<div class="hero-buttons">
-
-<a href="https://wa.me/212678774597"
-target="_blank"
-class="btn btn-gold"
-data-i18n="hero_btn">
-💬 Demander un devis
-</a>
-
-<a href="#services"
-class="btn btn-outline"
-data-i18n="hero_services">
-Découvrir nos services →
-</a>
-
-</div>
-
-<div class="hero-stats">
-
-<div class="stat">
-<strong>01</strong>
-<span data-i18n="stat_project">Projet sur mesure</span>
-</div>
-
-<div class="stat">
-<strong>04</strong>
-<span data-i18n="stat_languages">Langues disponibles</span>
-</div>
-
-<div class="stat">
-<strong>24/7</strong>
-<span data-i18n="stat_contact">Contact WhatsApp</span>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-head">
-<div class="eyebrow" data-i18n="services_eyebrow">Nos services</div>
-<h2 data-i18n="services_title">
-Des solutions pour chaque projet
-</h2>
-<p data-i18n="services_text">
-De la construction à la rénovation, nous vous accompagnons
-avec des solutions adaptées à vos besoins.
-</p>
-</div>
-
-<div class="services-grid">
-
-<div class="service">
-<div class="service-icon">🏗️</div>
-<h3 data-i18n="service1_title">Construction</h3>
-<p data-i18n="service1_text">
-Construction de bâtiments et réalisation des différentes étapes
-du chantier avec une organisation adaptée au projet.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🏠</div>
-<h3 data-i18n="service2_title">Villas & maisons</h3>
-<p data-i18n="service2_text">
-Réalisation de projets résidentiels avec une attention particulière
-aux finitions et au confort.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🔨</div>
-<h3 data-i18n="service3_title">Rénovation</h3>
-<p data-i18n="service3_text">
-Modernisation et rénovation des espaces existants selon vos
-besoins et votre projet.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🏢</div>
-<h3 data-i18n="service4_title">Bâtiments professionnels</h3>
-<p data-i18n="service4_text">
-Solutions pour locaux, bâtiments professionnels et différents
-projets immobiliers.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🧱</div>
-<h3 data-i18n="service5_title">Gros œuvre</h3>
-<p data-i18n="service5_text">
-Travaux de structure et différentes opérations liées au gros œuvre.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">✨</div>
-<h3 data-i18n="service6_title">Finitions</h3>
-<p data-i18n="service6_text">
-Une attention particulière aux détails pour obtenir un résultat
-propre et harmonieux.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container about-grid">
-
-<div class="about-image">
-
-<img
-src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85"
-alt="STE TARCI chantier construction"
-loading="lazy">
-
-<div class="about-badge">
-<strong>STE TARCI</strong>
-<span data-i18n="badge_text">Construction • Bâtiment • Rénovation</span>
-</div>
-
-</div>
-
-<div class="about-text">
-
-<div class="eyebrow" data-i18n="about_eyebrow">
-STE TARCI
-</div>
-
-<h2 data-i18n="about_title">
-Une approche sérieuse pour vos projets
-</h2>
-
-<p data-i18n="about_text">
-Chez STE TARCI, chaque projet commence par l'écoute de vos besoins.
-Notre objectif est de proposer une réalisation organisée, pratique
-et adaptée aux exigences du chantier.
-</p>
-
-<div class="checks">
-
-<div class="check">
-<i>✓</i>
-<span data-i18n="check1">Écoute et compréhension du projet</span>
-</div>
-
-<div class="check">
-<i>✓</i>
-<span data-i18n="check2">Organisation des différentes étapes</span>
-</div>
-
-<div class="check">
-<i>✓</i>
-<span data-i18n="check3">Attention portée aux détails</span>
-</div>
-
-<div class="check">
-<i>✓</i>
-<span data-i18n="check4">Communication directe avec le client</span>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= PROCESS ================= -->
-
-<section class="process">
-
-<div class="container">
-
-<div class="section-head">
-<div class="eyebrow" data-i18n="method_eyebrow">
-Notre méthode
-</div>
-
-<h2 data-i18n="method_title">
-Un processus simple
-</h2>
-
-<p data-i18n="method_text">
-Une démarche claire pour avancer sereinement sur votre projet.
-</p>
-</div>
-
-<div class="process-grid">
-
-<div class="step">
-<div class="step-number">01</div>
-<h3 data-i18n="step1_title">Échange</h3>
-<p data-i18n="step1_text">
-Nous discutons de votre projet et de vos besoins.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">02</div>
-<h3 data-i18n="step2_title">Étude</h3>
-<p data-i18n="step2_text">
-Nous analysons les travaux et les différentes possibilités.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">03</div>
-<h3 data-i18n="step3_title">Réalisation</h3>
-<p data-i18n="step3_text">
-Les travaux sont organisés selon les étapes prévues.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">04</div>
-<h3 data-i18n="step4_title">Finitions</h3>
-<p data-i18n="step4_text">
-Nous accordons une attention particulière au résultat final.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-
-<section class="projects" id="projects">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" data-i18n="projects_eyebrow">
-Réalisations
-</div>
-
-<h2 data-i18n="projects_title">
-Nos projets
-</h2>
-
-<p data-i18n="projects_text">
-Découvrez différents environnements et étapes liés aux projets
-de construction, villas et bâtiments.
-</p>
-
-</div>
-
-<div class="projects-grid">
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1590644365607-1c5a6e4b8f8a?auto=format&fit=crop&w=1000&q=85"
-alt="Villa en construction"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project1_tag">
-VILLA • GROS ŒUVRE
-</span>
-<h3 data-i18n="project1_title">
-Villa en construction
-</h3>
-</div>
-
-</div>
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=85"
-alt="Villa moderne"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project2_tag">
-RÉSIDENTIEL
-</span>
-<h3 data-i18n="project2_title">
-Projet villa moderne
-</h3>
-</div>
-
-</div>
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85"
-alt="Chantier"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project3_tag">
-CHANTIER
-</span>
-<h3 data-i18n="project3_title">
-Phase de construction
-</h3>
-</div>
-
-</div>
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
-alt="Travaux de construction"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project4_tag">
-TRAVAUX
-</span>
-<h3 data-i18n="project4_title">
-Organisation du chantier
-</h3>
-</div>
-
-</div>
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
-alt="Maison moderne"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project5_tag">
-FINITION
-</span>
-<h3 data-i18n="project5_title">
-Projet résidentiel
-</h3>
-</div>
-
-</div>
-
-<div class="project">
-
-<img
-src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1000&q=85"
-alt="Bâtiment professionnel"
-loading="lazy">
-
-<div class="project-overlay">
-<span class="project-tag" data-i18n="project6_tag">
-PROFESSIONNEL
-</span>
-<h3 data-i18n="project6_title">
-Bâtiment professionnel
-</h3>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= TEAM ================= -->
-
-<section class="team-section">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" data-i18n="team_eyebrow">
-Sur le chantier
-</div>
-
-<h2 data-i18n="team_title">
-Une équipe présente sur le terrain
-</h2>
-
-<p data-i18n="team_text">
-Une présence humaine et professionnelle à chaque étape du projet.
-</p>
-
-</div>
-
-<div class="team-grid">
-
-<div class="team-card">
-
-<img
-src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85"
-alt="Équipe de chantier"
-loading="lazy">
-
-<div class="team-info">
-
-<h3 data-i18n="team1_title">
-Équipe chantier
-</h3>
-
-<p data-i18n="team1_text">
-Organisation et suivi des travaux sur le terrain.
-</p>
-
-</div>
-</div>
-
-<div class="team-card">
-
-<img
-src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
-alt="Équipe professionnelle"
-loading="lazy">
-
-<div class="team-info">
-
-<h3 data-i18n="team2_title">
-Coordination & suivi
-</h3>
-
-<p data-i18n="team2_text">
-Communication et coordination autour du projet.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- ================= WHY ================= -->
-
-<section class="why">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" data-i18n="why_eyebrow">
-Pourquoi TARCI
-</div>
-
-<h2 data-i18n="why_title">
-Une vision orientée vers le projet
-</h2>
-
-<p data-i18n="why_text">
-Nous privilégions une communication claire et une réalisation
-adaptée à chaque chantier.
-</p>
-
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<div class="icon">🤝</div>
-<h3 data-i18n="why1_title">Communication directe</h3>
-<p data-i18n="why1_text">
-Un contact simple avec le client permet de mieux comprendre
-les besoins du projet.
-</p>
-</div>
-
-<div class="why-card">
-<div class="icon">📐</div>
-<h3 data-i18n="why2_title">Organisation</h3>
-<p data-i18n="why2_text">
-Chaque chantier nécessite une organisation claire des différentes étapes.
-</p>
-</div>
-
-<div class="why-card">
-<div class="icon">🔎</div>
-<h3 data-i18n="why3_title">Attention aux détails</h3>
-<p data-i18n="why3_text">
-Les détails et les finitions participent au résultat final.
-</p>
-</div>
-
-<div class="why-card">
-<div class="icon">🏗️</div>
-<h3 data-i18n="why4_title">Expérience chantier</h3>
-<p data-i18n="why4_text">
-Une approche pratique permettant de s'adapter aux réalités du chantier.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= FAQ ================= -->
-
-<section class="faq" id="faq">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-FAQ
-</div>
-
-<h2 data-i18n="faq_title">
-Questions fréquentes
-</h2>
-
-<p data-i18n="faq_text">
-Quelques réponses aux questions que nos clients peuvent se poser.
-</p>
-
-</div>
-
-<div class="faq-list">
-
-<div class="faq-item">
-
-<button class="faq-question">
-<span data-i18n="faq1_q">
-Quels types de projets réalisez-vous ?
-</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer" data-i18n="faq1_a">
-Nous travaillons sur différents projets de construction,
-rénovation, maisons, villas et bâtiments professionnels.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-<span data-i18n="faq2_q">
-Comment demander un devis ?
-</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer" data-i18n="faq2_a">
-Vous pouvez nous contacter directement sur WhatsApp en utilisant
-le bouton « Demander un devis ».
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-<span data-i18n="faq3_q">
-Où intervenez-vous ?
-</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer" data-i18n="faq3_a">
-Contactez-nous pour nous présenter votre projet et connaître
-les possibilités d'intervention selon votre chantier.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-<span data-i18n="faq4_q">
-Puis-je envoyer les détails de mon projet sur WhatsApp ?
-</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer" data-i18n="faq4_a">
-Oui. Vous pouvez envoyer directement votre demande, vos photos,
-plans ou informations utiles via WhatsApp.
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-<div class="container cta-box">
-
-<div>
-
-<h2 data-i18n="cta_title">
-Vous avez un projet ?
-</h2>
-
-<p data-i18n="cta_text">
-Parlons de votre projet et voyons ensemble comment le réaliser.
-</p>
-
-</div>
-
-<a
-href="https://wa.me/212678774597"
-target="_blank"
-class="btn btn-gold"
-data-i18n="cta_button">
-💬 Contacter STE TARCI
-</a>
-
-</div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contact">
-
-<div class="container contact-grid">
-
-<div class="contact-info">
-
-<div class="eyebrow" data-i18n="contact_eyebrow">
-Contact
-</div>
-
-<h2 data-i18n="contact_title">
-Parlons de votre projet
-</h2>
-
-<p data-i18n="contact_text">
-Pour une demande d'information ou un devis, contactez directement
-STE TARCI.
-</p>
-
-<div class="contact-items">
-
-<div class="contact-item">
-<div class="contact-icon">📱</div>
-<div>
-<small data-i18n="phone1_label">Téléphone principal</small>
-<strong>0678 77 45 97</strong>
-</div>
-</div>
-
-<div class="contact-item">
-<div class="contact-icon">📞</div>
-<div>
-<small data-i18n="phone2_label">Téléphone</small>
-<strong>0676 28 90 76</strong>
-</div>
-</div>
-
-<div class="contact-item">
-<div class="contact-icon">💬</div>
-<div>
-<small>WhatsApp</small>
-<strong>0678 77 45 97</strong>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="contact-card">
-
-<h3 data-i18n="contact_card_title">
-Demander un devis
-</h3>
-
-<p data-i18n="contact_card_text">
-Expliquez-nous simplement votre projet. Vous pouvez nous envoyer
-les informations directement sur WhatsApp.
-</p>
-
-<a
-href="https://wa.me/212678774597"
-target="_blank"
-class="whatsapp-big">
-💬 WhatsApp — 0678 77 45 97
-</a>
-
-<div class="phone-links">
-
-<a href="tel:+212678774597">
-📱 0678 77 45 97
-</a>
-
-<a href="tel:+212676289076">
-📞 0676 28 90 76
-</a>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3>TARCI<span style="color:#efc76b">.</span></h3>
-
-<p data-i18n="footer_text">
-Construction • Bâtiment • Rénovation • Villas • Projets professionnels
-</p>
-
-</div>
-
-<div>
-
-<h3 data-i18n="footer_nav">
-Navigation
-</h3>
-
-<div class="footer-links">
-
-<a href="#home" data-i18n="nav_home">Accueil</a>
-<a href="#services" data-i18n="nav_services">Services</a>
-<a href="#about" data-i18n="nav_about">À propos</a>
-<a href="#projects" data-i18n="nav_projects">Projets</a>
-<a href="#contact" data-i18n="nav_contact">Contact</a>
-
-</div>
-</div>
-
-<div>
-
-<h3 data-i18n="footer_contact">
-Contact
-</h3>
-
-<div class="footer-links">
-
-<a href="tel:+212678774597">
-0678 77 45 97
-</a>
-
-<a href="tel:+212676289076">
-0676 28 90 76
-</a>
-
-<a href="https://wa.me/212678774597"
-target="_blank">
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-© STE TARCI — <span data-i18n="copyright">Tous droits réservés.</span>
-</div>
-
-</div>
-</footer>
-
-<a
-href="https://wa.me/212678774597"
-target="_blank"
-class="whatsapp-float"
-aria-label="WhatsApp">
-💬
-</a>
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-const translations = {
-
-fr: {
-
-nav_home:"Accueil",
-nav_services:"Services",
-nav_about:"À propos",
-nav_projects:"Projets",
-nav_faq:"FAQ",
-nav_contact:"Contact",
-quote:"Demander un devis",
-
-hero_kicker:"STE TARCI • CONSTRUCTION & RÉNOVATION",
-hero_title1:"Construire aujourd'hui.",
-hero_title2:"Créer pour demain.",
-hero_text:"STE TARCI accompagne vos projets de construction, rénovation, villas et bâtiments professionnels avec une approche sérieuse, moderne et soignée.",
-hero_btn:"💬 Demander un devis",
-hero_services:"Découvrir nos services →",
-
-stat_project:"Projet sur mesure",
-stat_languages:"Langues disponibles",
-stat_contact:"Contact WhatsApp",
-
-services_eyebrow:"Nos services",
-services_title:"Des solutions pour chaque projet",
-services_text:"De la construction à la rénovation, nous vous accompagnons avec des solutions adaptées à vos besoins.",
-
-service1_title:"Construction",
-service1_text:"Construction de bâtiments et réalisation des différentes étapes du chantier avec une organisation adaptée au projet.",
-service2_title:"Villas & maisons",
-service2_text:"Réalisation de projets résidentiels avec une attention particulière aux finitions et au confort.",
-service3_title:"Rénovation",
-service3_text:"Modernisation et rénovation des espaces existants selon vos besoins et votre projet.",
-service4_title:"Bâtiments professionnels",
-service4_text:"Solutions pour locaux, bâtiments professionnels et différents projets immobiliers.",
-service5_title:"Gros œuvre",
-service5_text:"Travaux de structure et différentes opérations liées au gros œuvre.",
-service6_title:"Finitions",
-service6_text:"Une attention particulière aux détails pour obtenir un résultat propre et harmonieux.",
-
-badge_text:"Construction • Bâtiment • Rénovation",
-
-about_eyebrow:"STE TARCI",
-about_title:"Une approche sérieuse pour vos projets",
-about_text:"Chez STE TARCI, chaque projet commence par l'écoute de vos besoins. Notre objectif est de proposer une réalisation organisée, pratique et adaptée aux exigences du chantier.",
-
-check1:"Écoute et compréhension du projet",
-check2:"Organisation des différentes étapes",
-check3:"Attention portée aux détails",
-check4:"Communication directe avec le client",
-
-method_eyebrow:"Notre méthode",
-method_title:"Un processus simple",
-method_text:"Une démarche claire pour avancer sereinement sur votre projet.",
-
-step1_title:"Échange",
-step1_text:"Nous discutons de votre projet et de vos besoins.",
-step2_title:"Étude",
-step2_text:"Nous analysons les travaux et les différentes possibilités.",
-step3_title:"Réalisation",
-step3_text:"Les travaux sont organisés selon les étapes prévues.",
-step4_title:"Finitions",
-step4_text:"Nous accordons une attention particulière au résultat final.",
-
-projects_eyebrow:"Réalisations",
-projects_title:"Nos projets",
-projects_text:"Découvrez différents environnements et étapes liés aux projets de construction, villas et bâtiments.",
-
-project1_tag:"VILLA • GROS ŒUVRE",
-project1_title:"Villa en construction",
-project2_tag:"RÉSIDENTIEL",
-project2_title:"Projet villa moderne",
-project3_tag:"CHANTIER",
-project3_title:"Phase de construction",
-project4_tag:"TRAVAUX",
-project4_title:"Organisation du chantier",
-project5_tag:"FINITION",
-project5_title:"Projet résidentiel",
-project6_tag:"PROFESSIONNEL",
-project6_title:"Bâtiment professionnel",
-
-team_eyebrow:"Sur le chantier",
-team_title:"Une équipe présente sur le terrain",
-team_text:"Une présence humaine et professionnelle à chaque étape du projet.",
-team1_title:"Équipe chantier",
-team1_text:"Organisation et suivi des travaux sur le terrain.",
-team2_title:"Coordination & suivi",
-team2_text:"Communication et coordination autour du projet.",
-
-why_eyebrow:"Pourquoi TARCI",
-why_title:"Une vision orientée vers le projet",
-why_text:"Nous privilégions une communication claire et une réalisation adaptée à chaque chantier.",
-
-why1_title:"Communication directe",
-why1_text:"Un contact simple avec le client permet de mieux comprendre les besoins du projet.",
-why2_title:"Organisation",
-why2_text:"Chaque chantier nécessite une organisation claire des différentes étapes.",
-why3_title:"Attention aux détails",
-why3_text:"Les détails et les finitions participent au résultat final.",
-why4_title:"Expérience chantier",
-why4_text:"Une approche pratique permettant de s'adapter aux réalités du chantier.",
-
-faq_title:"Questions fréquentes",
-faq_text:"Quelques réponses aux questions que nos clients peuvent se poser.",
-faq1_q:"Quels types de projets réalisez-vous ?",
-faq1_a:"Nous travaillons sur différents projets de construction, rénovation, maisons, villas et bâtiments professionnels.",
-faq2_q:"Comment demander un devis ?",
-faq2_a:"Vous pouvez nous contacter directement sur WhatsApp en utilisant le bouton « Demander un devis ».",
-faq3_q:"Où intervenez-vous ?",
-faq3_a:"Contactez-nous pour nous présenter votre projet et connaître les possibilités d'intervention selon votre chantier.",
-faq4_q:"Puis-je envoyer les détails de mon projet sur WhatsApp ?",
-faq4_a:"Oui. Vous pouvez envoyer directement votre demande, vos photos, plans ou informations utiles via WhatsApp.",
-
-cta_title:"Vous avez un projet ?",
-cta_text:"Parlons de votre projet et voyons ensemble comment le réaliser.",
-cta_button:"💬 Contacter STE TARCI",
-
-contact_eyebrow:"Contact",
-contact_title:"Parlons de votre projet",
-contact_text:"Pour une demande d'information ou un devis, contactez directement STE TARCI.",
-phone1_label:"Téléphone principal",
-phone2_label:"Téléphone",
-contact_card_title:"Demander un devis",
-contact_card_text:"Expliquez-nous simplement votre projet. Vous pouvez nous envoyer les informations directement sur WhatsApp.",
-
-footer_text:"Construction • Bâtiment • Rénovation • Villas • Projets professionnels",
-footer_nav:"Navigation",
-footer_contact:"Contact",
-copyright:"Tous droits réservés."
-
-},
-
-ar: {
-
-nav_home:"الرئيسية",
-nav_services:"الخدمات",
-nav_about:"من نحن",
-nav_projects:"المشاريع",
-nav_faq:"الأسئلة",
-nav_contact:"اتصل بنا",
-quote:"طلب عرض سعر",
-
-hero_kicker:"STE TARCI • البناء والتجديد",
-hero_title1:"نبني اليوم.",
-hero_title2:"لنصنع الغد.",
-hero_text:"STE TARCI ترافق مشاريع البناء والتجديد والفيلات والمباني المهنية بمنهجية منظمة وعمل دقيق.",
-hero_btn:"💬 طلب عرض سعر",
-hero_services:"اكتشف خدماتنا ←",
-
-stat_project:"مشروع حسب الطلب",
-stat_languages:"لغات متاحة",
-stat_contact:"تواصل عبر واتساب",
-
-services_eyebrow:"خدماتنا",
-services_title:"حلول لكل مشروع",
-services_text:"من البناء إلى التجديد، نرافقكم بحلول مناسبة لاحتياجات كل مشروع.",
-
-service1_title:"البناء",
-service1_text:"إنجاز مشاريع البناء ومختلف مراحل الورش بتنظيم مناسب لطبيعة المشروع.",
-service2_title:"الفيلات والمنازل",
-service2_text:"إنجاز المشاريع السكنية مع الاهتمام بالتشطيبات والراحة.",
-service3_title:"التجديد",
-service3_text:"تحديث وتجديد المساحات والمباني الموجودة حسب احتياجاتكم.",
-service4_title:"المباني المهنية",
-service4_text:"حلول للمحلات والمباني المهنية والمشاريع العقارية المختلفة.",
-service5_title:"الأعمال الكبرى",
-service5_text:"أعمال الهيكل ومختلف العمليات المرتبطة بالأشغال الكبرى.",
-service6_title:"التشطيبات",
-service6_text:"اهتمام بالتفاصيل للحصول على نتيجة نظيفة ومتناسقة.",
-
-badge_text:"البناء • المباني • التجديد",
-
-about_eyebrow:"STE TARCI",
-about_title:"منهجية منظمة لمشاريعكم",
-about_text:"في STE TARCI يبدأ كل مشروع بفهم احتياجاتكم. هدفنا هو تقديم إنجاز منظم وعملي ومناسب لمتطلبات الورش.",
-
-check1:"الاستماع وفهم المشروع",
-check2:"تنظيم مختلف المراحل",
-check3:"الاهتمام بالتفاصيل",
-check4:"تواصل مباشر مع العميل",
-
-method_eyebrow:"منهجيتنا",
-method_title:"مراحل واضحة وبسيطة",
-method_text:"خطوات منظمة تساعد على متابعة المشروع بهدوء ووضوح.",
-
-step1_title:"التواصل",
-step1_text:"نتحدث معكم حول المشروع واحتياجاتكم.",
-step2_title:"الدراسة",
-step2_text:"نحلل الأشغال والإمكانيات المتاحة.",
-step3_title:"الإنجاز",
-step3_text:"يتم تنظيم الأشغال حسب المراحل المتفق عليها.",
-step4_title:"التشطيبات",
-step4_text:"نهتم بالنتيجة النهائية والتفاصيل.",
-
-projects_eyebrow:"إنجازات",
-projects_title:"مشاريعنا",
-projects_text:"نماذج لمراحل ومجالات مختلفة مرتبطة بالبناء والفيلات والمباني.",
-
-project1_tag:"فيلا • الهيكل",
-project1_title:"فيلا في طور البناء",
-project2_tag:"سكني",
-project2_title:"مشروع فيلا عصرية",
-project3_tag:"ورش",
-project3_title:"مرحلة البناء",
-project4_tag:"أشغال",
-project4_title:"تنظيم الورش",
-project5_tag:"تشطيبات",
-project5_title:"مشروع سكني",
-project6_tag:"مهني",
-project6_title:"مبنى مهني",
-
-team_eyebrow:"في الورش",
-team_title:"فريق حاضر في الميدان",
-team_text:"حضور مهني وإنساني في مختلف مراحل المشروع.",
-team1_title:"فريق الورش",
-team1_text:"تنظيم ومتابعة الأشغال في الميدان.",
-team2_title:"التنسيق والمتابعة",
-team2_text:"تواصل وتنسيق مستمر حول المشروع.",
-
-why_eyebrow:"لماذا TARCI",
-why_title:"رؤية تركز على المشروع",
-why_text:"نركز على التواصل الواضح والتنفيذ المناسب لطبيعة كل ورش.",
-
-why1_title:"تواصل مباشر",
-why1_text:"التواصل المباشر يساعد على فهم احتياجات المشروع.",
-why2_title:"التنظيم",
-why2_text:"كل ورش يحتاج إلى تنظيم واضح للمراحل المختلفة.",
-why3_title:"الاهتمام بالتفاصيل",
-why3_text:"التفاصيل والتشطيبات تساهم في النتيجة النهائية.",
-why4_title:"خبرة ميدانية",
-why4_text:"منهجية عملية للتعامل مع مختلف ظروف الورش.",
-
-faq_title:"الأسئلة الشائعة",
-faq_text:"بعض الأجوبة عن الأسئلة التي قد يطرحها عملاؤنا.",
-faq1_q:"ما هي أنواع المشاريع التي تنجزونها؟",
-faq1_a:"نشتغل على مشاريع البناء والتجديد والمنازل والفيلات والمباني المهنية.",
-faq2_q:"كيف يمكن طلب عرض سعر؟",
-faq2_a:"يمكنكم التواصل معنا مباشرة عبر واتساب من خلال زر طلب عرض السعر.",
-faq3_q:"أين تتدخلون؟",
-faq3_a:"تواصلوا معنا لتقديم تفاصيل مشروعكم ومعرفة إمكانية التدخل حسب طبيعة الورش.",
-faq4_q:"هل يمكنني إرسال تفاصيل مشروعي عبر واتساب؟",
-faq4_a:"نعم، يمكنكم إرسال الطلب والصور والمخططات والمعلومات المفيدة مباشرة عبر واتساب.",
-
-cta_title:"عندك مشروع؟",
-cta_text:"تواصل معنا ونتحدث عن مشروعك وكيفية إنجازه.",
-cta_button:"💬 تواصل مع STE TARCI",
-
-contact_eyebrow:"اتصل بنا",
-contact_title:"تحدث معنا عن مشروعك",
-contact_text:"للمعلومات أو طلب عرض سعر، تواصل مباشرة مع STE TARCI.",
-phone1_label:"الهاتف الرئيسي",
-phone2_label:"الهاتف",
-contact_card_title:"طلب عرض سعر",
-contact_card_text:"شرح لنا مشروعك ببساطة ويمكنك إرسال المعلومات مباشرة عبر واتساب.",
-
-footer_text:"البناء • المباني • التجديد • الفيلات • المشاريع المهنية",
-footer_nav:"التنقل",
-footer_contact:"اتصل بنا",
-copyright:"جميع الحقوق محفوظة."
-
-},
-
-en: {
-
-nav_home:"Home",
-nav_services:"Services",
-nav_about:"About",
-nav_projects:"Projects",
-nav_faq:"FAQ",
-nav_contact:"Contact",
-quote:"Request a quote",
-
-hero_kicker:"STE TARCI • CONSTRUCTION & RENOVATION",
-hero_title1:"Build today.",
-hero_title2:"Create for tomorrow.",
-hero_text:"STE TARCI supports construction, renovation, villa and professional building projects with an organized, modern and careful approach.",
-hero_btn:"💬 Request a quote",
-hero_services:"Discover our services →",
-
-stat_project:"Custom project",
-stat_languages:"Languages available",
-stat_contact:"WhatsApp contact",
-
-services_eyebrow:"Our services",
-services_title:"Solutions for every project",
-services_text:"From construction to renovation, we provide solutions adapted to your project.",
-
-service1_title:"Construction",
-service1_text:"Building projects and different construction stages with an organization adapted to each project.",
-service2_title:"Villas & houses",
-service2_text:"Residential projects with particular attention to comfort and finishing.",
-service3_title:"Renovation",
-service3_text:"Modernization and renovation of existing spaces according to your needs.",
-service4_title:"Professional buildings",
-service4_text:"Solutions for commercial spaces, professional buildings and real estate projects.",
-service5_title:"Structural works",
-service5_text:"Structural work and operations related to major construction works.",
-service6_title:"Finishing",
-service6_text:"Particular attention to details for a clean and harmonious final result.",
-
-badge_text:"Construction • Building • Renovation",
-
-about_eyebrow:"STE TARCI",
-about_title:"A serious approach to your projects",
-about_text:"At STE TARCI, every project starts by understanding your needs. Our goal is to provide an organized, practical and project-focused execution.",
-
-check1:"Understanding your project",
-check2:"Organization of every stage",
-check3:"Attention to details",
-check4:"Direct client communication",
-
-method_eyebrow:"Our method",
-method_title:"A simple process",
-method_text:"A clear approach to move forward with confidence.",
-
-step1_title:"Discussion",
-step1_text:"We discuss your project and your needs.",
-step2_title:"Study",
-step2_text:"We analyze the work and available options.",
-step3_title:"Execution",
-step3_text:"The work is organized according to the planned stages.",
-step4_title:"Finishing",
-step4_text:"We pay particular attention to the final result.",
-
-projects_eyebrow:"Projects",
-projects_title:"Our projects",
-projects_text:"Explore different environments and stages related to construction, villas and buildings.",
-
-project1_tag:"VILLA • STRUCTURE",
-project1_title:"Villa under construction",
-project2_tag:"RESIDENTIAL",
-project2_title:"Modern villa project",
-project3_tag:"CONSTRUCTION SITE",
-project3_title:"Construction phase",
-project4_tag:"WORKS",
-project4_title:"Site organization",
-project5_tag:"FINISHING",
-project5_title:"Residential project",
-project6_tag:"PROFESSIONAL",
-project6_title:"Professional building",
-
-team_eyebrow:"On site",
-team_title:"A team present in the field",
-team_text:"Professional and human presence throughout the project.",
-team1_title:"Construction team",
-team1_text:"Organization and monitoring of work on site.",
-team2_title:"Coordination & follow-up",
-team2_text:"Communication and coordination around the project.",
-
-why_eyebrow:"Why TARCI",
-why_title:"A project-focused vision",
-why_text:"We focus on clear communication and execution adapted to every site.",
-
-why1_title:"Direct communication",
-why1_text:"Simple communication helps us understand project needs.",
-why2_title:"Organization",
-why2_text:"Every construction site requires clear organization of its stages.",
-why3_title:"Attention to detail",
-why3_text:"Details and finishing contribute to the final result.",
-why4_title:"Site experience",
-why4_text:"A practical approach adapted to construction realities.",
-
-faq_title:"Frequently asked questions",
-faq_text:"Some answers to common questions from our clients.",
-faq1_q:"What types of projects do you handle?",
-faq1_a:"We work on construction, renovation, houses, villas and professional building projects.",
-faq2_q:"How can I request a quote?",
-faq2_a:"You can contact us directly on WhatsApp using the Request a quote button.",
-faq3_q:"Where do you operate?",
-faq3_a:"Contact us with your project details to discuss the possibilities for your site.",
-faq4_q:"Can I send my project details on WhatsApp?",
-faq4_a:"Yes. You can send your request, photos, plans or useful information directly through WhatsApp.",
-
-cta_title:"Have a project?",
-cta_text:"Let's talk about your project and how to make it happen.",
-cta_button:"💬 Contact STE TARCI",
-
-contact_eyebrow:"Contact",
-contact_title:"Let's talk about your project",
-contact_text:"For information or a quote, contact STE TARCI directly.",
-phone1_label:"Main phone",
-phone2_label:"Phone",
-contact_card_title:"Request a quote",
-contact_card_text:"Tell us about your project. You can send the information directly through WhatsApp.",
-
-footer_text:"Construction • Building • Renovation • Villas • Professional projects",
-footer_nav:"Navigation",
-footer_contact:"Contact",
-copyright:"All rights reserved."
-
-},
-
-es: {
-
-nav_home:"Inicio",
-nav_services:"Servicios",
-nav_about:"Nosotros",
-nav_projects:"Proyectos",
-nav_faq:"Preguntas",
-nav_contact:"Contacto",
-quote:"Solicitar presupuesto",
-
-hero_kicker:"STE TARCI • CONSTRUCCIÓN Y RENOVACIÓN",
-hero_title1:"Construir hoy.",
-hero_title2:"Crear para mañana.",
-hero_text:"STE TARCI acompaña sus proyectos de construcción, renovación, villas y edificios profesionales con un enfoque organizado, moderno y cuidado.",
-hero_btn:"💬 Solicitar presupuesto",
-hero_services:"Descubrir nuestros servicios →",
-
-stat_project:"Proyecto a medida",
-stat_languages:"Idiomas disponibles",
-stat_contact:"Contacto WhatsApp",
-
-services_eyebrow:"Nuestros servicios",
-services_title:"Soluciones para cada proyecto",
-services_text:"Desde la construcción hasta la renovación, ofrecemos soluciones adaptadas a sus necesidades.",
-
-service1_title:"Construcción",
-service1_text:"Construcción de edificios y realización de las diferentes etapas de la obra con una organización adaptada al proyecto.",
-service2_title:"Villas y casas",
-service2_text:"Realización de proyectos residenciales con especial atención a los acabados y al confort.",
-service3_title:"Renovación",
-service3_text:"Modernización y renovación de espacios existentes según sus necesidades.",
-service4_title:"Edificios profesionales",
-service4_text:"Soluciones para locales, edificios profesionales y diferentes proyectos inmobiliarios.",
-service5_title:"Obra estructural",
-service5_text:"Trabajos de estructura y diferentes operaciones relacionadas con la obra.",
-service6_title:"Acabados",
-service6_text:"Especial atención a los detalles para obtener un resultado limpio y armonioso.",
-
-badge_text:"Construcción • Edificación • Renovación",
-
-about_eyebrow:"STE TARCI",
-about_title:"Un enfoque serio para sus proyectos",
-about_text:"En STE TARCI, cada proyecto comienza escuchando sus necesidades. Nuestro objetivo es ofrecer una ejecución organizada, práctica y adaptada a las exigencias de la obra.",
-
-check1:"Comprensión del proyecto",
-check2:"Organización de cada etapa",
-check3:"Atención a los detalles",
-check4:"Comunicación directa con el cliente",
-
-method_eyebrow:"Nuestro método",
-method_title:"Un proceso sencillo",
-method_text:"Un proceso claro para avanzar con tranquilidad en su proyecto.",
-
-step1_title:"Contacto",
-step1_text:"Hablamos sobre su proyecto y sus necesidades.",
-step2_title:"Estudio",
-step2_text:"Analizamos los trabajos y las diferentes posibilidades.",
-step3_title:"Realización",
-step3_text:"Los trabajos se organizan según las etapas previstas.",
-step4_title:"Acabados",
-step4_text:"Prestamos especial atención al resultado final.",
-
-projects_eyebrow:"Realizaciones",
-projects_title:"Nuestros proyectos",
-projects_text:"Descubra diferentes entornos y etapas relacionados con la construcción, villas y edificios.",
-
-project1_tag:"VILLA • ESTRUCTURA",
-project1_title:"Villa en construcción",
-project2_tag:"RESIDENCIAL",
-project2_title:"Proyecto de villa moderna",
-project3_tag:"OBRA",
-project3_title:"Fase de construcción",
-project4_tag:"TRABAJOS",
-project4_title:"Organización de la obra",
-project5_tag:"ACABADOS",
-project5_title:"Proyecto residencial",
-project6_tag:"PROFESIONAL",
-project6_title:"Edificio profesional",
-
-team_eyebrow:"En la obra",
-team_title:"Un equipo presente en el terreno",
-team_text:"Presencia profesional y humana durante cada etapa del proyecto.",
-team1_title:"Equipo de obra",
-team1_text:"Organización y seguimiento de los trabajos.",
-team2_title:"Coordinación y seguimiento",
-team2_text:"Comunicación y coordinación alrededor del proyecto.",
-
-why_eyebrow:"Por qué TARCI",
-why_title:"Una visión centrada en el proyecto",
-why_text:"Priorizamos una comunicación clara y una ejecución adaptada a cada obra.",
-
-why1_title:"Comunicación directa",
-why1_text:"Una comunicación sencilla ayuda a comprender las necesidades del proyecto.",
-why2_title:"Organización",
-why2_text:"Cada obra necesita una organización clara de sus diferentes etapas.",
-why3_title:"Atención a los detalles",
-why3_text:"Los detalles y los acabados contribuyen al resultado final.",
-why4_title:"Experiencia en obra",
-why4_text:"Un enfoque práctico adaptado a las realidades de la construcción.",
-
-faq_title:"Preguntas frecuentes",
-faq_text:"Algunas respuestas a las preguntas de nuestros clientes.",
-faq1_q:"¿Qué tipos de proyectos realizan?",
-faq1_a:"Trabajamos en proyectos de construcción, renovación, casas, villas y edificios profesionales.",
-faq2_q:"¿Cómo puedo solicitar un presupuesto?",
-faq2_a:"Puede contactarnos directamente por WhatsApp mediante el botón Solicitar presupuesto.",
-faq3_q:"¿Dónde trabajan?",
-faq3_a:"Contáctenos para presentar su proyecto y conocer las posibilidades de intervención.",
-faq4_q:"¿Puedo enviar los detalles de mi proyecto por WhatsApp?",
-faq4_a:"Sí. Puede enviar su solicitud, fotos, planos o información útil directamente por WhatsApp.",
-
-cta_title:"¿Tiene un proyecto?",
-cta_text:"Hablemos de su proyecto y veamos juntos cómo realizarlo.",
-cta_button:"💬 Contactar con STE TARCI",
-
-contact_eyebrow:"Contacto",
-contact_title:"Hablemos de su proyecto",
-contact_text:"Para información o presupuesto, contacte directamente con STE TARCI.",
-phone1_label:"Teléfono principal",
-phone2_label:"Teléfono",
-contact_card_title:"Solicitar presupuesto",
-contact_card_text:"Cuéntenos brevemente su proyecto. Puede enviarnos la información directamente por WhatsApp.",
-
-footer_text:"Construcción • Edificación • Renovación • Villas • Proyectos profesionales",
-footer_nav:"Navegación",
-footer_contact:"Contacto",
-copyright:"Todos los derechos reservados."
-
-}
-
-};
-
-
-/* ================= LANGUAGE ================= */
-
-function setLanguage(lang){
-
-const data = translations[lang];
-
-if(!data) return;
-
-document.documentElement.lang = lang;
-
-if(lang === "ar"){
-document.documentElement.dir = "rtl";
-document.body.dir = "rtl";
-}else{
-document.documentElement.dir = "ltr";
-document.body.dir = "ltr";
-}
-
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-
-const key = el.getAttribute("data-i18n");
-
-if(data[key]){
-el.textContent = data[key];
-}
-
-});
-
-document.querySelectorAll(".lang-btn").forEach(btn=>{
-btn.classList.toggle(
-"active",
-btn.dataset.lang === lang
-);
-});
-
-localStorage.setItem("tarci-language",lang);
-
-}
-
-document.querySelectorAll(".lang-btn").forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-setLanguage(btn.dataset.lang);
-
-});
-
-});
-
-
-/* ================= MENU ================= */
-
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click",()=>{
-
-navLinks.classList.toggle("open");
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-navLinks.classList.remove("open");
-});
-
-});
-
-
-/* ================= FAQ ================= */
-
-document.querySelectorAll(".faq-question").forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-const item = button.parentElement;
-
-document.querySelectorAll(".faq-item").forEach(other=>{
-
-if(other !== item){
-other.classList.remove("open");
-}
-
-});
-
-item.classList.toggle("open");
-
-});
-
-});
-
-
-/* ================= START LANGUAGE ================= */
-
-const savedLanguage =
-localStorage.getItem("tarci-language") || "fr";
-
-setLanguage(savedLanguage);
-
-</script>
-
-</body>
-</html>
+  .project-grid{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .project:nth-child(n){
+    grid-column:span 1;
+    min-height:320px;
+  }
+
+  .project img{
+    min-height:320px;
+  }
+
+  .expert-card img{
+    height:360px;
+  }
+
+  .contact-info h2{
+    font-size:38px;
+  }
+
+  .form-row{
+    grid-template-columns:1
