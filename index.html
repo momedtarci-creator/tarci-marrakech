@@ -4,33 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>STE TARCI | Construction, rénovation et bâtiment au Maroc</title>
+<title>STE TARCI | Construction, Bâtiment & Rénovation</title>
 
-<meta name="description"
-content="STE TARCI - Construction, rénovation, villas et bâtiments au Maroc. Demandez votre devis directement par WhatsApp.">
+<meta name="description" content="STE TARCI - Construction, bâtiment, rénovation, villas et projets professionnels au Maroc. Demandez votre devis directement sur WhatsApp.">
 
-<meta name="keywords"
-content="STE TARCI, TARCI, construction Maroc, construction Marrakech, rénovation Marrakech, bâtiment, villas, travaux">
+<meta name="keywords" content="STE TARCI, TARCI, construction Maroc, bâtiment, rénovation, villa, travaux, entreprise construction">
 
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#071a33">
+<meta name="author" content="STE TARCI">
 
-<link rel="canonical"
-href="https://momedtarci-creator.github.io/tarci-marrakech/">
+<meta name="theme-color" content="#07111d">
+
+<link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
 <style>
-:root{
-  --navy:#071a33;
-  --navy2:#0d294b;
-  --blue:#1261a0;
-  --red:#d62828;
-  --white:#ffffff;
-  --light:#f5f7fa;
-  --text:#172033;
-  --muted:#687386;
-  --border:#e5e9ef;
-  --shadow:0 15px 45px rgba(7,26,51,.12);
-}
 
 *{
   margin:0;
@@ -43,16 +29,15 @@ html{
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  background:#fff;
-  line-height:1.6;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f6f8fb;
+  color:#15202b;
   overflow-x:hidden;
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 img{
@@ -60,27 +45,2080 @@ img{
   display:block;
 }
 
-.container{
-  width:min(1180px,92%);
-  margin:auto;
-}
+/* ================= HEADER ================= */
 
-/* HEADER */
 header{
   position:fixed;
   top:0;
   left:0;
   width:100%;
   z-index:1000;
-  background:rgba(7,26,51,.94);
+  background:rgba(7,17,29,.94);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
+  max-width:1200px;
+  margin:auto;
   min-height:76px;
+  padding:0 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
 }
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  font-weight:900;
+  font-size:27px;
+  letter-spacing:1px;
+}
+
+.logo-mark{
+  width:43px;
+  height:43px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#0d6efd,#e52b2b);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:18px;
+  font-weight:900;
+}
+
+.logo small{
+  display:block;
+  font-size:10px;
+  letter-spacing:3px;
+  color:#cbd5e1;
+  margin-top:-3px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.nav-links a{
+  color:#e8eef5;
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#4da3ff;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.lang-btn{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05);
+  color:white;
+  padding:7px 9px;
+  border-radius:7px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.lang-btn.active{
+  background:#0d6efd;
+  border-color:#0d6efd;
+}
+
+.quote-btn{
+  background:#e52b2b;
+  color:white;
+  padding:12px 17px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:800;
+  transition:.3s;
+  white-space:nowrap;
+}
+
+.quote-btn:hover{
+  background:#c91f1f;
+  transform:translateY(-2px);
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#07111d;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transition:opacity 1s ease, transform 7s ease;
+  transform:scale(1.04);
+}
+
+.hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(4,13,23,.92),rgba(4,13,23,.55),rgba(4,13,23,.35)),
+    linear-gradient(0deg,rgba(4,13,23,.65),transparent);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:140px 20px 80px;
+}
+
+.hero-text{
+  max-width:730px;
+}
+
+.badge{
+  display:inline-flex;
+  padding:8px 13px;
+  border-radius:30px;
+  background:rgba(13,110,253,.16);
+  border:1px solid rgba(77,163,255,.4);
+  color:#8dc5ff;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  color:white;
+  font-size:clamp(40px,6vw,76px);
+  line-height:1.02;
+  margin-bottom:22px;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  color:#4da3ff;
+}
+
+.hero p{
+  color:#d9e2ec;
+  font-size:18px;
+  line-height:1.7;
+  max-width:650px;
+  margin-bottom:32px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+  padding:15px 22px;
+  border-radius:9px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:#e52b2b;
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  background:#c91f1f;
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+  background:rgba(255,255,255,.07);
+}
+
+.btn-secondary:hover{
+  background:white;
+  color:#07111d;
+}
+
+.slider-dots{
+  position:absolute;
+  bottom:35px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+  z-index:5;
+}
+
+.slider-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:rgba(255,255,255,.4);
+  cursor:pointer;
+}
+
+.slider-dot.active{
+  width:27px;
+  border-radius:20px;
+  background:#fff;
+}
+
+/* ================= TRUST ================= */
+
+.trust{
+  background:#07111d;
+  color:white;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.trust-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:22px 20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.trust-icon{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:rgba(13,110,253,.16);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#63adff;
+  font-size:20px;
+}
+
+.trust-item strong{
+  display:block;
+  font-size:14px;
+}
+
+.trust-item span{
+  color:#9eacba;
+  font-size:12px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+  padding:95px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 50px;
+}
+
+.section-label{
+  color:#0d6efd;
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.section-head h2{
+  font-size:clamp(30px,4vw,46px);
+  margin-bottom:15px;
+  color:#101c29;
+}
+
+.section-head p{
+  color:#64748b;
+  line-height:1.7;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:white;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.service-card{
+  background:#fff;
+  border:1px solid #e7edf4;
+  border-radius:16px;
+  padding:30px;
+  transition:.35s;
+  position:relative;
+  overflow:hidden;
+}
+
+.service-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(90deg,#0d6efd,#e52b2b);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.35s;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(15,35,55,.1);
+}
+
+.service-card:hover::before{
+  transform:scaleX(1);
+}
+
+.service-icon{
+  width:56px;
+  height:56px;
+  border-radius:13px;
+  background:#edf5ff;
+  color:#0d6efd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.service-card p{
+  color:#687789;
+  line-height:1.65;
+  font-size:14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#f6f8fb;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image{
+  min-height:500px;
+  border-radius:20px;
+  background:
+    linear-gradient(rgba(5,15,25,.12),rgba(5,15,25,.35)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  box-shadow:0 25px 60px rgba(20,35,50,.18);
+}
+
+.about-content .section-label{
+  margin-bottom:10px;
+}
+
+.about-content h2{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.about-content > p{
+  color:#657487;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.check-list{
+  display:grid;
+  gap:13px;
+}
+
+.check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.check b{
+  color:#0d6efd;
+  font-size:19px;
+}
+
+.check span{
+  color:#334155;
+  font-weight:600;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+  background:white;
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.process-card{
+  text-align:center;
+  padding:30px 18px;
+}
+
+.process-number{
+  width:65px;
+  height:65px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:#07111d;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  font-weight:900;
+  border:4px solid #e8f1fb;
+}
+
+.process-card h3{
+  margin-bottom:10px;
+}
+
+.process-card p{
+  color:#718096;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  background:#07111d;
+}
+
+.projects .section-head h2{
+  color:white;
+}
+
+.projects .section-head p{
+  color:#aab8c7;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.project{
+  height:300px;
+  border-radius:15px;
+  overflow:hidden;
+  position:relative;
+}
+
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s;
+}
+
+.project::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 45%,rgba(0,0,0,.8));
+}
+
+.project:hover img{
+  transform:scale(1.08);
+}
+
+.project-info{
+  position:absolute;
+  z-index:2;
+  bottom:20px;
+  left:20px;
+  color:white;
+}
+
+.project-info small{
+  color:#75b7ff;
+  font-weight:700;
+}
+
+.project-info h3{
+  margin-top:5px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+  background:white;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.why-card{
+  padding:28px;
+  border-radius:16px;
+  background:#f7f9fc;
+  border:1px solid #e6edf5;
+}
+
+.why-card h3{
+  margin-bottom:10px;
+}
+
+.why-card p{
+  color:#69788a;
+  line-height:1.7;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+  background:#f6f8fb;
+}
+
+.faq-list{
+  max-width:850px;
+  margin:auto;
+  display:grid;
+  gap:12px;
+}
+
+.faq-item{
+  background:white;
+  border:1px solid #e3eaf2;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+  padding:20px;
+  border:0;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-weight:800;
+  font-size:15px;
+  cursor:pointer;
+  text-align:left;
+}
+
+.faq-question span{
+  font-size:22px;
+  color:#0d6efd;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 20px 20px;
+  color:#687789;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.faq-item.open .faq-answer{
+  display:block;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  padding:70px 20px;
+  background:
+    linear-gradient(100deg,rgba(7,17,29,.97),rgba(7,17,29,.82)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+}
+
+.cta-inner{
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+
+.cta h2{
+  color:white;
+  font-size:clamp(30px,5vw,48px);
+  margin-bottom:15px;
+}
+
+.cta p{
+  color:#c5d0dc;
+  margin-bottom:28px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:white;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.contact-info h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.contact-info > p{
+  color:#69788a;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:15px 0;
+  border-bottom:1px solid #edf0f4;
+}
+
+.contact-icon{
+  width:45px;
+  height:45px;
+  border-radius:10px;
+  background:#edf5ff;
+  color:#0d6efd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+}
+
+.contact-item strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+.contact-item span,
+.contact-item a{
+  color:#64748b;
+}
+
+.contact-box{
+  background:#07111d;
+  border-radius:18px;
+  padding:35px;
+  color:white;
+}
+
+.contact-box h3{
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.contact-box p{
+  color:#aebccc;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.contact-box a{
+  display:block;
+  padding:15px;
+  margin-top:10px;
+  border-radius:9px;
+  text-align:center;
+  font-weight:800;
+}
+
+.whatsapp-btn{
+  background:#25D366;
+  color:white;
+}
+
+.phone-btn{
+  background:white;
+  color:#07111d;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#040b12;
+  color:white;
+  padding:40px 20px 25px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-bottom:25px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.footer-brand{
+  max-width:400px;
+}
+
+.footer-brand h3{
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.footer-brand p{
+  color:#8998a8;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.footer-links a{
+  color:#aab7c5;
+  font-size:13px;
+}
+
+.footer-bottom{
+  max-width:1200px;
+  margin:20px auto 0;
+  color:#6f7c89;
+  font-size:12px;
+  text-align:center;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  z-index:999;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.07)}
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= RTL ================= */
+
+html[dir="rtl"] .hero-text{
+  text-align:right;
+}
+
+html[dir="rtl"] .hero-buttons{
+  justify-content:flex-start;
+}
+
+html[dir="rtl"] .faq-question{
+  text-align:right;
+}
+
+html[dir="rtl"] .check{
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+}
+
+html[dir="rtl"] .contact-item{
+  flex-direction:row-reverse;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:#07111d;
+    padding:20px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:14px 5px;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .header-actions .lang-btn{
+    display:none;
+  }
+
+  .header-actions .quote-btn{
+    display:none;
+  }
+
+  .navbar{
+    min-height:70px;
+  }
+
+  .trust-inner{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .project-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid,
+  .contact-grid,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-image{
+    min-height:380px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:70px 16px;
+  }
+
+  .navbar{
+    padding:0 15px;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  .logo-mark{
+    width:38px;
+    height:38px;
+  }
+
+  .hero-content{
+    padding:120px 17px 80px;
+  }
+
+  .hero h1{
+    font-size:43px;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .hero-buttons a{
+    text-align:center;
+    width:100%;
+  }
+
+  .trust-inner{
+    grid-template-columns:1fr 1fr;
+    padding:18px 14px;
+    gap:15px;
+  }
+
+  .trust-item{
+    gap:8px;
+  }
+
+  .trust-item strong{
+    font-size:11px;
+  }
+
+  .trust-item span{
+    font-size:10px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    padding:25px;
+  }
+
+  .about-grid{
+    gap:30px;
+  }
+
+  .about-image{
+    min-height:300px;
+  }
+
+  .about-content h2{
+    font-size:32px;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process-card{
+    padding:20px 8px;
+  }
+
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project{
+    height:280px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-info h2{
+    font-size:32px;
+  }
+
+  .contact-box{
+    padding:25px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+
+  .footer-links{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .whatsapp-float{
+    right:15px;
+    bottom:15px;
+    width:54px;
+    height:54px;
+  }
+
+}
+
+/* ================= ARABIC MOBILE ================= */
+
+@media(max-width:600px){
+
+  html[dir="rtl"] .hero-text{
+    text-align:right;
+  }
+
+  html[dir="rtl"] .hero-buttons a{
+    text-align:center;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+  <div class="logo-mark">T</div>
+  <div>
+    TARCI
+    <small>STE</small>
+  </div>
+</a>
+
+<nav class="nav-links" id="navLinks">
+  <a href="#home" data-fr="Accueil" data-ar="الرئيسية" data-en="Home" data-es="Inicio">Accueil</a>
+  <a href="#services" data-fr="Services" data-ar="الخدمات" data-en="Services" data-es="Servicios">Services</a>
+  <a href="#about" data-fr="À propos" data-ar="من نحن" data-en="About" data-es="Nosotros">À propos</a>
+  <a href="#projects" data-fr="Projets" data-ar="المشاريع" data-en="Projects" data-es="Proyectos">Projets</a>
+  <a href="#faq" data-fr="FAQ" data-ar="الأسئلة" data-en="FAQ" data-es="FAQ">FAQ</a>
+  <a href="#contact" data-fr="Contact" data-ar="اتصل بنا" data-en="Contact" data-es="Contacto">Contact</a>
+</nav>
+
+<div class="header-actions">
+
+<button class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
+<button class="lang-btn" onclick="changeLanguage('ar')">AR</button>
+<button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+
+<a class="quote-btn"
+href="https://wa.me/212678774597?text=Bonjour%20STE%20TARCI%2C%20je%20souhaite%20demander%20un%20devis%20pour%20mon%20projet."
+target="_blank">
+Demander un devis
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-bg" id="heroBg"></div>
+
+<div class="hero-content">
+
+<div class="hero-text reveal">
+
+<div class="badge">
+STE TARCI • CONSTRUCTION & RÉNOVATION
+</div>
+
+<h1>
+Construire aujourd'hui.<br>
+<span>Créer pour demain.</span>
+</h1>
+
+<p>
+STE TARCI accompagne vos projets de construction,
+rénovation, villas et bâtiments professionnels
+avec une approche sérieuse, moderne et soignée.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn-primary"
+href="https://wa.me/212678774597?text=Bonjour%20STE%20TARCI%2C%20je%20souhaite%20demander%20un%20devis%20pour%20mon%20projet."
+target="_blank">
+💬 Demander un devis
+</a>
+
+<a class="btn-secondary" href="#services">
+Découvrir nos services →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slider-dots" id="sliderDots"></div>
+
+</section>
+
+
+<!-- TRUST -->
+<div class="trust">
+
+<div class="trust-inner">
+
+<div class="trust-item">
+<div class="trust-icon">✓</div>
+<div>
+<strong>Travail soigné</strong>
+<span>Qualité et précision</span>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">◆</div>
+<div>
+<strong>Solutions adaptées</strong>
+<span>Selon votre projet</span>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">⌂</div>
+<div>
+<strong>Construction</strong>
+<span>Résidentiel & professionnel</span>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">↗</div>
+<div>
+<strong>Accompagnement</strong>
+<span>De l'idée à la réalisation</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-label">Nos services</div>
+
+<h2>
+Des solutions pour chaque projet
+</h2>
+
+<p>
+De la construction à la rénovation, nous vous accompagnons
+avec des solutions adaptées à vos besoins.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service-card reveal">
+<div class="service-icon">🏗️</div>
+<h3>Construction</h3>
+<p>
+Construction de bâtiments et réalisation des différentes étapes
+du chantier avec une organisation adaptée au projet.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">🏠</div>
+<h3>Villas & maisons</h3>
+<p>
+Réalisation de projets résidentiels avec une attention particulière
+aux finitions et au confort.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">🔨</div>
+<h3>Rénovation</h3>
+<p>
+Modernisation et rénovation des espaces existants selon vos
+besoins et votre projet.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">🏢</div>
+<h3>Bâtiments professionnels</h3>
+<p>
+Solutions pour locaux, bâtiments professionnels et différents
+projets immobiliers.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">🧱</div>
+<h3>Gros œuvre</h3>
+<p>
+Travaux de structure et différentes opérations liées au gros œuvre.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">✨</div>
+<h3>Finitions</h3>
+<p>
+Une attention particulière aux détails pour obtenir un résultat
+propre et harmonieux.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image reveal"></div>
+
+<div class="about-content reveal">
+
+<div class="section-label">
+STE TARCI
+</div>
+
+<h2>
+Une approche sérieuse pour vos projets
+</h2>
+
+<p>
+Chez STE TARCI, chaque projet commence par l'écoute de vos besoins.
+Notre objectif est de proposer une réalisation organisée,
+pratique et adaptée aux exigences du chantier.
+</p>
+
+<div class="check-list">
+
+<div class="check">
+<b>✓</b>
+<span>Écoute et compréhension du projet</span>
+</div>
+
+<div class="check">
+<b>✓</b>
+<span>Organisation des différentes étapes</span>
+</div>
+
+<div class="check">
+<b>✓</b>
+<span>Attention portée aux détails</span>
+</div>
+
+<div class="check">
+<b>✓</b>
+<span>Communication directe avec le client</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+<section class="process">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-label">
+Notre méthode
+</div>
+
+<h2>
+Un processus simple
+</h2>
+
+<p>
+Une démarche claire pour avancer sereinement sur votre projet.
+</p>
+
+</div>
+
+<div class="process-grid">
+
+<div class="process-card reveal">
+<div class="process-number">01</div>
+<h3>Échange</h3>
+<p>
+Nous discutons de votre projet et de vos besoins.
+</p>
+</div>
+
+<div class="process-card reveal">
+<div class="process-number">02</div>
+<h3>Étude</h3>
+<p>
+Nous analysons les travaux et les différentes possibilités.
+</p>
+</div>
+
+<div class="process-card reveal">
+<div class="process-number">03</div>
+<h3>Réalisation</h3>
+<p>
+Les travaux sont organisés selon les étapes prévues.
+</p>
+</div>
+
+<div class="process-card reveal">
+<div class="process-number">04</div>
+<h3>Finitions</h3>
+<p>
+Nous accordons une attention particulière au résultat final.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-label">
+Réalisations
+</div>
+
+<h2>
+Nos projets
+</h2>
+
+<p>
+Quelques exemples de travaux et d'environnements liés au secteur
+de la construction et du bâtiment.
+</p>
+
+</div>
+
+<div class="project-grid">
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85" alt="Projet construction">
+<div class="project-info">
+<small>CONSTRUCTION</small>
+<h3>Projet bâtiment</h3>
+</div>
+</div>
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Projet villa">
+<div class="project-info">
+<small>RÉSIDENTIEL</small>
+<h3>Projet villa</h3>
+</div>
+</div>
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85" alt="Chantier">
+<div class="project-info">
+<small>CHANTIER</small>
+<h3>Travaux & construction</h3>
+</div>
+</div>
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" alt="Travaux bâtiment">
+<div class="project-info">
+<small>TRAVAUX</small>
+<h3>Projet professionnel</h3>
+</div>
+</div>
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="Construction">
+<div class="project-info">
+<small>CONSTRUCTION</small>
+<h3>Travaux de chantier</h3>
+</div>
+</div>
+
+<div class="project reveal">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="Bâtiment professionnel">
+<div class="project-info">
+<small>PROFESSIONNEL</small>
+<h3>Espace professionnel</h3>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+<section class="why">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-label">
+Pourquoi TARCI
+</div>
+
+<h2>
+Une vision orientée vers le projet
+</h2>
+
+<p>
+Nous privilégions une communication claire et une réalisation
+adaptée à chaque chantier.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card reveal">
+<h3>🤝 Communication directe</h3>
+<p>
+Un contact simple avec le client permet de mieux comprendre
+les besoins et les priorités du projet.
+</p>
+</div>
+
+<div class="why-card reveal">
+<h3>📐 Organisation</h3>
+<p>
+Chaque chantier nécessite une organisation claire des différentes
+étapes et des interventions.
+</p>
+</div>
+
+<div class="why-card reveal">
+<h3>🔎 Attention aux détails</h3>
+<p>
+Les détails et les finitions participent directement à la qualité
+visuelle du résultat.
+</p>
+</div>
+
+<div class="why-card reveal">
+<h3>🏗️ Expérience chantier</h3>
+<p>
+Une approche pratique permettant de s'adapter aux réalités
+du chantier et aux besoins du projet.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-label">
+FAQ
+</div>
+
+<h2>
+Questions fréquentes
+</h2>
+
+<p>
+Quelques réponses aux questions que nos clients peuvent se poser.
+</p>
+
+</div>
+
+<div class="faq-list">
+
+<div class="faq-item reveal">
+<button class="faq-question">
+Quels types de projets réalisez-vous ?
+<span>+</span>
+</button>
+<div class="faq-answer">
+Nous travaillons sur différents projets de construction,
+rénovation, maisons, villas et bâtiments professionnels.
+</div>
+</div>
+
+<div class="faq-item reveal">
+<button class="faq-question">
+Comment demander un devis ?
+<span>+</span>
+</button>
+<div class="faq-answer">
+Vous pouvez nous contacter directement sur WhatsApp en utilisant
+le bouton « Demander un devis ».
+</div>
+</div>
+
+<div class="faq-item reveal">
+<button class="faq-question">
+Où intervenez-vous ?
+<span>+</span>
+</button>
+<div class="faq-answer">
+Contactez-nous pour nous présenter votre projet et connaître
+les possibilités d'intervention selon votre chantier.
+</div>
+</div>
+
+<div class="faq-item reveal">
+<button class="faq-question">
+Puis-je vous envoyer les détails de mon projet sur WhatsApp ?
+<span>+</span>
+</button>
+<div class="faq-answer">
+Oui. Vous pouvez envoyer directement votre demande, vos photos,
+plans ou informations utiles via WhatsApp.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="cta-inner reveal">
+
+<h2>
+Vous avez un projet ?
+</h2>
+
+<p>
+Parlons de votre projet et voyons ensemble comment le réaliser.
+</p>
+
+<a class="btn-primary"
+href="https://wa.me/212678774597?text=Bonjour%20STE%20TARCI%2C%20je%20souhaite%20demander%20un%20devis%20pour%20mon%20projet."
+target="_blank">
+💬 Contacter STE TARCI sur WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-info reveal">
+
+<div class="section-label">
+Contact
+</div>
+
+<h2>
+Parlons de votre projet
+</h2>
+
+<p>
+Pour une demande d'information ou un devis, contactez directement
+STE TARCI.
+</p>
+
+<div class="contact-item">
+
+<div class="contact-icon">📱</div>
+
+<div>
+<strong>Téléphone principal</strong>
+<a href="tel:+212678774597">
+0678 77 45 97
+</a>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">📞</div>
+
+<div>
+<strong>Téléphone</strong>
+<a href="tel:+212676289076">
+0676 28 90 76
+</a>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">💬</div>
+
+<div>
+<strong>WhatsApp</strong>
+<a href="https://wa.me/212678774597" target="_blank">
+Contacter STE TARCI
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-box reveal">
+
+<h3>
+Demander un devis
+</h3>
+
+<p>
+Expliquez-nous simplement votre projet. Vous pouvez nous envoyer
+les informations directement sur WhatsApp.
+</p>
+
+<a class="whatsapp-btn"
+href="https://wa.me/212678774597?text=Bonjour%20STE%20TARCI%2C%20je%20souhaite%20demander%20un%20devis%20pour%20mon%20projet."
+target="_blank">
+💬 WhatsApp — 0678 77 45 97
+</a>
+
+<a class="phone-btn"
+href="tel:+212678774597">
+📞 Appeler maintenant
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>STE TARCI</h3>
+
+<p>
+Construction • Bâtiment • Rénovation • Villas • Projets professionnels
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="#home">Accueil</a>
+<a href="#services">Services</a>
+<a href="#about">À propos</a>
+<a href="#projects">Projets</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© <span id="year"></span> STE TARCI — Tous droits réservés.
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+
+<a class="whatsapp-float"
+href="https://wa.me/212678774597?text=Bonjour%20STE%20TARCI%2C%20je%20souhaite%20demander%20un%20devis%20pour%20mon%20projet."
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+
+/* ================= YEAR ================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+  document.getElementById("navLinks").classList.toggle("open");
+
+}
+
+
+/* Close mobile menu after click */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    document.getElementById("navLinks").classList.remove("open");
+
+  });
+
+});
+
+
+/* ================= HERO SLIDER ================= */
+
+const heroImages = [
+
+"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=90",
+
+"https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=90",
+
+"https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=90",
+
+"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=90"
+
+];
+
+let currentSlide = 0;
+
+const heroBg = document.getElementById("heroBg");
+
+const dotsContainer =
+document.getElementById("sliderDots");
+
+
+heroImages.forEach((image,index)=>{
+
+  const dot = document.createElement("div");
+
+  dot.className =
+    "slider-dot" + (index === 0 ? " active" : "");
+
+  dot.onclick = () => {
+
+    currentSlide = index;
+
+    showSlide();
+
+  };
+
+  dotsContainer.appendChild(dot);
+
+});
+
+
+function showSlide(){
+
+  heroBg.style.backgroundImage =
+    `url("${heroImages[currentSlide]}")`;
+
+  document.querySelectorAll(".slider-dot")
+    .forEach((dot,index)=>{
+
+      dot.classList.toggle(
+        "active",
+        index === currentSlide
+      );
+
+    });
+
+}
+
+
+showSlide();
+
+
+setInterval(()=>{
+
+  currentSlide =
+    (currentSlide + 1) % heroImages.length;
+
+  showSlide();
+
+},5500);
+
+
+/* ================= FAQ ================= */
+
+document.querySelectorAll(".faq-question")
+.forEach(button => {
+
+  button.addEventListener("click",()=>{
+
+    const item =
+      button.parentElement;
+
+    const wasOpen =
+      item.classList.contains("open");
+
+    document.querySelectorAll(".faq-item")
+    .forEach(i => i.classList.remove("open"));
+
+    document.querySelectorAll(".faq-question span")
+    .forEach(s => s.textContent = "+");
+
+    if(!wasOpen){
+
+      item.classList.add("open");
+
+      button.querySelector("span")
+        .textContent = "−";
+
+    }
+
+  });
+
+});
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+  });
+
+},
+
+{
+  threshold:.12
+}
+
+);
+
+
+document.querySelectorAll(".reveal")
+.forEach(element => {
+
+  observer.observe(element);
+
+});
+
+
+/* ================= LANGUAGE ================= */
+
+const translations = {
+
+fr:{
+  title:"STE TARCI | Construction, Bâtiment & Rénovation"
+},
+
+ar:{
+  title:"STE TARCI | البناء والأشغال والتجديد"
+},
+
+en:{
+  title:"STE TARCI | Construction, Building & Renovation"
+},
+
+es:{
+  title:"STE TARCI | Construcción, Edificación y Renovación"
+}
+
+};
+
+
+function changeLanguage(lang){
+
+  document.documentElement.lang = lang;
+
+  if(lang === "ar"){
+
+    document.documentElement.dir = "rtl";
+
+  }else{
+
+    document.documentElement.dir = "ltr";
+
+  }
+
+
+  document.title =
+    translations[lang].title;
+
+
+  document.querySelectorAll("[data-fr]")
+  .forEach(element=>{
+
+    const value =
+      element.getAttribute("data-" + lang);
+
+    if(value){
+
+      element.textContent = value;
+
+    }
+
+  });
+
+
+  document.querySelectorAll(".lang-btn")
+  .forEach(button=>{
+
+    button.classList.remove("active");
+
+  });
+
+
+  const activeButton =
+    document.querySelector(
+      `.lang-btn[onclick="changeLanguage('${lang}')"]`
+    );
+
+  if(activeButton){
+
+    activeButton.classList.add("active");
+
+  }
+
+
+  localStorage.setItem(
+    "tarci-language",
+    lang
+  );
+
+}
+
+
+/* Restore language */
+
+const savedLanguage =
+localStorage.getItem("tarci-language");
+
+if(savedLanguage){
+
+  changeLanguage(savedLanguage);
+
+}
+
+</script>
+
+</body>
+</html>
