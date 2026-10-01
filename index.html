@@ -136,25 +136,12 @@ gap:30px;
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
-font-family:'Poppins',sans-serif;
-font-size:25px;
-font-weight:800;
 }
 
-.logo-mark{
-width:39px;
-height:39px;
-border-radius:10px;
-display:grid;
-place-items:center;
-background:linear-gradient(145deg,var(--blue),var(--red));
-color:#fff;
-font-weight:800;
-}
-
-.logo span{
-color:var(--blue);
+.logo img{
+width:155px;
+height:auto;
+object-fit:contain;
 }
 
 .nav-links{
@@ -421,7 +408,7 @@ display:grid;
 place-items:center;
 background:#e4f1fb;
 color:var(--blue);
-font-weight:800;
+font-size:21px;
 }
 
 .feature h3{
@@ -672,16 +659,60 @@ color:var(--gray);
 font-size:13px;
 }
 
+/* ================= FINAL RESULT ================= */
+
+.final-result{
+background:#fff;
+}
+
+.final-result-box{
+max-width:900px;
+margin:auto;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+background:#fff;
+}
+
+.final-result-image{
+height:520px;
+overflow:hidden;
+}
+
+.final-result-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.final-result-content{
+padding:30px;
+text-align:center;
+}
+
+.final-result-content h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.final-result-content p{
+color:var(--gray);
+max-width:650px;
+margin:auto;
+}
+
 /* ================= COMPLEMENTARY ================= */
 
 .complementary{
-background:#fff;
+background:#f7f8fa;
 }
 
 .complementary-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 gap:25px;
+max-width:900px;
+margin:auto;
 }
 
 .complementary-card{
@@ -730,7 +761,7 @@ font-size:14px;
 /* ================= SECURITY ================= */
 
 .security{
-background:#f7f8fa;
+background:#fff;
 }
 
 .security-box{
@@ -1036,13 +1067,8 @@ display:none;
 height:70px;
 }
 
-.logo{
-font-size:22px;
-}
-
-.logo-mark{
-width:35px;
-height:35px;
+.logo img{
+width:125px;
 }
 
 .langs button{
@@ -1102,8 +1128,7 @@ font-size:30px;
 .service-grid,
 .stage-grid,
 .project-grid,
-.about-points,
-.complementary-grid{
+.about-points{
 grid-template-columns:1fr;
 }
 
@@ -1120,6 +1145,10 @@ grid-auto-rows:260px;
 }
 
 .about-image img{
+height:360px;
+}
+
+.final-result-image{
 height:360px;
 }
 
@@ -1189,11 +1218,9 @@ WhatsApp direct →
 
 <a href="#home" class="logo">
 
-<div class="logo-mark">
-T
-</div>
-
-<span>TARCI</span>
+<img
+src="tarci-logo-sans-sarl.png"
+alt="TARCI Marrakech">
 
 </a>
 
@@ -1272,9 +1299,9 @@ Construire aujourd’hui,
 <p>
 
 TARCI accompagne vos projets de construction,
-bâtiment, villas, rénovation et aménagement
-avec une équipe professionnelle et un suivi
-sérieux de chaque étape du chantier.
+bâtiment, villas et rénovation avec une équipe
+professionnelle et un suivi sérieux de chaque
+étape du chantier.
 
 </p>
 
@@ -1387,12 +1414,29 @@ de finition, nous organisons les différentes
 
 <div class="feature-list">
 
+<div class="feature">
+
+<div class="feature-icon">✓</div>
+
+<div>
+
+<h3>
+Préparation et fondations
+</h3>
+
+<p>
+Préparation du terrain, fondations et travaux
+nécessaires au démarrage du chantier.
+</p>
+
+</div>
+
+</div>
+
 
 <div class="feature">
 
-<div class="feature-icon">
-01
-</div>
+<div class="feature-icon">✓</div>
 
 <div>
 
@@ -1401,8 +1445,8 @@ Gros œuvre
 </h3>
 
 <p>
-Fondations, béton, maçonnerie,
-structures et travaux de base.
+Ferraillage, béton, poteaux, dalles,
+maçonnerie et structure du bâtiment.
 </p>
 
 </div>
@@ -1412,19 +1456,17 @@ structures et travaux de base.
 
 <div class="feature">
 
-<div class="feature-icon">
-02
-</div>
+<div class="feature-icon">✓</div>
 
 <div>
 
 <h3>
-Construction de bâtiments
+Construction du bâtiment
 </h3>
 
 <p>
-Maisons, villas et bâtiments adaptés
-aux besoins du projet.
+Élévation des murs, réalisation des différents
+niveaux et avancement du chantier.
 </p>
 
 </div>
@@ -1434,9 +1476,7 @@ aux besoins du projet.
 
 <div class="feature">
 
-<div class="feature-icon">
-03
-</div>
+<div class="feature-icon">✓</div>
 
 <div>
 
@@ -1445,30 +1485,8 @@ Second œuvre & finitions
 </h3>
 
 <p>
-Enduits, cloisons, revêtements,
-aménagements et finitions.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-04
-</div>
-
-<div>
-
-<h3>
-Suivi du chantier
-</h3>
-
-<p>
-Coordination et accompagnement
-pendant les différentes phases.
+Enduits, revêtements, aménagements et
+finitions jusqu'à la livraison du projet.
 </p>
 
 </div>
@@ -1504,8 +1522,9 @@ Construction, bâtiment & travaux
 
 <p>
 
-Une organisation pensée autour des différentes
-étapes de réalisation d'un projet de construction.
+Notre savoir-faire couvre les principales
+étapes d'un projet de construction, de la
+structure jusqu'aux finitions.
 
 </p>
 
@@ -1521,7 +1540,7 @@ Une organisation pensée autour des différentes
 
 <img
 src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=900&q=85"
-alt="Travaux de construction">
+alt="Travaux de gros œuvre">
 
 </div>
 
@@ -1536,8 +1555,8 @@ Gros œuvre
 </h3>
 
 <p>
-Fondations, béton, structures,
-maçonnerie et travaux de gros œuvre.
+Fondations, ferraillage, béton, structures,
+poteaux, dalles et maçonnerie.
 </p>
 
 </div>
@@ -1550,8 +1569,8 @@ maçonnerie et travaux de gros œuvre.
 <div class="service-image">
 
 <img
-src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
-alt="Bâtiment en construction">
+src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85"
+alt="Chantier de bâtiment">
 
 </div>
 
@@ -1566,8 +1585,8 @@ Construction
 </h3>
 
 <p>
-Réalisation de maisons, bâtiments
-et projets immobiliers.
+Réalisation de bâtiments et projets
+adaptés aux besoins du chantier.
 </p>
 
 </div>
@@ -1580,8 +1599,8 @@ et projets immobiliers.
 <div class="service-image">
 
 <img
-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
-alt="Villa moderne">
+src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85"
+alt="Construction de villa">
 
 </div>
 
@@ -1596,8 +1615,8 @@ Construction de villas
 </h3>
 
 <p>
-Des projets de villas pensés autour
-des besoins et du style du client.
+Construction et suivi de villas, depuis
+la structure jusqu'aux dernières étapes.
 </p>
 
 </div>
@@ -1610,8 +1629,8 @@ des besoins et du style du client.
 <div class="service-image">
 
 <img
-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85"
-alt="Finition intérieure">
+src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=900&q=85"
+alt="Travaux de finition sur chantier">
 
 </div>
 
@@ -1626,8 +1645,8 @@ Second œuvre
 </h3>
 
 <p>
-Aménagement, enduits, cloisons,
-revêtements et finitions.
+Travaux de finition, revêtements,
+enduits et préparation avant livraison.
 </p>
 
 </div>
@@ -1651,15 +1670,16 @@ revêtements et finitions.
 <div class="section-head">
 
 <div class="section-kicker">
-Notre méthode
+Les étapes du chantier
 </div>
 
 <h2>
-Du chantier aux finitions
+De la préparation aux finitions
 </h2>
 
 <p>
-Les principales étapes d'un projet de construction.
+Chaque étape participe à la réalisation
+complète du projet.
 </p>
 
 </div>
@@ -1672,18 +1692,19 @@ Les principales étapes d'un projet de construction.
 
 <img
 src="https://images.unsplash.com/photo-1590486803833-1c5dc8dda2c4?auto=format&fit=crop&w=900&q=85"
-alt="Préparation du chantier">
+alt="Préparation et travaux de terrassement">
 
 <div class="stage-overlay"></div>
 
 <div class="stage-content">
 
 <h3>
-Préparation
+Préparation du chantier
 </h3>
 
 <p>
-Organisation et préparation du chantier.
+Installation, préparation du terrain
+et démarrage des travaux.
 </p>
 
 </div>
@@ -1695,18 +1716,19 @@ Organisation et préparation du chantier.
 
 <img
 src="https://images.unsplash.com/photo-1590644365607-1c5a2b6c0e9f?auto=format&fit=crop&w=900&q=85"
-alt="Travaux de béton">
+alt="Ferraillage et béton">
 
 <div class="stage-overlay"></div>
 
 <div class="stage-content">
 
 <h3>
-Structure & béton
+Ferraillage & béton
 </h3>
 
 <p>
-Réalisation des éléments structuraux.
+Réalisation des éléments structuraux
+du bâtiment.
 </p>
 
 </div>
@@ -1718,18 +1740,19 @@ Réalisation des éléments structuraux.
 
 <img
 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85"
-alt="Équipe de construction">
+alt="Équipe travaillant sur un chantier">
 
 <div class="stage-overlay"></div>
 
 <div class="stage-content">
 
 <h3>
-Travaux du bâtiment
+Élévation & maçonnerie
 </h3>
 
 <p>
-Coordination des équipes et des travaux.
+Progression du bâtiment et coordination
+des équipes sur le chantier.
 </p>
 
 </div>
@@ -1741,7 +1764,7 @@ Coordination des équipes et des travaux.
 
 <img
 src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85"
-alt="Finitions d'une villa">
+alt="Travaux de finition">
 
 <div class="stage-overlay"></div>
 
@@ -1752,7 +1775,8 @@ Finitions
 </h3>
 
 <p>
-Dernières étapes du projet.
+Dernières étapes avant la livraison
+du projet.
 </p>
 
 </div>
@@ -1786,7 +1810,8 @@ Des projets construits étape par étape
 </h2>
 
 <p>
-Construction, villas, rénovation et aménagement.
+Du chantier et du gros œuvre jusqu'aux
+dernières finitions.
 </p>
 
 </div>
@@ -1799,7 +1824,7 @@ Construction, villas, rénovation et aménagement.
 
 <img
 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1300&q=85"
-alt="Chantier de construction">
+alt="Grand chantier de construction">
 
 <div class="project-caption">
 
@@ -1832,13 +1857,30 @@ Travaux de chantier
 <article class="project">
 
 <img
-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
-alt="Villa moderne">
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85"
+alt="Équipe professionnelle sur chantier">
 
 <div class="project-caption">
 
 <h3>
-Villas
+Équipe & chantier
+</h3>
+
+</div>
+
+</article>
+
+
+<article class="project">
+
+<img
+src="https://images.unsplash.com/photo-1590644365607-1c5a2b6c0e9f?auto=format&fit=crop&w=900&q=85"
+alt="Structure et béton">
+
+<div class="project-caption">
+
+<h3>
+Structure & béton
 </h3>
 
 </div>
@@ -1850,29 +1892,12 @@ Villas
 
 <img
 src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85"
-alt="Aménagement">
+alt="Projet intérieur terminé">
 
 <div class="project-caption">
 
 <h3>
-Aménagement
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="project">
-
-<img
-src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85"
-alt="Architecture">
-
-<div class="project-caption">
-
-<h3>
-Architecture & rénovation
+Projet terminé
 </h3>
 
 </div>
@@ -1917,9 +1942,9 @@ Une équipe autour de votre projet.
 <p>
 
 TARCI accompagne ses clients dans leurs projets
-de construction, bâtiment, villas, rénovation
-et aménagement avec une approche basée sur
-l'organisation, la communication et le suivi.
+de construction, bâtiment, villas et rénovation
+avec une approche basée sur l'organisation,
+la communication et le suivi du chantier.
 
 </p>
 
@@ -1930,7 +1955,7 @@ l'organisation, la communication et le suivi.
 <div class="about-point">
 
 <strong>
-Suivi du projet
+Suivi du chantier
 </strong>
 
 <span>
@@ -1947,7 +1972,7 @@ Coordination des différentes étapes.
 </strong>
 
 <span>
-Des équipes adaptées au chantier.
+Des équipes adaptées aux besoins du chantier.
 </span>
 
 </div>
@@ -1960,7 +1985,8 @@ Organisation
 </strong>
 
 <span>
-Une attention portée à chaque étape.
+Une attention portée à chaque phase
+du projet.
 </span>
 
 </div>
@@ -1978,6 +2004,60 @@ Un contact direct avec le client.
 
 </div>
 
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FINAL RESULT ================= -->
+
+<section class="final-result">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+Après les travaux
+</div>
+
+<h2>
+Le résultat final
+</h2>
+
+<p>
+Une seule image intérieure pour montrer
+le résultat après l'achèvement des travaux.
+</p>
+
+</div>
+
+
+<div class="final-result-box">
+
+<div class="final-result-image">
+
+<img
+src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=85"
+alt="Intérieur d'un projet terminé">
+
+</div>
+
+<div class="final-result-content">
+
+<h3>
+Projet terminé
+</h3>
+
+<p>
+Après les travaux de construction et de finition,
+le projet prend sa forme finale.
+</p>
 
 </div>
 
@@ -2006,8 +2086,9 @@ Ménage & nettoyage
 
 <p>
 
-Un service complémentaire pour les maisons,
-villas et espaces professionnels.
+Un service complémentaire pour accompagner
+les espaces après les travaux et leur mise
+en service.
 
 </p>
 
@@ -2015,7 +2096,6 @@ villas et espaces professionnels.
 
 
 <div class="complementary-grid">
-
 
 <div class="complementary-card">
 
@@ -2032,38 +2112,14 @@ Nettoyage professionnel
 </h3>
 
 <p>
-Intervention pour maisons, villas,
-bureaux et espaces professionnels.
+Nettoyage des maisons, villas, bureaux
+et espaces professionnels, notamment
+après les travaux.
 </p>
 
 </div>
 
 </div>
-
-
-<div class="complementary-card">
-
-<img
-src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=85"
-alt="Nettoyage après travaux">
-
-<div class="complementary-overlay"></div>
-
-<div class="complementary-content">
-
-<h3>
-Nettoyage après travaux
-</h3>
-
-<p>
-Préparation des espaces après les travaux
-et avant leur utilisation.
-</p>
-
-</div>
-
-</div>
-
 
 </div>
 
