@@ -1,33 +1,24 @@
- <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<!DOCTYPE html><html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TARCI Marrakech | Construction, bâtiment et rénovation</title>
-
-<meta name="description"
-content="TARCI Marrakech - Construction, bâtiment, rénovation, villas et projets professionnels à Marrakech et au Maroc.">
-
-<meta name="keywords"
-content="TARCI, TARCI Marrakech, construction Marrakech, bâtiment Marrakech, rénovation Marrakech, villas Marrakech">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TARCI Marrakech | Construction, bâtiment et rénovation</title><meta name="description" content="TARCI Marrakech - Construction, bâtiment, rénovation, villas et projets professionnels à Marrakech et au Maroc.">
+<meta name="keywords" content="TARCI, TARCI Marrakech, construction Marrakech, bâtiment Marrakech, rénovation Marrakech, villas Marrakech">
 <meta name="author" content="TARCI Marrakech">
-
-<link rel="canonical"
-href="https://momedtarci-creator.github.io/tarci-marrakech/">
-
-<style>
-
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://momedtarci-creator.github.io/tarci-marrakech/"><meta property="og:title" content="TARCI Marrakech | Construction et rénovation">
+<meta property="og:description" content="Construction, bâtiment et rénovation à Marrakech et au Maroc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://momedtarci-creator.github.io/tarci-marrakech/"><style>
 :root{
   --navy:#071a33;
   --navy2:#0d294b;
   --gold:#d6ad55;
+  --gold2:#e7c878;
   --white:#fff;
   --light:#f5f7fa;
   --text:#182433;
   --muted:#657384;
   --border:#e3e8ee;
+  --shadow:0 10px 30px rgba(7,26,51,.08);
 }
 
 *{
@@ -38,6 +29,7 @@ href="https://momedtarci-creator.github.io/tarci-marrakech/">
 
 html{
   scroll-behavior:smooth;
+  scroll-padding-top:75px;
 }
 
 body{
@@ -45,6 +37,7 @@ body{
   color:var(--text);
   background:#fff;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 a{
@@ -57,12 +50,16 @@ img{
   display:block;
 }
 
+button{
+  font-family:inherit;
+}
+
 .container{
   width:min(1180px,92%);
   margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
   position:fixed;
@@ -71,7 +68,8 @@ header{
   width:100%;
   z-index:1000;
   background:rgba(7,26,51,.97);
-  box-shadow:0 2px 15px rgba(0,0,0,.15);
+  box-shadow:0 2px 18px rgba(0,0,0,.16);
+  backdrop-filter:blur(8px);
 }
 
 .navbar{
@@ -82,16 +80,19 @@ header{
   gap:20px;
 }
 
-/* LOGO - text, so no missing image problem */
-
 .logo{
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:7px;
   color:#fff;
-  font-size:25px;
+  font-size:24px;
   font-weight:900;
-  letter-spacing:2px;
+  letter-spacing:1.5px;
+  white-space:nowrap;
+}
+
+.logo strong{
+  color:#fff;
 }
 
 .logo span{
@@ -101,7 +102,7 @@ header{
 .nav-links{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:22px;
   list-style:none;
 }
 
@@ -119,6 +120,7 @@ header{
 .language{
   display:flex;
   gap:5px;
+  align-items:center;
 }
 
 .language button{
@@ -129,21 +131,26 @@ header{
   padding:5px 8px;
   cursor:pointer;
   font-size:12px;
+  transition:.2s;
 }
 
-.language button:hover{
+.language button:hover,
+.language button.active{
   background:var(--gold);
   color:var(--navy);
+  border-color:var(--gold);
 }
 
 .menu-btn{
   display:none;
   color:#fff;
-  font-size:30px;
+  font-size:29px;
+  line-height:1;
   cursor:pointer;
+  user-select:none;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
   min-height:720px;
@@ -151,22 +158,33 @@ header{
   display:flex;
   align-items:center;
   position:relative;
-
   background:
-    linear-gradient(rgba(4,19,37,.72),rgba(4,19,37,.72)),
+    linear-gradient(rgba(4,19,37,.68),rgba(4,19,37,.78)),
     url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85")
     center/cover no-repeat;
 }
 
 .hero-content{
-  max-width:760px;
+  max-width:780px;
   color:#fff;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid rgba(214,173,85,.6);
+  border-radius:30px;
+  color:var(--gold2);
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px;
+  background:rgba(0,0,0,.12);
 }
 
 .hero h1{
   font-size:58px;
   line-height:1.08;
-  margin-bottom:22px;
+  margin-bottom:20px;
   font-weight:800;
 }
 
@@ -176,7 +194,7 @@ header{
 
 .hero p{
   font-size:20px;
-  max-width:700px;
+  max-width:720px;
   margin-bottom:32px;
   color:#eef3f8;
 }
@@ -184,7 +202,7 @@ header{
 .buttons{
   display:flex;
   flex-wrap:wrap;
-  gap:14px;
+  gap:13px;
 }
 
 .btn{
@@ -196,6 +214,7 @@ header{
   border-radius:7px;
   font-weight:700;
   transition:.25s;
+  cursor:pointer;
 }
 
 .btn-primary{
@@ -204,6 +223,7 @@ header{
 }
 
 .btn-primary:hover{
+  background:var(--gold2);
   transform:translateY(-2px);
 }
 
@@ -217,7 +237,7 @@ header{
   color:var(--navy);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
   padding:85px 0;
@@ -236,11 +256,11 @@ section{
 
 .section-title p{
   color:var(--muted);
-  max-width:700px;
+  max-width:720px;
   margin:auto;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services{
   background:var(--light);
@@ -254,15 +274,16 @@ section{
 
 .card{
   background:#fff;
-  border-radius:12px;
+  border-radius:13px;
   overflow:hidden;
   border:1px solid var(--border);
-  box-shadow:0 8px 25px rgba(7,26,51,.07);
+  box-shadow:var(--shadow);
   transition:.25s;
 }
 
 .card:hover{
   transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(7,26,51,.12);
 }
 
 .card-image{
@@ -285,7 +306,7 @@ section{
   color:var(--muted);
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about-grid{
   display:grid;
@@ -298,9 +319,10 @@ section{
   min-height:430px;
   border-radius:14px;
   background:
-    linear-gradient(rgba(7,26,51,.2),rgba(7,26,51,.2)),
+    linear-gradient(rgba(7,26,51,.18),rgba(7,26,51,.18)),
     url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85")
     center/cover no-repeat;
+  box-shadow:var(--shadow);
 }
 
 .about-text h2{
@@ -331,7 +353,7 @@ section{
   margin-right:10px;
 }
 
-/* PROJECTS */
+/* ================= PROJECTS ================= */
 
 .projects{
   background:var(--light);
@@ -367,7 +389,7 @@ section{
   left:0;
   right:0;
   bottom:0;
-  padding:35px 20px 20px;
+  padding:45px 20px 20px;
   color:#fff;
   background:linear-gradient(transparent,rgba(0,0,0,.9));
 }
@@ -376,7 +398,7 @@ section{
   font-size:20px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact{
   background:var(--navy);
@@ -403,10 +425,16 @@ section{
   border:1px solid rgba(255,255,255,.15);
   border-radius:12px;
   background:rgba(255,255,255,.05);
+  transition:.25s;
+}
+
+.contact-box:hover{
+  transform:translateY(-3px);
+  border-color:rgba(214,173,85,.5);
 }
 
 .contact-box .icon{
-  font-size:32px;
+  font-size:30px;
   margin-bottom:12px;
 }
 
@@ -420,7 +448,11 @@ section{
   color:#e4eaf1;
 }
 
-/* FOOTER */
+.contact-box a:hover{
+  color:var(--gold2);
+}
+
+/* ================= FOOTER ================= */
 
 footer{
   background:#041221;
@@ -434,7 +466,7 @@ footer strong{
   color:#fff;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
   position:fixed;
@@ -448,12 +480,17 @@ footer strong{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
+  font-size:27px;
   z-index:999;
   box-shadow:0 5px 20px rgba(0,0,0,.25);
+  transition:.25s;
 }
 
-/* MOBILE */
+.whatsapp:hover{
+  transform:scale(1.08);
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
@@ -475,7 +512,8 @@ footer strong{
     align-items:stretch;
     gap:0;
     background:var(--navy);
-    padding:10px 0 18px;
+    padding:8px 0 18px;
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
   }
 
   .nav-links.active{
@@ -493,6 +531,7 @@ footer strong{
 
   .language{
     padding:10px 25px;
+    justify-content:flex-start;
   }
 
   .hero{
@@ -527,24 +566,36 @@ footer strong{
     padding:65px 0;
   }
 
+  .container{
+    width:90%;
+  }
+
   .logo{
-    font-size:21px;
+    font-size:20px;
+    letter-spacing:1px;
   }
 
   .hero{
     min-height:570px;
+    padding-top:70px;
+  }
+
+  .hero-badge{
+    font-size:11px;
   }
 
   .hero h1{
-    font-size:38px;
+    font-size:37px;
   }
 
   .hero p{
     font-size:15px;
+    line-height:1.7;
   }
 
   .buttons{
     flex-direction:column;
+    gap:10px;
   }
 
   .btn{
@@ -554,6 +605,10 @@ footer strong{
   .grid,
   .project-grid{
     grid-template-columns:1fr;
+  }
+
+  .section-title{
+    margin-bottom:35px;
   }
 
   .section-title h2{
@@ -568,6 +623,10 @@ footer strong{
     font-size:32px;
   }
 
+  .project{
+    height:260px;
+  }
+
   .whatsapp{
     width:54px;
     height:54px;
@@ -576,7 +635,7 @@ footer strong{
   }
 }
 
-/* RTL */
+/* ================= RTL ================= */
 
 html[dir="rtl"] body{
   font-family:Arial,Tahoma,sans-serif;
@@ -587,461 +646,379 @@ html[dir="rtl"] .points li::before{
   margin-left:10px;
 }
 
-</style>
-</head>
-
-<body>
-
-<header>
-
-  <div class="container navbar">
-
-    <a href="#home" class="logo">
-      <span>TARCI</span> Marrakech
-    </a>
-
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-    <nav>
-
-      <ul class="nav-links" id="navLinks">
-
-        <li>
-          <a href="#home" data-i18n="home">Accueil</a>
-        </li>
-
-        <li>
-          <a href="#services" data-i18n="services">Services</a>
-        </li>
-
-        <li>
-          <a href="#about" data-i18n="about">À propos</a>
-        </li>
-
-        <li>
-          <a href="#projects" data-i18n="projects">Projets</a>
-        </li>
-
-        <li>
-          <a href="#contact" data-i18n="contact">Contact</a>
-        </li>
-
-        <li class="language">
-          <button onclick="setLanguage('fr')">FR</button>
-          <button onclick="setLanguage('ar')">AR</button>
-          <button onclick="setLanguage('en')">EN</button>
-          <button onclick="setLanguage('es')">ES</button>
-        </li>
-
-      </ul>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <div class="container">
-
-    <div class="hero-content">
-
-      <h1>
-        <span>TARCI</span> Marrakech
-      </h1>
-
-      <p data-i18n="heroText">
-        Construction, bâtiment et rénovation à Marrakech.
-        Nous vous accompagnons dans la réalisation de vos maisons,
-        villas et projets professionnels.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#contact"
-           class="btn btn-primary"
-           data-i18n="quote">
-          Demander un devis
-        </a>
-
-        <a href="https://wa.me/212678774597"
-           target="_blank"
-           rel="noopener"
-           class="btn btn-outline">
-          WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2 data-i18n="servicesTitle">
-        Nos services
-      </h2>
-
-      <p data-i18n="servicesIntro">
-        Des solutions complètes pour vos projets de construction,
-        rénovation et aménagement.
-      </p>
-
-    </div>
-
-
-    <div class="grid">
-
-      <article class="card">
-
-        <div class="card-image"
-        style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85')">
-        </div>
-
-        <div class="card-body">
-
-          <h3 data-i18n="service1Title">
-            Construction
-          </h3>
-
-          <p data-i18n="service1Text">
-            Construction de maisons, villas et bâtiments
-            avec un accompagnement professionnel.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="card-image"
-        style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85')">
-        </div>
-
-        <div class="card-body">
-
-          <h3 data-i18n="service2Title">
-            Rénovation
-          </h3>
-
-          <p data-i18n="service2Text">
-            Rénovation intérieure et extérieure,
-            amélioration et modernisation des espaces.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="card-image"
-        style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85')">
-        </div>
-
-        <div class="card-body">
-
-          <h3 data-i18n="service3Title">
-            Villas & projets
-          </h3>
-
-          <p data-i18n="service3Text">
-            Réalisation de villas et projets professionnels
-            adaptés à vos besoins.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-  <div class="container">
-
-    <div class="about-grid">
-
-      <div class="about-image"></div>
-
-      <div class="about-text">
-
-        <h2 data-i18n="aboutTitle">
-          TARCI Marrakech
-        </h2>
-
-        <p data-i18n="aboutText1">
-          TARCI accompagne les particuliers et les professionnels
-          dans leurs projets de construction, bâtiment et rénovation
-          à Marrakech et au Maroc.
-        </p>
-
-        <p data-i18n="aboutText2">
-          Notre objectif est de proposer un travail sérieux,
-          organisé et adapté à chaque projet.
-        </p>
-
-        <ul class="points">
-
-          <li data-i18n="point1">
-            Travail professionnel
-          </li>
-
-          <li data-i18n="point2">
-            Accompagnement du projet
-          </li>
-
-          <li data-i18n="point3">
-            Solutions adaptées
-          </li>
-
-          <li data-i18n="point4">
-            Marrakech et Maroc
-          </li>
-
-        </ul>
-
-        <a href="#contact"
-           class="btn btn-primary"
-           data-i18n="contactUs">
-          Contactez-nous
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section class="projects" id="projects">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2 data-i18n="projectsTitle">
-        Nos projets
-      </h2>
-
-      <p data-i18n="projectsIntro">
-        Quelques exemples de réalisations et d'univers
-        liés à nos projets.
-      </p>
-
-    </div>
-
-
-    <div class="project-grid">
-
-      <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
-        alt="Villa">
-
-        <div class="project-overlay">
-
-          <h3 data-i18n="project1">
-            Villas
-          </h3>
-
-        </div>
-
-      </div>
-
-
-      <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-        alt="Rénovation">
-
-        <div class="project-overlay">
-
-          <h3 data-i18n="project2">
-            Rénovation
-          </h3>
-
-        </div>
-
-      </div>
-
-
-      <div class="project">
-
-        <img
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
-        alt="Bâtiment professionnel">
-
-        <div class="project-overlay">
-
-          <h3 data-i18n="project3">
-            Bâtiments professionnels
-          </h3>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2 data-i18n="contactTitle">
-        Contactez TARCI
-      </h2>
-
-      <p data-i18n="contactIntro">
-        Parlons de votre projet de construction ou de rénovation.
-      </p>
-
-    </div>
-
-
-    <div class="contact-grid">
-
-
-      <div class="contact-box">
-
-        <div class="icon">📞</div>
-
-        <h3 data-i18n="phoneTitle">
-          Téléphone
-        </h3>
-
-        <a href="tel:+212678774597">
-          0678 77 45 97
-        </a>
-
-      </div>
-
-
-      <div class="contact-box">
-
-        <div class="icon">💬</div>
-
-        <h3>
-          WhatsApp
-        </h3>
-
-        <a
-        href="https://wa.me/212678774597"
-        target="_blank"
-        rel="noopener">
-
-          0678 77 45 97
-
-        </a>
-
-      </div>
-
-
-      <div class="contact-box">
-
-        <div class="icon">📍</div>
-
-        <h3 data-i18n="locationTitle">
-          Localisation
-        </h3>
-
-        <p data-i18n="locationText">
-          Marrakech, Maroc
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <strong>TARCI Marrakech</strong>
-
-    <br>
-
-    <span data-i18n="footerText">
-      Construction • Bâtiment • Rénovation
-    </span>
-
-    <br><br>
-
-    © 2026 TARCI Marrakech
-
-  </div>
-
-</footer>
-
-
-<!-- WHATSAPP -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/212678774597"
-  target="_blank"
-  rel="noopener"
-  aria-label="WhatsApp">
-
-  ☎
-
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .about-text{
+  text-align:right;
+}
+
+html[dir="rtl"] .section-title{
+  text-align:center;
+}
+
+@media(max-width:900px){
+  html[dir="rtl"] .language{
+    justify-content:flex-start;
+  }
+}
+</style></head><body><header>
+  <div class="container navbar"><a href="#home" class="logo" aria-label="TARCI Marrakech">
+  <span>TARCI</span> Marrakech
 </a>
 
+<div class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
+  ☰
+</div>
 
-<script>
+<nav>
+  <ul class="nav-links" id="navLinks">
 
-/* MOBILE MENU */
+    <li>
+      <a href="#home" data-i18n="home">Accueil</a>
+    </li>
+
+    <li>
+      <a href="#services" data-i18n="services">Services</a>
+    </li>
+
+    <li>
+      <a href="#about" data-i18n="about">À propos</a>
+    </li>
+
+    <li>
+      <a href="#projects" data-i18n="projects">Projets</a>
+    </li>
+
+    <li>
+      <a href="#contact" data-i18n="contact">Contact</a>
+    </li>
+
+    <li class="language">
+      <button onclick="setLanguage('fr')" data-lang="fr">FR</button>
+      <button onclick="setLanguage('ar')" data-lang="ar">AR</button>
+      <button onclick="setLanguage('en')" data-lang="en">EN</button>
+      <button onclick="setLanguage('es')" data-lang="es">ES</button>
+    </li>
+
+  </ul>
+</nav>
+
+  </div>
+</header><main><!-- HERO --><section class="hero" id="home">  <div class="container"><div class="hero-content">
+
+  <div class="hero-badge" data-i18n="badge">
+    Construction • Bâtiment • Rénovation
+  </div>
+
+  <h1>
+    <span>TARCI</span> Marrakech
+  </h1>
+
+  <p data-i18n="heroText">
+    Construction, bâtiment et rénovation à Marrakech.
+    Nous vous accompagnons dans la réalisation de vos maisons,
+    villas et projets professionnels.
+  </p>
+
+  <div class="buttons">
+
+    <a href="#contact"
+       class="btn btn-primary"
+       data-i18n="quote">
+      Demander un devis
+    </a>
+
+    <a href="https://wa.me/212678774597"
+       target="_blank"
+       rel="noopener"
+       class="btn btn-outline">
+      WhatsApp
+    </a>
+
+  </div>
+
+</div>
+
+  </div>
+</section><!-- SERVICES --><section class="services" id="services">  <div class="container"><div class="section-title">
+
+  <h2 data-i18n="servicesTitle">
+    Nos services
+  </h2>
+
+  <p data-i18n="servicesIntro">
+    Des solutions complètes pour vos projets de construction,
+    rénovation et aménagement.
+  </p>
+
+</div>
+
+<div class="grid">
+
+  <article class="card">
+
+    <div class="card-image"
+    style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85')">
+    </div>
+
+    <div class="card-body">
+
+      <h3 data-i18n="service1Title">
+        Construction
+      </h3>
+
+      <p data-i18n="service1Text">
+        Construction de maisons, villas et bâtiments
+        avec un accompagnement professionnel.
+      </p>
+
+    </div>
+  </article>
+
+
+  <article class="card">
+
+    <div class="card-image"
+    style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85')">
+    </div>
+
+    <div class="card-body">
+
+      <h3 data-i18n="service2Title">
+        Rénovation
+      </h3>
+
+      <p data-i18n="service2Text">
+        Rénovation intérieure et extérieure,
+        amélioration et modernisation des espaces.
+      </p>
+
+    </div>
+  </article>
+
+
+  <article class="card">
+
+    <div class="card-image"
+    style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85')">
+    </div>
+
+    <div class="card-body">
+
+      <h3 data-i18n="service3Title">
+        Villas & projets
+      </h3>
+
+      <p data-i18n="service3Text">
+        Réalisation de villas et projets professionnels
+        adaptés à vos besoins.
+      </p>
+
+    </div>
+  </article>
+
+</div>
+
+  </div>
+</section><!-- ABOUT --><section id="about">  <div class="container"><div class="about-grid">
+
+  <div class="about-image"></div>
+
+  <div class="about-text">
+
+    <h2 data-i18n="aboutTitle">
+      TARCI Marrakech
+    </h2>
+
+    <p data-i18n="aboutText1">
+      TARCI accompagne les particuliers et les professionnels
+      dans leurs projets de construction, bâtiment et rénovation
+      à Marrakech et au Maroc.
+    </p>
+
+    <p data-i18n="aboutText2">
+      Notre objectif est de proposer un travail sérieux,
+      organisé et adapté à chaque projet.
+    </p>
+
+    <ul class="points">
+
+      <li data-i18n="point1">
+        Travail professionnel
+      </li>
+
+      <li data-i18n="point2">
+        Accompagnement du projet
+      </li>
+
+      <li data-i18n="point3">
+        Solutions adaptées
+      </li>
+
+      <li data-i18n="point4">
+        Marrakech et Maroc
+      </li>
+
+    </ul>
+
+    <a href="#contact"
+       class="btn btn-primary"
+       data-i18n="contactUs">
+      Contactez-nous
+    </a>
+
+  </div>
+
+</div>
+
+  </div>
+</section><!-- PROJECTS --><section class="projects" id="projects">  <div class="container"><div class="section-title">
+
+  <h2 data-i18n="projectsTitle">
+    Nos projets
+  </h2>
+
+  <p data-i18n="projectsIntro">
+    Quelques exemples de réalisations et d'univers
+    liés à nos projets.
+  </p>
+
+</div>
+
+<div class="project-grid">
+
+  <div class="project">
+
+    <img
+    src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
+    alt="Villa TARCI Marrakech"
+    loading="lazy">
+
+    <div class="project-overlay">
+      <h3 data-i18n="project1">Villas</h3>
+    </div>
+
+  </div>
+
+
+  <div class="project">
+
+    <img
+    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+    alt="Rénovation TARCI Marrakech"
+    loading="lazy">
+
+    <div class="project-overlay">
+      <h3 data-i18n="project2">Rénovation</h3>
+    </div>
+
+  </div>
+
+
+  <div class="project">
+
+    <img
+    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
+    alt="Bâtiment professionnel TARCI"
+    loading="lazy">
+
+    <div class="project-overlay">
+      <h3 data-i18n="project3">
+        Bâtiments professionnels
+      </h3>
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+</section><!-- CONTACT --><section class="contact" id="contact">  <div class="container"><div class="section-title">
+
+  <h2 data-i18n="contactTitle">
+    Contactez TARCI
+  </h2>
+
+  <p data-i18n="contactIntro">
+    Parlons de votre projet de construction ou de rénovation.
+  </p>
+
+</div>
+
+<div class="contact-grid">
+
+  <div class="contact-box">
+
+    <div class="icon">📞</div>
+
+    <h3 data-i18n="phoneTitle">
+      Téléphone
+    </h3>
+
+    <a href="tel:+212678774597">
+      0678 77 45 97
+    </a>
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <div class="icon">💬</div>
+
+    <h3>
+      WhatsApp
+    </h3>
+
+    <a href="https://wa.me/212678774597"
+       target="_blank"
+       rel="noopener">
+      0678 77 45 97
+    </a>
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <div class="icon">📍</div>
+
+    <h3 data-i18n="locationTitle">
+      Localisation
+    </h3>
+
+    <p data-i18n="locationText">
+      Marrakech, Maroc
+    </p>
+
+  </div>
+
+</div>
+
+  </div>
+</section></main><!-- FOOTER --><footer>  <div class="container"><strong>TARCI Marrakech</strong>
+
+<br>
+
+<span data-i18n="footerText">
+  Construction • Bâtiment • Rénovation
+</span>
+
+<br><br>
+
+© 2026 TARCI Marrakech
+
+  </div></footer><!-- WHATSAPP --><a
+class="whatsapp"
+href="https://wa.me/212678774597"
+target="_blank"
+rel="noopener"
+aria-label="WhatsApp">
+
+☎
+
+</a><script>
+
+/* ================= MOBILE MENU ================= */
 
 function toggleMenu(){
 
@@ -1052,7 +1029,20 @@ function toggleMenu(){
 }
 
 
-/* TRANSLATIONS */
+/* Fermer le menu après clic */
+
+document.querySelectorAll("#navLinks a").forEach(function(link){
+
+  link.addEventListener("click",function(){
+
+    document.getElementById("navLinks").classList.remove("active");
+
+  });
+
+});
+
+
+/* ================= TRANSLATIONS ================= */
 
 const translations = {
 
@@ -1063,6 +1053,8 @@ const translations = {
     about:"À propos",
     projects:"Projets",
     contact:"Contact",
+
+    badge:"Construction • Bâtiment • Rénovation",
 
     heroText:"Construction, bâtiment et rénovation à Marrakech. Nous vous accompagnons dans la réalisation de vos maisons, villas et projets professionnels.",
 
@@ -1118,6 +1110,8 @@ const translations = {
     projects:"المشاريع",
     contact:"اتصل بنا",
 
+    badge:"البناء • الأشغال • التجديد",
+
     heroText:"البناء والأشغال والتجديد في مراكش. نرافقكم في إنجاز المنازل والفلل والمشاريع المهنية.",
 
     quote:"اطلب عرض سعر",
@@ -1171,6 +1165,8 @@ const translations = {
     about:"About",
     projects:"Projects",
     contact:"Contact",
+
+    badge:"Construction • Building • Renovation",
 
     heroText:"Construction, building and renovation in Marrakech. We support you in creating homes, villas and professional projects.",
 
@@ -1226,6 +1222,8 @@ const translations = {
     projects:"Proyectos",
     contact:"Contacto",
 
+    badge:"Construcción • Edificación • Renovación",
+
     heroText:"Construcción, edificación y renovación en Marrakech. Le acompañamos en la realización de casas, villas y proyectos profesionales.",
 
     quote:"Solicitar presupuesto",
@@ -1274,7 +1272,7 @@ const translations = {
 };
 
 
-/* LANGUAGE */
+/* ================= LANGUAGE ================= */
 
 function setLanguage(lang){
 
@@ -1286,11 +1284,8 @@ function setLanguage(lang){
 
   document.documentElement.lang = lang;
 
-  if(lang === "ar"){
-    document.documentElement.dir = "rtl";
-  }else{
-    document.documentElement.dir = "ltr";
-  }
+  document.documentElement.dir =
+    lang === "ar" ? "rtl" : "ltr";
 
   document.querySelectorAll("[data-i18n]").forEach(function(element){
 
@@ -1302,6 +1297,20 @@ function setLanguage(lang){
 
   });
 
+
+  /* Language button */
+
+  document.querySelectorAll("[data-lang]").forEach(function(button){
+
+    button.classList.remove("active");
+
+    if(button.getAttribute("data-lang") === lang){
+      button.classList.add("active");
+    }
+
+  });
+
+
   localStorage.setItem("tarciLanguage",lang);
 
   document.getElementById("navLinks").classList.remove("active");
@@ -1309,7 +1318,7 @@ function setLanguage(lang){
 }
 
 
-/* LOAD SAVED LANGUAGE */
+/* ================= LOAD LANGUAGE ================= */
 
 document.addEventListener("DOMContentLoaded",function(){
 
@@ -1320,7 +1329,5 @@ document.addEventListener("DOMContentLoaded",function(){
 
 });
 
-</script>
-
-</body>
+</script></body>
 </html>
