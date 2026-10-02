@@ -1,12 +1,577 @@
- tarci-logo-sans-sarl.png
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TARCI Marrakech - Construction, rénovation, maçonnerie, finitions et nettoyage de chantier à Marrakech.">
+  <meta name="keywords" content="TARCI Marrakech, construction Marrakech, rénovation, maçonnerie, bâtiment, nettoyage chantier">
+  <meta name="theme-color" content="#111827">
+  <title>TARCI Marrakech | Construction & Rénovation</title>
 
-tarci-hero-bg.png
+  <style>
+    :root{
+      --dark:#111827;
+      --dark2:#1f2937;
+      --gold:#d7a52b;
+      --gold2:#f0c75e;
+      --light:#f7f7f5;
+      --white:#fff;
+      --text:#20252b;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --shadow:0 12px 35px rgba(0,0,0,.10);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
 
-tarci-etape-1-fondations.jpg
-tarci-etape-2-elevation-murs.jpg
-tarci-etape-3-maconnerie.jpg
-tarci-etape-4-dalle-toiture.jpg
-tarci-etape-5-enduits-finitions.jpg
-tarci-etape-6-controle-livraison.jpg
+    /* HEADER */
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(17,24,39,.97);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(10px);
+    }
+    .nav{
+      min-height:76px;display:flex;align-items:center;
+      justify-content:space-between;gap:18px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:#fff}
+    .brand img{width:58px;height:58px;object-fit:contain}
+    .brand span{font-size:18px;letter-spacing:.5px}
+    nav{display:flex;align-items:center;gap:20px}
+    nav a{
+      color:#fff;font-size:14px;font-weight:700;opacity:.9;
+      transition:.2s;
+    }
+    nav a:hover{color:var(--gold2)}
+    .lang-select{
+      background:#fff;color:var(--dark);border:0;border-radius:10px;
+      padding:9px 10px;font-weight:700;cursor:pointer;
+    }
+    .menu-btn{
+      display:none;border:0;background:transparent;color:#fff;
+      font-size:30px;cursor:pointer;
+    }
 
-tarci-nettoyage-chantier.jpg
+    /* HERO */
+    .hero{
+      min-height:78vh;display:grid;place-items:center;
+      background:
+        linear-gradient(90deg,rgba(17,24,39,.90),rgba(17,24,39,.54)),
+        url("tarci-hero-bg.png") center/cover no-repeat;
+      color:#fff;
+    }
+    .hero-inner{padding:95px 0 85px;max-width:850px}
+    .eyebrow{
+      display:inline-block;border:1px solid rgba(255,255,255,.3);
+      border-radius:999px;padding:7px 13px;margin-bottom:18px;
+      font-size:13px;font-weight:700;
+    }
+    h1{font-size:clamp(38px,6vw,72px);line-height:1.04;margin-bottom:20px}
+    .hero p{font-size:clamp(17px,2vw,21px);max-width:720px;color:#f1f5f9}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 19px;border-radius:12px;font-weight:800;
+      border:1px solid transparent;transition:.2s;
+    }
+    .btn-primary{background:var(--gold);color:#111}
+    .btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
+    .btn-light{border-color:rgba(255,255,255,.4);color:#fff}
+    .btn-light:hover{background:#fff;color:#111}
+
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 40px}
+    .section-head span{
+      color:#9a7415;font-weight:800;text-transform:uppercase;
+      font-size:12px;letter-spacing:1.5px;
+    }
+    .section-head h2{font-size:clamp(30px,4vw,45px);line-height:1.15;margin:8px 0 12px}
+    .section-head p{color:var(--muted)}
+
+    /* SERVICES */
+    .services{background:var(--light)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:25px;box-shadow:0 5px 18px rgba(0,0,0,.04);
+    }
+    .icon{
+      width:48px;height:48px;border-radius:14px;
+      background:#fff4d6;display:grid;place-items:center;
+      font-size:24px;margin-bottom:17px;
+    }
+    .card h3{font-size:20px;margin-bottom:8px}
+    .card p{font-size:14px;color:var(--muted)}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .about-img img{width:100%;height:470px;object-fit:cover}
+    .check-list{list-style:none;margin-top:22px}
+    .check-list li{margin:11px 0;font-weight:700}
+    .check-list li::before{content:"✓";color:#a77910;font-weight:900;margin-right:10px}
+
+    /* STEPS */
+    .steps{background:var(--light)}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .step{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+    .step img{width:100%;height:220px;object-fit:cover}
+    .step-body{padding:19px}
+    .step-number{font-size:12px;color:#9a7415;font-weight:900;text-transform:uppercase}
+    .step h3{margin:4px 0 7px;font-size:20px}
+    .step p{font-size:14px;color:var(--muted)}
+
+    /* CLEANING */
+    .cleaning{background:#fff}
+    .clean-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    .clean-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .clean-img img{width:100%;height:400px;object-fit:cover}
+
+    /* CTA */
+    .cta{padding:55px 0}
+    .cta-box{
+      background:var(--dark);color:#fff;border-radius:24px;
+      padding:42px;display:flex;align-items:center;
+      justify-content:space-between;gap:25px;
+    }
+    .cta-box h2{font-size:clamp(26px,4vw,40px);line-height:1.15}
+    .cta-box p{color:#d1d5db;margin-top:8px}
+
+    /* CONTACT */
+    .contact{background:var(--light)}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .contact-card{
+      background:#fff;border:1px solid var(--line);border-radius:16px;
+      padding:24px;text-align:center;
+    }
+    .contact-card strong{display:block;margin-top:8px;font-size:18px}
+    .contact-card small{color:var(--muted)}
+
+    footer{background:#0b1120;color:#cbd5e1;padding:35px 0}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-inner strong{color:#fff}
+    .footer-links{display:flex;gap:18px;font-size:14px}
+    .copyright{text-align:center;margin-top:22px;font-size:12px;color:#94a3b8}
+
+    .floating{
+      position:fixed;right:17px;bottom:17px;z-index:999;
+      display:flex;flex-direction:column;gap:9px;
+    }
+    .float-btn{
+      width:52px;height:52px;border-radius:50%;
+      display:grid;place-items:center;background:#111827;color:#fff;
+      box-shadow:0 8px 22px rgba(0,0,0,.25);font-size:20px;
+    }
+    .float-btn.whatsapp{background:#198754}
+    .float-btn.phone{background:var(--gold);color:#111}
+
+    @media(max-width:900px){
+      nav{gap:12px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .steps-grid{grid-template-columns:repeat(2,1fr)}
+      .about-grid,.clean-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      .nav{min-height:68px}
+      .brand img{width:48px;height:48px}
+      .brand span{font-size:15px}
+      .menu-btn{display:block}
+      nav{
+        display:none;position:absolute;left:0;right:0;top:68px;
+        background:#111827;padding:15px 4%;
+        flex-direction:column;align-items:stretch;
+        border-top:1px solid rgba(255,255,255,.08);
+      }
+      nav.open{display:flex}
+      nav a{padding:10px 4px}
+      .lang-select{width:100%}
+      .hero{min-height:75vh}
+      .hero-inner{padding:75px 0}
+      section{padding:58px 0}
+      .grid,.steps-grid{grid-template-columns:1fr}
+      .about-img img,.clean-img img{height:300px}
+      .cta-box{padding:30px;display:block}
+      .cta-box .btn{margin-top:20px;width:100%}
+      .footer-inner{display:block;text-align:center}
+      .footer-links{justify-content:center;margin-top:15px;flex-wrap:wrap}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#accueil">
+      <img src="tarci-logo-sans-sarl.png" alt="TARCI">
+      <span>TARCI MARRAKECH</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+
+    <nav id="mainNav">
+      <a href="#accueil" data-i18n="nav_home">Accueil</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#etapes" data-i18n="nav_steps">Étapes</a>
+      <a href="#nettoyage" data-i18n="nav_clean">Nettoyage</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+
+      <select class="lang-select" id="language" aria-label="Language">
+        <option value="fr">🇫🇷 Français</option>
+        <option value="ar">🇲🇦 العربية</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="container hero-inner">
+      <span class="eyebrow" data-i18n="hero_badge">Construction • Rénovation • Finitions</span>
+      <h1 data-i18n="hero_title">Construire avec sérieux, réaliser avec précision.</h1>
+      <p data-i18n="hero_text">
+        TARCI accompagne vos projets de construction et de rénovation à Marrakech,
+        de la préparation du chantier jusqu'au contrôle et à la livraison.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+212678774597" data-i18n="call">Appeler TARCI</a>
+        <a class="btn btn-light" href="#services" data-i18n="discover">Découvrir nos services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span data-i18n="services_label">Notre savoir-faire</span>
+        <h2 data-i18n="services_title">Des services adaptés à votre projet</h2>
+        <p data-i18n="services_text">Une approche professionnelle, organisée et attentive aux détails.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🏗️</div>
+          <h3 data-i18n="s1_title">Construction</h3>
+          <p data-i18n="s1_text">Travaux de bâtiment et accompagnement des différentes phases du chantier.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧱</div>
+          <h3 data-i18n="s2_title">Maçonnerie</h3>
+          <p data-i18n="s2_text">Fondations, élévation, maçonnerie et travaux structurels.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔨</div>
+          <h3 data-i18n="s3_title">Rénovation & finitions</h3>
+          <p data-i18n="s3_text">Enduits, finitions et amélioration des espaces existants.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧹</div>
+          <h3 data-i18n="s4_title">Nettoyage</h3>
+          <p data-i18n="s4_text">Nettoyage de chantier et remise en état des espaces après travaux.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container about-grid">
+      <div>
+        <div class="section-head" style="text-align:left;margin:0">
+          <span data-i18n="about_label">TARCI Marrakech</span>
+          <h2 data-i18n="about_title">Une méthode claire pour chaque chantier</h2>
+          <p data-i18n="about_text">
+            Nous organisons les travaux étape par étape afin de garder une vision claire
+            de l'avancement et des finitions.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li data-i18n="about_c1">Organisation des différentes phases</li>
+          <li data-i18n="about_c2">Suivi et contrôle des travaux</li>
+          <li data-i18n="about_c3">Attention portée aux finitions</li>
+          <li data-i18n="about_c4">Communication directe avec le client</li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="tarci-hero-bg.png" alt="Chantier TARCI" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="etapes">
+    <div class="container">
+      <div class="section-head">
+        <span data-i18n="steps_label">Suivi du chantier</span>
+        <h2 data-i18n="steps_title">Les principales étapes</h2>
+        <p data-i18n="steps_text">Une présentation simple du parcours des travaux.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step">
+          <img src="tarci-etape-1-fondations.jpg" alt="TARCI - Fondations" loading="lazy">
+          <div class="step-body"><span class="step-number">01</span><h3 data-i18n="st1">Fondations</h3><p data-i18n="st1p">Préparation et réalisation des fondations du projet.</p></div>
+        </article>
+        <article class="step">
+          <img src="tarci-etape-2-elevation-murs.jpg" alt="TARCI - Élévation des murs" loading="lazy">
+          <div class="step-body"><span class="step-number">02</span><h3 data-i18n="st2">Élévation des murs</h3><p data-i18n="st2p">Montée des murs et progression de la structure.</p></div>
+        </article>
+        <article class="step">
+          <img src="tarci-etape-3-maconnerie.jpg" alt="TARCI - Maçonnerie" loading="lazy">
+          <div class="step-body"><span class="step-number">03</span><h3 data-i18n="st3">Maçonnerie</h3><p data-i18n="st3p">Travaux de maçonnerie et préparation des supports.</p></div>
+        </article>
+        <article class="step">
+          <img src="tarci-etape-4-dalle-toiture.jpg" alt="TARCI - Dalle et toiture" loading="lazy">
+          <div class="step-body"><span class="step-number">04</span><h3 data-i18n="st4">Dalle & toiture</h3><p data-i18n="st4p">Réalisation des dalles et travaux liés à la toiture.</p></div>
+        </article>
+        <article class="step">
+          <img src="tarci-etape-5-enduits-finitions.jpg" alt="TARCI - Enduits et finitions" loading="lazy">
+          <div class="step-body"><span class="step-number">05</span><h3 data-i18n="st5">Enduits & finitions</h3><p data-i18n="st5p">Enduits, finitions et préparation des espaces.</p></div>
+        </article>
+        <article class="step">
+          <img src="tarci-etape-6-controle-livraison.jpg" alt="TARCI - Contrôle et livraison" loading="lazy">
+          <div class="step-body"><span class="step-number">06</span><h3 data-i18n="st6">Contrôle & livraison</h3><p data-i18n="st6p">Contrôle final et préparation de la livraison du projet.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nettoyage" class="cleaning">
+    <div class="container clean-grid">
+      <div class="clean-img">
+        <img src="tarci-nettoyage-chantier.jpg" alt="Nettoyage de chantier TARCI" loading="lazy">
+      </div>
+      <div>
+        <div class="section-head" style="text-align:left;margin:0">
+          <span data-i18n="clean_label">Service nettoyage</span>
+          <h2 data-i18n="clean_title">Un chantier propre pour une livraison soignée</h2>
+          <p data-i18n="clean_text">
+            Le nettoyage fait partie de l'accompagnement de fin de chantier afin de
+            préparer les espaces pour leur utilisation.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/212678774597" target="_blank" rel="noopener" data-i18n="whatsapp">WhatsApp</a>
+          <a class="btn" style="border:1px solid var(--line)" href="mailto:tarcitravaux@gmail.com" data-i18n="email_btn">Écrire par email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2 data-i18n="cta_title">Parlons de votre projet.</h2>
+          <p data-i18n="cta_text">Contactez TARCI Marrakech pour demander des informations.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:+212678774597" data-i18n="contact_now">Contacter maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span data-i18n="contact_label">Contact</span>
+        <h2 data-i18n="contact_title">TARCI Marrakech</h2>
+        <p data-i18n="contact_text">Nous sommes à votre écoute pour vos projets de construction et de rénovation.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+212678774597">
+          📞
+          <strong>0678 77 45 97</strong>
+          <small data-i18n="main_phone">Numéro principal</small>
+        </a>
+        <a class="contact-card" href="mailto:tarcitravaux@gmail.com">
+          ✉️
+          <strong>tarcitravaux@gmail.com</strong>
+          <small>Email</small>
+        </a>
+        <a class="contact-card" href="https://wa.me/212678774597" target="_blank" rel="noopener">
+          💬
+          <strong>WhatsApp</strong>
+          <small>0678 77 45 97</small>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <strong>TARCI Marrakech</strong>
+    <div class="footer-links">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#etapes" data-i18n="nav_steps">Étapes</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+  </div>
+  <div class="container copyright">
+    © <span id="year"></span> TARCI Marrakech — <span data-i18n="rights">Tous droits réservés.</span>
+  </div>
+</footer>
+
+<div class="floating">
+  <a class="float-btn whatsapp" href="https://wa.me/212678774597" target="_blank" rel="noopener" aria-label="WhatsApp">☘</a>
+  <a class="float-btn phone" href="tel:+212678774597" aria-label="Téléphone">☎</a>
+</div>
+
+<script>
+  const translations = {
+    fr:{
+      nav_home:"Accueil",nav_services:"Services",nav_steps:"Étapes",nav_clean:"Nettoyage",nav_contact:"Contact",
+      hero_badge:"Construction • Rénovation • Finitions",
+      hero_title:"Construire avec sérieux, réaliser avec précision.",
+      hero_text:"TARCI accompagne vos projets de construction et de rénovation à Marrakech, de la préparation du chantier jusqu'au contrôle et à la livraison.",
+      call:"Appeler TARCI",discover:"Découvrir nos services",
+      services_label:"Notre savoir-faire",services_title:"Des services adaptés à votre projet",services_text:"Une approche professionnelle, organisée et attentive aux détails.",
+      s1_title:"Construction",s1_text:"Travaux de bâtiment et accompagnement des différentes phases du chantier.",
+      s2_title:"Maçonnerie",s2_text:"Fondations, élévation, maçonnerie et travaux structurels.",
+      s3_title:"Rénovation & finitions",s3_text:"Enduits, finitions et amélioration des espaces existants.",
+      s4_title:"Nettoyage",s4_text:"Nettoyage de chantier et remise en état des espaces après travaux.",
+      about_label:"TARCI Marrakech",about_title:"Une méthode claire pour chaque chantier",
+      about_text:"Nous organisons les travaux étape par étape afin de garder une vision claire de l'avancement et des finitions.",
+      about_c1:"Organisation des différentes phases",about_c2:"Suivi et contrôle des travaux",about_c3:"Attention portée aux finitions",about_c4:"Communication directe avec le client",
+      steps_label:"Suivi du chantier",steps_title:"Les principales étapes",steps_text:"Une présentation simple du parcours des travaux.",
+      st1:"Fondations",st1p:"Préparation et réalisation des fondations du projet.",
+      st2:"Élévation des murs",st2p:"Montée des murs et progression de la structure.",
+      st3:"Maçonnerie",st3p:"Travaux de maçonnerie et préparation des supports.",
+      st4:"Dalle & toiture",st4p:"Réalisation des dalles et travaux liés à la toiture.",
+      st5:"Enduits & finitions",st5p:"Enduits, finitions et préparation des espaces.",
+      st6:"Contrôle & livraison",st6p:"Contrôle final et préparation de la livraison du projet.",
+      clean_label:"Service nettoyage",clean_title:"Un chantier propre pour une livraison soignée",
+      clean_text:"Le nettoyage fait partie de l'accompagnement de fin de chantier afin de préparer les espaces pour leur utilisation.",
+      whatsapp:"WhatsApp",email_btn:"Écrire par email",cta_title:"Parlons de votre projet.",
+      cta_text:"Contactez TARCI Marrakech pour demander des informations.",contact_now:"Contacter maintenant",
+      contact_label:"Contact",contact_title:"TARCI Marrakech",contact_text:"Nous sommes à votre écoute pour vos projets de construction et de rénovation.",
+      main_phone:"Numéro principal",rights:"Tous droits réservés."
+    },
+    ar:{
+      nav_home:"الرئيسية",nav_services:"الخدمات",nav_steps:"مراحل البناء",nav_clean:"النظافة",nav_contact:"اتصل بنا",
+      hero_badge:"البناء • الترميم • التشطيبات",hero_title:"نبني بجدية وننجز بدقة.",
+      hero_text:"ترافقكم TARCI في مشاريع البناء والترميم بمراكش، من إعداد الورش إلى المراقبة والتسليم.",
+      call:"اتصل بـ TARCI",discover:"اكتشف خدماتنا",
+      services_label:"خبرتنا",services_title:"خدمات مناسبة لمشروعك",services_text:"عمل منظم واحترافي مع الاهتمام بالتفاصيل.",
+      s1_title:"البناء",s1_text:"أشغال البناء ومواكبة مختلف مراحل الورش.",
+      s2_title:"البناء والخرسانة",s2_text:"الأساسات ورفع الجدران وأشغال البناء.",
+      s3_title:"الترميم والتشطيبات",s3_text:"التلييس والتشطيبات وتحسين المساحات الموجودة.",
+      s4_title:"النظافة",s4_text:"تنظيف الورش وإعادة ترتيب المساحات بعد الأشغال.",
+      about_label:"TARCI مراكش",about_title:"منهج واضح لكل ورش",
+      about_text:"ننظم الأشغال مرحلة بمرحلة للحفاظ على رؤية واضحة لتقدم المشروع والتشطيبات.",
+      about_c1:"تنظيم مختلف المراحل",about_c2:"تتبع ومراقبة الأشغال",about_c3:"الاهتمام بالتشطيبات",about_c4:"تواصل مباشر مع الزبون",
+      steps_label:"تتبع الورش",steps_title:"المراحل الرئيسية",steps_text:"عرض مبسط لمسار الأشغال.",
+      st1:"الأساسات",st1p:"إعداد وإنجاز أساسات المشروع.",
+      st2:"رفع الجدران",st2p:"بناء الجدران وتقدم الهيكل.",
+      st3:"أشغال البناء",st3p:"أشغال البناء وتجهيز الأسطح.",
+      st4:"السقف والسطح",st4p:"إنجاز الأسقف والأشغال المرتبطة بها.",
+      st5:"التلييس والتشطيبات",st5p:"التلييس والتشطيبات وتجهيز المساحات.",
+      st6:"المراقبة والتسليم",st6p:"المراقبة النهائية وتجهيز المشروع للتسليم.",
+      clean_label:"خدمة النظافة",clean_title:"ورش نظيف وتسليم منظم",
+      clean_text:"تدخل النظافة ضمن مواكبة نهاية الورش من أجل تجهيز المساحات للاستعمال.",
+      whatsapp:"واتساب",email_btn:"مراسلة عبر البريد",cta_title:"لنتحدث عن مشروعك.",
+      cta_text:"تواصل مع TARCI مراكش للحصول على المعلومات.",contact_now:"اتصل الآن",
+      contact_label:"اتصل بنا",contact_title:"TARCI مراكش",contact_text:"نحن رهن إشارتكم لمشاريع البناء والترميم.",
+      main_phone:"الرقم الرئيسي",rights:"جميع الحقوق محفوظة."
+    },
+    en:{
+      nav_home:"Home",nav_services:"Services",nav_steps:"Project stages",nav_clean:"Cleaning",nav_contact:"Contact",
+      hero_badge:"Construction • Renovation • Finishing",hero_title:"Build with care. Deliver with precision.",
+      hero_text:"TARCI supports construction and renovation projects in Marrakech, from site preparation through inspection and handover.",
+      call:"Call TARCI",discover:"Discover our services",
+      services_label:"Our expertise",services_title:"Services adapted to your project",services_text:"A professional, organized approach with attention to detail.",
+      s1_title:"Construction",s1_text:"Building work and support throughout the different site phases.",
+      s2_title:"Masonry",s2_text:"Foundations, wall elevation, masonry and structural work.",
+      s3_title:"Renovation & finishing",s3_text:"Plastering, finishing and improvement of existing spaces.",
+      s4_title:"Cleaning",s4_text:"Site cleaning and preparation of spaces after the work.",
+      about_label:"TARCI Marrakech",about_title:"A clear method for every project",
+      about_text:"We organize the work step by step to keep clear visibility on progress and finishing.",
+      about_c1:"Organization of each phase",about_c2:"Work monitoring and inspection",about_c3:"Attention to finishing",about_c4:"Direct client communication",
+      steps_label:"Site monitoring",steps_title:"Main project stages",steps_text:"A simple overview of the work journey.",
+      st1:"Foundations",st1p:"Preparation and construction of the project foundations.",
+      st2:"Wall elevation",st2p:"Wall construction and structural progress.",
+      st3:"Masonry",st3p:"Masonry work and surface preparation.",
+      st4:"Slab & roof",st4p:"Slab construction and roofing-related work.",
+      st5:"Plaster & finishing",st5p:"Plastering, finishing and space preparation.",
+      st6:"Inspection & handover",st6p:"Final inspection and preparation for project handover.",
+      clean_label:"Cleaning service",clean_title:"A clean site for a well-prepared handover",
+      clean_text:"Cleaning is part of our end-of-project support to prepare spaces for use.",
+      whatsapp:"WhatsApp",email_btn:"Email us",cta_title:"Let's talk about your project.",
+      cta_text:"Contact TARCI Marrakech for more information.",contact_now:"Contact now",
+      contact_label:"Contact",contact_title:"TARCI Marrakech",contact_text:"We are available for your construction and renovation projects.",
+      main_phone:"Main number",rights:"All rights reserved."
+    },
+    es:{
+      nav_home:"Inicio",nav_services:"Servicios",nav_steps:"Etapas",nav_clean:"Limpieza",nav_contact:"Contacto",
+      hero_badge:"Construcción • Renovación • Acabados",hero_title:"Construir con seriedad, realizar con precisión.",
+      hero_text:"TARCI acompaña sus proyectos de construcción y renovación en Marrakech, desde la preparación de la obra hasta el control y la entrega.",
+      call:"Llamar a TARCI",discover:"Descubrir nuestros servicios",
+      services_label:"Nuestra experiencia",services_title:"Servicios adaptados a su proyecto",services_text:"Un enfoque profesional, organizado y atento a los detalles.",
+      s1_title:"Construcción",s1_text:"Trabajos de construcción y acompañamiento de las diferentes fases de la obra.",
+      s2_title:"Albañilería",s2_text:"Cimientos, elevación de muros, albañilería y trabajos estructurales.",
+      s3_title:"Renovación y acabados",s3_text:"Revestimientos, acabados y mejora de espacios existentes.",
+      s4_title:"Limpieza",s4_text:"Limpieza de obra y preparación de los espacios después de los trabajos.",
+      about_label:"TARCI Marrakech",about_title:"Un método claro para cada obra",
+      about_text:"Organizamos los trabajos paso a paso para mantener una visión clara del progreso y de los acabados.",
+      about_c1:"Organización de las diferentes fases",about_c2:"Seguimiento y control de los trabajos",about_c3:"Atención a los acabados",about_c4:"Comunicación directa con el cliente",
+      steps_label:"Seguimiento de la obra",steps_title:"Principales etapas",steps_text:"Una presentación sencilla del proceso de trabajo.",
+      st1:"Cimientos",st1p:"Preparación y realización de los cimientos del proyecto.",
+      st2:"Elevación de muros",st2p:"Construcción de muros y avance de la estructura.",
+      st3:"Albañilería",st3p:"Trabajos de albañilería y preparación de superficies.",
+      st4:"Forjado y cubierta",st4p:"Realización de forjados y trabajos relacionados con la cubierta.",
+      st5:"Revestimientos y acabados",st5p:"Revestimientos, acabados y preparación de los espacios.",
+      st6:"Control y entrega",st6p:"Control final y preparación de la entrega del proyecto.",
+      clean_label:"Servicio de limpieza",clean_title:"Una obra limpia para una entrega cuidada",
+      clean_text:"La limpieza forma parte del acompañamiento al final de la obra para preparar los espacios para su uso.",
+      whatsapp:"WhatsApp",email_btn:"Escribir por email",cta_title:"Hablemos de su proyecto.",
+      cta_text:"Contacte con TARCI Marrakech para solicitar información.",contact_now:"Contactar ahora",
+      contact_label:"Contacto",contact_title:"TARCI Marrakech",contact_text:"Estamos a su disposición para sus proyectos de construcción y renovación.",
+      main_phone:"Número principal",rights:"Todos los derechos reservados."
+    }
+  };
+
+  const language = document.getElementById("language");
+  const menuBtn = document.getElementById("menuBtn");
+  const mainNav = document.getElementById("mainNav");
+
+  function setLanguage(lang){
+    const dict = translations[lang] || translations.fr;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      if(dict[key]) el.textContent = dict[key];
+    });
+    localStorage.setItem("tarciLanguage",lang);
+  }
+
+  const saved = localStorage.getItem("tarciLanguage") || "fr";
+  language.value = saved;
+  setLanguage(saved);
+
+  language.addEventListener("change",e=>setLanguage(e.target.value));
+
+  menuBtn.addEventListener("click",()=>{
+    mainNav.classList.toggle("open");
+  });
+
+  document.querySelectorAll("#mainNav a").forEach(a=>{
+    a.addEventListener("click",()=>mainNav.classList.remove("open"));
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
