@@ -5,340 +5,1378 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TARCI | Construction de villas à Marrakech</title>
 <meta name="description" content="TARCI — Construction de villas et maisons à Marrakech, étape par étape, du terrassement à la livraison.">
+
 <style>
 :root{
-  --navy:#082d52;--blue:#0b5cab;--gold:#f2c230;--ink:#17202a;
-  --muted:#667085;--light:#f5f7fa;--white:#fff;--border:#e6eaf0;
-  --shadow:0 14px 40px rgba(8,45,82,.10);--radius:20px;--max:1180px;
+  --navy:#16324f;
+  --blue:#245f8f;
+  --gold:#d9ad38;
+  --ink:#202a33;
+  --muted:#697783;
+  --light:#f3f5f6;
+  --white:#fff;
+  --border:#e2e6e9;
+  --shadow:0 14px 40px rgba(22,50,79,.10);
+  --radius:18px;
+  --max:1180px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-.container{width:min(var(--max),calc(100% - 32px));margin:auto}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  line-height:1.65;
+  background:#fff;
+  overflow-x:hidden
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+img{
+  display:block;
+  max-width:100%
+}
+
+.container{
+  width:min(var(--max),calc(100% - 32px));
+  margin:auto
+}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
-.nav{min-height:74px;display:flex;align-items:center;gap:25px}
-.logo img{width:145px}
-.nav-links{display:flex;align-items:center;gap:24px;margin-left:auto;font-weight:800;font-size:15px}
-.nav-links a:hover{color:var(--blue)}
-.lang{border:1px solid var(--border);background:#fff;border-radius:10px;padding:9px 10px;font-weight:800}
-.menu{display:none;border:0;background:none;font-size:28px}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px)
+}
+
+.nav{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  gap:25px
+}
+
+.logo img{
+  width:145px
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  margin-left:auto;
+  font-weight:800;
+  font-size:15px
+}
+
+.nav-links a{
+  transition:.2s
+}
+
+.nav-links a:hover{
+  color:var(--blue)
+}
+
+.lang{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:10px;
+  padding:9px 10px;
+  font-weight:800;
+  color:var(--navy)
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:28px;
+  color:var(--navy)
+}
 
 /* HERO */
+
 .hero{
- min-height:690px;display:flex;align-items:center;color:#fff;position:relative;
- background:
- linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.40),rgba(0,0,0,.12)),
- url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png") center/cover no-repeat,
- #123d64;
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  position:relative;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(10,30,48,.78),
+    rgba(22,50,79,.45),
+    rgba(22,50,79,.12)
+  ),
+  url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
+  center/cover no-repeat,
+  #16324f;
 }
-.hero-content{padding:85px 0;max-width:760px}
-.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--gold);margin-bottom:12px}
-.hero h1{font-size:clamp(40px,6vw,70px);line-height:1.04;margin-bottom:18px}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:clamp(17px,2vw,21px);max-width:690px;color:#eef4f9}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:12px;font-weight:900;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.primary{background:var(--gold);color:#171717}
-.light{border:1px solid rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08)}
+
+.hero-content{
+  padding:85px 0;
+  max-width:760px
+}
+
+.kicker{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:900;
+  color:var(--gold);
+  margin-bottom:12px
+}
+
+.hero h1{
+  font-size:clamp(40px,6vw,70px);
+  line-height:1.04;
+  margin-bottom:18px
+}
+
+.hero h1 span{
+  color:var(--gold)
+}
+
+.hero p{
+  font-size:clamp(17px,2vw,21px);
+  max-width:690px;
+  color:#eef3f6
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:12px 20px;
+  border-radius:11px;
+  font-weight:900;
+  transition:.2s
+}
+
+.btn:hover{
+  transform:translateY(-2px)
+}
+
+.primary{
+  background:var(--gold);
+  color:#171717
+}
+
+.light{
+  border:1px solid rgba(255,255,255,.7);
+  color:#fff;
+  background:rgba(255,255,255,.08)
+}
 
 /* SECTIONS */
-section{padding:82px 0}
-.head{text-align:center;max-width:780px;margin:0 auto 42px}
-.head .kicker{color:var(--blue)}
-h2{font-size:clamp(30px,4vw,45px);line-height:1.12;margin:6px 0 13px}
-.head p{color:var(--muted);font-size:17px}
+
+section{
+  padding:82px 0
+}
+
+.head{
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 42px
+}
+
+.head .kicker{
+  color:var(--blue)
+}
+
+h2{
+  font-size:clamp(30px,4vw,45px);
+  line-height:1.12;
+  margin:6px 0 13px
+}
+
+.head p{
+  color:var(--muted);
+  font-size:17px
+}
 
 /* INTRO */
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.intro-image{min-height:410px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-.intro-image img{width:100%;height:100%;object-fit:cover}
-.checks{display:grid;gap:13px;margin-top:24px}
-.check{display:flex;gap:12px;font-weight:750}
-.check b{color:var(--blue)}
+
+.intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center
+}
+
+.intro-image{
+  min-height:410px;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow)
+}
+
+.intro-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.checks{
+  display:grid;
+  gap:13px;
+  margin-top:24px
+}
+
+.check{
+  display:flex;
+  gap:12px;
+  font-weight:750
+}
+
+.check b{
+  color:var(--blue)
+}
 
 /* STATS */
-.stats{background:var(--navy);color:#fff}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.stat{text-align:center;padding:24px 18px;border-right:1px solid rgba(255,255,255,.12)}
-.stat:last-child{border-right:0}
-.stat-icon{font-size:30px;color:var(--gold);margin-bottom:7px}
-.stat strong{display:block;font-size:48px;line-height:1;color:#fff}
-.stat span{display:block;margin-top:9px;color:#d7e2ec;font-weight:700}
+
+.stats{
+  background:var(--navy);
+  color:#fff
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0
+}
+
+.stat{
+  text-align:center;
+  padding:24px 18px;
+  border-right:1px solid rgba(255,255,255,.12)
+}
+
+.stat:last-child{
+  border-right:0
+}
+
+.stat-icon{
+  font-size:30px;
+  color:var(--gold);
+  margin-bottom:7px
+}
+
+.stat strong{
+  display:block;
+  font-size:48px;
+  line-height:1;
+  color:#fff
+}
+
+.stat span{
+  display:block;
+  margin-top:9px;
+  color:#d7e0e7;
+  font-weight:700
+}
 
 /* SERVICES */
-.services{background:var(--light)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 5px 22px rgba(8,45,82,.05);transition:.22s}
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.card-media{height:190px;overflow:hidden;background:#dce3e9}
-.card-media img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.card:hover .card-media img{transform:scale(1.04)}
-.card-body{padding:22px}
-.number{color:var(--gold);font-weight:900;font-size:13px;letter-spacing:.1em}
-.card h3{font-size:21px;margin:5px 0 7px}
-.card p{color:var(--muted)}
+
+.services{
+  background:var(--light)
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 5px 22px rgba(22,50,79,.05);
+  transition:.22s
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow)
+}
+
+.card-media{
+  height:190px;
+  overflow:hidden;
+  background:#dce2e6
+}
+
+.card-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s
+}
+
+.card:hover .card-media img{
+  transform:scale(1.04)
+}
+
+.card-body{
+  padding:22px
+}
+
+.number{
+  color:var(--gold);
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.1em
+}
+
+.card h3{
+  font-size:21px;
+  margin:5px 0 7px
+}
+
+.card p{
+  color:var(--muted)
+}
 
 /* PHASES */
-.phases-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.phase{position:relative;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff}
-.phase img{width:100%;height:210px;object-fit:cover}
-.phase-body{padding:18px}
-.phase-number{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);font-weight:900;margin-bottom:8px}
-.phase h3{font-size:18px}
-.phase p{font-size:14px;color:var(--muted);margin-top:5px}
+
+.phases-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px
+}
+
+.phase{
+  position:relative;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  transition:.2s
+}
+
+.phase:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow)
+}
+
+.phase img{
+  width:100%;
+  height:210px;
+  object-fit:cover
+}
+
+.phase-body{
+  padding:18px
+}
+
+.phase-number{
+  display:inline-grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#17202a;
+  font-weight:900;
+  margin-bottom:8px
+}
+
+.phase h3{
+  font-size:18px
+}
+
+.phase p{
+  font-size:14px;
+  color:var(--muted);
+  margin-top:5px
+}
 
 /* REALISATIONS */
-.real{background:var(--light)}
-.real-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
-.real-item{min-height:300px;border-radius:20px;overflow:hidden;position:relative;background:#ddd}
-.real-item.big{min-height:500px;grid-row:span 2}
-.real-item img{width:100%;height:100%;object-fit:cover}
-.real-overlay{position:absolute;left:0;right:0;bottom:0;padding:45px 20px 20px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82))}
-.real-overlay h3{font-size:20px}
+
+.real{
+  background:var(--light)
+}
+
+.real-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:18px
+}
+
+.real-item{
+  min-height:300px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  background:#ddd
+}
+
+.real-item.big{
+  min-height:500px;
+  grid-row:span 2
+}
+
+.real-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.real-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:45px 20px 20px;
+  color:#fff;
+  background:linear-gradient(
+    transparent,
+    rgba(10,25,38,.84)
+  )
+}
+
+.real-overlay h3{
+  font-size:20px
+}
 
 /* WHY */
-.why{background:#101820;color:#fff}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.why-card{padding:25px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.04)}
-.why-card .ico{font-size:28px;color:var(--gold);margin-bottom:12px}
-.why-card p{color:#c8d0d8;margin-top:7px}
+
+.why{
+  background:#18232d;
+  color:#fff
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px
+}
+
+.why-card{
+  padding:25px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  background:rgba(255,255,255,.04)
+}
+
+.why-card .ico{
+  font-size:28px;
+  color:var(--gold);
+  margin-bottom:12px
+}
+
+.why-card p{
+  color:#c8d0d8;
+  margin-top:7px
+}
 
 /* CTA */
-.cta{background:linear-gradient(90deg,#073d75,#0b5cab);color:#fff}
-.cta-box{display:flex;align-items:center;justify-content:space-between;gap:25px}
-.cta h2{margin:0 0 7px}
+
+.cta{
+  background:
+  linear-gradient(
+    90deg,
+    #16324f,
+    #245f8f
+  );
+  color:#fff
+}
+
+.cta-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px
+}
+
+.cta h2{
+  margin:0 0 7px
+}
 
 /* CONTACT */
-.contact{background:var(--light)}
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
-.contact-card,.form-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:27px}
-.contact-item{padding:16px 0;border-bottom:1px solid var(--border)}
-.contact-item:last-child{border:0}
-.contact-item small{display:block;color:var(--muted);margin-bottom:4px}
-.contact-item a{font-weight:900;color:var(--blue)}
-form{display:grid;gap:13px}
-label{font-weight:800;font-size:14px}
-input,textarea{width:100%;border:1px solid #d8dee7;border-radius:11px;padding:13px;font:inherit}
-textarea{min-height:125px;resize:vertical}
+
+.contact{
+  background:var(--light)
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:25px
+}
+
+.contact-card,
+.form-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:27px
+}
+
+.contact-item{
+  padding:16px 0;
+  border-bottom:1px solid var(--border)
+}
+
+.contact-item:last-child{
+  border:0
+}
+
+.contact-item small{
+  display:block;
+  color:var(--muted);
+  margin-bottom:4px
+}
+
+.contact-item a{
+  font-weight:900;
+  color:var(--blue)
+}
+
+form{
+  display:grid;
+  gap:13px
+}
+
+label{
+  font-weight:800;
+  font-size:14px
+}
+
+input,
+textarea{
+  width:100%;
+  border:1px solid #d8dee7;
+  border-radius:11px;
+  padding:13px;
+  font:inherit;
+  outline:none;
+  transition:.2s
+}
+
+input:focus,
+textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(36,95,143,.10)
+}
+
+textarea{
+  min-height:125px;
+  resize:vertical
+}
 
 /* FOOTER */
-footer{background:#0b1117;color:#c8d0d8;padding:48px 0 22px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
-footer h3{color:#fff;margin-bottom:12px}
-footer a:hover{color:#fff}
-.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:13px}
-.whatsapp{position:fixed;right:17px;bottom:17px;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:24px;font-weight:900;z-index:1200;box-shadow:0 8px 25px #0003}
+
+footer{
+  background:#101820;
+  color:#c8d0d8;
+  padding:48px 0 22px
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:30px
+}
+
+footer h3{
+  color:#fff;
+  margin-bottom:12px
+}
+
+footer a:hover{
+  color:#fff
+}
+
+.copy{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:30px;
+  padding-top:18px;
+  font-size:13px
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:17px;
+  bottom:17px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#25d366;
+  color:#fff;
+  font-size:24px;
+  font-weight:900;
+  z-index:1200;
+  box-shadow:0 8px 25px #0003
+}
 
 /* MOBILE */
+
 @media(max-width:900px){
- .nav-links{display:none}.menu{display:block;margin-left:auto}
- .nav.open .nav-links{display:flex;position:absolute;top:74px;left:16px;right:16px;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 15px;border:1px solid var(--border);border-radius:0 0 15px 15px;box-shadow:var(--shadow)}
- .nav.open .nav-links a{padding:12px 3px;border-bottom:1px solid var(--border)}
- .intro,.contact-grid{grid-template-columns:1fr}
- .stats-grid{grid-template-columns:repeat(2,1fr)}
- .stat{border-bottom:1px solid rgba(255,255,255,.12)}
- .cards{grid-template-columns:repeat(2,1fr)}
- .phases-grid{grid-template-columns:repeat(2,1fr)}
- .why-grid{grid-template-columns:repeat(2,1fr)}
- .real-grid{grid-template-columns:1fr 1fr}.real-item.big{grid-row:auto;min-height:350px}
- .cta-box{flex-direction:column;align-items:flex-start}
- .footer-grid{grid-template-columns:1fr 1fr}
+
+ .nav-links{
+   display:none
+ }
+
+ .menu{
+   display:block;
+   margin-left:auto
+ }
+
+ .nav.open .nav-links{
+   display:flex;
+   position:absolute;
+   top:74px;
+   left:16px;
+   right:16px;
+   background:#fff;
+   flex-direction:column;
+   align-items:stretch;
+   gap:0;
+   padding:8px 15px;
+   border:1px solid var(--border);
+   border-radius:0 0 15px 15px;
+   box-shadow:var(--shadow)
+ }
+
+ .nav.open .nav-links a{
+   padding:12px 3px;
+   border-bottom:1px solid var(--border)
+ }
+
+ .intro,
+ .contact-grid{
+   grid-template-columns:1fr
+ }
+
+ .stats-grid{
+   grid-template-columns:repeat(2,1fr)
+ }
+
+ .stat{
+   border-bottom:1px solid rgba(255,255,255,.12)
+ }
+
+ .cards{
+   grid-template-columns:repeat(2,1fr)
+ }
+
+ .phases-grid{
+   grid-template-columns:repeat(2,1fr)
+ }
+
+ .why-grid{
+   grid-template-columns:repeat(2,1fr)
+ }
+
+ .real-grid{
+   grid-template-columns:1fr 1fr
+ }
+
+ .real-item.big{
+   grid-row:auto;
+   min-height:350px
+ }
+
+ .cta-box{
+   flex-direction:column;
+   align-items:flex-start
+ }
+
+ .footer-grid{
+   grid-template-columns:1fr 1fr
+ }
 }
+
 @media(max-width:600px){
- .container{width:calc(100% - 28px)}
- .logo img{width:125px}
- .lang{padding:7px 8px}
- .hero{min-height:650px}
- .hero-content{padding:65px 0}
- .hero h1{font-size:42px}
- .buttons{display:grid;grid-template-columns:1fr}.btn{width:100%}
- section{padding:62px 0}
- .stats-grid,.cards,.phases-grid,.why-grid,.real-grid,.footer-grid{grid-template-columns:1fr}
- .stat{border-right:0}
- .stat strong{font-size:43px}
- .real-item,.real-item.big{min-height:290px}
+
+ .container{
+   width:calc(100% - 28px)
+ }
+
+ .logo img{
+   width:125px
+ }
+
+ .lang{
+   padding:7px 8px
+ }
+
+ .hero{
+   min-height:650px
+ }
+
+ .hero-content{
+   padding:65px 0
+ }
+
+ .hero h1{
+   font-size:42px
+ }
+
+ .buttons{
+   display:grid;
+   grid-template-columns:1fr
+ }
+
+ .btn{
+   width:100%
+ }
+
+ section{
+   padding:62px 0
+ }
+
+ .stats-grid,
+ .cards,
+ .phases-grid,
+ .why-grid,
+ .real-grid,
+ .footer-grid{
+   grid-template-columns:1fr
+ }
+
+ .stat{
+   border-right:0
+ }
+
+ .stat strong{
+   font-size:43px
+ }
+
+ .real-item,
+ .real-item.big{
+   min-height:290px
+ }
 }
 </style>
 </head>
+
 <body>
 
 <header>
  <div class="container nav" id="nav">
-  <a class="logo" href="#home"><img src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png" alt="TARCI"></a>
+
+  <a class="logo" href="#home">
+   <img
+    src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
+    alt="TARCI">
+  </a>
+
   <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
+
   <nav class="nav-links">
-   <a href="#home">Accueil</a><a href="#services">Services</a><a href="#phases">Phases de chantier</a><a href="#realisations">Réalisations</a><a href="#about">À propos</a><a href="#contact">Contact</a>
+   <a href="#home">Accueil</a>
+   <a href="#services">Services</a>
+   <a href="#phases">Phases de chantier</a>
+   <a href="#realisations">Réalisations</a>
+   <a href="#about">À propos</a>
+   <a href="#contact">Contact</a>
   </nav>
-  <select class="lang" id="lang"><option>FR</option><option>AR</option><option>EN</option><option>ES</option></select>
+
+  <select class="lang" id="lang">
+   <option>FR</option>
+   <option>AR</option>
+   <option>EN</option>
+   <option>ES</option>
+  </select>
+
  </div>
 </header>
 
 <main>
+
 <section class="hero" id="home">
  <div class="container hero-content">
+
   <div class="kicker">TARCI Marrakech</div>
-  <h1>Construction de <span>villas</span>, étape par étape.</h1>
-  <p>Des travaux de construction organisés, du terrassement jusqu'à la livraison de votre villa.</p>
+
+  <h1>
+   Construction de <span>villas</span>, étape par étape.
+  </h1>
+
+  <p>
+   Des travaux de construction organisés, du terrassement
+   jusqu'à la livraison de votre villa.
+  </p>
+
   <div class="buttons">
-   <a class="btn primary" href="#contact">Demander un devis</a>
-   <a class="btn light" href="#phases">Découvrir les phases</a>
+   <a class="btn primary" href="#contact">
+    Demander un devis
+   </a>
+
+   <a class="btn light" href="#phases">
+    Découvrir les phases
+   </a>
   </div>
+
  </div>
 </section>
 
 <section id="about">
  <div class="container intro">
+
   <div>
+
    <div class="kicker">Notre spécialité</div>
-   <h2>Construire une villa, c'est maîtriser chaque étape du chantier.</h2>
-   <p style="color:var(--muted);font-size:17px">TARCI se concentre sur les travaux réels de construction des maisons et villas. Notre présentation met en avant l'évolution du chantier, les équipes et les étapes d'exécution — sans présenter TARCI comme un bureau d'études.</p>
+
+   <h2>
+    Construire une villa, c'est maîtriser chaque étape du chantier.
+   </h2>
+
+   <p style="color:var(--muted);font-size:17px">
+    TARCI se concentre sur les travaux réels de construction
+    des maisons et villas. Notre présentation met en avant
+    l'évolution du chantier, les équipes et les étapes d'exécution.
+   </p>
+
    <div class="checks">
-    <div class="check"><b>✓</b><span>Terrassement et préparation du terrain</span></div>
-    <div class="check"><b>✓</b><span>Fondations, structure et maçonnerie</span></div>
-    <div class="check"><b>✓</b><span>Dalles, toiture et réseaux techniques</span></div>
-    <div class="check"><b>✓</b><span>Travaux de construction jusqu'à la livraison</span></div>
+
+    <div class="check">
+     <b>✓</b>
+     <span>Terrassement et préparation du terrain</span>
+    </div>
+
+    <div class="check">
+     <b>✓</b>
+     <span>Fondations, structure et maçonnerie</span>
+    </div>
+
+    <div class="check">
+     <b>✓</b>
+     <span>Dalles, toiture et réseaux techniques</span>
+    </div>
+
+    <div class="check">
+     <b>✓</b>
+     <span>Travaux de construction jusqu'à la livraison</span>
+    </div>
+
    </div>
+
   </div>
-  <div class="intro-image"><img src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png" alt="Chantier de construction TARCI"></div>
+
+  <div class="intro-image">
+   <img
+    src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png"
+    alt="Chantier de construction TARCI">
+  </div>
+
  </div>
 </section>
 
 <section class="stats">
+
  <div class="container">
-  <div class="head" style="margin-bottom:30px"><div class="kicker">TARCI en chiffres</div><h2 style="color:#fff">Des repères simples</h2></div>
+
+  <div class="head" style="margin-bottom:30px">
+   <div class="kicker">TARCI en chiffres</div>
+   <h2 style="color:#fff">Des repères simples</h2>
+  </div>
+
   <div class="stats-grid">
-   <div class="stat"><div class="stat-icon">👷</div><strong data-count="2">0</strong><span>Ingénieurs & Techniciens</span></div>
-   <div class="stat"><div class="stat-icon">🤝</div><strong data-count="30">0</strong><span>Clients satisfaits</span></div>
-   <div class="stat"><div class="stat-icon">🏗️</div><strong data-count="50">0</strong><span>Projets réalisés</span></div>
-   <div class="stat"><div class="stat-icon">🚧</div><strong data-count="7">0</strong><span>Projets en cours</span></div>
+
+   <div class="stat">
+    <div class="stat-icon">👷</div>
+    <strong data-count="2">0</strong>
+    <span>Ingénieurs & Techniciens</span>
+   </div>
+
+   <div class="stat">
+    <div class="stat-icon">🤝</div>
+    <strong data-count="30">0</strong>
+    <span>Clients satisfaits</span>
+   </div>
+
+   <div class="stat">
+    <div class="stat-icon">🏗️</div>
+    <strong data-count="50">0</strong>
+    <span>Projets réalisés</span>
+   </div>
+
+   <div class="stat">
+    <div class="stat-icon">🚧</div>
+    <strong data-count="7">0</strong>
+    <span>Projets en cours</span>
+   </div>
+
   </div>
  </div>
 </section>
 
 <section class="services" id="services">
+
  <div class="container">
-  <div class="head"><div class="kicker">Nos services</div><h2>Une construction présentée par étapes</h2><p>Une lecture simple du chantier, centrée sur les villas et les travaux de construction.</p></div>
+
+  <div class="head">
+   <div class="kicker">Nos services</div>
+   <h2>Une construction présentée par étapes</h2>
+   <p>
+    Une lecture simple du chantier, centrée sur les villas
+    et les travaux de construction.
+   </p>
+  </div>
+
   <div class="cards">
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85" alt="Préparation chantier"></div><div class="card-body"><div class="number">01</div><h3>Préparation du chantier</h3><p>Installation, organisation et préparation du terrain avant les travaux.</p></div></article>
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85" alt="Fondations"></div><div class="card-body"><div class="number">02</div><h3>Fondations</h3><p>Travaux de terrassement et réalisation des fondations de la villa.</p></div></article>
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=85" alt="Structure béton"></div><div class="card-body"><div class="number">03</div><h3>Structure & élévation</h3><p>Élévation, béton et maçonnerie pour donner forme au bâtiment.</p></div></article>
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85" alt="Dalle et toiture"></div><div class="card-body"><div class="number">04</div><h3>Dalles & toiture</h3><p>Réalisation des éléments de couverture et des différentes dalles.</p></div></article>
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85" alt="Travaux techniques"></div><div class="card-body"><div class="number">05</div><h3>Réseaux & travaux</h3><p>Passage et réalisation des réseaux nécessaires au projet.</p></div></article>
-   <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85" alt="Fin de construction"></div><div class="card-body"><div class="number">06</div><h3>Achèvement du chantier</h3><p>Contrôles, dernières interventions de construction et préparation à la livraison.</p></div></article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85" alt="Préparation chantier">
+    </div>
+    <div class="card-body">
+     <div class="number">01</div>
+     <h3>Préparation du chantier</h3>
+     <p>Installation, organisation et préparation du terrain avant les travaux.</p>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85" alt="Fondations">
+    </div>
+    <div class="card-body">
+     <div class="number">02</div>
+     <h3>Fondations</h3>
+     <p>Travaux de terrassement et réalisation des fondations de la villa.</p>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=85" alt="Structure béton">
+    </div>
+    <div class="card-body">
+     <div class="number">03</div>
+     <h3>Structure & élévation</h3>
+     <p>Élévation, béton et maçonnerie pour donner forme au bâtiment.</p>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85" alt="Dalle et toiture">
+    </div>
+    <div class="card-body">
+     <div class="number">04</div>
+     <h3>Dalles & toiture</h3>
+     <p>Réalisation des éléments de couverture et des différentes dalles.</p>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85" alt="Travaux techniques">
+    </div>
+    <div class="card-body">
+     <div class="number">05</div>
+     <h3>Réseaux & travaux</h3>
+     <p>Passage et réalisation des réseaux nécessaires au projet.</p>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="card-media">
+     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85" alt="Fin de construction">
+    </div>
+    <div class="card-body">
+     <div class="number">06</div>
+     <h3>Achèvement du chantier</h3>
+     <p>Contrôles, dernières interventions de construction et préparation à la livraison.</p>
+    </div>
+   </article>
+
   </div>
  </div>
 </section>
 
 <section id="phases">
+
  <div class="container">
-  <div class="head"><div class="kicker">Phases de chantier</div><h2>Une histoire visuelle de la même villa</h2><p>La galerie est structurée pour montrer l'évolution d'un projet, étape après étape.</p></div>
+
+  <div class="head">
+   <div class="kicker">Phases de chantier</div>
+   <h2>Une histoire visuelle de la même villa</h2>
+   <p>
+    La galerie est structurée pour montrer l'évolution
+    d'un projet, étape après étape.
+   </p>
+  </div>
+
   <div class="phases-grid">
-   <article class="phase"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85" alt="Phase 1"><div class="phase-body"><div class="phase-number">1</div><h3>Terrain préparé</h3><p>Début du chantier et préparation.</p></div></article>
-   <article class="phase"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85" alt="Phase 2"><div class="phase-body"><div class="phase-number">2</div><h3>Fondations</h3><p>Base structurelle de la villa.</p></div></article>
-   <article class="phase"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Phase 3"><div class="phase-body"><div class="phase-number">3</div><h3>Élévation</h3><p>La villa prend forme.</p></div></article>
-   <article class="phase"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Phase 4"><div class="phase-body"><div class="phase-number">4</div><h3>Toiture & réseaux</h3><p>Avancement vers l'achèvement.</p></div></article>
+
+   <article class="phase">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85" alt="Phase 1">
+    <div class="phase-body">
+     <div class="phase-number">1</div>
+     <h3>Terrain préparé</h3>
+     <p>Début du chantier et préparation.</p>
+    </div>
+   </article>
+
+   <article class="phase">
+    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85" alt="Phase 2">
+    <div class="phase-body">
+     <div class="phase-number">2</div>
+     <h3>Fondations</h3>
+     <p>Base structurelle de la villa.</p>
+    </div>
+   </article>
+
+   <article class="phase">
+    <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Phase 3">
+    <div class="phase-body">
+     <div class="phase-number">3</div>
+     <h3>Élévation</h3>
+     <p>La villa prend forme.</p>
+    </div>
+   </article>
+
+   <article class="phase">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Phase 4">
+    <div class="phase-body">
+     <div class="phase-number">4</div>
+     <h3>Toiture & réseaux</h3>
+     <p>Avancement vers l'achèvement.</p>
+    </div>
+   </article>
+
   </div>
  </div>
 </section>
 
 <section class="real" id="realisations">
+
  <div class="container">
-  <div class="head"><div class="kicker">Nos réalisations</div><h2>Des projets à découvrir</h2><p>La galerie pourra ensuite recevoir les vraies photos de chaque chantier TARCI, classées par étape.</p></div>
+
+  <div class="head">
+   <div class="kicker">Nos réalisations</div>
+   <h2>Des projets à découvrir</h2>
+   <p>
+    La galerie pourra ensuite recevoir les vraies photos
+    de chaque chantier TARCI.
+   </p>
+  </div>
+
   <div class="real-grid">
-   <article class="real-item big"><img src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png" alt="Projet villa TARCI"><div class="real-overlay"><h3>Construction de villa</h3><p>Projet résidentiel</p></div></article>
-   <article class="real-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85" alt="Travaux de chantier"><div class="real-overlay"><h3>Structure</h3></div></article>
-   <article class="real-item"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Maçonnerie"><div class="real-overlay"><h3>Élévation</h3></div></article>
-   <article class="real-item"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Toiture"><div class="real-overlay"><h3>Toiture</h3></div></article>
-   <article class="real-item"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=85" alt="Travaux techniques"><div class="real-overlay"><h3>Travaux techniques</h3></div></article>
+
+   <article class="real-item big">
+    <img src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png" alt="Projet villa TARCI">
+    <div class="real-overlay">
+     <h3>Construction de villa</h3>
+     <p>Projet résidentiel</p>
+    </div>
+   </article>
+
+   <article class="real-item">
+    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85" alt="Travaux de chantier">
+    <div class="real-overlay"><h3>Structure</h3></div>
+   </article>
+
+   <article class="real-item">
+    <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Maçonnerie">
+    <div class="real-overlay"><h3>Élévation</h3></div>
+   </article>
+
+   <article class="real-item">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Toiture">
+    <div class="real-overlay"><h3>Toiture</h3></div>
+   </article>
+
+   <article class="real-item">
+    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=85" alt="Travaux techniques">
+    <div class="real-overlay"><h3>Travaux techniques</h3></div>
+   </article>
+
   </div>
  </div>
 </section>
 
 <section class="why">
+
  <div class="container">
-  <div class="head"><div class="kicker">Pourquoi TARCI</div><h2>Une présence organisée sur le chantier</h2><p style="color:#c8d0d8">Des éléments simples qui expliquent la manière dont le projet est exécuté.</p></div>
+
+  <div class="head">
+   <div class="kicker">Pourquoi TARCI</div>
+   <h2>Une présence organisée sur le chantier</h2>
+   <p style="color:#c8d0d8">
+    Des éléments simples qui expliquent la manière
+    dont le projet est exécuté.
+   </p>
+  </div>
+
   <div class="why-grid">
-   <article class="why-card"><div class="ico">🏗️</div><h3>Organisation</h3><p>Chaque phase est présentée clairement pour suivre l'évolution du chantier.</p></article>
-   <article class="why-card"><div class="ico">✓</div><h3>Qualité</h3><p>Une attention portée à l'exécution et aux détails de construction.</p></article>
-   <article class="why-card"><div class="ico">👷</div><h3>Équipe</h3><p>Des intervenants présentés autour du travail réel sur le chantier.</p></article>
-   <article class="why-card"><div class="ico">⏱</div><h3>Suivi</h3><p>Une communication claire sur l'avancement des différentes étapes.</p></article>
+
+   <article class="why-card">
+    <div class="ico">🏗️</div>
+    <h3>Organisation</h3>
+    <p>Chaque phase est présentée clairement pour suivre l'évolution du chantier.</p>
+   </article>
+
+   <article class="why-card">
+    <div class="ico">✓</div>
+    <h3>Qualité</h3>
+    <p>Une attention portée à l'exécution et aux détails de construction.</p>
+   </article>
+
+   <article class="why-card">
+    <div class="ico">👷</div>
+    <h3>Équipe</h3>
+    <p>Des intervenants présentés autour du travail réel sur le chantier.</p>
+   </article>
+
+   <article class="why-card">
+    <div class="ico">⏱</div>
+    <h3>Suivi</h3>
+    <p>Une communication claire sur l'avancement des différentes étapes.</p>
+   </article>
+
   </div>
  </div>
 </section>
 
 <section class="cta">
+
  <div class="container cta-box">
-  <div><h2>Vous avez un projet de villa ?</h2><p>Parlez-nous de votre projet de construction.</p></div>
-  <a class="btn primary" href="#contact">Demander un devis</a>
+
+  <div>
+   <h2>Vous avez un projet de villa ?</h2>
+   <p>Parlez-nous de votre projet de construction.</p>
+  </div>
+
+  <a class="btn primary" href="#contact">
+   Demander un devis
+  </a>
+
  </div>
 </section>
 
 <section class="contact" id="contact">
+
  <div class="container">
-  <div class="head"><div class="kicker">Contact</div><h2>Parlons de votre projet</h2><p>Construction de villa ou maison à Marrakech ? Contactez TARCI.</p></div>
+
+  <div class="head">
+   <div class="kicker">Contact</div>
+   <h2>Parlons de votre projet</h2>
+   <p>
+    Construction de villa ou maison à Marrakech ?
+    Contactez TARCI.
+   </p>
+  </div>
+
   <div class="contact-grid">
+
    <div class="contact-card">
-    <div class="contact-item"><small>Téléphone</small><a href="tel:+212678774597">0678 77 45 97</a><br><a href="tel:+212676289076">0676 28 90 76</a></div>
-    <div class="contact-item"><small>Email</small><a href="mailto:tarcitravaux@gmail.com">tarcitravaux@gmail.com</a></div>
-    <div class="contact-item"><small>Localisation</small><strong>Marrakech, Maroc</strong></div>
+
+    <div class="contact-item">
+     <small>Téléphone</small>
+     <a href="tel:+212678774597">0678 77 45 97</a><br>
+     <a href="tel:+212676289076">0676 28 90 76</a>
+    </div>
+
+    <div class="contact-item">
+     <small>Email</small>
+     <a href="mailto:tarcitravaux@gmail.com">
+      tarcitravaux@gmail.com
+     </a>
+    </div>
+
+    <div class="contact-item">
+     <small>Localisation</small>
+     <strong>Marrakech, Maroc</strong>
+    </div>
+
    </div>
+
    <div class="form-card">
-    <form action="mailto:tarcitravaux@gmail.com" method="post" enctype="text/plain">
-     <div><label>Nom</label><input name="Nom" required></div>
-     <div><label>Email</label><input type="email" name="Email" required></div>
-     <div><label>Votre projet</label><textarea name="Message" required></textarea></div>
-     <button class="btn primary" type="submit">Envoyer</button>
+
+    <form
+     action="mailto:tarcitravaux@gmail.com"
+     method="post"
+     enctype="text/plain"
+    >
+
+     <div>
+      <label>Nom</label>
+      <input name="Nom" required>
+     </div>
+
+     <div>
+      <label>Email</label>
+      <input type="email" name="Email" required>
+     </div>
+
+     <div>
+      <label>Votre projet</label>
+      <textarea name="Message" required></textarea>
+     </div>
+
+     <button class="btn primary" type="submit">
+      Envoyer
+     </button>
+
     </form>
+
    </div>
+
   </div>
  </div>
 </section>
+
 </main>
 
 <footer>
+
  <div class="container">
+
   <div class="footer-grid">
-   <div><h3>TARCI</h3><p>Construction de maisons et villas à Marrakech.</p></div>
-   <div><h3>Navigation</h3><p><a href="#services">Services</a></p><p><a href="#phases">Phases de chantier</a></p><p><a href="#realisations">Réalisations</a></p></div>
-   <div><h3>Contact</h3><p><a href="tel:+212678774597">0678 77 45 97</a></p><p><a href="mailto:tarcitravaux@gmail.com">tarcitravaux@gmail.com</a></p></div>
+
+   <div>
+    <h3>TARCI</h3>
+    <p>Construction de maisons et villas à Marrakech.</p>
+   </div>
+
+   <div>
+    <h3>Navigation</h3>
+    <p><a href="#services">Services</a></p>
+    <p><a href="#phases">Phases de chantier</a></p>
+    <p><a href="#realisations">Réalisations</a></p>
+   </div>
+
+   <div>
+    <h3>Contact</h3>
+    <p>
+     <a href="tel:+212678774597">
+      0678 77 45 97
+     </a>
+    </p>
+    <p>
+     <a href="mailto:tarcitravaux@gmail.com">
+      tarcitravaux@gmail.com
+     </a>
+    </p>
+   </div>
+
   </div>
-  <div class="copy">© 2026 STE TARCI SARL AU — Marrakech, Maroc</div>
+
+  <div class="copy">
+   © 2026 STE TARCI SARL AU — Marrakech, Maroc
+  </div>
+
  </div>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/212678774597" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
+<a
+ class="whatsapp"
+ href="https://wa.me/212678774597"
+ target="_blank"
+ rel="noopener"
+ aria-label="WhatsApp"
+>
+ ☎
+</a>
 
 <script>
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
-menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
 
-const counters=document.querySelectorAll('[data-count]');
-let done=false;
-const observer=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-  if(entry.isIntersecting && !done){
-   done=true;
-   counters.forEach(el=>{
-    const target=Number(el.dataset.count),duration=1200,start=performance.now();
-    function tick(now){
-     const p=Math.min((now-start)/duration,1);
-     el.textContent=Math.floor(p*target);
-     if(p<1)requestAnimationFrame(tick);else el.textContent=target;
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+
+menuBtn.addEventListener('click',()=>{
+  nav.classList.toggle('open');
+});
+
+const counters = document.querySelectorAll('[data-count]');
+let done = false;
+
+const observer = new IntersectionObserver(entries=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting && !done){
+
+      done = true;
+
+      counters.forEach(el=>{
+
+        const target = Number(el.dataset.count);
+        const duration = 1200;
+        const start = performance.now();
+
+        function tick(now){
+
+          const p = Math.min(
+            (now-start)/duration,
+            1
+          );
+
+          el.textContent =
+            Math.floor(p*target);
+
+          if(p<1){
+            requestAnimationFrame(tick);
+          }else{
+            el.textContent = target;
+          }
+
+        }
+
+        requestAnimationFrame(tick);
+
+      });
     }
-    requestAnimationFrame(tick);
-   });
-  }
- });
-},{threshold:.35});
-const stats=document.querySelector('.stats');
-if(stats)observer.observe(stats);
+  });
 
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+},{threshold:.35});
+
+const stats = document.querySelector('.stats');
+
+if(stats){
+  observer.observe(stats);
+}
+
+document
+.querySelectorAll('.nav-links a')
+.forEach(a=>{
+
+  a.addEventListener('click',()=>{
+    nav.classList.remove('open');
+  });
+
+});
+
 </script>
+
 </body>
 </html>
