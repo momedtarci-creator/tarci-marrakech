@@ -1,1729 +1,2667 @@
  <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TARCI | Construction & Travaux à Marrakech</title>
-<meta name="description" content="TARCI - Construction, béton armé, démolition, terrassement, maintenance et travaux à Marrakech.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --navy:#062d4d;
-  --navy2:#0a3d63;
-  --blue:#0c4b76;
-  --yellow:#f7b900;
-  --yellow2:#ffca28;
-  --white:#ffffff;
-  --light:#f5f7f9;
-  --text:#163047;
-  --muted:#6f7d89;
-  --border:#e4e9ee;
-  --shadow:0 14px 35px rgba(6,45,77,.10);
-  --radius:22px;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:"Inter",Arial,sans-serif;
-  background:#fff;
-  color:var(--text);
-  line-height:1.65;
-  overflow-x:hidden;
-}
-
-body[dir="rtl"]{
-  font-family:"Cairo","Inter",Arial,sans-serif;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
-}
-
-/* TOP BAR */
-.topbar{
-  background:var(--navy);
-  color:#fff;
-  min-height:42px;
-  display:flex;
-  align-items:center;
-}
-
-.topbar-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  font-size:13px;
-}
-
-.top-info{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.top-info span{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  white-space:nowrap;
-}
-
-.languages{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.lang-btn{
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  font-size:22px;
-  line-height:1;
-  padding:2px;
-  transition:.2s;
-}
-
-.lang-btn:hover,
-.lang-btn.active{
-  transform:scale(1.18);
-}
-
-/* HEADER */
-header{
-  background:#fff;
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.header-inner{
-  min-height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.logo{
-  width:165px;
-  height:auto;
-  object-fit:contain;
-}
-
-.nav{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  font-weight:600;
-  font-size:14px;
-}
-
-.nav a{
-  position:relative;
-  padding:28px 0;
-}
-
-.nav a::after{
-  content:"";
-  position:absolute;
-  height:3px;
-  width:0;
-  bottom:17px;
-  left:50%;
-  background:var(--yellow);
-  transform:translateX(-50%);
-  transition:.25s;
-}
-
-.nav a:hover::after{
-  width:100%;
-}
-
-.header-actions{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  border:0;
-  cursor:pointer;
-  padding:13px 21px;
-  border-radius:10px;
-  font-weight:700;
-  transition:.25s;
-}
-
-.btn-yellow{
-  background:var(--yellow);
-  color:#10283b;
-}
-
-.btn-yellow:hover{
-  background:var(--yellow2);
-  transform:translateY(-2px);
-}
-
-.btn-dark{
-  background:var(--navy);
-  color:#fff;
-}
-
-.btn-dark:hover{
-  background:var(--blue);
-  transform:translateY(-2px);
-}
-
-.menu-btn{
-  display:none;
-  border:0;
-  background:none;
-  font-size:32px;
-  cursor:pointer;
-}
-
-/* HERO */
-.hero{
-  min-height:610px;
-  position:relative;
-  background:
-    linear-gradient(90deg,rgba(3,27,45,.88),rgba(3,27,45,.42),rgba(3,27,45,.12)),
-    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png") center/cover no-repeat;
-  color:#fff;
-  display:flex;
-  align-items:center;
-}
-
-.hero-content{
-  max-width:700px;
-  padding:80px 0;
-}
-
-.hero-kicker{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  color:#fff;
-  font-weight:700;
-  margin-bottom:18px;
-}
-
-.hero-kicker::before,
-.section-kicker::before{
-  content:"";
-  width:38px;
-  height:3px;
-  background:var(--yellow);
-  display:block;
-}
-
-.hero h1{
-  font-size:clamp(42px,6vw,72px);
-  line-height:1.05;
-  margin-bottom:22px;
-  font-weight:800;
-}
-
-.hero h1 span{
-  color:var(--yellow);
-}
-
-.hero p{
-  max-width:650px;
-  font-size:18px;
-  color:#edf3f7;
-  margin-bottom:30px;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.hero-trust{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  background:#fff;
-  color:var(--text);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  max-width:850px;
-}
-
-.trust-item{
-  padding:20px;
-  text-align:center;
-  border-right:1px solid var(--border);
-}
-
-.trust-item:last-child{
-  border-right:0;
-}
-
-.trust-item strong{
-  display:block;
-  font-size:17px;
-  margin-bottom:4px;
-}
-
-.trust-item small{
-  color:var(--muted);
-}
-
-/* SECTION */
-section{
-  padding:90px 0;
-}
-
-.section-head{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 45px;
-}
-
-.section-kicker{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  color:var(--blue);
-  font-weight:800;
-  margin-bottom:8px;
-}
-
-.section-title{
-  font-size:clamp(30px,4vw,46px);
-  line-height:1.15;
-  margin-bottom:14px;
-}
-
-.section-text{
-  color:var(--muted);
-}
-
-/* SERVICES */
-.services-section{
-  background:#fff;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.service-card{
-  border-radius:18px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:var(--shadow);
-  border:1px solid var(--border);
-  transition:.3s;
-}
-
-.service-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 20px 45px rgba(6,45,77,.16);
-}
-
-.service-image{
-  height:210px;
-  overflow:hidden;
-}
-
-.service-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.5s;
-}
-
-.service-card:hover .service-image img{
-  transform:scale(1.05);
-}
-
-.service-body{
-  padding:20px;
-}
-
-.service-body h3{
-  font-size:19px;
-  margin-bottom:7px;
-}
-
-.service-body p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* STATS */
-.stats{
-  background:var(--navy);
-  color:#fff;
-  padding:38px 0;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-  text-align:center;
-  padding:12px 20px;
-  border-right:1px solid rgba(255,255,255,.25);
-}
-
-.stat:last-child{
-  border-right:0;
-}
-
-.stat strong{
-  display:block;
-  color:var(--yellow);
-  font-size:42px;
-  line-height:1;
-  margin-bottom:7px;
-}
-
-.stat span{
-  font-weight:600;
-}
-
-/* ABOUT */
-.about{
-  background:var(--light);
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:55px;
-  align-items:center;
-}
-
-.about-image{
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-
-.about-image img{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-}
-
-.about-content .section-kicker{
-  justify-content:flex-start;
-}
-
-.about-content h2{
-  font-size:clamp(32px,4vw,48px);
-  line-height:1.15;
-  margin-bottom:20px;
-}
-
-.about-content p{
-  color:var(--muted);
-  margin-bottom:20px;
-}
-
-.check-list{
-  display:grid;
-  gap:12px;
-  margin:25px 0;
-}
-
-.check{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:600;
-}
-
-.check span{
-  width:25px;
-  height:25px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--yellow);
-  color:#132c40;
-  font-weight:900;
-}
-
-/* PROJECT IMAGES */
-.projects{
-  background:#fff;
-}
-
-.project-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.project-photo{
-  height:290px;
-  border-radius:20px;
-  overflow:hidden;
-  position:relative;
-  background:#ddd;
-}
-
-.project-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.5s;
-}
-
-.project-photo:hover img{
-  transform:scale(1.05);
-}
-
-/* BIG CUSTOMER IMAGE */
-.customer-section{
-  background:var(--light);
-}
-
-.customer-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.customer-photo{
-  height:460px;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-
-.customer-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.customer-text{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:30px;
-}
-
-.customer-text .section-kicker{
-  justify-content:flex-start;
-}
-
-.customer-text h2{
-  font-size:clamp(30px,4vw,46px);
-  line-height:1.15;
-  margin-bottom:18px;
-}
-
-.customer-text p{
-  color:var(--muted);
-  margin-bottom:25px;
-}
-
-/* METHOD */
-.method{
-  background:#fff;
-}
-
-.method-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.method-card{
-  position:relative;
-  border-radius:20px;
-  overflow:hidden;
-  min-height:300px;
-  color:#fff;
-}
-
-.method-card img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.method-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 35%,rgba(0,0,0,.78));
-}
-
-.method-number{
-  position:absolute;
-  z-index:2;
-  top:18px;
-  left:18px;
-  background:var(--yellow);
-  color:#132c40;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  font-weight:800;
-}
-
-.method-content{
-  position:absolute;
-  z-index:2;
-  left:20px;
-  right:20px;
-  bottom:20px;
-}
-
-.method-content h3{
-  font-size:20px;
-  margin-bottom:5px;
-}
-
-.method-content p{
-  font-size:13px;
-  color:#e9edf0;
-}
-
-/* WHY */
-.why{
-  background:var(--light);
-}
-
-.why-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.why-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:30px;
-  box-shadow:0 8px 25px rgba(6,45,77,.06);
-}
-
-.why-icon{
-  width:50px;
-  height:50px;
-  border-radius:14px;
-  background:#fff4ca;
-  display:grid;
-  place-items:center;
-  font-size:24px;
-  margin-bottom:18px;
-}
-
-.why-card h3{
-  margin-bottom:8px;
-}
-
-.why-card p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* CONTACT */
-.contact{
-  background:#fff;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:40px;
-}
-
-.contact-info{
-  background:var(--navy);
-  color:#fff;
-  border-radius:25px;
-  padding:40px;
-}
-
-.contact-info h2{
-  font-size:35px;
-  margin-bottom:15px;
-}
-
-.contact-info p{
-  color:#d7e2e9;
-  margin-bottom:30px;
-}
-
-.contact-line{
-  display:flex;
-  gap:14px;
-  margin:18px 0;
-  align-items:flex-start;
-}
-
-.contact-line .icon{
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  background:rgba(255,255,255,.1);
-  display:grid;
-  place-items:center;
-  flex-shrink:0;
-}
-
-.contact-line small{
-  color:#aebec9;
-  display:block;
-}
-
-.contact-form{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:25px;
-  padding:35px;
-  box-shadow:var(--shadow);
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.field.full{
-  grid-column:1/-1;
-}
-
-.field label{
-  font-size:13px;
-  font-weight:700;
-}
-
-.field input,
-.field select,
-.field textarea{
-  width:100%;
-  border:1px solid #dce3e8;
-  border-radius:10px;
-  padding:13px 14px;
-  font-family:inherit;
-  font-size:14px;
-  outline:none;
-  background:#fff;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  border-color:var(--blue);
-}
-
-.field textarea{
-  min-height:140px;
-  resize:vertical;
-}
-
-/* FOOTER */
-footer{
-  background:#031f35;
-  color:#fff;
-  padding:55px 0 20px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
-  gap:35px;
-  padding-bottom:35px;
-}
-
-.footer-logo{
-  width:170px;
-  margin-bottom:18px;
-  filter:brightness(0) invert(1);
-}
-
-footer p{
-  color:#b6c4ce;
-  font-size:14px;
-}
-
-footer h3{
-  margin-bottom:15px;
-  color:#fff;
-}
-
-.footer-links{
-  display:grid;
-  gap:8px;
-  color:#b6c4ce;
-  font-size:14px;
-}
-
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.12);
-  padding-top:20px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:#a9bac5;
-  font-size:13px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  background:#20d366;
-  color:#fff;
-  display:grid;
-  place-items:center;
-  z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,.22);
-  font-size:30px;
-  transition:.25s;
-}
-
-.whatsapp:hover{
-  transform:scale(1.08);
-}
-
-/* RTL */
-body[dir="rtl"] .nav a::after{
-  left:auto;
-  right:50%;
-  transform:translateX(50%);
-}
-
-body[dir="rtl"] .trust-item{
-  border-right:0;
-  border-left:1px solid var(--border);
-}
-
-body[dir="rtl"] .trust-item:last-child{
-  border-left:0;
-}
-
-body[dir="rtl"] .stat{
-  border-right:0;
-  border-left:1px solid rgba(255,255,255,.25);
-}
-
-body[dir="rtl"] .stat:last-child{
-  border-left:0;
-}
-
-body[dir="rtl"] .about-content .section-kicker,
-body[dir="rtl"] .customer-text .section-kicker{
-  justify-content:flex-start;
-}
-
-body[dir="rtl"] .method-number{
-  left:auto;
-  right:18px;
-}
-
-body[dir="rtl"] .contact-line{
-  flex-direction:row;
-}
-
-body[dir="rtl"] .hero{
-  background:
-    linear-gradient(270deg,rgba(3,27,45,.88),rgba(3,27,45,.42),rgba(3,27,45,.12)),
-    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png") center/cover no-repeat;
-}
-
-/* MOBILE */
-@media(max-width:1000px){
-  .nav{
-    gap:17px;
-  }
-
-  .nav a{
-    font-size:13px;
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .method-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .project-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:760px){
-  .topbar{
-    display:none;
-  }
-
-  header{
-    position:sticky;
-  }
-
-  .header-inner{
-    min-height:88px;
-  }
-
-  .logo{
-    width:155px;
-  }
-
-  .menu-btn{
-    display:block;
-    order:2;
-  }
-
-  .nav{
-    position:absolute;
-    top:88px;
-    left:0;
-    right:0;
-    background:#fff;
-    border-top:1px solid var(--border);
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
-  }
-
-  .nav.open{
-    display:flex;
-  }
-
-  .nav a{
-    padding:15px 5%;
-    border-bottom:1px solid var(--border);
-  }
-
-  .nav a::after{
-    display:none;
-  }
-
-  .header-actions{
-    display:none;
-  }
-
-  .hero{
-    min-height:650px;
-  }
-
-  .hero-content{
-    padding:70px 0;
-  }
-
-  .hero h1{
-    font-size:43px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  .hero-trust{
-    grid-template-columns:1fr;
-  }
-
-  .trust-item{
-    border-right:0;
-    border-bottom:1px solid var(--border);
-  }
-
-  .trust-item:last-child{
-    border-bottom:0;
-  }
-
-  section{
-    padding:65px 0;
-  }
-
-  .services-grid,
-  .project-grid,
-  .method-grid,
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .service-image{
-    height:250px;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .stat{
-    border-right:1px solid rgba(255,255,255,.25);
-    border-bottom:1px solid rgba(255,255,255,.25);
-  }
-
-  .stat:nth-child(2){
-    border-right:0;
-  }
-
-  .stat:nth-child(3),
-  .stat:nth-child(4){
-    border-bottom:0;
-  }
-
-  .about-grid,
-  .customer-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-image{
-    order:2;
-  }
-
-  .about-image img{
-    height:350px;
-  }
-
-  .customer-photo{
-    height:350px;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .field.full{
-    grid-column:auto;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-  }
-
-  .whatsapp{
-    width:60px;
-    height:60px;
-    right:18px;
-    bottom:18px;
-  }
-}
-
-@media(max-width:430px){
-  .container{
-    width:90%;
-  }
-
-  .hero h1{
-    font-size:37px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .hero-buttons .btn{
-    width:100%;
-  }
-
-  .section-title{
-    font-size:30px;
-  }
-
-  .stats-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .stat strong{
-    font-size:34px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TARCI Marrakech | Construction, Béton, Démolition & Maintenance</title>
+
+  <meta name="description"
+        content="TARCI Marrakech - Construction, béton armé, démolition, terrassement, maintenance, rénovation et travaux de bâtiment.">
+
+  <meta name="theme-color" content="#111827">
+
+  <link rel="icon"
+        href="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: #111827;
+      --dark2: #1f2937;
+      --blue: #1769aa;
+      --blue2: #0f4c81;
+      --yellow: #f4c430;
+      --light: #f6f8fb;
+      --white: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --green: #25d366;
+      --shadow: 0 15px 40px rgba(0,0,0,.10);
+      --radius: 18px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body[dir="rtl"] {
+      font-family:
+        Arial,
+        Tahoma,
+        sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      background: var(--dark);
+      color: #fff;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 20px;
+    }
+
+    .topbar-inner {
+      width: min(1200px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .top-contact {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .top-contact a {
+      opacity: .95;
+      transition: .2s;
+    }
+
+    .top-contact a:hover {
+      color: var(--yellow);
+    }
+
+    /* =========================
+       LANGUAGE FLAGS
+    ========================= */
+
+    .languages {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      width: 34px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .2s;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      background: rgba(255,255,255,.14);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      width: min(1200px, 100%);
+      min-height: 78px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      transition: .2s;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-whatsapp {
+      background: var(--green);
+      color: #fff;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: var(--dark);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 650px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8,18,30,.90),
+          rgba(8,18,30,.66),
+          rgba(8,18,30,.18)
+        ),
+        url("tarci-images/tarci-08.jpg")
+        center/cover no-repeat;
+      color: #fff;
+    }
+
+    [dir="rtl"] .hero {
+      background:
+        linear-gradient(
+          270deg,
+          rgba(8,18,30,.90),
+          rgba(8,18,30,.66),
+          rgba(8,18,30,.18)
+        ),
+        url("tarci-images/tarci-08.jpg")
+        center/cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(1200px, 100%);
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--yellow);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      margin-bottom: 17px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 3px;
+      background: var(--yellow);
+      border-radius: 5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.04;
+      margin-bottom: 22px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 21px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(244,196,48,.22);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.75);
+      color: #fff;
+      background: rgba(255,255,255,.05);
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--dark);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      width: min(1200px, 100%);
+      margin: auto;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.12;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       PILLARS
+    ========================= */
+
+    .pillars {
+      padding-top: 55px;
+      padding-bottom: 55px;
+      background: var(--white);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pillar {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,.045);
+    }
+
+    .pillar-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #edf5fb;
+      color: var(--blue);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .pillar h3 {
+      margin-bottom: 9px;
+      color: var(--dark);
+      font-size: 19px;
+    }
+
+    .pillar p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: var(--light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 7px 24px rgba(0,0,0,.055);
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 20px;
+    }
+
+    .service-content h3 {
+      color: var(--dark);
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+      padding: 50px 20px;
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat {
+      padding: 12px;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    [dir="rtl"] .stat {
+      border-right: 0;
+      border-left: 1px solid rgba(255,255,255,.12);
+    }
+
+    [dir="rtl"] .stat:last-child {
+      border-left: 0;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 43px;
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+
+    .stat span {
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 530px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text .section-kicker {
+      text-align: start;
+    }
+
+    .about-text h2 {
+      font-size: clamp(31px, 4vw, 46px);
+      line-height: 1.12;
+      margin-bottom: 18px;
+      color: var(--dark);
+    }
+
+    .about-text > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      font-weight: 700;
+      color: var(--dark2);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      flex: 0 0 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e8f6ed;
+      color: #18864b;
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    /* =========================
+       PROJECT PHASES
+    ========================= */
+
+    .phases {
+      background: var(--light);
+    }
+
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .phase-card {
+      background: #fff;
+      border-radius: 17px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .phase-card img {
+      height: 260px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .phase-body {
+      padding: 21px;
+    }
+
+    .phase-body h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .phase-body p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       METHOD
+    ========================= */
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .method-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 27px 22px;
+      background: #fff;
+    }
+
+    .method-number {
+      font-size: 35px;
+      font-weight: 900;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .method-card h3 {
+      margin-bottom: 7px;
+      color: var(--dark);
+    }
+
+    .method-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       WHY
+    ========================= */
+
+    .why {
+      background: var(--light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .why-image img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .why-list {
+      display: grid;
+      gap: 17px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 15px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .why-icon {
+      flex: 0 0 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #edf5fb;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .why-item h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+
+    .why-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      height: 270px;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #ddd;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      background: var(--light);
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    details p {
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 75px 20px;
+      background:
+        linear-gradient(90deg, rgba(17,24,39,.96), rgba(15,76,129,.88)),
+        url("tarci-images/tarci-11.jpg")
+        center/cover;
+      color: #fff;
+    }
+
+    .cta-inner {
+      width: min(1000px, 100%);
+      margin: auto;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,.82);
+      margin-bottom: 27px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 35px;
+    }
+
+    .contact-info {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 20px;
+      padding: 35px;
+    }
+
+    .contact-info h2 {
+      font-size: 31px;
+      margin-bottom: 12px;
+    }
+
+    .contact-info > p {
+      color: rgba(255,255,255,.72);
+      margin-bottom: 30px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      flex: 0 0 42px;
+      height: 42px;
+      background: rgba(255,255,255,.09);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-row strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-row span,
+    .contact-row a {
+      color: rgba(255,255,255,.72);
+      font-size: 14px;
+    }
+
+    .contact-form {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      background: #fff;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 15px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d8dde5;
+      border-radius: 9px;
+      min-height: 46px;
+      padding: 11px 13px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(23,105,170,.10);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1220;
+      color: #fff;
+      padding: 50px 20px 25px;
+    }
+
+    .footer-grid {
+      width: min(1200px, 100%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .footer-logo {
+      width: 145px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 5px;
+      margin-bottom: 17px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.63);
+      font-size: 13px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.65);
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .copyright {
+      width: min(1200px, 100%);
+      margin: auto;
+      padding-top: 22px;
+      text-align: center;
+      color: rgba(255,255,255,.45);
+      font-size: 12px;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 1100;
+      right: 20px;
+      bottom: 20px;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      transition: .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    [dir="rtl"] .whatsapp-float {
+      right: auto;
+      left: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img,
+      .why-image img {
+        height: 430px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 14px 5px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .header-whatsapp {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      section {
+        padding: 65px 16px;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .top-contact {
+        justify-content: center;
+        gap: 7px 13px;
+        font-size: 11px;
+      }
+
+      .languages {
+        display: none;
+      }
+
+      .header-inner {
+        min-height: 70px;
+        padding: 8px 14px;
+      }
+
+      .logo {
+        width: 130px;
+      }
+
+      nav {
+        top: 70px;
+      }
+
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero-inner {
+        padding: 65px 17px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .service-grid,
+      .phase-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 10px;
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+        padding-bottom: 20px;
+      }
+
+      .stat:nth-child(3),
+      .stat:nth-child(4) {
+        border-bottom: 0;
+      }
+
+      [dir="rtl"] .stat {
+        border-left: 0;
+      }
+
+      .about-image img,
+      .why-image img {
+        height: 360px;
+      }
+
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 24px;
+      }
+
+      .gallery-item {
+        height: 290px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="container topbar-inner">
+  <!-- =========================
+       TOP BAR
+  ========================= -->
 
-    <div class="top-info">
-      <span>📍 Marrakech - Maroc</span>
-      <span>✉️ tarcitravaux@gmail.com</span>
-      <span>☎️ 0678 77 45 97</span>
-      <span>☎️ 0676 28 90 76</span>
-    </div>
+  <div class="topbar">
+    <div class="topbar-inner">
 
-    <div class="languages">
-      <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
-      <button class="lang-btn" data-lang="ar" title="العربية">🇲🇦</button>
-      <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
-      <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
-    </div>
+      <div class="top-contact">
+        <span>📍 <span data-i18n="location">Marrakech, Maroc</span></span>
 
-  </div>
-</div>
+        <a href="tel:+212678774597">
+          ☎ 0678 77 45 97
+        </a>
 
-<!-- HEADER -->
-<header>
-  <div class="container header-inner">
+        <a href="tel:+212676289076">
+          ☎ 0676 28 90 76
+        </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
-
-    <img
-      class="logo"
-      src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
-      alt="TARCI"
-    >
-
-    <nav class="nav" id="mainNav">
-      <a href="#home" data-i18n="navHome">Accueil</a>
-      <a href="#services" data-i18n="navServices">Services</a>
-      <a href="#about" data-i18n="navAbout">À propos</a>
-      <a href="#projects" data-i18n="navProjects">Réalisations</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn btn-yellow" href="#contact" data-i18n="quote">
-        Demander un devis
-      </a>
-    </div>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container">
-
-    <div class="hero-content">
-
-      <div class="hero-kicker" data-i18n="heroKicker">
-        BÂTIR • RÉNOVER • ENTRETENIR
+        <a href="mailto:tarcitravaux@gmail.com">
+          ✉ tarcitravaux@gmail.com
+        </a>
       </div>
 
-      <h1>
-        <span data-i18n="heroTitle1">Des bases solides</span><br>
-        <span data-i18n="heroTitle2">pour vos projets.</span>
-      </h1>
+      <div class="languages">
 
-      <p data-i18n="heroText">
-        TARCI accompagne vos projets de construction à Marrakech :
-        béton armé, gros œuvre, démolition, terrassement, maintenance
-        et suivi des travaux.
-      </p>
+        <button class="lang-btn active"
+                data-lang="fr"
+                aria-label="Français">
+          🇫🇷
+        </button>
 
-      <div class="hero-buttons">
-        <a class="btn btn-yellow" href="#contact" data-i18n="heroBtn1">
-          Demander un devis
+        <button class="lang-btn"
+                data-lang="ar"
+                aria-label="العربية">
+          🇲🇦
+        </button>
+
+        <button class="lang-btn"
+                data-lang="en"
+                aria-label="English">
+          🇬🇧
+        </button>
+
+        <button class="lang-btn"
+                data-lang="es"
+                aria-label="Español">
+          🇪🇸
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="header-inner">
+
+      <a href="#accueil">
+        <img
+          class="logo"
+          src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
+          alt="TARCI">
+      </a>
+
+      <nav id="mainNav">
+
+        <a href="#accueil" data-i18n="nav_home">Accueil</a>
+
+        <a href="#services" data-i18n="nav_services">
+          Services
         </a>
+
+        <a href="#apropos" data-i18n="nav_about">
+          À propos
+        </a>
+
+        <a href="#realisations" data-i18n="nav_projects">
+          Réalisations
+        </a>
+
+        <a href="#contact" data-i18n="nav_contact">
+          Contact
+        </a>
+
+      </nav>
+
+      <div class="header-actions">
 
         <a
-          class="btn btn-dark"
+          class="header-whatsapp"
           href="https://wa.me/212678774597"
           target="_blank"
-          data-i18n="heroBtn2">
-          Contacter via WhatsApp
+          data-i18n="whatsapp">
+          WhatsApp
         </a>
-      </div>
 
-      <div class="hero-trust">
-
-        <div class="trust-item">
-          <strong data-i18n="trust1">Expertise technique</strong>
-          <small data-i18n="trust1small">Équipes et suivi adaptés au chantier</small>
-        </div>
-
-        <div class="trust-item">
-          <strong data-i18n="trust2">Qualité d'exécution</strong>
-          <small data-i18n="trust2small">Travail organisé et contrôlé</small>
-        </div>
-
-        <div class="trust-item">
-          <strong data-i18n="trust3">Suivi du chantier</strong>
-          <small data-i18n="trust3small">Présence et coordination des étapes</small>
-        </div>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Menu">
+          ☰
+        </button>
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </header>
 
-<!-- SERVICES -->
-<section class="services-section" id="services">
 
-  <div class="container">
+  <!-- =========================
+       HERO
+  ========================= -->
 
-    <div class="section-head">
-      <div class="section-kicker" data-i18n="servicesKicker">NOS SERVICES</div>
+  <main>
 
-      <h2 class="section-title" data-i18n="servicesTitle">
-        Des travaux pensés pour le terrain
-      </h2>
+    <section class="hero" id="accueil">
 
-      <p class="section-text" data-i18n="servicesText">
-        De la démolition à la construction, TARCI intervient sur les
-        principales étapes techniques de votre projet.
-      </p>
-    </div>
+      <div class="hero-inner">
 
-    <div class="services-grid">
+        <div class="hero-content">
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-01.jpg" alt="Démolition et travaux de chantier">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s1">Démolition</h3>
-          <p data-i18n="s1p">Dépose, démolition et préparation du chantier.</p>
-        </div>
-      </article>
+          <div class="eyebrow"
+               data-i18n="hero_eyebrow">
+            BÂTIMENT • BÉTON • TRAVAUX • MARRAKECH
+          </div>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-02.jpg" alt="Terrassement">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s2">Terrassement</h3>
-          <p data-i18n="s2p">Préparation du terrain, fouilles et terrassement.</p>
-        </div>
-      </article>
+          <h1 data-i18n="hero_title">
+            Construire avec précision.<br>
+            Réaliser avec sérieux.
+          </h1>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-03.jpg" alt="Ferraillage">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s3">Ferraillage & coffrage</h3>
-          <p data-i18n="s3p">Préparation de la structure et travaux de béton armé.</p>
-        </div>
-      </article>
+          <p data-i18n="hero_text">
+            TARCI accompagne vos projets de construction,
+            béton armé, démolition, terrassement, maintenance
+            et rénovation à Marrakech et ses environs.
+          </p>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-04.jpg" alt="Béton">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s4">Béton & béton armé</h3>
-          <p data-i18n="s4p">Réalisation des éléments structurels du bâtiment.</p>
-        </div>
-      </article>
+          <div class="hero-buttons">
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-05.jpg" alt="Maçonnerie">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s5">Maçonnerie</h3>
-          <p data-i18n="s5p">Murs, cloisons et travaux de gros œuvre.</p>
-        </div>
-      </article>
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              data-i18n="hero_btn1">
+              Demander un devis
+            </a>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-06.jpg" alt="Travaux de maintenance">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s6">Maintenance</h3>
-          <p data-i18n="s6p">Réparation et entretien des bâtiments.</p>
-        </div>
-      </article>
+            <a
+              href="#services"
+              class="btn btn-outline"
+              data-i18n="hero_btn2">
+              Découvrir nos services
+            </a>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-07.jpg" alt="Étanchéité">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s7">Étanchéité</h3>
-          <p data-i18n="s7p">Protection des surfaces et traitement des infiltrations.</p>
-        </div>
-      </article>
+          </div>
 
-      <article class="service-card">
-        <div class="service-image">
-          <img src="tarci-images/tarci-08.jpg" alt="Construction">
-        </div>
-        <div class="service-body">
-          <h3 data-i18n="s8">Construction</h3>
-          <p data-i18n="s8p">Construction et avancement des projets de bâtiment.</p>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="container stats-grid">
-
-    <div class="stat">
-      <strong>6</strong>
-      <span data-i18n="stat1">Ingénieurs & techniciens</span>
-    </div>
-
-    <div class="stat">
-      <strong>70</strong>
-      <span data-i18n="stat2">Clients</span>
-    </div>
-
-    <div class="stat">
-      <strong>91</strong>
-      <span data-i18n="stat3">Projets réalisés</span>
-    </div>
-
-    <div class="stat">
-      <strong>4</strong>
-      <span data-i18n="stat4">Projets en cours</span>
-    </div>
-
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-
-  <div class="container about-grid">
-
-    <div class="about-image">
-      <img src="tarci-images/tarci-11.jpg" alt="Projet de construction TARCI">
-    </div>
-
-    <div class="about-content">
-
-      <div class="section-kicker" data-i18n="aboutKicker">À PROPOS DE TARCI</div>
-
-      <h2 data-i18n="aboutTitle">
-        Une approche centrée sur le chantier.
-      </h2>
-
-      <p data-i18n="aboutText">
-        TARCI intervient dans les travaux de construction et les opérations
-        techniques liées au bâtiment à Marrakech et environs.
-        Notre priorité est une exécution organisée, un suivi sérieux
-        et une attention particulière aux étapes techniques.
-      </p>
-
-      <div class="check-list">
-
-        <div class="check">
-          <span>✓</span>
-          <div data-i18n="check1">Béton et béton armé</div>
-        </div>
-
-        <div class="check">
-          <span>✓</span>
-          <div data-i18n="check2">Démolition et terrassement</div>
-        </div>
-
-        <div class="check">
-          <span>✓</span>
-          <div data-i18n="check3">Construction et gros œuvre</div>
-        </div>
-
-        <div class="check">
-          <span>✓</span>
-          <div data-i18n="check4">Maintenance et réparation</div>
         </div>
 
       </div>
 
-      <a class="btn btn-dark" href="#contact" data-i18n="aboutBtn">
-        Parlons de votre projet
-      </a>
+    </section>
 
-    </div>
 
-  </div>
+    <!-- =========================
+         PILLARS
+    ========================= -->
 
-</section>
+    <section class="pillars">
 
-<!-- PROJECT PHOTOS -->
-<section class="projects" id="projects">
+      <div class="container">
 
-  <div class="container">
+        <div class="pillar-grid">
 
-    <div class="section-head">
+          <article class="pillar">
 
-      <div class="section-kicker" data-i18n="projectsKicker">
-        CHANTIERS
-      </div>
+            <div class="pillar-icon">
+              🏗️
+            </div>
 
-      <h2 class="section-title" data-i18n="projectsTitle">
-        Le chantier parle de lui-même.
-      </h2>
+            <h3 data-i18n="pillar1_title">
+              Expertise technique
+            </h3>
 
-      <p class="section-text" data-i18n="projectsText">
-        Chaque image montre une étape réelle du travail :
-        structure, béton, maçonnerie, maintenance et suivi.
-      </p>
+            <p data-i18n="pillar1_text">
+              Une approche terrain centrée sur la construction,
+              le béton, la structure et les travaux techniques.
+            </p>
 
-    </div>
+          </article>
 
-    <div class="project-grid">
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-03.jpg" alt="Ferraillage">
-      </div>
+          <article class="pillar">
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-04.jpg" alt="Béton">
-      </div>
+            <div class="pillar-icon">
+              🧱
+            </div>
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-05.jpg" alt="Maçonnerie">
-      </div>
+            <h3 data-i18n="pillar2_title">
+              Travail de qualité
+            </h3>
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-06.jpg" alt="Travaux">
-      </div>
+            <p data-i18n="pillar2_text">
+              Des équipes organisées et une attention particulière
+              portée à la réalisation et aux détails du chantier.
+            </p>
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-08.jpg" alt="Structure">
-      </div>
+          </article>
 
-      <div class="project-photo">
-        <img src="tarci-images/tarci-10.jpg" alt="Suivi de chantier">
-      </div>
 
-    </div>
+          <article class="pillar">
 
-  </div>
+            <div class="pillar-icon">
+              📐
+            </div>
 
-</section>
+            <h3 data-i18n="pillar3_title">
+              Suivi du chantier
+            </h3>
 
-<!-- CUSTOMER -->
-<section class="customer-section">
+            <p data-i18n="pillar3_text">
+              Suivi, coordination et communication avec le client
+              pendant les différentes étapes du projet.
+            </p>
 
-  <div class="container customer-grid">
+          </article>
 
-    <div class="customer-photo">
-      <img src="tarci-images/tarci-15.jpg" alt="TARCI avec un client sur chantier">
-    </div>
-
-    <div class="customer-text">
-
-      <div class="section-kicker" data-i18n="customerKicker">
-        SUIVI & ÉCHANGE
-      </div>
-
-      <h2 data-i18n="customerTitle">
-        Un chantier se construit aussi avec le client.
-      </h2>
-
-      <p data-i18n="customerText">
-        Échange sur le terrain, compréhension du besoin et suivi
-        de l'avancement : TARCI privilégie une communication directe
-        pendant les différentes phases du projet.
-      </p>
-
-      <a class="btn btn-yellow" href="#contact" data-i18n="customerBtn">
-        Nous contacter
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- METHOD -->
-<section class="method">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="section-kicker" data-i18n="methodKicker">
-        NOTRE MÉTHODE
-      </div>
-
-      <h2 class="section-title" data-i18n="methodTitle">
-        Du terrain à la construction.
-      </h2>
-
-      <p class="section-text" data-i18n="methodText">
-        Une organisation claire pour accompagner les principales
-        étapes d'un chantier.
-      </p>
-
-    </div>
-
-    <div class="method-grid">
-
-      <article class="method-card">
-        <img src="tarci-images/tarci-02.jpg" alt="Terrassement">
-        <div class="method-number">01</div>
-        <div class="method-content">
-          <h3 data-i18n="m1">Préparation</h3>
-          <p data-i18n="m1p">Terrain, fouilles et préparation du chantier.</p>
         </div>
-      </article>
 
-      <article class="method-card">
-        <img src="tarci-images/tarci-03.jpg" alt="Ferraillage">
-        <div class="method-number">02</div>
-        <div class="method-content">
-          <h3 data-i18n="m2">Structure</h3>
-          <p data-i18n="m2p">Ferraillage, coffrage et préparation du béton armé.</p>
-        </div>
-      </article>
-
-      <article class="method-card">
-        <img src="tarci-images/tarci-04.jpg" alt="Béton">
-        <div class="method-number">03</div>
-        <div class="method-content">
-          <h3 data-i18n="m3">Béton</h3>
-          <p data-i18n="m3p">Réalisation et avancement de la structure.</p>
-        </div>
-      </article>
-
-      <article class="method-card">
-        <img src="tarci-images/tarci-08.jpg" alt="Construction">
-        <div class="method-number">04</div>
-        <div class="method-content">
-          <h3 data-i18n="m4">Construction</h3>
-          <p data-i18n="m4p">Progression du bâtiment et suivi technique.</p>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- WHY -->
-<section class="why">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="section-kicker" data-i18n="whyKicker">
-        POURQUOI TARCI
       </div>
 
-      <h2 class="section-title" data-i18n="whyTitle">
-        Une présence réelle sur le terrain.
-      </h2>
+    </section>
 
-      <p class="section-text" data-i18n="whyText">
-        Une organisation orientée vers la qualité d'exécution,
-        le suivi et les besoins réels du projet.
-      </p>
 
-    </div>
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
-    <div class="why-grid">
+    <section class="services" id="services">
 
-      <div class="why-card">
-        <div class="why-icon">🏗️</div>
-        <h3 data-i18n="why1">Expérience chantier</h3>
-        <p data-i18n="why1p">
-          Une approche pratique basée sur les différentes étapes
-          du bâtiment.
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker"
+               data-i18n="services_kicker">
+            Nos domaines
+          </div>
+
+          <h2 data-i18n="services_title">
+            Des travaux centrés sur le terrain
+          </h2>
+
+          <p data-i18n="services_intro">
+            TARCI intervient principalement dans les travaux
+            de construction, béton, démolition, maintenance
+            et rénovation.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-04.jpg"
+              alt="Bétonnage">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service1_title">
+                Béton & béton armé
+              </h3>
+
+              <p data-i18n="service1_text">
+                Travaux de bétonnage, dalle, structure et éléments
+                en béton armé.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-03.jpg"
+              alt="Ferraillage">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service2_title">
+                Ferraillage & coffrage
+              </h3>
+
+              <p data-i18n="service2_text">
+                Préparation et réalisation des éléments de structure
+                selon les besoins du chantier.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-01.jpg"
+              alt="Démolition">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service3_title">
+                Démolition
+              </h3>
+
+              <p data-i18n="service3_text">
+                Travaux de démolition et préparation du terrain
+                pour les nouvelles réalisations.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-02.jpg"
+              alt="Terrassement">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service4_title">
+                Terrassement & fondations
+              </h3>
+
+              <p data-i18n="service4_text">
+                Préparation des terrains, terrassement et travaux
+                nécessaires avant la construction.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-05.jpg"
+              alt="Maçonnerie">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service5_title">
+                Maçonnerie
+              </h3>
+
+              <p data-i18n="service5_text">
+                Travaux de maçonnerie et réalisation des ouvrages
+                nécessaires au projet.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-14.jpg"
+              alt="Maintenance">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service6_title">
+                Maintenance & réparation
+              </h3>
+
+              <p data-i18n="service6_text">
+                Interventions de maintenance, réparation et remise
+                en état des ouvrages.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-07.jpg"
+              alt="Étanchéité">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service7_title">
+                Étanchéité
+              </h3>
+
+              <p data-i18n="service7_text">
+                Travaux d'étanchéité et protection des surfaces
+                selon les besoins du bâtiment.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <img
+              src="tarci-images/tarci-08.jpg"
+              alt="Construction">
+
+            <div class="service-content">
+
+              <h3 data-i18n="service8_title">
+                Construction
+              </h3>
+
+              <p data-i18n="service8_text">
+                Construction de bâtiments et villas avec suivi
+                des différentes étapes du chantier.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================= -->
+
+    <section class="stats">
+
+      <div class="container">
+
+        <div class="stats-grid">
+
+          <div class="stat">
+            <strong>6</strong>
+            <span data-i18n="stat1">Ingénieurs & techniciens</span>
+          </div>
+
+          <div class="stat">
+            <strong>70</strong>
+            <span data-i18n="stat2">Clients</span>
+          </div>
+
+          <div class="stat">
+            <strong>91</strong>
+            <span data-i18n="stat3">Projets réalisés</span>
+          </div>
+
+          <div class="stat">
+            <strong>4</strong>
+            <span data-i18n="stat4">Projets en cours</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="apropos">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+
+            <img
+              src="tarci-images/tarci-12.jpg"
+              alt="Équipe TARCI sur chantier">
+
+          </div>
+
+
+          <div class="about-text">
+
+            <div class="section-kicker"
+                 data-i18n="about_kicker">
+              TARCI Marrakech
+            </div>
+
+            <h2 data-i18n="about_title">
+              Une entreprise orientée chantier
+            </h2>
+
+            <p data-i18n="about_text">
+              TARCI intervient dans les travaux de construction
+              et les opérations techniques liées au bâtiment,
+              avec une attention particulière portée au béton,
+              à la structure, à la démolition et à la maintenance.
+            </p>
+
+            <ul class="check-list">
+
+              <li data-i18n="check1">
+                Construction et gros œuvre
+              </li>
+
+              <li data-i18n="check2">
+                Béton et béton armé
+              </li>
+
+              <li data-i18n="check3">
+                Démolition et terrassement
+              </li>
+
+              <li data-i18n="check4">
+                Maintenance et rénovation
+              </li>
+
+              <li data-i18n="check5">
+                Suivi et coordination du chantier
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECT PHASES
+    ========================= -->
+
+    <section class="phases" id="realisations">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker"
+               data-i18n="phases_kicker">
+            Sur le terrain
+          </div>
+
+          <h2 data-i18n="phases_title">
+            Les étapes du chantier
+          </h2>
+
+          <p data-i18n="phases_intro">
+            Des images qui montrent réellement le travail
+            réalisé sur le terrain.
+          </p>
+
+        </div>
+
+
+        <div class="phase-grid">
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-01.jpg"
+              alt="Démolition">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase1_title">
+                Préparation & démolition
+              </h3>
+
+              <p data-i18n="phase1_text">
+                Préparation du site et travaux nécessaires
+                avant le démarrage du nouveau projet.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-02.jpg"
+              alt="Terrassement">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase2_title">
+                Terrassement & fondations
+              </h3>
+
+              <p data-i18n="phase2_text">
+                Préparation du terrain et mise en place des bases
+                du projet.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-03.jpg"
+              alt="Ferraillage">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase3_title">
+                Ferraillage & structure
+              </h3>
+
+              <p data-i18n="phase3_text">
+                Mise en œuvre des armatures et préparation
+                des éléments structurels.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-04.jpg"
+              alt="Béton">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase4_title">
+                Bétonnage
+              </h3>
+
+              <p data-i18n="phase4_text">
+                Réalisation des éléments en béton nécessaires
+                à la structure.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-05.jpg"
+              alt="Maçonnerie">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase5_title">
+                Maçonnerie
+              </h3>
+
+              <p data-i18n="phase5_text">
+                Élévation des murs et réalisation des ouvrages
+                de maçonnerie.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="phase-card">
+
+            <img
+              src="tarci-images/tarci-08.jpg"
+              alt="Structure">
+
+            <div class="phase-body">
+
+              <h3 data-i18n="phase6_title">
+                Structure & avancement
+              </h3>
+
+              <p data-i18n="phase6_text">
+                Suivi de l'évolution du bâtiment jusqu'aux étapes
+                avancées de construction.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         METHOD
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker"
+               data-i18n="method_kicker">
+            Notre méthode
+          </div>
+
+          <h2 data-i18n="method_title">
+            Un chantier organisé étape par étape
+          </h2>
+
+        </div>
+
+
+        <div class="method-grid">
+
+          <article class="method-card">
+
+            <div class="method-number">01</div>
+
+            <h3 data-i18n="method1_title">
+              Préparation
+            </h3>
+
+            <p data-i18n="method1_text">
+              Analyse du projet et préparation du chantier.
+            </p>
+
+          </article>
+
+
+          <article class="method-card">
+
+            <div class="method-number">02</div>
+
+            <h3 data-i18n="method2_title">
+              Gros œuvre
+            </h3>
+
+            <p data-i18n="method2_text">
+              Terrassement, fondations, ferraillage,
+              coffrage et béton.
+            </p>
+
+          </article>
+
+
+          <article class="method-card">
+
+            <div class="method-number">03</div>
+
+            <h3 data-i18n="method3_title">
+              Structure
+            </h3>
+
+            <p data-i18n="method3_text">
+              Élévation et réalisation progressive
+              de la structure du bâtiment.
+            </p>
+
+          </article>
+
+
+          <article class="method-card">
+
+            <div class="method-number">04</div>
+
+            <h3 data-i18n="method4_title">
+              Finitions & maintenance
+            </h3>
+
+            <p data-i18n="method4_text">
+              Travaux de finition, réparation,
+              maintenance et remise en état.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY
+    ========================= -->
+
+    <section class="why">
+
+      <div class="container">
+
+        <div class="why-grid">
+
+          <div class="why-image">
+
+            <img
+              src="tarci-images/tarci-10.jpg"
+              alt="Suivi de chantier TARCI">
+
+          </div>
+
+
+          <div>
+
+            <div class="section-kicker"
+                 data-i18n="why_kicker">
+              Notre engagement
+            </div>
+
+            <h2
+              style="font-size:clamp(30px,4vw,45px);line-height:1.12;margin-bottom:25px;"
+              data-i18n="why_title">
+              Un suivi proche du terrain
+            </h2>
+
+
+            <div class="why-list">
+
+              <div class="why-item">
+
+                <div class="why-icon">
+                  📋
+                </div>
+
+                <div>
+
+                  <h3 data-i18n="why1_title">
+                    Suivi rigoureux
+                  </h3>
+
+                  <p data-i18n="why1_text">
+                    Suivi des différentes étapes et coordination
+                    des interventions.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="why-item">
+
+                <div class="why-icon">
+                  🛠️
+                </div>
+
+                <div>
+
+                  <h3 data-i18n="why2_title">
+                    Travail terrain
+                  </h3>
+
+                  <p data-i18n="why2_text">
+                    Une approche directement liée aux réalités
+                    du chantier.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="why-item">
+
+                <div class="why-icon">
+                  ⏱️
+                </div>
+
+                <div>
+
+                  <h3 data-i18n="why3_title">
+                    Organisation
+                  </h3>
+
+                  <p data-i18n="why3_text">
+                    Organisation des travaux et coordination
+                    des différentes phases.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="why-item">
+
+                <div class="why-icon">
+                  🤝
+                </div>
+
+                <div>
+
+                  <h3 data-i18n="why4_title">
+                    Relation client
+                  </h3>
+
+                  <p data-i18n="why4_text">
+                    Échanges avec le client et suivi du projet
+                    pendant sa réalisation.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CLIENT / SITE SUPERVISION
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <div class="section-kicker"
+                 data-i18n="client_kicker">
+              Suivi du projet
+            </div>
+
+            <h2 data-i18n="client_title">
+              Le client au cœur du suivi
+            </h2>
+
+            <p data-i18n="client_text">
+              Le suivi d'un chantier passe aussi par une
+              communication claire avec le client, la présentation
+              de l'avancement et l'échange autour des travaux.
+            </p>
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              data-i18n="client_button">
+              Parlons de votre projet
+            </a>
+
+          </div>
+
+
+          <div class="about-image">
+
+            <img
+              src="tarci-images/tarci-15.jpg"
+              alt="Client et équipe TARCI sur chantier">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker"
+               data-i18n="gallery_kicker">
+            Galerie chantier
+          </div>
+
+          <h2 data-i18n="gallery_title">
+            Le travail parle de lui-même
+          </h2>
+
+          <p data-i18n="gallery_text">
+            Quelques vues de travaux, d'équipes et de chantiers.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-01.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-03.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-04.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-06.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-07.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-08.jpg"
+                 alt="Chantier TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-11.jpg"
+                 alt="Construction TARCI">
+          </div>
+
+          <div class="gallery-item">
+            <img src="tarci-images/tarci-13.jpg"
+                 alt="Travaux TARCI">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================= -->
+
+    <section class="faq">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker">
+            FAQ
+          </div>
+
+          <h2 data-i18n="faq_title">
+            Questions fréquentes
+          </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <details>
+
+            <summary data-i18n="faq1_q">
+              Quels types de travaux réalise TARCI ?
+            </summary>
+
+            <p data-i18n="faq1_a">
+              TARCI intervient notamment dans la construction,
+              le béton armé, la démolition, le terrassement,
+              la maintenance et la rénovation.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary data-i18n="faq2_q">
+              Où intervenez-vous ?
+            </summary>
+
+            <p data-i18n="faq2_a">
+              TARCI intervient principalement à Marrakech
+              et dans ses environs selon la nature du projet.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary data-i18n="faq3_q">
+              Puis-je demander une estimation pour mon projet ?
+            </summary>
+
+            <p data-i18n="faq3_a">
+              Oui. Vous pouvez nous contacter par téléphone,
+              WhatsApp ou via le formulaire de contact.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary data-i18n="faq4_q">
+              Réalisez-vous des projets de villas ?
+            </summary>
+
+            <p data-i18n="faq4_a">
+              Oui. TARCI accompagne notamment des projets
+              résidentiels et de villas, en fonction des travaux
+              demandés.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="cta-inner">
+
+        <h2 data-i18n="cta_title">
+          Vous avez un projet de construction ?
+        </h2>
+
+        <p data-i18n="cta_text">
+          Parlons de votre chantier, de vos besoins techniques
+          et des travaux à réaliser.
         </p>
-      </div>
 
-      <div class="why-card">
-        <div class="why-icon">⚙️</div>
-        <h3 data-i18n="why2">Compétences techniques</h3>
-        <p data-i18n="why2p">
-          Une équipe adaptée aux travaux de construction,
-          béton et maintenance.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">🤝</div>
-        <h3 data-i18n="why3">Relation client</h3>
-        <p data-i18n="why3p">
-          Une communication directe pour suivre l'avancement
-          et comprendre les besoins.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-  <div class="container contact-grid">
-
-    <div class="contact-info">
-
-      <h2 data-i18n="contactTitle">
-        Parlons de votre projet.
-      </h2>
-
-      <p data-i18n="contactText">
-        Décrivez votre besoin. TARCI vous répond directement.
-      </p>
-
-      <div class="contact-line">
-        <div class="icon">☎</div>
-        <div>
-          <small data-i18n="phoneLabel">Téléphone</small>
-          <a href="tel:+212678774597">0678 77 45 97</a><br>
-          <a href="tel:+212676289076">0676 28 90 76</a>
-        </div>
-      </div>
-
-      <div class="contact-line">
-        <div class="icon">✉</div>
-        <div>
-          <small>Email</small>
-          <a href="mailto:tarcitravaux@gmail.com">
-            tarcitravaux@gmail.com
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-line">
-        <div class="icon">📍</div>
-        <div>
-          <small data-i18n="locationLabel">Zone</small>
-          <span data-i18n="location">Marrakech et environs</span>
-        </div>
-      </div>
-
-    </div>
-
-    <form class="contact-form" id="contactForm">
-
-      <div class="form-grid">
-
-        <div class="field">
-          <label data-i18n="nameLabel">Nom</label>
-          <input id="name" type="text" required>
-        </div>
-
-        <div class="field">
-          <label data-i18n="phoneField">Téléphone</label>
-          <input id="phone" type="tel" required>
-        </div>
-
-        <div class="field">
-          <label data-i18n="serviceField">Service</label>
-
-          <select id="service">
-
-            <option value="Construction">Construction</option>
-            <option value="Béton armé">Béton armé</option>
-            <option value="Démolition">Démolition</option>
-            <option value="Terrassement">Terrassement</option>
-            <option value="Maintenance">Maintenance</option>
-            <option value="Étanchéité">Étanchéité</option>
-            <option value="Autre">Autre</option>
-
-          </select>
-        </div>
-
-        <div class="field">
-          <label data-i18n="cityField">Ville / zone</label>
-          <input id="city" type="text">
-        </div>
-
-        <div class="field full">
-          <label data-i18n="projectField">Votre projet</label>
-          <textarea id="message" required></textarea>
-        </div>
-
-        <div class="field full">
-
-          <button class="btn btn-yellow" type="submit">
-            <span data-i18n="sendWhatsapp">
-              Envoyer sur WhatsApp
-            </span>
-          </button>
-
-        </div>
+        <a
+          href="#contact"
+          class="btn btn-primary"
+          data-i18n="cta_button">
+          Contactez TARCI
+        </a>
 
       </div>
 
-    </form>
+    </section>
 
-  </div>
 
-</section>
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-<!-- FOOTER -->
-<footer>
+    <section id="contact">
 
-  <div class="container">
+      <div class="container">
+
+        <div class="contact-grid">
+
+
+          <div class="contact-info">
+
+            <h2 data-i18n="contact_title">
+              Parlons de votre projet
+            </h2>
+
+            <p data-i18n="contact_text">
+              Contactez TARCI pour discuter de votre chantier
+              et de vos besoins.
+            </p>
+
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                📍
+              </div>
+
+              <div>
+
+                <strong data-i18n="contact_location">
+                  Localisation
+                </strong>
+
+                <span>
+                  Marrakech, Maroc
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                ☎
+              </div>
+
+              <div>
+
+                <strong data-i18n="contact_phone">
+                  Téléphone
+                </strong>
+
+                <a href="tel:+212678774597">
+                  0678 77 45 97
+                </a>
+
+                <br>
+
+                <a href="tel:+212676289076">
+                  0676 28 90 76
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                ✉
+              </div>
+
+              <div>
+
+                <strong data-i18n="contact_email">
+                  Email
+                </strong>
+
+                <a href="mailto:tarcitravaux@gmail.com">
+                  tarcitravaux@gmail.com
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                💬
+              </div>
+
+              <div>
+
+                <strong>
+                  WhatsApp
+                </strong>
+
+                <a
+                  href="https://wa.me/212678774597"
+                  target="_blank">
+                  0678 77 45 97
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <form
+            class="contact-form"
+            id="contactForm">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label
+                  for="name"
+                  data-i18n="form_name">
+                  Nom
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  required
+                  placeholder="Votre nom">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  for="phone"
+                  data-i18n="form_phone">
+                  Téléphone
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  required
+                  placeholder="Votre téléphone">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  for="email"
+                  data-i18n="form_email">
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Votre email">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  for="project"
+                  data-i18n="form_project">
+                  Type de projet
+                </label>
+
+                <select id="project">
+
+                  <option
+                    value=""
+                    data-i18n="select_default">
+                    Sélectionner
+                  </option>
+
+                  <option
+                    value="Construction"
+                    data-i18n="select_construction">
+                    Construction
+                  </option>
+
+                  <option
+                    value="Béton"
+                    data-i18n="select_beton">
+                    Béton / béton armé
+                  </option>
+
+                  <option
+                    value="Démolition"
+                    data-i18n="select_demolition">
+                    Démolition
+                  </option>
+
+                  <option
+                    value="Maintenance"
+                    data-i18n="select_maintenance">
+                    Maintenance
+                  </option>
+
+                  <option
+                    value="Rénovation"
+                    data-i18n="select_renovation">
+                    Rénovation
+                  </option>
+
+                  <option
+                    value="Terrassement"
+                    data-i18n="select_terrassement">
+                    Terrassement
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label
+                  for="message"
+                  data-i18n="form_message">
+                  Votre demande
+                </label>
+
+                <textarea
+                  id="message"
+                  placeholder="Décrivez votre projet..."
+                  required></textarea>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width:100%;border:0;"
+              data-i18n="form_button">
+              Envoyer via WhatsApp
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
 
     <div class="footer-grid">
 
@@ -1732,612 +2670,936 @@ body[dir="rtl"] .hero{
         <img
           class="footer-logo"
           src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
-          alt="TARCI"
-        >
+          alt="TARCI">
 
-        <p data-i18n="footerText">
-          Construction, béton, démolition, maintenance et travaux
-          à Marrakech et environs.
+        <p data-i18n="footer_text">
+          Construction, béton, démolition, maintenance
+          et travaux de bâtiment à Marrakech.
         </p>
 
       </div>
 
+
       <div>
-        <h3 data-i18n="footerNav">Navigation</h3>
+
+        <h3 data-i18n="footer_services">
+          Services
+        </h3>
 
         <div class="footer-links">
-          <a href="#home" data-i18n="navHome">Accueil</a>
-          <a href="#services" data-i18n="navServices">Services</a>
-          <a href="#about" data-i18n="navAbout">À propos</a>
-          <a href="#projects" data-i18n="navProjects">Réalisations</a>
+
+          <a href="#services"
+             data-i18n="footer_service1">
+            Béton & béton armé
+          </a>
+
+          <a href="#services"
+             data-i18n="footer_service2">
+            Construction
+          </a>
+
+          <a href="#services"
+             data-i18n="footer_service3">
+            Démolition
+          </a>
+
+          <a href="#services"
+             data-i18n="footer_service4">
+            Maintenance
+          </a>
+
         </div>
+
       </div>
 
-      <div>
-
-        <h3 data-i18n="footerServices">Services</h3>
-
-        <div class="footer-links">
-          <span data-i18n="s4">Béton & béton armé</span>
-          <span data-i18n="s1">Démolition</span>
-          <span data-i18n="s2">Terrassement</span>
-          <span data-i18n="s6">Maintenance</span>
-        </div>
-
-      </div>
 
       <div>
 
-        <h3 data-i18n="footerContact">Contact</h3>
+        <h3 data-i18n="footer_contact">
+          Contact
+        </h3>
 
         <div class="footer-links">
-          <a href="tel:+212678774597">0678 77 45 97</a>
-          <a href="tel:+212676289076">0676 28 90 76</a>
+
+          <a href="tel:+212678774597">
+            0678 77 45 97
+          </a>
+
+          <a href="tel:+212676289076">
+            0676 28 90 76
+          </a>
+
           <a href="mailto:tarcitravaux@gmail.com">
             tarcitravaux@gmail.com
           </a>
-          <span data-i18n="location">Marrakech et environs</span>
+
+          <a href="https://wa.me/212678774597"
+             target="_blank">
+            WhatsApp
+          </a>
+
         </div>
 
       </div>
 
     </div>
 
-    <div class="footer-bottom">
 
-      <span>
-        © 2026 TARCI — <span data-i18n="rights">Tous droits réservés</span>
+    <div class="copyright">
+      © <span id="year"></span> TARCI Marrakech.
+      <span data-i18n="copyright">
+        Tous droits réservés.
       </span>
-
-      <span data-i18n="footerMotto">
-        Bâtir • Entretenir • Rénover
-      </span>
-
     </div>
 
-  </div>
+  </footer>
 
-</footer>
 
-<!-- WHATSAPP -->
-<a
-  class="whatsapp"
-  href="https://wa.me/212678774597"
-  target="_blank"
-  aria-label="WhatsApp">
-  ☎
-</a>
+  <!-- =========================
+       WHATSAPP FLOAT
+  ========================= -->
 
-<script>
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/212678774597"
+    target="_blank"
+    aria-label="WhatsApp">
+    ☎
+  </a>
 
-const translations = {
 
-fr:{
-  navHome:"Accueil",
-  navServices:"Services",
-  navAbout:"À propos",
-  navProjects:"Réalisations",
-  navContact:"Contact",
-  quote:"Demander un devis",
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
-  heroKicker:"BÂTIR • RÉNOVER • ENTRETENIR",
-  heroTitle1:"Des bases solides",
-  heroTitle2:"pour vos projets.",
-  heroText:"TARCI accompagne vos projets de construction à Marrakech : béton armé, gros œuvre, démolition, terrassement, maintenance et suivi des travaux.",
-  heroBtn1:"Demander un devis",
-  heroBtn2:"Contacter via WhatsApp",
+  <script>
 
-  trust1:"Expertise technique",
-  trust1small:"Équipes et suivi adaptés au chantier",
-  trust2:"Qualité d'exécution",
-  trust2small:"Travail organisé et contrôlé",
-  trust3:"Suivi du chantier",
-  trust3small:"Présence et coordination des étapes",
+    /* =========================
+       YEAR
+    ========================= */
 
-  servicesKicker:"NOS SERVICES",
-  servicesTitle:"Des travaux pensés pour le terrain",
-  servicesText:"De la démolition à la construction, TARCI intervient sur les principales étapes techniques de votre projet.",
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-  s1:"Démolition",
-  s1p:"Dépose, démolition et préparation du chantier.",
-  s2:"Terrassement",
-  s2p:"Préparation du terrain, fouilles et terrassement.",
-  s3:"Ferraillage & coffrage",
-  s3p:"Préparation de la structure et travaux de béton armé.",
-  s4:"Béton & béton armé",
-  s4p:"Réalisation des éléments structurels du bâtiment.",
-  s5:"Maçonnerie",
-  s5p:"Murs, cloisons et travaux de gros œuvre.",
-  s6:"Maintenance",
-  s6p:"Réparation et entretien des bâtiments.",
-  s7:"Étanchéité",
-  s7p:"Protection des surfaces et traitement des infiltrations.",
-  s8:"Construction",
-  s8p:"Construction et avancement des projets de bâtiment.",
 
-  stat1:"Ingénieurs & techniciens",
-  stat2:"Clients",
-  stat3:"Projets réalisés",
-  stat4:"Projets en cours",
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
-  aboutKicker:"À PROPOS DE TARCI",
-  aboutTitle:"Une approche centrée sur le chantier.",
-  aboutText:"TARCI intervient dans les travaux de construction et les opérations techniques liées au bâtiment à Marrakech et environs. Notre priorité est une exécution organisée, un suivi sérieux et une attention particulière aux étapes techniques.",
-  check1:"Béton et béton armé",
-  check2:"Démolition et terrassement",
-  check3:"Construction et gros œuvre",
-  check4:"Maintenance et réparation",
-  aboutBtn:"Parlons de votre projet",
+    const menuBtn = document.getElementById("menuBtn");
+    const mainNav = document.getElementById("mainNav");
 
-  projectsKicker:"CHANTIERS",
-  projectsTitle:"Le chantier parle de lui-même.",
-  projectsText:"Chaque image montre une étape réelle du travail : structure, béton, maçonnerie, maintenance et suivi.",
+    menuBtn.addEventListener("click", function () {
+      mainNav.classList.toggle("open");
+    });
 
-  customerKicker:"SUIVI & ÉCHANGE",
-  customerTitle:"Un chantier se construit aussi avec le client.",
-  customerText:"Échange sur le terrain, compréhension du besoin et suivi de l'avancement : TARCI privilégie une communication directe pendant les différentes phases du projet.",
-  customerBtn:"Nous contacter",
+    document.querySelectorAll("#mainNav a").forEach(function(link) {
 
-  methodKicker:"NOTRE MÉTHODE",
-  methodTitle:"Du terrain à la construction.",
-  methodText:"Une organisation claire pour accompagner les principales étapes d'un chantier.",
-  m1:"Préparation",
-  m1p:"Terrain, fouilles et préparation du chantier.",
-  m2:"Structure",
-  m2p:"Ferraillage, coffrage et préparation du béton armé.",
-  m3:"Béton",
-  m3p:"Réalisation et avancement de la structure.",
-  m4:"Construction",
-  m4p:"Progression du bâtiment et suivi technique.",
+      link.addEventListener("click", function() {
+        mainNav.classList.remove("open");
+      });
 
-  whyKicker:"POURQUOI TARCI",
-  whyTitle:"Une présence réelle sur le terrain.",
-  whyText:"Une organisation orientée vers la qualité d'exécution, le suivi et les besoins réels du projet.",
-  why1:"Expérience chantier",
-  why1p:"Une approche pratique basée sur les différentes étapes du bâtiment.",
-  why2:"Compétences techniques",
-  why2p:"Une équipe adaptée aux travaux de construction, béton et maintenance.",
-  why3:"Relation client",
-  why3p:"Une communication directe pour suivre l'avancement et comprendre les besoins.",
+    });
 
-  contactTitle:"Parlons de votre projet.",
-  contactText:"Décrivez votre besoin. TARCI vous répond directement.",
-  phoneLabel:"Téléphone",
-  locationLabel:"Zone",
-  location:"Marrakech et environs",
-  nameLabel:"Nom",
-  phoneField:"Téléphone",
-  serviceField:"Service",
-  cityField:"Ville / zone",
-  projectField:"Votre projet",
-  sendWhatsapp:"Envoyer sur WhatsApp",
 
-  footerText:"Construction, béton, démolition, maintenance et travaux à Marrakech et environs.",
-  footerNav:"Navigation",
-  footerServices:"Services",
-  footerContact:"Contact",
-  rights:"Tous droits réservés",
-  footerMotto:"Bâtir • Entretenir • Rénover"
-},
+    /* =========================
+       TRANSLATIONS
+    ========================= */
 
-ar:{
-  navHome:"الرئيسية",
-  navServices:"خدماتنا",
-  navAbout:"من نحن",
-  navProjects:"أعمالنا",
-  navContact:"اتصل بنا",
-  quote:"طلب عرض سعر",
+    const translations = {
 
-  heroKicker:"بناء • صيانة • هدم",
-  heroTitle1:"أساسات قوية",
-  heroTitle2:"لمشاريعكم.",
-  heroText:"تواكب TARCI مشاريع البناء بمراكش: الخرسانة المسلحة، الأشغال الكبرى، الهدم، الحفر، الصيانة وتتبع الأشغال.",
-  heroBtn1:"طلب عرض سعر",
-  heroBtn2:"تواصل عبر واتساب",
+      fr: {
 
-  trust1:"خبرة تقنية",
-  trust1small:"فرق ومتابعة حسب طبيعة الورش",
-  trust2:"جودة التنفيذ",
-  trust2small:"عمل منظم ومراقب",
-  trust3:"تتبع الورش",
-  trust3small:"حضور وتنسيق مختلف المراحل",
+        location: "Marrakech, Maroc",
 
-  servicesKicker:"خدماتنا",
-  servicesTitle:"أشغال موجهة للواقع الميداني",
-  servicesText:"من الهدم إلى البناء، تتدخل TARCI في أهم المراحل التقنية للمشروع.",
+        nav_home: "Accueil",
+        nav_services: "Services",
+        nav_about: "À propos",
+        nav_projects: "Réalisations",
+        nav_contact: "Contact",
+        whatsapp: "WhatsApp",
 
-  s1:"الهدم",
-  s1p:"الهدم وإزالة العناصر وتجهيز الورش.",
-  s2:"الحفر والتهيئة",
-  s2p:"تهيئة الأرض والحفر والأشغال الترابية.",
-  s3:"الحديد والقوالب",
-  s3p:"تجهيز الهيكل وأعمال الخرسانة المسلحة.",
-  s4:"الخرسانة المسلحة",
-  s4p:"إنجاز العناصر الهيكلية للمبنى.",
-  s5:"البناء",
-  s5p:"الجدران والقواطع والأشغال الكبرى.",
-  s6:"الصيانة",
-  s6p:"إصلاح وصيانة المباني.",
-  s7:"العزل",
-  s7p:"حماية الأسطح ومعالجة التسربات.",
-  s8:"البناء",
-  s8p:"إنجاز وتقدم مشاريع البناء.",
+        hero_eyebrow: "BÂTIMENT • BÉTON • TRAVAUX • MARRAKECH",
+        hero_title: "Construire avec précision.<br>Réaliser avec sérieux.",
+        hero_text: "TARCI accompagne vos projets de construction, béton armé, démolition, terrassement, maintenance et rénovation à Marrakech et ses environs.",
+        hero_btn1: "Demander un devis",
+        hero_btn2: "Découvrir nos services",
 
-  stat1:"مهندسون وتقنيون",
-  stat2:"عميل",
-  stat3:"مشروع منجز",
-  stat4:"مشاريع قيد الإنجاز",
+        pillar1_title: "Expertise technique",
+        pillar1_text: "Une approche terrain centrée sur la construction, le béton, la structure et les travaux techniques.",
+        pillar2_title: "Travail de qualité",
+        pillar2_text: "Des équipes organisées et une attention particulière portée à la réalisation et aux détails du chantier.",
+        pillar3_title: "Suivi du chantier",
+        pillar3_text: "Suivi, coordination et communication avec le client pendant les différentes étapes du projet.",
 
-  aboutKicker:"عن TARCI",
-  aboutTitle:"منهجية تركز على الورش.",
-  aboutText:"تتدخل TARCI في أعمال البناء والأشغال التقنية المرتبطة بالمباني في مراكش والنواحي. الأولوية لدينا هي التنفيذ المنظم والتتبع الجيد والاهتمام بالمراحل التقنية.",
-  check1:"الخرسانة والخرسانة المسلحة",
-  check2:"الهدم والحفر",
-  check3:"البناء والأشغال الكبرى",
-  check4:"الصيانة والإصلاح",
-  aboutBtn:"تحدث معنا حول مشروعك",
+        services_kicker: "Nos domaines",
+        services_title: "Des travaux centrés sur le terrain",
+        services_intro: "TARCI intervient principalement dans les travaux de construction, béton, démolition, maintenance et rénovation.",
 
-  projectsKicker:"الأوراش",
-  projectsTitle:"الورش يتحدث بنفسه.",
-  projectsText:"كل صورة تعكس مرحلة من العمل: الهيكل، الخرسانة، البناء، الصيانة والتتبع.",
+        service1_title: "Béton & béton armé",
+        service1_text: "Travaux de bétonnage, dalle, structure et éléments en béton armé.",
+        service2_title: "Ferraillage & coffrage",
+        service2_text: "Préparation et réalisation des éléments de structure selon les besoins du chantier.",
+        service3_title: "Démolition",
+        service3_text: "Travaux de démolition et préparation du terrain pour les nouvelles réalisations.",
+        service4_title: "Terrassement & fondations",
+        service4_text: "Préparation des terrains, terrassement et travaux nécessaires avant la construction.",
+        service5_title: "Maçonnerie",
+        service5_text: "Travaux de maçonnerie et réalisation des ouvrages nécessaires au projet.",
+        service6_title: "Maintenance & réparation",
+        service6_text: "Interventions de maintenance, réparation et remise en état des ouvrages.",
+        service7_title: "Étanchéité",
+        service7_text: "Travaux d'étanchéité et protection des surfaces selon les besoins du bâtiment.",
+        service8_title: "Construction",
+        service8_text: "Construction de bâtiments et villas avec suivi des différentes étapes du chantier.",
 
-  customerKicker:"التتبع والتواصل",
-  customerTitle:"الورش يُبنى أيضاً مع الزبون.",
-  customerText:"التواصل في الورش وفهم الحاجة وتتبع التقدم: TARCI تعتمد على تواصل مباشر خلال مختلف مراحل المشروع.",
-  customerBtn:"اتصل بنا",
+        stat1: "Ingénieurs & techniciens",
+        stat2: "Clients",
+        stat3: "Projets réalisés",
+        stat4: "Projets en cours",
 
-  methodKicker:"منهجيتنا",
-  methodTitle:"من الأرض إلى البناء.",
-  methodText:"تنظيم واضح لمواكبة أهم مراحل الورش.",
-  m1:"التهيئة",
-  m1p:"الأرض والحفر وتجهيز الورش.",
-  m2:"الهيكل",
-  m2p:"الحديد والقوالب وتجهيز الخرسانة المسلحة.",
-  m3:"الخرسانة",
-  m3p:"إنجاز وتقدم الهيكل.",
-  m4:"البناء",
-  m4p:"تقدم المبنى والتتبع التقني.",
+        about_kicker: "TARCI Marrakech",
+        about_title: "Une entreprise orientée chantier",
+        about_text: "TARCI intervient dans les travaux de construction et les opérations techniques liées au bâtiment, avec une attention particulière portée au béton, à la structure, à la démolition et à la maintenance.",
 
-  whyKicker:"لماذا TARCI",
-  whyTitle:"حضور فعلي في الورش.",
-  whyText:"تنظيم يركز على جودة التنفيذ والتتبع والحاجيات الحقيقية للمشروع.",
-  why1:"خبرة ميدانية",
-  why1p:"مقاربة عملية مبنية على مختلف مراحل البناء.",
-  why2:"كفاءات تقنية",
-  why2p:"فريق مناسب لأعمال البناء والخرسانة والصيانة.",
-  why3:"علاقة مع الزبون",
-  why3p:"تواصل مباشر لمتابعة التقدم وفهم الحاجيات.",
+        check1: "Construction et gros œuvre",
+        check2: "Béton et béton armé",
+        check3: "Démolition et terrassement",
+        check4: "Maintenance et rénovation",
+        check5: "Suivi et coordination du chantier",
 
-  contactTitle:"تحدث معنا حول مشروعك.",
-  contactText:"صف لنا حاجتك وسنجيبك مباشرة.",
-  phoneLabel:"الهاتف",
-  locationLabel:"المنطقة",
-  location:"مراكش والنواحي",
-  nameLabel:"الاسم",
-  phoneField:"الهاتف",
-  serviceField:"الخدمة",
-  cityField:"المدينة / المنطقة",
-  projectField:"مشروعك",
-  sendWhatsapp:"إرسال عبر واتساب",
+        phases_kicker: "Sur le terrain",
+        phases_title: "Les étapes du chantier",
+        phases_intro: "Des images qui montrent réellement le travail réalisé sur le terrain.",
 
-  footerText:"البناء، الخرسانة، الهدم، الصيانة والأشغال بمراكش والنواحي.",
-  footerNav:"التنقل",
-  footerServices:"الخدمات",
-  footerContact:"اتصل بنا",
-  rights:"جميع الحقوق محفوظة",
-  footerMotto:"نبني • نصون • نصلح"
-},
+        phase1_title: "Préparation & démolition",
+        phase1_text: "Préparation du site et travaux nécessaires avant le démarrage du nouveau projet.",
+        phase2_title: "Terrassement & fondations",
+        phase2_text: "Préparation du terrain et mise en place des bases du projet.",
+        phase3_title: "Ferraillage & structure",
+        phase3_text: "Mise en œuvre des armatures et préparation des éléments structurels.",
+        phase4_title: "Bétonnage",
+        phase4_text: "Réalisation des éléments en béton nécessaires à la structure.",
+        phase5_title: "Maçonnerie",
+        phase5_text: "Élévation des murs et réalisation des ouvrages de maçonnerie.",
+        phase6_title: "Structure & avancement",
+        phase6_text: "Suivi de l'évolution du bâtiment jusqu'aux étapes avancées de construction.",
 
-en:{
-  navHome:"Home",
-  navServices:"Services",
-  navAbout:"About",
-  navProjects:"Projects",
-  navContact:"Contact",
-  quote:"Request a quote",
+        method_kicker: "Notre méthode",
+        method_title: "Un chantier organisé étape par étape",
+        method1_title: "Préparation",
+        method1_text: "Analyse du projet et préparation du chantier.",
+        method2_title: "Gros œuvre",
+        method2_text: "Terrassement, fondations, ferraillage, coffrage et béton.",
+        method3_title: "Structure",
+        method3_text: "Élévation et réalisation progressive de la structure du bâtiment.",
+        method4_title: "Finitions & maintenance",
+        method4_text: "Travaux de finition, réparation, maintenance et remise en état.",
 
-  heroKicker:"BUILD • RENOVATE • MAINTAIN",
-  heroTitle1:"Solid foundations",
-  heroTitle2:"for your projects.",
-  heroText:"TARCI supports construction projects in Marrakech: reinforced concrete, structural work, demolition, excavation, maintenance and site supervision.",
-  heroBtn1:"Request a quote",
-  heroBtn2:"Contact via WhatsApp",
+        why_kicker: "Notre engagement",
+        why_title: "Un suivi proche du terrain",
+        why1_title: "Suivi rigoureux",
+        why1_text: "Suivi des différentes étapes et coordination des interventions.",
+        why2_title: "Travail terrain",
+        why2_text: "Une approche directement liée aux réalités du chantier.",
+        why3_title: "Organisation",
+        why3_text: "Organisation des travaux et coordination des différentes phases.",
+        why4_title: "Relation client",
+        why4_text: "Échanges avec le client et suivi du projet pendant sa réalisation.",
 
-  trust1:"Technical expertise",
-  trust1small:"Teams and site supervision",
-  trust2:"Quality execution",
-  trust2small:"Organized and controlled work",
-  trust3:"Site supervision",
-  trust3small:"Coordination throughout the project",
+        client_kicker: "Suivi du projet",
+        client_title: "Le client au cœur du suivi",
+        client_text: "Le suivi d'un chantier passe aussi par une communication claire avec le client, la présentation de l'avancement et l'échange autour des travaux.",
+        client_button: "Parlons de votre projet",
 
-  servicesKicker:"OUR SERVICES",
-  servicesTitle:"Work designed for the field",
-  servicesText:"From demolition to construction, TARCI handles the main technical stages of your project.",
+        gallery_kicker: "Galerie chantier",
+        gallery_title: "Le travail parle de lui-même",
+        gallery_text: "Quelques vues de travaux, d'équipes et de chantiers.",
 
-  s1:"Demolition",
-  s1p:"Demolition and site preparation.",
-  s2:"Excavation",
-  s2p:"Ground preparation and excavation.",
-  s3:"Rebar & formwork",
-  s3p:"Structural preparation and reinforced concrete.",
-  s4:"Concrete",
-  s4p:"Structural concrete works.",
-  s5:"Masonry",
-  s5p:"Walls, partitions and structural work.",
-  s6:"Maintenance",
-  s6p:"Building repair and maintenance.",
-  s7:"Waterproofing",
-  s7p:"Surface protection and leak treatment.",
-  s8:"Construction",
-  s8p:"Building construction and project progress.",
+        faq_title: "Questions fréquentes",
 
-  stat1:"Engineers & technicians",
-  stat2:"Clients",
-  stat3:"Completed projects",
-  stat4:"Ongoing projects",
+        faq1_q: "Quels types de travaux réalise TARCI ?",
+        faq1_a: "TARCI intervient notamment dans la construction, le béton armé, la démolition, le terrassement, la maintenance et la rénovation.",
 
-  aboutKicker:"ABOUT TARCI",
-  aboutTitle:"An approach focused on the construction site.",
-  aboutText:"TARCI provides construction and technical building services in Marrakech and surrounding areas. Our priority is organized execution, serious supervision and attention to technical stages.",
-  check1:"Concrete and reinforced concrete",
-  check2:"Demolition and excavation",
-  check3:"Construction and structural work",
-  check4:"Maintenance and repair",
-  aboutBtn:"Discuss your project",
+        faq2_q: "Où intervenez-vous ?",
+        faq2_a: "TARCI intervient principalement à Marrakech et dans ses environs selon la nature du projet.",
 
-  projectsKicker:"CONSTRUCTION SITES",
-  projectsTitle:"The site speaks for itself.",
-  projectsText:"Each image shows a stage of the work: structure, concrete, masonry, maintenance and supervision.",
+        faq3_q: "Puis-je demander une estimation pour mon projet ?",
+        faq3_a: "Oui. Vous pouvez nous contacter par téléphone, WhatsApp ou via le formulaire de contact.",
 
-  customerKicker:"SUPERVISION & DIALOGUE",
-  customerTitle:"A project is also built with the client.",
-  customerText:"On-site discussion, understanding the needs and monitoring progress: TARCI favors direct communication throughout the project.",
-  customerBtn:"Contact us",
+        faq4_q: "Réalisez-vous des projets de villas ?",
+        faq4_a: "Oui. TARCI accompagne notamment des projets résidentiels et de villas, en fonction des travaux demandés.",
 
-  methodKicker:"OUR METHOD",
-  methodTitle:"From the ground to construction.",
-  methodText:"A clear organization to support the main stages of a construction site.",
-  m1:"Preparation",
-  m1p:"Ground, excavation and site preparation.",
-  m2:"Structure",
-  m2p:"Rebar, formwork and reinforced concrete preparation.",
-  m3:"Concrete",
-  m3p:"Structural concrete works and progress.",
-  m4:"Construction",
-  m4p:"Building progress and technical supervision.",
+        cta_title: "Vous avez un projet de construction ?",
+        cta_text: "Parlons de votre chantier, de vos besoins techniques et des travaux à réaliser.",
+        cta_button: "Contactez TARCI",
 
-  whyKicker:"WHY TARCI",
-  whyTitle:"Real presence on site.",
-  whyText:"An organization focused on execution quality, supervision and real project needs.",
-  why1:"Site experience",
-  why1p:"A practical approach based on the different construction stages.",
-  why2:"Technical skills",
-  why2p:"A team adapted to construction, concrete and maintenance works.",
-  why3:"Client relationship",
-  why3p:"Direct communication to follow progress and understand needs.",
+        contact_title: "Parlons de votre projet",
+        contact_text: "Contactez TARCI pour discuter de votre chantier et de vos besoins.",
+        contact_location: "Localisation",
+        contact_phone: "Téléphone",
+        contact_email: "Email",
 
-  contactTitle:"Let's talk about your project.",
-  contactText:"Describe your needs and TARCI will respond directly.",
-  phoneLabel:"Phone",
-  locationLabel:"Area",
-  location:"Marrakech and surroundings",
-  nameLabel:"Name",
-  phoneField:"Phone",
-  serviceField:"Service",
-  cityField:"City / area",
-  projectField:"Your project",
-  sendWhatsapp:"Send via WhatsApp",
+        form_name: "Nom",
+        form_phone: "Téléphone",
+        form_email: "Email",
+        form_project: "Type de projet",
+        form_message: "Votre demande",
+        form_button: "Envoyer via WhatsApp",
 
-  footerText:"Construction, concrete, demolition, maintenance and works in Marrakech and surroundings.",
-  footerNav:"Navigation",
-  footerServices:"Services",
-  footerContact:"Contact",
-  rights:"All rights reserved",
-  footerMotto:"Build • Maintain • Renovate"
-},
+        select_default: "Sélectionner",
+        select_construction: "Construction",
+        select_beton: "Béton / béton armé",
+        select_demolition: "Démolition",
+        select_maintenance: "Maintenance",
+        select_renovation: "Rénovation",
+        select_terrassement: "Terrassement",
 
-es:{
-  navHome:"Inicio",
-  navServices:"Servicios",
-  navAbout:"Nosotros",
-  navProjects:"Proyectos",
-  navContact:"Contacto",
-  quote:"Solicitar presupuesto",
+        footer_text: "Construction, béton, démolition, maintenance et travaux de bâtiment à Marrakech.",
+        footer_services: "Services",
+        footer_contact: "Contact",
+        footer_service1: "Béton & béton armé",
+        footer_service2: "Construction",
+        footer_service3: "Démolition",
+        footer_service4: "Maintenance",
+        copyright: "Tous droits réservés."
 
-  heroKicker:"CONSTRUIR • RENOVAR • MANTENER",
-  heroTitle1:"Bases sólidas",
-  heroTitle2:"para sus proyectos.",
-  heroText:"TARCI acompaña proyectos de construcción en Marrakech: hormigón armado, obra estructural, demolición, excavación, mantenimiento y seguimiento.",
-  heroBtn1:"Solicitar presupuesto",
-  heroBtn2:"Contactar por WhatsApp",
+      },
 
-  trust1:"Experiencia técnica",
-  trust1small:"Equipos y seguimiento de obra",
-  trust2:"Calidad de ejecución",
-  trust2small:"Trabajo organizado y controlado",
-  trust3:"Seguimiento de obra",
-  trust3small:"Coordinación de las diferentes etapas",
 
-  servicesKicker:"NUESTROS SERVICIOS",
-  servicesTitle:"Trabajos pensados para la obra",
-  servicesText:"Desde la demolición hasta la construcción, TARCI interviene en las principales etapas técnicas.",
+      ar: {
 
-  s1:"Demolición",
-  s1p:"Demolición y preparación de la obra.",
-  s2:"Excavación",
-  s2p:"Preparación del terreno y excavación.",
-  s3:"Hierro y encofrado",
-  s3p:"Preparación estructural y hormigón armado.",
-  s4:"Hormigón armado",
-  s4p:"Realización de elementos estructurales.",
-  s5:"Albañilería",
-  s5p:"Muros, divisiones y obra estructural.",
-  s6:"Mantenimiento",
-  s6p:"Reparación y mantenimiento de edificios.",
-  s7:"Impermeabilización",
-  s7p:"Protección de superficies y tratamiento de filtraciones.",
-  s8:"Construcción",
-  s8p:"Construcción y avance de proyectos.",
+        location: "مراكش، المغرب",
 
-  stat1:"Ingenieros y técnicos",
-  stat2:"Clientes",
-  stat3:"Proyectos realizados",
-  stat4:"Proyectos en curso",
+        nav_home: "الرئيسية",
+        nav_services: "الخدمات",
+        nav_about: "من نحن",
+        nav_projects: "أعمالنا",
+        nav_contact: "اتصل بنا",
+        whatsapp: "واتساب",
 
-  aboutKicker:"SOBRE TARCI",
-  aboutTitle:"Un enfoque centrado en la obra.",
-  aboutText:"TARCI realiza trabajos de construcción y servicios técnicos relacionados con edificios en Marrakech y alrededores. Nuestra prioridad es una ejecución organizada y un seguimiento serio.",
-  check1:"Hormigón y hormigón armado",
-  check2:"Demolición y excavación",
-  check3:"Construcción y obra estructural",
-  check4:"Mantenimiento y reparación",
-  aboutBtn:"Hablemos de su proyecto",
+        hero_eyebrow: "البناء • الخرسانة • الأشغال • مراكش",
+        hero_title: "نبني بدقة.<br>وننجز بجدية.",
+        hero_text: "ترافق TARCI مشاريعكم في البناء، الخرسانة المسلحة، الهدم، الحفر، الصيانة والإصلاح بمراكش والنواحي.",
+        hero_btn1: "اطلب عرضاً",
+        hero_btn2: "اكتشف خدماتنا",
 
-  projectsKicker:"OBRAS",
-  projectsTitle:"La obra habla por sí misma.",
-  projectsText:"Cada imagen muestra una etapa del trabajo: estructura, hormigón, albañilería, mantenimiento y seguimiento.",
+        pillar1_title: "خبرة تقنية",
+        pillar1_text: "مقاربة ميدانية تركز على البناء والخرسانة والهياكل والأشغال التقنية.",
+        pillar2_title: "جودة في العمل",
+        pillar2_text: "فرق منظمة واهتمام خاص بجودة الإنجاز وتفاصيل الورش.",
+        pillar3_title: "تتبع الورش",
+        pillar3_text: "تتبع وتنسيق وتواصل مع الزبون خلال مختلف مراحل المشروع.",
 
-  customerKicker:"SEGUIMIENTO Y COMUNICACIÓN",
-  customerTitle:"Un proyecto también se construye con el cliente.",
-  customerText:"Comunicación en la obra, comprensión de las necesidades y seguimiento del progreso: TARCI prioriza el contacto directo.",
-  customerBtn:"Contactarnos",
+        services_kicker: "مجالاتنا",
+        services_title: "أشغال تركز على الميدان",
+        services_intro: "تتخصص TARCI خصوصاً في البناء والخرسانة والهدم والصيانة والإصلاح.",
 
-  methodKicker:"NUESTRO MÉTODO",
-  methodTitle:"Del terreno a la construcción.",
-  methodText:"Una organización clara para acompañar las principales etapas de una obra.",
-  m1:"Preparación",
-  m1p:"Terreno, excavación y preparación.",
-  m2:"Estructura",
-  m2p:"Hierro, encofrado y hormigón armado.",
-  m3:"Hormigón",
-  m3p:"Realización y avance de la estructura.",
-  m4:"Construcción",
-  m4p:"Avance del edificio y seguimiento técnico.",
+        service1_title: "الخرسانة والخرسانة المسلحة",
+        service1_text: "أشغال الخرسانة والأساسات والدالات والعناصر الخرسانية المسلحة.",
+        service2_title: "الحديد والتسليح والقوالب",
+        service2_text: "إعداد وإنجاز العناصر الهيكلية حسب حاجيات الورش.",
+        service3_title: "الهدم",
+        service3_text: "أشغال الهدم وتهيئة الموقع استعداداً للمشاريع الجديدة.",
+        service4_title: "الحفر والأساسات",
+        service4_text: "تهيئة الأراضي وأشغال الحفر وما يلزم قبل البناء.",
+        service5_title: "البناء والآجر",
+        service5_text: "أشغال البناء وإنجاز مختلف العناصر المطلوبة في المشروع.",
+        service6_title: "الصيانة والإصلاح",
+        service6_text: "التدخلات الخاصة بالصيانة والإصلاح وإعادة تأهيل المنشآت.",
+        service7_title: "العزل المائي",
+        service7_text: "أشغال العزل وحماية الأسطح حسب حاجيات المبنى.",
+        service8_title: "البناء",
+        service8_text: "بناء المباني والفلل مع تتبع مختلف مراحل الورش.",
 
-  whyKicker:"POR QUÉ TARCI",
-  whyTitle:"Presencia real en la obra.",
-  whyText:"Una organización centrada en la calidad, el seguimiento y las necesidades del proyecto.",
-  why1:"Experiencia en obra",
-  why1p:"Un enfoque práctico basado en las diferentes etapas de construcción.",
-  why2:"Competencias técnicas",
-  why2p:"Un equipo adaptado a construcción, hormigón y mantenimiento.",
-  why3:"Relación con el cliente",
-  why3p:"Comunicación directa para seguir el avance y entender las necesidades.",
+        stat1: "مهندسون وتقنيون",
+        stat2: "زبون",
+        stat3: "مشروع منجز",
+        stat4: "مشاريع قيد الإنجاز",
 
-  contactTitle:"Hablemos de su proyecto.",
-  contactText:"Describa sus necesidades y TARCI le responderá directamente.",
-  phoneLabel:"Teléfono",
-  locationLabel:"Zona",
-  location:"Marrakech y alrededores",
-  nameLabel:"Nombre",
-  phoneField:"Teléfono",
-  serviceField:"Servicio",
-  cityField:"Ciudad / zona",
-  projectField:"Su proyecto",
-  sendWhatsapp:"Enviar por WhatsApp",
+        about_kicker: "TARCI مراكش",
+        about_title: "شركة موجهة نحو الميدان",
+        about_text: "تتدخل TARCI في أشغال البناء والأعمال التقنية المرتبطة بالمباني، مع تركيز خاص على الخرسانة والهياكل والهدم والصيانة.",
 
-  footerText:"Construcción, hormigón, demolición, mantenimiento y trabajos en Marrakech y alrededores.",
-  footerNav:"Navegación",
-  footerServices:"Servicios",
-  footerContact:"Contacto",
-  rights:"Todos los derechos reservados",
-  footerMotto:"Construir • Mantener • Renovar"
-}
+        check1: "البناء والأشغال الكبرى",
+        check2: "الخرسانة والخرسانة المسلحة",
+        check3: "الهدم والحفر",
+        check4: "الصيانة والإصلاح",
+        check5: "تتبع وتنسيق الورش",
 
-};
+        phases_kicker: "في الميدان",
+        phases_title: "مراحل الورش",
+        phases_intro: "صور تعكس العمل الحقيقي المنجز في الميدان.",
 
-function setLanguage(lang){
+        phase1_title: "التهيئة والهدم",
+        phase1_text: "تهيئة الموقع وإنجاز الأشغال الضرورية قبل بداية المشروع الجديد.",
+        phase2_title: "الحفر والأساسات",
+        phase2_text: "تهيئة الأرض ووضع الأسس الأولى للمشروع.",
+        phase3_title: "التسليح والهيكل",
+        phase3_text: "تركيب الحديد وتجهيز العناصر الهيكلية.",
+        phase4_title: "صب الخرسانة",
+        phase4_text: "إنجاز العناصر الخرسانية الضرورية للهيكل.",
+        phase5_title: "البناء",
+        phase5_text: "رفع الجدران وإنجاز أشغال البناء.",
+        phase6_title: "الهيكل وتقدم الأشغال",
+        phase6_text: "تتبع تطور المبنى إلى المراحل المتقدمة من البناء.",
 
-  const dict = translations[lang] || translations.fr;
+        method_kicker: "منهجيتنا",
+        method_title: "ورش منظم مرحلة بمرحلة",
+        method1_title: "التهيئة",
+        method1_text: "دراسة المشروع وتهيئة الورش.",
+        method2_title: "الأشغال الكبرى",
+        method2_text: "الحفر والأساسات والتسليح والقوالب والخرسانة.",
+        method3_title: "الهيكل",
+        method3_text: "إنجاز الهيكل بشكل تدريجي ومنظم.",
+        method4_title: "التشطيبات والصيانة",
+        method4_text: "أشغال التشطيب والإصلاح والصيانة وإعادة التأهيل.",
 
-  document.documentElement.lang = lang;
-  document.body.dir = lang === "ar" ? "rtl" : "ltr";
+        why_kicker: "التزامنا",
+        why_title: "تتبع قريب من الميدان",
+        why1_title: "تتبع دقيق",
+        why1_text: "تتبع مختلف المراحل وتنسيق التدخلات.",
+        why2_title: "عمل ميداني",
+        why2_text: "مقاربة مرتبطة مباشرة بواقع الورش.",
+        why3_title: "تنظيم",
+        why3_text: "تنظيم الأشغال وتنسيق مختلف المراحل.",
+        why4_title: "علاقة مع الزبون",
+        why4_text: "تواصل مع الزبون وتتبع المشروع أثناء الإنجاز.",
 
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.getAttribute("data-i18n");
+        client_kicker: "تتبع المشروع",
+        client_title: "الزبون في قلب المتابعة",
+        client_text: "تتبع الورش يتطلب أيضاً تواصلاً واضحاً مع الزبون وشرح تقدم الأشغال والتبادل حول المشروع.",
+        client_button: "تحدث معنا عن مشروعك",
 
-    if(dict[key] !== undefined){
-      el.textContent = dict[key];
+        gallery_kicker: "صور الورش",
+        gallery_title: "العمل يتحدث عن نفسه",
+        gallery_text: "نماذج من الأشغال والفرق والورش.",
+
+        faq_title: "الأسئلة المتداولة",
+
+        faq1_q: "ما هي الأشغال التي تنجزها TARCI؟",
+        faq1_a: "تتدخل TARCI خصوصاً في البناء والخرسانة المسلحة والهدم والحفر والصيانة والإصلاح.",
+
+        faq2_q: "أين تتدخلون؟",
+        faq2_a: "تتدخل TARCI أساساً في مراكش والنواحي حسب طبيعة المشروع.",
+
+        faq3_q: "هل يمكنني طلب تقدير لمشروعي؟",
+        faq3_a: "نعم. يمكنكم التواصل معنا عبر الهاتف أو واتساب أو نموذج الاتصال.",
+
+        faq4_q: "هل تنجزون مشاريع الفلل؟",
+        faq4_a: "نعم. ترافق TARCI أيضاً مشاريع سكنية ومشاريع فلل حسب الأشغال المطلوبة.",
+
+        cta_title: "عندك مشروع بناء؟",
+        cta_text: "تحدث معنا حول الورش والحاجيات التقنية والأشغال المطلوبة.",
+        cta_button: "تواصل مع TARCI",
+
+        contact_title: "تحدث معنا عن مشروعك",
+        contact_text: "تواصل مع TARCI لمناقشة الورش والحاجيات ديالك.",
+        contact_location: "الموقع",
+        contact_phone: "الهاتف",
+        contact_email: "البريد الإلكتروني",
+
+        form_name: "الاسم",
+        form_phone: "الهاتف",
+        form_email: "البريد الإلكتروني",
+        form_project: "نوع المشروع",
+        form_message: "طلبك",
+        form_button: "إرسال عبر واتساب",
+
+        select_default: "اختار",
+        select_construction: "البناء",
+        select_beton: "الخرسانة / الخرسانة المسلحة",
+        select_demolition: "الهدم",
+        select_maintenance: "الصيانة",
+        select_renovation: "الإصلاح",
+        select_terrassement: "الحفر",
+
+        footer_text: "البناء والخرسانة والهدم والصيانة وأشغال المباني بمراكش.",
+        footer_services: "الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_service1: "الخرسانة والخرسانة المسلحة",
+        footer_service2: "البناء",
+        footer_service3: "الهدم",
+        footer_service4: "الصيانة",
+        copyright: "جميع الحقوق محفوظة."
+
+      },
+
+
+      en: {
+
+        location: "Marrakech, Morocco",
+
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+        whatsapp: "WhatsApp",
+
+        hero_eyebrow: "BUILDING • CONCRETE • WORKS • MARRAKECH",
+        hero_title: "Build with precision.<br>Deliver with commitment.",
+        hero_text: "TARCI supports construction, reinforced concrete, demolition, earthworks, maintenance and renovation projects in Marrakech and surrounding areas.",
+        hero_btn1: "Request a quote",
+        hero_btn2: "Discover our services",
+
+        pillar1_title: "Technical expertise",
+        pillar1_text: "A field-oriented approach focused on construction, concrete, structures and technical works.",
+        pillar2_title: "Quality work",
+        pillar2_text: "Organized teams with particular attention to execution and site details.",
+        pillar3_title: "Site supervision",
+        pillar3_text: "Follow-up, coordination and communication with the client throughout the project.",
+
+        services_kicker: "Our fields",
+        services_title: "Work focused on the field",
+        services_intro: "TARCI mainly works in construction, concrete, demolition, maintenance and renovation.",
+
+        service1_title: "Concrete & reinforced concrete",
+        service1_text: "Concrete works, slabs, structures and reinforced concrete elements.",
+        service2_title: "Reinforcement & formwork",
+        service2_text: "Preparation and execution of structural elements according to site requirements.",
+        service3_title: "Demolition",
+        service3_text: "Demolition works and site preparation for new projects.",
+        service4_title: "Earthworks & foundations",
+        service4_text: "Ground preparation, earthworks and necessary pre-construction works.",
+        service5_title: "Masonry",
+        service5_text: "Masonry works and construction of the required structures.",
+        service6_title: "Maintenance & repair",
+        service6_text: "Maintenance, repair and restoration interventions.",
+        service7_title: "Waterproofing",
+        service7_text: "Waterproofing works and surface protection according to building requirements.",
+        service8_title: "Construction",
+        service8_text: "Construction of buildings and villas with project-stage supervision.",
+
+        stat1: "Engineers & technicians",
+        stat2: "Clients",
+        stat3: "Completed projects",
+        stat4: "Ongoing projects",
+
+        about_kicker: "TARCI Marrakech",
+        about_title: "A field-oriented company",
+        about_text: "TARCI works in construction and technical building operations, with particular focus on concrete, structures, demolition and maintenance.",
+
+        check1: "Construction and structural works",
+        check2: "Concrete and reinforced concrete",
+        check3: "Demolition and earthworks",
+        check4: "Maintenance and renovation",
+        check5: "Site supervision and coordination",
+
+        phases_kicker: "On site",
+        phases_title: "Construction stages",
+        phases_intro: "Images showing the actual work carried out on site.",
+
+        phase1_title: "Preparation & demolition",
+        phase1_text: "Site preparation and necessary works before starting the new project.",
+        phase2_title: "Earthworks & foundations",
+        phase2_text: "Ground preparation and establishment of the project foundations.",
+        phase3_title: "Reinforcement & structure",
+        phase3_text: "Installation of reinforcement and preparation of structural elements.",
+        phase4_title: "Concrete works",
+        phase4_text: "Execution of the concrete elements required for the structure.",
+        phase5_title: "Masonry",
+        phase5_text: "Wall construction and masonry works.",
+        phase6_title: "Structure & progress",
+        phase6_text: "Monitoring the building as construction progresses.",
+
+        method_kicker: "Our method",
+        method_title: "An organized site, step by step",
+        method1_title: "Preparation",
+        method1_text: "Project analysis and site preparation.",
+        method2_title: "Structural works",
+        method2_text: "Earthworks, foundations, reinforcement, formwork and concrete.",
+        method3_title: "Structure",
+        method3_text: "Progressive and organized construction of the building structure.",
+        method4_title: "Finishing & maintenance",
+        method4_text: "Finishing, repair, maintenance and restoration works.",
+
+        why_kicker: "Our commitment",
+        why_title: "Close field supervision",
+        why1_title: "Rigorous follow-up",
+        why1_text: "Monitoring of the different stages and coordination of interventions.",
+        why2_title: "Field work",
+        why2_text: "An approach directly connected to site realities.",
+        why3_title: "Organization",
+        why3_text: "Organization of works and coordination of different phases.",
+        why4_title: "Client relationship",
+        why4_text: "Communication with the client and project follow-up.",
+
+        client_kicker: "Project follow-up",
+        client_title: "The client at the heart of follow-up",
+        client_text: "Site supervision also means clear communication with the client, progress updates and discussion around the work.",
+        client_button: "Discuss your project",
+
+        gallery_kicker: "Site gallery",
+        gallery_title: "The work speaks for itself",
+        gallery_text: "A selection of works, teams and construction sites.",
+
+        faq_title: "Frequently asked questions",
+
+        faq1_q: "What type of work does TARCI carry out?",
+        faq1_a: "TARCI works mainly in construction, reinforced concrete, demolition, earthworks, maintenance and renovation.",
+
+        faq2_q: "Where do you operate?",
+        faq2_a: "TARCI mainly operates in Marrakech and surrounding areas depending on the project.",
+
+        faq3_q: "Can I request an estimate?",
+        faq3_a: "Yes. You can contact us by phone, WhatsApp or through the contact form.",
+
+        faq4_q: "Do you work on villa projects?",
+        faq4_a: "Yes. TARCI also works on residential and villa projects depending on the requested works.",
+
+        cta_title: "Do you have a construction project?",
+        cta_text: "Let's discuss your site, technical requirements and required works.",
+        cta_button: "Contact TARCI",
+
+        contact_title: "Let's discuss your project",
+        contact_text: "Contact TARCI to discuss your construction site and requirements.",
+        contact_location: "Location",
+        contact_phone: "Phone",
+        contact_email: "Email",
+
+        form_name: "Name",
+        form_phone: "Phone",
+        form_email: "Email",
+        form_project: "Project type",
+        form_message: "Your request",
+        form_button: "Send via WhatsApp",
+
+        select_default: "Select",
+        select_construction: "Construction",
+        select_beton: "Concrete / reinforced concrete",
+        select_demolition: "Demolition",
+        select_maintenance: "Maintenance",
+        select_renovation: "Renovation",
+        select_terrassement: "Earthworks",
+
+        footer_text: "Construction, concrete, demolition, maintenance and building works in Marrakech.",
+        footer_services: "Services",
+        footer_contact: "Contact",
+        footer_service1: "Concrete & reinforced concrete",
+        footer_service2: "Construction",
+        footer_service3: "Demolition",
+        footer_service4: "Maintenance",
+        copyright: "All rights reserved."
+
+      },
+
+
+      es: {
+
+        location: "Marrakech, Marruecos",
+
+        nav_home: "Inicio",
+        nav_services: "Servicios",
+        nav_about: "Nosotros",
+        nav_projects: "Proyectos",
+        nav_contact: "Contacto",
+        whatsapp: "WhatsApp",
+
+        hero_eyebrow: "CONSTRUCCIÓN • HORMIGÓN • OBRAS • MARRAKECH",
+        hero_title: "Construir con precisión.<br>Trabajar con seriedad.",
+        hero_text: "TARCI acompaña proyectos de construcción, hormigón armado, demolición, movimiento de tierras, mantenimiento y renovación en Marrakech y alrededores.",
+        hero_btn1: "Solicitar presupuesto",
+        hero_btn2: "Descubrir servicios",
+
+        pillar1_title: "Experiencia técnica",
+        pillar1_text: "Un enfoque de campo centrado en construcción, hormigón, estructuras y trabajos técnicos.",
+        pillar2_title: "Trabajo de calidad",
+        pillar2_text: "Equipos organizados y especial atención a la ejecución y los detalles de obra.",
+        pillar3_title: "Seguimiento de obra",
+        pillar3_text: "Seguimiento, coordinación y comunicación con el cliente durante el proyecto.",
+
+        services_kicker: "Nuestros campos",
+        services_title: "Trabajos centrados en el terreno",
+        services_intro: "TARCI trabaja principalmente en construcción, hormigón, demolición, mantenimiento y renovación.",
+
+        service1_title: "Hormigón y hormigón armado",
+        service1_text: "Trabajos de hormigón, losas, estructuras y elementos de hormigón armado.",
+        service2_title: "Ferrallado y encofrado",
+        service2_text: "Preparación y ejecución de elementos estructurales según las necesidades de la obra.",
+        service3_title: "Demolición",
+        service3_text: "Trabajos de demolición y preparación del terreno para nuevos proyectos.",
+        service4_title: "Movimiento de tierras y cimentaciones",
+        service4_text: "Preparación del terreno y trabajos necesarios antes de la construcción.",
+        service5_title: "Albañilería",
+        service5_text: "Trabajos de albañilería y ejecución de las obras necesarias.",
+        service6_title: "Mantenimiento y reparación",
+        service6_text: "Intervenciones de mantenimiento, reparación y restauración.",
+        service7_title: "Impermeabilización",
+        service7_text: "Trabajos de impermeabilización y protección de superficies.",
+        service8_title: "Construcción",
+        service8_text: "Construcción de edificios y villas con seguimiento de las diferentes etapas.",
+
+        stat1: "Ingenieros y técnicos",
+        stat2: "Clientes",
+        stat3: "Proyectos realizados",
+        stat4: "Proyectos en curso",
+
+        about_kicker: "TARCI Marrakech",
+        about_title: "Una empresa orientada a la obra",
+        about_text: "TARCI trabaja en construcción y operaciones técnicas relacionadas con edificios, con especial atención al hormigón, estructuras, demolición y mantenimiento.",
+
+        check1: "Construcción y obra estructural",
+        check2: "Hormigón y hormigón armado",
+        check3: "Demolición y movimiento de tierras",
+        check4: "Mantenimiento y renovación",
+        check5: "Seguimiento y coordinación de obra",
+
+        phases_kicker: "En obra",
+        phases_title: "Etapas de construcción",
+        phases_intro: "Imágenes que muestran el trabajo realizado realmente en obra.",
+
+        phase1_title: "Preparación y demolición",
+        phase1_text: "Preparación del sitio y trabajos necesarios antes del nuevo proyecto.",
+        phase2_title: "Movimiento de tierras y cimentaciones",
+        phase2_text: "Preparación del terreno y creación de las bases del proyecto.",
+        phase3_title: "Ferrallado y estructura",
+        phase3_text: "Colocación de armaduras y preparación de elementos estructurales.",
+        phase4_title: "Hormigonado",
+        phase4_text: "Realización de los elementos de hormigón necesarios.",
+        phase5_title: "Albañilería",
+        phase5_text: "Elevación de muros y trabajos de albañilería.",
+        phase6_title: "Estructura y avance",
+        phase6_text: "Seguimiento de la evolución del edificio.",
+
+        method_kicker: "Nuestro método",
+        method_title: "Una obra organizada paso a paso",
+        method1_title: "Preparación",
+        method1_text: "Análisis del proyecto y preparación de la obra.",
+        method2_title: "Obra estructural",
+        method2_text: "Movimiento de tierras, cimentaciones, ferrallado, encofrado y hormigón.",
+        method3_title: "Estructura",
+        method3_text: "Construcción progresiva y organizada de la estructura.",
+        method4_title: "Acabados y mantenimiento",
+        method4_text: "Acabados, reparación, mantenimiento y restauración.",
+
+        why_kicker: "Nuestro compromiso",
+        why_title: "Un seguimiento cercano a la obra",
+        why1_title: "Seguimiento riguroso",
+        why1_text: "Seguimiento de las diferentes etapas y coordinación.",
+        why2_title: "Trabajo de campo",
+        why2_text: "Un enfoque directamente relacionado con la realidad de la obra.",
+        why3_title: "Organización",
+        why3_text: "Organización de trabajos y coordinación de las diferentes fases.",
+        why4_title: "Relación con el cliente",
+        why4_text: "Comunicación con el cliente y seguimiento del proyecto.",
+
+        client_kicker: "Seguimiento del proyecto",
+        client_title: "El cliente en el centro",
+        client_text: "El seguimiento de una obra también requiere comunicación clara, actualización del progreso y diálogo sobre los trabajos.",
+        client_button: "Hablemos de su proyecto",
+
+        gallery_kicker: "Galería de obra",
+        gallery_title: "El trabajo habla por sí mismo",
+        gallery_text: "Algunas imágenes de trabajos, equipos y obras.",
+
+        faq_title: "Preguntas frecuentes",
+
+        faq1_q: "¿Qué trabajos realiza TARCI?",
+        faq1_a: "TARCI trabaja principalmente en construcción, hormigón armado, demolición, movimiento de tierras, mantenimiento y renovación.",
+
+        faq2_q: "¿Dónde trabajan?",
+        faq2_a: "TARCI trabaja principalmente en Marrakech y alrededores según el proyecto.",
+
+        faq3_q: "¿Puedo solicitar un presupuesto?",
+        faq3_a: "Sí. Puede contactar con nosotros por teléfono, WhatsApp o mediante el formulario.",
+
+        faq4_q: "¿Trabajan en proyectos de villas?",
+        faq4_a: "Sí. TARCI también trabaja en proyectos residenciales y villas según los trabajos solicitados.",
+
+        cta_title: "¿Tiene un proyecto de construcción?",
+        cta_text: "Hablemos de su obra, sus necesidades técnicas y los trabajos necesarios.",
+        cta_button: "Contactar con TARCI",
+
+        contact_title: "Hablemos de su proyecto",
+        contact_text: "Contacte con TARCI para hablar de su obra y sus necesidades.",
+        contact_location: "Ubicación",
+        contact_phone: "Teléfono",
+        contact_email: "Email",
+
+        form_name: "Nombre",
+        form_phone: "Teléfono",
+        form_email: "Email",
+        form_project: "Tipo de proyecto",
+        form_message: "Su solicitud",
+        form_button: "Enviar por WhatsApp",
+
+        select_default: "Seleccionar",
+        select_construction: "Construcción",
+        select_beton: "Hormigón / hormigón armado",
+        select_demolition: "Demolición",
+        select_maintenance: "Mantenimiento",
+        select_renovation: "Renovación",
+        select_terrassement: "Movimiento de tierras",
+
+        footer_text: "Construcción, hormigón, demolición, mantenimiento y trabajos de edificación en Marrakech.",
+        footer_services: "Servicios",
+        footer_contact: "Contacto",
+        footer_service1: "Hormigón y hormigón armado",
+        footer_service2: "Construcción",
+        footer_service3: "Demolición",
+        footer_service4: "Mantenimiento",
+        copyright: "Todos los derechos reservados."
+
+      }
+
+    };
+
+
+    /* =========================
+       CHANGE LANGUAGE
+    ========================= */
+
+    function changeLanguage(lang) {
+
+      const data = translations[lang];
+
+      if (!data) return;
+
+      document.documentElement.lang = lang;
+
+      document.documentElement.dir =
+        lang === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-i18n]").forEach(function(element) {
+
+        const key = element.getAttribute("data-i18n");
+
+        if (data[key] !== undefined) {
+          element.innerHTML = data[key];
+        }
+
+      });
+
+
+      document.querySelectorAll(".lang-btn").forEach(function(button) {
+
+        button.classList.toggle(
+          "active",
+          button.dataset.lang === lang
+        );
+
+      });
+
+
+      localStorage.setItem("tarci-language", lang);
+
     }
-  });
-
-  document.querySelectorAll(".lang-btn").forEach(btn=>{
-    btn.classList.toggle(
-      "active",
-      btn.dataset.lang === lang
-    );
-  });
-
-  localStorage.setItem("tarciLanguage",lang);
-}
-
-document.querySelectorAll(".lang-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    setLanguage(btn.dataset.lang);
-  });
-});
-
-const savedLanguage =
-  localStorage.getItem("tarciLanguage") || "fr";
-
-setLanguage(savedLanguage);
 
 
-/* MENU MOBILE */
-const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
+    document.querySelectorAll(".lang-btn").forEach(function(button) {
 
-menuBtn.addEventListener("click",()=>{
-  mainNav.classList.toggle("open");
-});
+      button.addEventListener("click", function() {
 
-document.querySelectorAll(".nav a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    mainNav.classList.remove("open");
-  });
-});
+        changeLanguage(button.dataset.lang);
+
+      });
+
+    });
 
 
-/* WHATSAPP FORM */
-document.getElementById("contactForm").addEventListener("submit",function(e){
+    /* =========================
+       LOAD SAVED LANGUAGE
+    ========================= */
 
-  e.preventDefault();
+    const savedLanguage =
+      localStorage.getItem("tarci-language") || "fr";
 
-  const name =
-    document.getElementById("name").value.trim();
+    changeLanguage(savedLanguage);
 
-  const phone =
-    document.getElementById("phone").value.trim();
 
-  const service =
-    document.getElementById("service").value;
+    /* =========================
+       CONTACT FORM → WHATSAPP
+    ========================= */
 
-  const city =
-    document.getElementById("city").value.trim();
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function(event) {
 
-  const message =
-    document.getElementById("message").value.trim();
+        event.preventDefault();
 
-  const text =
-`Bonjour TARCI,
+        const name =
+          document.getElementById("name").value.trim();
 
-Nom : ${name}
-Téléphone : ${phone}
-Service : ${service}
-Ville / zone : ${city}
+        const phone =
+          document.getElementById("phone").value.trim();
 
-Projet :
-${message}`;
+        const email =
+          document.getElementById("email").value.trim();
 
-  const url =
-    "https://wa.me/212678774597?text=" +
-    encodeURIComponent(text);
+        const project =
+          document.getElementById("project").value.trim();
 
-  window.open(url,"_blank");
+        const message =
+          document.getElementById("message").value.trim();
 
-});
+        const lang =
+          document.documentElement.lang || "fr";
 
-</script>
+
+        const labels = {
+
+          fr: {
+            title: "Bonjour TARCI, je souhaite demander des informations.",
+            name: "Nom",
+            phone: "Téléphone",
+            email: "Email",
+            project: "Projet",
+            message: "Demande"
+          },
+
+          ar: {
+            title: "السلام عليكم TARCI، بغيت معلومات على مشروع.",
+            name: "الاسم",
+            phone: "الهاتف",
+            email: "الإيميل",
+            project: "المشروع",
+            message: "الطلب"
+          },
+
+          en: {
+            title: "Hello TARCI, I would like information about a project.",
+            name: "Name",
+            phone: "Phone",
+            email: "Email",
+            project: "Project",
+            message: "Request"
+          },
+
+          es: {
+            title: "Hola TARCI, quiero información sobre un proyecto.",
+            name: "Nombre",
+            phone: "Teléfono",
+            email: "Email",
+            project: "Proyecto",
+            message: "Solicitud"
+          }
+
+        };
+
+
+        const l = labels[lang] || labels.fr;
+
+
+        const whatsappMessage =
+          l.title + "\n\n" +
+          l.name + ": " + name + "\n" +
+          l.phone + ": " + phone + "\n" +
+          l.email + ": " + (email || "-") + "\n" +
+          l.project + ": " + (project || "-") + "\n" +
+          l.message + ": " + message;
+
+
+        const url =
+          "https://wa.me/212678774597?text=" +
+          encodeURIComponent(whatsappMessage);
+
+
+        window.open(url, "_blank");
+
+      });
+
+  </script>
 
 </body>
 </html>
