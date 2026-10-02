@@ -1,2039 +1,3392 @@
  <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TARCI Marrakech - Construction, rénovation, peinture, étanchéité, isolation et nettoyage professionnel.">
-  <title>TARCI Marrakech | Construction & Travaux</title>
-
-  <style>
-    :root{
-      --blue:#0757a0;
-      --blue-dark:#063b70;
-      --yellow:#f5c400;
-      --dark:#111827;
-      --text:#4b5563;
-      --light:#f5f8fc;
-      --white:#fff;
-      --border:#e5e7eb;
-      --shadow:0 12px 35px rgba(0,0,0,.09);
-      --radius:16px;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.7;
-      overflow-x:hidden;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    .container{
-      width:min(1180px,92%);
-      margin:auto;
-    }
-
-    /* TOP BAR */
-    .topbar{
-      background:#082d50;
-      color:#fff;
-      font-size:13px;
-    }
-
-    .topbar-inner{
-      min-height:42px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .topbar-left,
-    .topbar-right{
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
-      align-items:center;
-    }
-
-    .topbar a:hover{
-      color:var(--yellow);
-    }
-
-    /* HEADER */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fff;
-      box-shadow:0 3px 18px rgba(0,0,0,.08);
-    }
-
-    .navbar{
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-    }
-
-    .logo{
-      width:145px;
-      height:auto;
-    }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      gap:25px;
-    }
-
-    .nav a{
-      font-size:14px;
-      font-weight:700;
-      color:#172033;
-      transition:.25s;
-    }
-
-    .nav a:hover{
-      color:var(--blue);
-    }
-
-    .nav-actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .language{
-      border:1px solid var(--border);
-      padding:9px 10px;
-      border-radius:7px;
-      background:#fff;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    .btn{
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      gap:8px;
-      padding:13px 22px;
-      border-radius:7px;
-      border:2px solid transparent;
-      font-weight:700;
-      font-size:14px;
-      transition:.25s;
-      cursor:pointer;
-    }
-
-    .btn-primary{
-      background:var(--yellow);
-      color:#111;
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 8px 20px rgba(245,196,0,.25);
-    }
-
-    .btn-blue{
-      background:var(--blue);
-      color:#fff;
-    }
-
-    .btn-blue:hover{
-      background:var(--blue-dark);
-      transform:translateY(-2px);
-    }
-
-    .btn-outline{
-      border-color:#fff;
-      color:#fff;
-      background:transparent;
-    }
-
-    .btn-outline:hover{
-      background:#fff;
-      color:var(--blue);
-    }
-
-    .menu-btn{
-      display:none;
-      border:0;
-      background:none;
-      font-size:28px;
-      cursor:pointer;
-    }
-
-    /* HERO */
-    .hero{
-      min-height:620px;
-      position:relative;
-      display:flex;
-      align-items:center;
-      background:
-        linear-gradient(90deg,rgba(3,22,40,.88),rgba(3,22,40,.58),rgba(3,22,40,.18)),
-        url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
-        center/cover no-repeat;
-    }
-
-    .hero-content{
-      max-width:760px;
-      color:#fff;
-      padding:90px 0;
-    }
-
-    .eyebrow{
-      color:var(--yellow);
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:13px;
-      margin-bottom:15px;
-    }
-
-    .hero h1{
-      font-size:clamp(38px,5vw,68px);
-      line-height:1.08;
-      margin-bottom:22px;
-      font-weight:900;
-    }
-
-    .hero h1 span{
-      color:var(--yellow);
-    }
-
-    .hero p{
-      max-width:650px;
-      font-size:18px;
-      color:#edf4fb;
-      margin-bottom:30px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      gap:13px;
-      flex-wrap:wrap;
-    }
-
-    /* FEATURE CARDS */
-    .features{
-      margin-top:-55px;
-      position:relative;
-      z-index:5;
-    }
-
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      background:#fff;
-      box-shadow:var(--shadow);
-      border-radius:var(--radius);
-      overflow:hidden;
-    }
-
-    .feature{
-      padding:30px;
-      display:flex;
-      gap:17px;
-      align-items:flex-start;
-      border-right:1px solid var(--border);
-    }
-
-    .feature:last-child{
-      border-right:0;
-    }
-
-    .feature-icon{
-      min-width:52px;
-      height:52px;
-      border-radius:50%;
-      background:#edf5fc;
-      display:grid;
-      place-items:center;
-      font-size:24px;
-    }
-
-    .feature h3{
-      color:var(--dark);
-      font-size:17px;
-      margin-bottom:5px;
-    }
-
-    .feature p{
-      font-size:13px;
-      line-height:1.6;
-    }
-
-    /* SECTION */
-    section{
-      padding:90px 0;
-    }
-
-    .section-head{
-      max-width:720px;
-      margin:0 auto 48px;
-      text-align:center;
-    }
-
-    .section-head .eyebrow{
-      color:var(--blue);
-      margin-bottom:8px;
-    }
-
-    .section-head h2{
-      color:var(--dark);
-      font-size:clamp(30px,4vw,44px);
-      line-height:1.15;
-      margin-bottom:15px;
-    }
-
-    .section-head p{
-      font-size:16px;
-    }
-
-    /* ABOUT */
-    .about{
-      background:#fff;
-    }
-
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:65px;
-      align-items:center;
-    }
-
-    .about-image{
-      position:relative;
-    }
-
-    .about-image img{
-      width:100%;
-      min-height:440px;
-      object-fit:cover;
-      border-radius:18px;
-      background:#e8eef4;
-    }
-
-    .about-badge{
-      position:absolute;
-      right:-25px;
-      bottom:25px;
-      background:var(--blue);
-      color:#fff;
-      padding:22px 26px;
-      border-radius:12px;
-      box-shadow:var(--shadow);
-    }
-
-    .about-badge strong{
-      display:block;
-      color:var(--yellow);
-      font-size:34px;
-      line-height:1;
-    }
-
-    .about-content h2{
-      font-size:42px;
-      line-height:1.15;
-      color:var(--dark);
-      margin-bottom:18px;
-    }
-
-    .about-content p{
-      margin-bottom:18px;
-    }
-
-    .check-list{
-      list-style:none;
-      display:grid;
-      gap:11px;
-      margin:25px 0 30px;
-    }
-
-    .check-list li{
-      color:#243044;
-      font-weight:600;
-    }
-
-    .check-list li::before{
-      content:"✓";
-      display:inline-grid;
-      place-items:center;
-      width:23px;
-      height:23px;
-      margin-right:10px;
-      background:#eaf4ff;
-      color:var(--blue);
-      border-radius:50%;
-      font-weight:900;
-    }
-
-    /* STATS */
-    .stats{
-      background:var(--blue);
-      color:#fff;
-      padding:55px 0;
-    }
-
-    .stats-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-    }
-
-    .stat{
-      text-align:center;
-      padding:15px;
-      border-right:1px solid rgba(255,255,255,.2);
-    }
-
-    .stat:last-child{
-      border-right:0;
-    }
-
-    .stat-number{
-      font-size:45px;
-      font-weight:900;
-      color:var(--yellow);
-      line-height:1;
-      margin-bottom:8px;
-    }
-
-    .stat-label{
-      color:#fff;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    /* SERVICES */
-    .services{
-      background:var(--light);
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-    }
-
-    .service-card{
-      background:#fff;
-      padding:30px 24px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      transition:.3s;
-    }
-
-    .service-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow);
-      border-color:#c9dff2;
-    }
-
-    .service-icon{
-      width:55px;
-      height:55px;
-      border-radius:10px;
-      display:grid;
-      place-items:center;
-      background:#edf5fc;
-      font-size:25px;
-      margin-bottom:20px;
-    }
-
-    .service-card h3{
-      color:var(--dark);
-      font-size:18px;
-      margin-bottom:10px;
-    }
-
-    .service-card p{
-      font-size:13px;
-    }
-
-    /* REALISATIONS */
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .project{
-      position:relative;
-      min-height:300px;
-      border-radius:15px;
-      overflow:hidden;
-      background:#dfe8ef;
-    }
-
-    .project img{
-      width:100%;
-      height:100%;
-      min-height:300px;
-      object-fit:cover;
-      transition:.5s;
-    }
-
-    .project:hover img{
-      transform:scale(1.06);
-    }
-
-    .project-overlay{
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      padding:25px;
-      color:#fff;
-      background:linear-gradient(transparent,rgba(0,0,0,.82));
-    }
-
-    .project-overlay h3{
-      font-size:20px;
-      margin-bottom:3px;
-    }
-
-    /* EXPERTISE */
-    .expertise{
-      background:var(--light);
-    }
-
-    .expertise-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .expertise-card{
-      background:#fff;
-      padding:28px;
-      border-radius:14px;
-      border-left:4px solid var(--yellow);
-      box-shadow:0 5px 18px rgba(0,0,0,.04);
-    }
-
-    .expertise-card h3{
-      color:var(--dark);
-      margin-bottom:8px;
-    }
-
-    /* TEAM */
-    .team-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-    }
-
-    .team-card{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:15px;
-      overflow:hidden;
-      text-align:center;
-    }
-
-    .team-photo{
-      height:220px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,#e9f1f8,#cddce8);
-      font-size:65px;
-    }
-
-    .team-card-content{
-      padding:20px;
-    }
-
-    .team-card h3{
-      color:var(--dark);
-      font-size:17px;
-    }
-
-    .team-card p{
-      color:var(--blue);
-      font-size:13px;
-      font-weight:700;
-    }
-
-    /* PHASES */
-    .phases{
-      background:#fff;
-    }
-
-    .phases-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:0;
-    }
-
-    .phase{
-      position:relative;
-      padding:30px 25px;
-      border-top:3px solid var(--blue);
-      background:#f8fafc;
-      margin-right:10px;
-    }
-
-    .phase-number{
-      width:48px;
-      height:48px;
-      display:grid;
-      place-items:center;
-      border-radius:50%;
-      background:var(--yellow);
-      color:#111;
-      font-weight:900;
-      margin-bottom:18px;
-    }
-
-    .phase h3{
-      color:var(--dark);
-      margin-bottom:8px;
-    }
-
-    /* WHY */
-    .why{
-      background:var(--dark);
-      color:#fff;
-    }
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:65px;
-      align-items:center;
-    }
-
-    .why h2{
-      font-size:42px;
-      line-height:1.15;
-      margin-bottom:18px;
-    }
-
-    .why p{
-      color:#cbd5e1;
-      margin-bottom:25px;
-    }
-
-    .why-list{
-      display:grid;
-      gap:17px;
-    }
-
-    .why-item{
-      display:flex;
-      gap:15px;
-      align-items:flex-start;
-    }
-
-    .why-item span{
-      min-width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      background:var(--yellow);
-      color:#111;
-      border-radius:8px;
-      font-weight:900;
-    }
-
-    .why-item h3{
-      font-size:16px;
-      margin-bottom:3px;
-    }
-
-    .why-item p{
-      margin:0;
-      font-size:13px;
-    }
-
-    .why-box{
-      background:linear-gradient(145deg,#0a4e8e,#062f58);
-      padding:45px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.12);
-    }
-
-    .why-box h3{
-      font-size:28px;
-      margin-bottom:12px;
-    }
-
-    /* FAQ */
-    .faq{
-      background:var(--light);
-    }
-
-    .faq-list{
-      max-width:850px;
-      margin:auto;
-      display:grid;
-      gap:12px;
-    }
-
-    details{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:18px 20px;
-    }
-
-    summary{
-      cursor:pointer;
-      color:var(--dark);
-      font-weight:800;
-    }
-
-    details p{
-      padding-top:12px;
-      font-size:14px;
-    }
-
-    /* CTA */
-    .cta{
-      padding:70px 0;
-      background:
-        linear-gradient(90deg,rgba(5,59,112,.96),rgba(7,87,160,.9));
-      color:#fff;
-    }
-
-    .cta-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:30px;
-    }
-
-    .cta h2{
-      font-size:40px;
-      line-height:1.15;
-      margin-bottom:10px;
-    }
-
-    .cta p{
-      color:#e7f0f8;
-    }
-
-    /* CONTACT */
-    .contact{
-      background:#fff;
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:50px;
-    }
-
-    .contact-info h2{
-      color:var(--dark);
-      font-size:38px;
-      line-height:1.2;
-      margin-bottom:15px;
-    }
-
-    .contact-item{
-      display:flex;
-      gap:15px;
-      margin-top:22px;
-      align-items:flex-start;
-    }
-
-    .contact-icon{
-      width:45px;
-      height:45px;
-      min-width:45px;
-      border-radius:8px;
-      background:#edf5fc;
-      display:grid;
-      place-items:center;
-      font-size:19px;
-    }
-
-    .contact-item strong{
-      display:block;
-      color:var(--dark);
-    }
-
-    .contact-form{
-      background:var(--light);
-      padding:35px;
-      border-radius:16px;
-    }
-
-    .form-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:15px;
-    }
-
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:7px;
-      margin-bottom:15px;
-    }
-
-    .field.full{
-      grid-column:1/-1;
-    }
-
-    .field label{
-      color:var(--dark);
-      font-size:13px;
-      font-weight:700;
-    }
-
-    .field input,
-    .field textarea,
-    .field select{
-      width:100%;
-      border:1px solid #d7dee7;
-      border-radius:8px;
-      padding:13px 14px;
-      font:inherit;
-      background:#fff;
-      outline:none;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus{
-      border-color:var(--blue);
-    }
-
-    textarea{
-      min-height:135px;
-      resize:vertical;
-    }
-
-    /* FOOTER */
-    footer{
-      background:#071a2b;
-      color:#b9c6d3;
-      padding:55px 0 20px;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:40px;
-      padding-bottom:40px;
-    }
-
-    .footer-logo{
-      width:130px;
-      background:#fff;
-      padding:8px;
-      border-radius:6px;
-      margin-bottom:18px;
-    }
-
-    footer h3{
-      color:#fff;
-      margin-bottom:16px;
-      font-size:16px;
-    }
-
-    footer ul{
-      list-style:none;
-      display:grid;
-      gap:8px;
-      font-size:13px;
-    }
-
-    footer a:hover{
-      color:var(--yellow);
-    }
-
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.1);
-      padding-top:20px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      font-size:12px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      z-index:999;
-      width:58px;
-      height:58px;
-      border-radius:50%;
-      background:#25d366;
-      color:#fff;
-      display:grid;
-      place-items:center;
-      font-size:28px;
-      box-shadow:0 8px 25px rgba(0,0,0,.2);
-    }
-
-    .whatsapp:hover{
-      transform:scale(1.08);
-    }
-
-    /* MOBILE */
-    @media(max-width:1000px){
-      .nav{
-        gap:15px;
-      }
-
-      .services-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .team-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .footer-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-    }
-
-    @media(max-width:800px){
-      .topbar{
-        display:none;
-      }
-
-      .navbar{
-        min-height:70px;
-      }
-
-      .menu-btn{
-        display:block;
-      }
-
-      .nav{
-        position:absolute;
-        top:70px;
-        left:0;
-        right:0;
-        background:#fff;
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        padding:20px 5%;
-        box-shadow:0 12px 20px rgba(0,0,0,.08);
-      }
-
-      .nav.active{
-        display:flex;
-      }
-
-      .nav a{
-        padding:10px 0;
-        border-bottom:1px solid var(--border);
-      }
-
-      .nav-actions .btn{
-        display:none;
-      }
-
-      .hero{
-        min-height:590px;
-      }
-
-      .hero-content{
-        padding:70px 0;
-      }
-
-      .features-grid{
-        grid-template-columns:1fr;
-      }
-
-      .feature{
-        border-right:0;
-        border-bottom:1px solid var(--border);
-      }
-
-      .feature:last-child{
-        border-bottom:0;
-      }
-
-      .about-grid,
-      .why-grid,
-      .contact-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-      }
-
-      .about-badge{
-        right:15px;
-      }
-
-      .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .stat{
-        border-bottom:1px solid rgba(255,255,255,.2);
-      }
-
-      .stat:nth-child(2){
-        border-right:0;
-      }
-
-      .projects-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .expertise-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .phases-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-      }
-
-      .phase{
-        margin:0;
-      }
-
-      .cta-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-
-    @media(max-width:600px){
-      section{
-        padding:65px 0;
-      }
-
-      .container{
-        width:90%;
-      }
-
-      .logo{
-        width:125px;
-      }
-
-      .hero h1{
-        font-size:40px;
-      }
-
-      .hero p{
-        font-size:16px;
-      }
-
-      .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .hero-buttons .btn{
-        width:100%;
-      }
-
-      .about-content h2,
-      .why h2,
-      .cta h2{
-        font-size:31px;
-      }
-
-      .services-grid,
-      .projects-grid,
-      .expertise-grid,
-      .team-grid,
-      .phases-grid{
-        grid-template-columns:1fr;
-      }
-
-      .stats-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .stat-number{
-        font-size:36px;
-      }
-
-      .form-grid{
-        grid-template-columns:1fr;
-      }
-
-      .field.full{
-        grid-column:auto;
-      }
-
-      .contact-form{
-        padding:23px;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-
-      .footer-bottom{
-        flex-direction:column;
-      }
-
-      .about-image img{
-        min-height:300px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TARCI Marrakech | Construction, Villas, Rénovation & Travaux</title>
+
+<meta name="description"
+content="TARCI Marrakech accompagne vos projets de construction de villas et maisons, rénovation, aménagement, peinture, étanchéité et travaux techniques au Maroc.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   TARCI - GLOBAL
+========================================================= */
+
+:root{
+  --blue:#0b2d4d;
+  --blue2:#123f68;
+  --yellow:#f4b400;
+  --yellow2:#ffc928;
+  --dark:#101820;
+  --text:#344454;
+  --light:#f5f7f9;
+  --white:#ffffff;
+  --border:#e5e9ee;
+  --shadow:0 15px 45px rgba(10,35,60,.10);
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.65;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+section{
+  padding:90px 0;
+}
+
+.small-label{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--yellow);
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  margin-bottom:14px;
+}
+
+.small-label::before{
+  content:"";
+  width:28px;
+  height:3px;
+  background:var(--yellow);
+  border-radius:20px;
+}
+
+.section-title{
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.12;
+  color:var(--blue);
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.section-text{
+  max-width:720px;
+  color:#657382;
+  font-size:16px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:52px;
+  padding:0 25px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:800;
+  transition:.25s ease;
+  border:0;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--yellow);
+  color:#152536;
+}
+
+.btn-primary:hover{
+  background:var(--yellow2);
+  transform:translateY(-2px);
+}
+
+.btn-dark{
+  background:var(--blue);
+  color:#fff;
+}
+
+.btn-dark:hover{
+  background:var(--blue2);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:var(--blue);
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+  background:var(--blue);
+  color:#dbe8f2;
+  font-size:12px;
+}
+
+.topbar-inner{
+  min-height:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.top-left,
+.top-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.topbar a:hover{
+  color:var(--yellow);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav{
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo img{
+  width:145px;
+  height:auto;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:13px;
+  font-weight:700;
+  color:#24394d;
+}
+
+.nav-links a{
+  position:relative;
+  padding:32px 0;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:22px;
+  width:0;
+  height:2px;
+  background:var(--yellow);
+  transition:.25s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.lang{
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:9px 11px;
+  font-size:12px;
+  font-weight:800;
+  color:var(--blue);
+  background:#fff;
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:var(--blue);
+  color:#fff;
+  width:43px;
+  height:43px;
+  border-radius:8px;
+  font-size:21px;
+}
+
+/* =========================================================
+   SERVICES STRIP
+========================================================= */
+
+.services-strip{
+  background:#f8fafc;
+  border-bottom:1px solid var(--border);
+}
+
+.services-strip-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  min-height:48px;
+  flex-wrap:wrap;
+}
+
+.services-strip a{
+  font-size:12px;
+  font-weight:700;
+  color:#526272;
+}
+
+.services-strip a:hover{
+  color:var(--blue);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:680px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(6,28,48,.93) 0%,rgba(6,28,48,.78) 45%,rgba(6,28,48,.28) 100%),
+    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
+    center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-100px;
+  bottom:-130px;
+  width:430px;
+  height:430px;
+  border:70px solid rgba(244,180,0,.13);
+  border-radius:50%;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  max-width:760px;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.hero-kicker span{
+  width:8px;
+  height:8px;
+  background:var(--yellow);
+  border-radius:50%;
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.02;
+  font-weight:900;
+  letter-spacing:-2.5px;
+  margin-bottom:25px;
+}
+
+.hero h1 strong{
+  color:var(--yellow);
+}
+
+.hero p{
+  font-size:18px;
+  color:#e5edf3;
+  max-width:670px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.hero-bottom{
+  position:absolute;
+  z-index:4;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.hero-bottom-inner{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:#fff;
+  box-shadow:0 -10px 40px rgba(0,0,0,.12);
+}
+
+.hero-feature{
+  padding:24px 28px;
+  border-right:1px solid var(--border);
+}
+
+.hero-feature:last-child{
+  border-right:0;
+}
+
+.hero-feature h3{
+  color:var(--blue);
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.hero-feature p{
+  color:#7a8793;
+  font-size:12px;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+  padding-top:115px;
+  background:#fff;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.intro-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.info-card{
+  padding:27px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.info-icon{
+  width:46px;
+  height:46px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff5d7;
+  color:#b27b00;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.info-card h3{
+  color:var(--blue);
+  font-size:17px;
+  margin-bottom:7px;
+}
+
+.info-card p{
+  font-size:13px;
+  color:#73808d;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+  background:var(--light);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-visual{
+  min-height:520px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  background:
+    linear-gradient(180deg,rgba(8,37,62,.05),rgba(8,37,62,.7)),
+    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
+    center/cover no-repeat;
+}
+
+.about-badge{
+  position:absolute;
+  left:25px;
+  bottom:25px;
+  background:#fff;
+  padding:22px 25px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.about-badge strong{
+  display:block;
+  font-size:34px;
+  color:var(--blue);
+  line-height:1;
+}
+
+.about-badge span{
+  font-size:12px;
+  color:#72808d;
+}
+
+.check-list{
+  list-style:none;
+  margin:25px 0 30px;
+}
+
+.check-list li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  margin-bottom:14px;
+  font-size:14px;
+  color:#536273;
+}
+
+.check-list li::before{
+  content:"✓";
+  flex:none;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff1c8;
+  color:#aa7400;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+  background:var(--blue);
+  padding:60px 0;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+  text-align:center;
+  padding:15px 20px;
+  border-right:1px solid rgba(255,255,255,.15);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  font-size:43px;
+  line-height:1;
+  color:#fff;
+  margin-bottom:9px;
+}
+
+.stat span{
+  font-size:12px;
+  color:#aebfcd;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+  background:#fff;
+}
+
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:45px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.service-card{
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.service-img{
+  height:210px;
+  background:
+    linear-gradient(135deg,#dce7ee,#f5f7f9);
+  position:relative;
+  overflow:hidden;
+}
+
+.service-img::after{
+  content:"TARCI";
+  position:absolute;
+  right:15px;
+  bottom:12px;
+  font-size:42px;
+  font-weight:900;
+  color:rgba(11,45,77,.07);
+}
+
+.service-content{
+  padding:25px;
+}
+
+.service-number{
+  font-size:11px;
+  color:#b27b00;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.service-card h3{
+  color:var(--blue);
+  font-size:19px;
+  margin-bottom:9px;
+}
+
+.service-card p{
+  font-size:13px;
+  color:#74818e;
+  margin-bottom:18px;
+}
+
+.service-link{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+/* =========================================================
+   SPECIAL VILLAS
+========================================================= */
+
+.villas{
+  background:
+    linear-gradient(90deg,rgba(8,35,57,.95),rgba(8,35,57,.76)),
+    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
+    center/cover no-repeat;
+  color:#fff;
+}
+
+.villas-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.villas .section-title{
+  color:#fff;
+}
+
+.villas .section-text{
+  color:#c9d5de;
+}
+
+.villa-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin:30px 0;
+}
+
+.villa-point{
+  padding:18px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.05);
+  border-radius:10px;
+}
+
+.villa-point strong{
+  display:block;
+  color:#fff;
+  font-size:14px;
+  margin-bottom:4px;
+}
+
+.villa-point span{
+  color:#aebdca;
+  font-size:11px;
+}
+
+.villa-visual{
+  min-height:440px;
+  border-radius:20px;
+  background:
+    linear-gradient(180deg,transparent,rgba(0,0,0,.6)),
+    url("https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png")
+    center/cover no-repeat;
+  position:relative;
+}
+
+.villa-label{
+  position:absolute;
+  left:25px;
+  bottom:25px;
+  background:var(--yellow);
+  color:#152536;
+  padding:18px 22px;
+  border-radius:10px;
+  font-weight:900;
+}
+
+/* =========================================================
+   REALISATIONS
+========================================================= */
+
+.realisations{
+  background:var(--light);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:30px 0 35px;
+}
+
+.filter{
+  border:1px solid var(--border);
+  background:#fff;
+  color:#5e6d7b;
+  border-radius:30px;
+  padding:10px 17px;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  transition:.3s;
+}
+
+.project:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.project-visual{
+  height:220px;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#d9e4eb,#f4f7f9);
+}
+
+.project-visual::before{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border:1px solid rgba(11,45,77,.13);
+  border-radius:8px;
+}
+
+.project-info{
+  padding:20px;
+}
+
+.project-info small{
+  color:#b17a00;
+  font-weight:900;
+  font-size:10px;
+  text-transform:uppercase;
+}
+
+.project-info h3{
+  color:var(--blue);
+  font-size:16px;
+  margin:7px 0;
+}
+
+.project-info p{
+  color:#758391;
+  font-size:12px;
+}
+
+.project.hide{
+  display:none;
+}
+
+/* =========================================================
+   METHOD
+========================================================= */
+
+.method{
+  background:#fff;
+}
+
+.method-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:45px;
+}
+
+.step{
+  position:relative;
+  padding:28px 23px;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.step-number{
+  font-size:38px;
+  font-weight:900;
+  color:#dce5eb;
+  line-height:1;
+  margin-bottom:22px;
+}
+
+.step h3{
+  color:var(--blue);
+  font-size:16px;
+  margin-bottom:7px;
+}
+
+.step p{
+  color:#788592;
+  font-size:12px;
+}
+
+/* =========================================================
+   QUALIFICATION / COMPETENCE
+========================================================= */
+
+.competence{
+  background:#f7f9fb;
+}
+
+.competence-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+
+.competence-box{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+
+.competence-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin-top:25px;
+}
+
+.competence-item{
+  padding:15px;
+  background:#f7f9fb;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:700;
+  color:#445667;
+}
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team{
+  background:#fff;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.team-card{
+  border:1px solid var(--border);
+  border-radius:15px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.team-photo{
+  height:250px;
+  background:
+    linear-gradient(135deg,#dce6ed,#f4f7f9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(11,45,77,.18);
+  font-size:60px;
+  font-weight:900;
+}
+
+.team-info{
+  padding:20px;
+}
+
+.team-info h3{
+  color:var(--blue);
+  font-size:16px;
+}
+
+.team-info p{
+  color:#788592;
+  font-size:11px;
+  margin-top:4px;
+}
+
+/* =========================================================
+   WHY
+========================================================= */
+
+.why{
+  background:var(--light);
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.why-list{
+  display:grid;
+  gap:14px;
+}
+
+.why-item{
+  display:flex;
+  gap:18px;
+  padding:20px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:13px;
+}
+
+.why-icon{
+  width:42px;
+  height:42px;
+  flex:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  background:#fff1c8;
+  color:#a87500;
+  font-weight:900;
+}
+
+.why-item h3{
+  color:var(--blue);
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+.why-item p{
+  color:#7a8792;
+  font-size:12px;
+}
+
+/* =========================================================
+   GUIDES
+========================================================= */
+
+.guides{
+  background:#fff;
+}
+
+.guides-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.guide{
+  padding:28px;
+  border:1px solid var(--border);
+  border-radius:15px;
+}
+
+.guide-tag{
+  color:#ae7800;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.guide h3{
+  color:var(--blue);
+  font-size:18px;
+  margin:10px 0;
+}
+
+.guide p{
+  color:#788592;
+  font-size:12px;
+  margin-bottom:17px;
+}
+
+.guide a{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+  background:var(--light);
+}
+
+.faq-grid{
+  max-width:850px;
+  margin:40px auto 0;
+}
+
+.faq-item{
+  background:#fff;
+  border:1px solid var(--border);
+  margin-bottom:10px;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+  border:0;
+  background:#fff;
+  padding:20px 22px;
+  text-align:left;
+  color:var(--blue);
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 22px 20px;
+  color:#71808d;
+  font-size:13px;
+}
+
+.faq-item.open .faq-answer{
+  display:block;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+  padding:0;
+}
+
+.cta-inner{
+  background:var(--yellow);
+  padding:60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.cta h2{
+  color:#162536;
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.1;
+  margin-bottom:8px;
+}
+
+.cta p{
+  color:#554400;
+  font-size:14px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+  background:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:60px;
+}
+
+.contact-info{
+  display:grid;
+  gap:15px;
+  margin-top:30px;
+}
+
+.contact-item{
+  display:flex;
+  gap:15px;
+  padding:17px;
+  background:var(--light);
+  border-radius:11px;
+}
+
+.contact-icon{
+  width:38px;
+  height:38px;
+  border-radius:8px;
+  background:#fff1c8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#9d6f00;
+  font-weight:900;
+}
+
+.contact-item strong{
+  display:block;
+  color:var(--blue);
+  font-size:12px;
+}
+
+.contact-item span,
+.contact-item a{
+  color:#72808d;
+  font-size:12px;
+}
+
+.form{
+  padding:35px;
+  background:#f7f9fb;
+  border:1px solid var(--border);
+  border-radius:17px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  margin-bottom:15px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  font-size:11px;
+  font-weight:800;
+  color:#536273;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid #dce2e8;
+  background:#fff;
+  border-radius:8px;
+  padding:13px 14px;
+  outline:0;
+  color:#33485a;
+  font-size:13px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--yellow);
+}
+
+.field textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+  background:#081d30;
+  color:#aebdca;
+  padding:65px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:45px;
+  padding-bottom:45px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-logo{
+  width:135px;
+  background:#fff;
+  padding:8px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.footer h3{
+  color:#fff;
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.footer p,
+.footer a{
+  font-size:12px;
+  color:#9caebb;
+}
+
+.footer a{
+  display:block;
+  margin-bottom:9px;
+}
+
+.footer a:hover{
+  color:var(--yellow);
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:20px;
+  font-size:11px;
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#20c063;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:900;
+  z-index:2000;
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    position:absolute;
+    top:86px;
+    left:0;
+    right:0;
+    background:#fff;
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:20px 4%;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    width:100%;
+    padding:11px 0;
+  }
+
+  .nav-links a::after{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-actions .btn{
+    display:none;
+  }
+
+  .intro-grid,
+  .about-grid,
+  .villas-grid,
+  .competence-grid,
+  .why-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services-grid,
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .method-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .team-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .guides-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .hero{
+    min-height:700px;
+  }
+
+  .hero-bottom-inner{
+    grid-template-columns:1fr;
+  }
+
+  .hero-feature{
+    border-right:0;
+    border-bottom:1px solid var(--border);
+  }
+
+  .hero-feature:last-child{
+    border-bottom:0;
+  }
+
+  .hero-bottom{
+    display:none;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:620px){
+
+  section{
+    padding:65px 0;
+  }
+
+  .topbar-inner{
+    justify-content:center;
+  }
+
+  .top-left{
+    display:none;
+  }
+
+  .nav{
+    min-height:75px;
+  }
+
+  .logo img{
+    width:125px;
+  }
+
+  .nav-links{
+    top:75px;
+  }
+
+  .services-strip-inner{
+    gap:12px 18px;
+    padding:9px 0;
+  }
+
+  .services-strip a{
+    font-size:10px;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero h1{
+    font-size:42px;
+    letter-spacing:-1.5px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  .intro-cards,
+  .services-grid,
+  .projects-grid,
+  .method-grid,
+  .team-grid,
+  .guides-grid,
+  .villa-points,
+  .competence-list,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .about-visual,
+  .villa-visual{
+    min-height:350px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    border-bottom:1px solid rgba(255,255,255,.15);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat strong{
+    font-size:34px;
+  }
+
+  .cta-inner{
+    padding:40px 25px;
+    display:block;
+  }
+
+  .cta .btn{
+    margin-top:20px;
+    width:100%;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+  .form{
+    padding:22px;
+  }
+
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>📍 Marrakech, Maroc</span>
-        <span>🕐 Lun - Sam : 08:00 - 18:00</span>
-      </div>
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
 
-      <div class="topbar-right">
-        <a href="tel:+212678774597">📞 0678 77 45 97</a>
-        <a href="mailto:tarcitravaux@gmail.com">✉️ tarcitravaux@gmail.com</a>
-      </div>
+<div class="topbar">
+  <div class="container topbar-inner">
+
+    <div class="top-left">
+      <span>● Marrakech, Maroc</span>
+      <span>Lun - Sam · 8:00 - 18:00</span>
     </div>
+
+    <div class="top-right">
+      <a href="tel:+212678774597">0678 77 45 97</a>
+      <a href="mailto:tarcitravaux@gmail.com">tarcitravaux@gmail.com</a>
+    </div>
+
   </div>
+</div>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container navbar">
 
-      <a href="#accueil">
-        <img
-          class="logo"
-          src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
-          alt="TARCI"
-        >
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <div class="container nav">
+
+    <a href="#accueil" class="logo">
+      <img
+        src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
+        alt="TARCI Marrakech">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#methode">Méthode</a>
+      <a href="#conseils">Conseils</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <select class="lang" id="language">
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+
+      <a href="#contact" class="btn btn-primary">
+        Demander un devis
       </a>
 
-      <nav class="nav" id="mainNav">
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     SERVICES STRIP
+===================================================== -->
+
+<div class="services-strip">
+
+  <div class="container services-strip-inner">
+
+    <a href="#services">Construction</a>
+    <a href="#services">Villas & Maisons</a>
+    <a href="#services">Rénovation</a>
+    <a href="#services">Aménagement</a>
+    <a href="#services">Peinture</a>
+    <a href="#services">Étanchéité</a>
+    <a href="#services">Travaux techniques</a>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="accueil">
+
+  <div class="container">
+
+    <div class="hero-content reveal">
+
+      <div class="hero-kicker">
+        <span></span>
+        Entreprise de construction & travaux · Marrakech
+      </div>
+
+      <h1>
+        Construire avec
+        <strong>méthode.</strong><br>
+        Rénover avec
+        <strong>exigence.</strong>
+      </h1>
+
+      <p>
+        TARCI accompagne vos projets de construction, villas,
+        maisons, rénovation, aménagement et travaux techniques
+        avec une approche claire, organisée et orientée qualité.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="btn btn-primary">
+          Demander un devis →
+        </a>
+
+        <a href="https://wa.me/212678774597"
+           target="_blank"
+           class="btn btn-outline">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-bottom">
+
+    <div class="container hero-bottom-inner">
+
+      <div class="hero-feature">
+        <h3>Expertise technique</h3>
+        <p>Une organisation adaptée aux exigences de chaque chantier.</p>
+      </div>
+
+      <div class="hero-feature">
+        <h3>Qualité d'exécution</h3>
+        <p>Des travaux suivis de la préparation jusqu'aux finitions.</p>
+      </div>
+
+      <div class="hero-feature">
+        <h3>Suivi du chantier</h3>
+        <p>Coordination et contrôle des différentes étapes du projet.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO / EXPERTISE
+===================================================== -->
+
+<section class="intro">
+
+  <div class="container">
+
+    <div class="intro-grid">
+
+      <div class="reveal">
+
+        <div class="small-label">Notre approche</div>
+
+        <h2 class="section-title">
+          Un interlocuteur pour structurer votre projet
+        </h2>
+
+        <p class="section-text">
+          De la première étude jusqu'aux dernières finitions,
+          TARCI vous accompagne avec une organisation adaptée
+          aux contraintes du chantier et à vos objectifs.
+        </p>
+
+        <br>
+
+        <a href="#contact" class="btn btn-dark">
+          Parler de votre projet →
+        </a>
+
+      </div>
+
+
+      <div class="intro-cards reveal">
+
+        <div class="info-card">
+          <div class="info-icon">⌂</div>
+          <h3>Construction</h3>
+          <p>
+            Maisons, villas et projets résidentiels pensés
+            selon vos besoins.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">↻</div>
+          <h3>Rénovation</h3>
+          <p>
+            Modernisation, remise à niveau et transformation
+            des espaces existants.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">◆</div>
+          <h3>Finitions</h3>
+          <p>
+            Peinture, revêtements, aménagement et finitions
+            intérieures ou extérieures.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">✓</div>
+          <h3>Suivi</h3>
+          <p>
+            Organisation des étapes et contrôle de l'avancement
+            du chantier.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about" id="apropos">
+
+  <div class="container about-grid">
+
+    <div class="about-visual reveal">
+
+      <div class="about-badge">
+        <strong>TARCI</strong>
+        <span>Construction & travaux · Marrakech</span>
+      </div>
+
+    </div>
+
+
+    <div class="reveal">
+
+      <div class="small-label">À propos de TARCI</div>
+
+      <h2 class="section-title">
+        Une vision pratique du chantier
+      </h2>
+
+      <p class="section-text">
+        TARCI intervient principalement sur les projets
+        résidentiels et les travaux de bâtiment, avec une
+        attention particulière portée aux villas et maisons.
+      </p>
+
+      <ul class="check-list">
+
+        <li>
+          Organisation claire des différentes phases du chantier.
+        </li>
+
+        <li>
+          Coordination des interventions et des finitions.
+        </li>
+
+        <li>
+          Solutions adaptées à la nature et aux contraintes
+          de chaque projet.
+        </li>
+
+        <li>
+          Communication directe avec le client pendant
+          l'avancement des travaux.
+        </li>
+
+      </ul>
+
+      <a href="#services" class="btn btn-dark">
+        Découvrir nos services →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>6</strong>
+      <span>Ingénieurs & techniciens</span>
+    </div>
+
+    <div class="stat">
+      <strong>70</strong>
+      <span>Clients</span>
+    </div>
+
+    <div class="stat">
+      <strong>91</strong>
+      <span>Projets réalisés</span>
+    </div>
+
+    <div class="stat">
+      <strong>4</strong>
+      <span>Projets en cours</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="small-label">Nos métiers</div>
+
+        <h2 class="section-title">
+          Des services adaptés à vos projets
+        </h2>
+
+        <p class="section-text">
+          Construction, rénovation, aménagement et travaux
+          techniques pour accompagner votre projet de manière
+          cohérente.
+        </p>
+      </div>
+
+      <a href="#contact" class="btn btn-dark">
+        Demander un devis →
+      </a>
+
+    </div>
+
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">01 · CONSTRUCTION</div>
+
+          <h3>Villas, maisons & bâtiments</h3>
+
+          <p>
+            Construction de projets résidentiels avec
+            organisation des différentes étapes du chantier.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">02 · RÉNOVATION</div>
+
+          <h3>Rénovation intérieure & extérieure</h3>
+
+          <p>
+            Transformation, modernisation et remise à niveau
+            des espaces existants.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">03 · AMÉNAGEMENT</div>
+
+          <h3>Aménagement intérieur & extérieur</h3>
+
+          <p>
+            Organisation des espaces, adaptation des surfaces
+            et coordination des finitions.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">04 · PEINTURE</div>
+
+          <h3>Peinture & finitions</h3>
+
+          <p>
+            Préparation des supports et réalisation des
+            finitions intérieures et extérieures.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">05 · ÉTANCHÉITÉ</div>
+
+          <h3>Étanchéité</h3>
+
+          <p>
+            Solutions pour toitures, terrasses et zones
+            exposées à l'humidité.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <div class="service-img"></div>
+
+        <div class="service-content">
+
+          <div class="service-number">06 · TECHNIQUE</div>
+
+          <h3>Travaux techniques</h3>
+
+          <p>
+            Coordination des interventions techniques selon
+            les besoins du projet.
+          </p>
+
+          <a class="service-link" href="#contact">
+            Découvrir le service →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     VILLAS
+===================================================== -->
+
+<section class="villas">
+
+  <div class="container villas-grid">
+
+    <div class="reveal">
+
+      <div class="small-label">Spécialité TARCI</div>
+
+      <h2 class="section-title">
+        Villas & maisons
+      </h2>
+
+      <p class="section-text">
+        TARCI met un accent particulier sur les projets
+        résidentiels : villas, maisons et espaces de vie.
+        L'objectif est de coordonner les travaux pour garder
+        une vision globale du projet.
+      </p>
+
+      <div class="villa-points">
+
+        <div class="villa-point">
+          <strong>Construction</strong>
+          <span>Du gros œuvre aux finitions.</span>
+        </div>
+
+        <div class="villa-point">
+          <strong>Rénovation</strong>
+          <span>Modernisation des espaces.</span>
+        </div>
+
+        <div class="villa-point">
+          <strong>Aménagement</strong>
+          <span>Intérieur et extérieur.</span>
+        </div>
+
+        <div class="villa-point">
+          <strong>Suivi</strong>
+          <span>Organisation du chantier.</span>
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-primary">
+        Étudier mon projet →
+      </a>
+
+    </div>
+
+
+    <div class="villa-visual reveal">
+
+      <div class="villa-label">
+        PROJET RÉSIDENTIEL
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     REALISATIONS
+===================================================== -->
+
+<section class="realisations" id="realisations">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="small-label">Réalisations</div>
+
+        <h2 class="section-title">
+          Des chantiers organisés par métier
+        </h2>
+
+        <p class="section-text">
+          Découvrez les différents types d'interventions
+          présentés par catégorie.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="filters">
+
+      <button class="filter active" data-filter="all">
+        Toutes
+      </button>
+
+      <button class="filter" data-filter="construction">
+        Construction
+      </button>
+
+      <button class="filter" data-filter="renovation">
+        Rénovation
+      </button>
+
+      <button class="filter" data-filter="peinture">
+        Peinture
+      </button>
+
+      <button class="filter" data-filter="etancheite">
+        Étanchéité
+      </button>
+
+      <button class="filter" data-filter="amenagement">
+        Aménagement
+      </button>
+
+      <button class="filter" data-filter="villa">
+        Villas
+      </button>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+      <article class="project" data-category="construction villa">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Construction · Villa</small>
+
+          <h3>Construction résidentielle</h3>
+
+          <p>
+            Organisation des travaux d'une villa,
+            du chantier aux finitions.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project" data-category="renovation">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Rénovation</small>
+
+          <h3>Rénovation d'espace intérieur</h3>
+
+          <p>
+            Reprise des surfaces, adaptation des espaces
+            et coordination des finitions.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project" data-category="peinture">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Peinture</small>
+
+          <h3>Peinture & finition</h3>
+
+          <p>
+            Préparation des supports et application
+            des finitions.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project" data-category="etancheite">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Étanchéité</small>
+
+          <h3>Toiture & terrasse</h3>
+
+          <p>
+            Traitement des zones exposées à l'humidité
+            et protection des surfaces.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project" data-category="amenagement villa">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Aménagement · Villa</small>
+
+          <h3>Aménagement résidentiel</h3>
+
+          <p>
+            Organisation et amélioration des espaces
+            intérieurs et extérieurs.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project" data-category="construction">
+
+        <div class="project-visual"></div>
+
+        <div class="project-info">
+
+          <small>Construction</small>
+
+          <h3>Travaux de bâtiment</h3>
+
+          <p>
+            Coordination des différentes étapes
+            d'un projet de construction.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     METHOD
+===================================================== -->
+
+<section class="method" id="methode">
+
+  <div class="container">
+
+    <div class="reveal">
+
+      <div class="small-label">Notre méthode</div>
+
+      <h2 class="section-title">
+        Du premier échange à la livraison
+      </h2>
+
+      <p class="section-text">
+        Une organisation simple pour garder une vision claire
+        de votre projet et de son avancement.
+      </p>
+
+    </div>
+
+
+    <div class="method-grid">
+
+      <div class="step reveal">
+        <div class="step-number">01</div>
+        <h3>Échange</h3>
+        <p>
+          Comprendre votre besoin, votre budget et vos objectifs.
+        </p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">02</div>
+        <h3>Étude</h3>
+        <p>
+          Analyser le projet et définir les interventions nécessaires.
+        </p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">03</div>
+        <h3>Exécution</h3>
+        <p>
+          Organiser les travaux et coordonner les différentes étapes.
+        </p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">04</div>
+        <h3>Suivi</h3>
+        <p>
+          Contrôler l'avancement et accompagner les finitions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMPETENCE
+===================================================== -->
+
+<section class="competence">
+
+  <div class="container competence-grid">
+
+    <div class="reveal">
+
+      <div class="small-label">Savoir-faire</div>
+
+      <h2 class="section-title">
+        Une approche orientée chantier
+      </h2>
+
+      <p class="section-text">
+        Chaque projet demande une organisation différente.
+        TARCI adapte son intervention à la nature du bâtiment,
+        aux contraintes du site et aux attentes du client.
+      </p>
+
+      <br>
+
+      <a href="#contact" class="btn btn-dark">
+        Discuter de votre projet →
+      </a>
+
+    </div>
+
+
+    <div class="competence-box reveal">
+
+      <h3 style="color:#0b2d4d;font-size:20px;">
+        Domaines d'intervention
+      </h3>
+
+      <div class="competence-list">
+
+        <div class="competence-item">Construction résidentielle</div>
+        <div class="competence-item">Villas & maisons</div>
+        <div class="competence-item">Rénovation</div>
+        <div class="competence-item">Aménagement</div>
+        <div class="competence-item">Peinture</div>
+        <div class="competence-item">Étanchéité</div>
+        <div class="competence-item">Finitions</div>
+        <div class="competence-item">Suivi de chantier</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TEAM
+===================================================== -->
+
+<section class="team">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="small-label">Équipe</div>
+
+        <h2 class="section-title">
+          Une équipe pour accompagner vos travaux
+        </h2>
+
+        <p class="section-text">
+          Des compétences complémentaires pour organiser
+          et suivre les différentes étapes du projet.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+
+        <div class="team-photo">T</div>
+
+        <div class="team-info">
+          <h3>Ingénierie</h3>
+          <p>Étude & coordination technique</p>
+        </div>
+
+      </div>
+
+
+      <div class="team-card reveal">
+
+        <div class="team-photo">C</div>
+
+        <div class="team-info">
+          <h3>Conducteur de travaux</h3>
+          <p>Organisation du chantier</p>
+        </div>
+
+      </div>
+
+
+      <div class="team-card reveal">
+
+        <div class="team-photo">S</div>
+
+        <div class="team-info">
+          <h3>Suivi</h3>
+          <p>Contrôle & coordination</p>
+        </div>
+
+      </div>
+
+
+      <div class="team-card reveal">
+
+        <div class="team-photo">F</div>
+
+        <div class="team-info">
+          <h3>Finitions</h3>
+          <p>Qualité des travaux</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY TARCI
+===================================================== -->
+
+<section class="why">
+
+  <div class="container why-grid">
+
+    <div class="reveal">
+
+      <div class="small-label">Pourquoi TARCI</div>
+
+      <h2 class="section-title">
+        Un chantier suivi avec attention
+      </h2>
+
+      <p class="section-text">
+        Notre objectif est de rendre les différentes étapes
+        du projet plus lisibles et mieux coordonnées.
+      </p>
+
+    </div>
+
+
+    <div class="why-list">
+
+      <div class="why-item reveal">
+
+        <div class="why-icon">✓</div>
+
+        <div>
+          <h3>Suivi rigoureux</h3>
+          <p>
+            Les différentes phases sont organisées et suivies.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="why-icon">◆</div>
+
+        <div>
+          <h3>Qualité de finition</h3>
+          <p>
+            Une attention particulière aux détails visibles.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="why-icon">⏱</div>
+
+        <div>
+          <h3>Organisation des délais</h3>
+          <p>
+            Les interventions sont planifiées selon l'avancement.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="why-icon">⌂</div>
+
+        <div>
+          <h3>Solutions adaptées</h3>
+          <p>
+            Chaque projet est étudié selon ses contraintes.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GUIDES
+===================================================== -->
+
+<section class="guides" id="conseils">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="small-label">Conseils pratiques</div>
+
+        <h2 class="section-title">
+          Bien préparer votre projet
+        </h2>
+
+        <p class="section-text">
+          Quelques points importants à considérer avant et
+          pendant vos travaux.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="guides-grid">
+
+      <article class="guide reveal">
+
+        <div class="guide-tag">
+          Construction
+        </div>
+
+        <h3>
+          Les étapes essentielles d'une construction
+        </h3>
+
+        <p>
+          Comprendre les principales phases d'un projet
+          résidentiel avant de commencer.
+        </p>
+
+        <a href="#contact">
+          En savoir plus →
+        </a>
+
+      </article>
+
+
+      <article class="guide reveal">
+
+        <div class="guide-tag">
+          Rénovation
+        </div>
+
+        <h3>
+          Préparer une rénovation de maison
+        </h3>
+
+        <p>
+          Identifier les travaux prioritaires et organiser
+          les différentes interventions.
+        </p>
+
+        <a href="#contact">
+          En savoir plus →
+        </a>
+
+      </article>
+
+
+      <article class="guide reveal">
+
+        <div class="guide-tag">
+          Étanchéité
+        </div>
+
+        <h3>
+          Pourquoi contrôler les zones humides
+        </h3>
+
+        <p>
+          Toitures, terrasses et autres zones exposées
+          nécessitent une attention particulière.
+        </p>
+
+        <a href="#contact">
+          En savoir plus →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="faq">
+
+  <div class="container">
+
+    <div style="text-align:center;" class="reveal">
+
+      <div class="small-label">
+        FAQ
+      </div>
+
+      <h2 class="section-title">
+        Questions fréquentes
+      </h2>
+
+    </div>
+
+
+    <div class="faq-grid">
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Quels types de projets prenez-vous en charge ?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          TARCI accompagne notamment les projets de villas,
+          maisons, construction, rénovation, aménagement,
+          peinture, étanchéité et travaux de bâtiment.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Travaillez-vous principalement sur les villas ?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Les projets résidentiels, notamment les villas et
+          maisons, constituent un axe important de l'activité
+          TARCI.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Comment demander un devis ?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Vous pouvez nous contacter par téléphone, WhatsApp,
+          e-mail ou utiliser directement le formulaire de
+          demande de projet.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Une visite du chantier est-elle possible ?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Selon la nature du projet, un échange ou une visite
+          technique peut être organisée afin de mieux définir
+          les besoins.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="cta-inner reveal">
+
+      <div>
+
+        <h2>
+          Vous avez un projet ?
+        </h2>
+
+        <p>
+          Présentez-nous votre besoin pour commencer à l'étudier.
+        </p>
+
+      </div>
+
+      <a href="#contact" class="btn btn-dark">
+        Démarrer mon projet →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+  <div class="container contact-grid">
+
+    <div class="reveal">
+
+      <div class="small-label">Contact TARCI</div>
+
+      <h2 class="section-title">
+        Parlons de votre projet
+      </h2>
+
+      <p class="section-text">
+        Décrivez-nous votre projet et vos besoins.
+        Nous vous répondrons avec les premières informations
+        nécessaires pour avancer.
+      </p>
+
+
+      <div class="contact-info">
+
+        <div class="contact-item">
+
+          <div class="contact-icon">☎</div>
+
+          <div>
+            <strong>Téléphone principal</strong>
+            <a href="tel:+212678774597">
+              0678 77 45 97
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">☎</div>
+
+          <div>
+            <strong>Téléphone</strong>
+            <a href="tel:+212676289076">
+              0676 28 90 76
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">✉</div>
+
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:tarcitravaux@gmail.com">
+              tarcitravaux@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">⌖</div>
+
+          <div>
+            <strong>Localisation</strong>
+            <span>Marrakech, Maroc</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <form class="form reveal" id="projectForm">
+
+      <div class="form-grid">
+
+        <div class="field">
+
+          <label>
+            Nom complet *
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Votre nom">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Téléphone *
+          </label>
+
+          <input
+            type="tel"
+            name="phone"
+            required
+            placeholder="06 XX XX XX XX">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Email
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="votre@email.com">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Type de projet
+          </label>
+
+          <select name="project">
+
+            <option value="">
+              Sélectionner
+            </option>
+
+            <option>
+              Construction villa
+            </option>
+
+            <option>
+              Construction maison
+            </option>
+
+            <option>
+              Rénovation
+            </option>
+
+            <option>
+              Aménagement
+            </option>
+
+            <option>
+              Peinture
+            </option>
+
+            <option>
+              Étanchéité
+            </option>
+
+            <option>
+              Autre
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field full">
+
+          <label>
+            Votre demande
+          </label>
+
+          <textarea
+            name="message"
+            placeholder="Décrivez votre projet..."></textarea>
+
+        </div>
+
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">
+        Envoyer la demande →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <img
+          class="footer-logo"
+          src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
+          alt="TARCI">
+
+        <p>
+          TARCI Marrakech accompagne vos projets de construction,
+          villas, rénovation, aménagement et travaux de bâtiment.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/212678774597"
+          target="_blank">
+          WhatsApp → 0678 77 45 97
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>Navigation</h3>
+
         <a href="#accueil">Accueil</a>
         <a href="#apropos">À propos</a>
         <a href="#services">Services</a>
         <a href="#realisations">Réalisations</a>
-        <a href="#expertise">Expertise</a>
         <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <select class="language" aria-label="Langue">
-          <option>FR</option>
-          <option>AR</option>
-          <option>EN</option>
-          <option>ES</option>
-        </select>
-
-        <a href="#contact" class="btn btn-primary">Demander un devis</a>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <main id="accueil">
-
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-
-          <div class="eyebrow">Construction • Rénovation • Travaux</div>
-
-          <h1>
-            Construire avec
-            <span>exigence</span>,
-            réaliser avec précision.
-          </h1>
-
-          <p>
-            TARCI accompagne vos projets de construction, rénovation,
-            peinture, étanchéité, isolation et travaux professionnels
-            à Marrakech et au Maroc.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">
-              Demander un devis
-            </a>
-
-            <a href="#services" class="btn btn-outline">
-              Découvrir nos services
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features">
-      <div class="container">
-        <div class="features-grid">
-
-          <div class="feature">
-            <div class="feature-icon">🏗️</div>
-            <div>
-              <h3>Maîtrise technique</h3>
-              <p>
-                Une équipe technique organisée pour accompagner
-                chaque étape de votre projet.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">✓</div>
-            <div>
-              <h3>Qualité des travaux</h3>
-              <p>
-                Des solutions adaptées aux besoins du chantier
-                et aux exigences du client.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">📐</div>
-            <div>
-              <h3>Suivi & coordination</h3>
-              <p>
-                Organisation, suivi et coordination pour assurer
-                une réalisation structurée.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="apropos" class="about">
-      <div class="container about-grid">
-
-        <div class="about-image">
-          <img
-            src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png"
-            alt="Projet TARCI Marrakech"
-          >
-
-          <div class="about-badge">
-            <strong>91+</strong>
-            projets réalisés
-          </div>
-        </div>
-
-        <div class="about-content">
-
-          <div class="eyebrow">À propos de TARCI</div>
-
-          <h2>
-            Une approche professionnelle pour vos travaux
-          </h2>
-
-          <p>
-            TARCI met son savoir-faire au service des particuliers,
-            professionnels et porteurs de projets à Marrakech.
-          </p>
-
-          <p>
-            Notre approche repose sur l'écoute, l'organisation,
-            la qualité d'exécution et le suivi du chantier.
-          </p>
-
-          <ul class="check-list">
-            <li>Étude et compréhension du besoin</li>
-            <li>Organisation et préparation des travaux</li>
-            <li>Suivi des différentes étapes</li>
-            <li>Coordination des intervenants</li>
-            <li>Respect des exigences du projet</li>
-          </ul>
-
-          <a href="#contact" class="btn btn-blue">
-            Parler de votre projet
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="stats">
-      <div class="container stats-grid">
-
-        <div class="stat">
-          <div class="stat-number" data-target="6">0</div>
-          <div class="stat-label">Ingénieurs & Techniciens</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number" data-target="70">0</div>
-          <div class="stat-label">Clients</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number" data-target="91">0</div>
-          <div class="stat-label">Projets réalisés</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number" data-target="4">0</div>
-          <div class="stat-label">Projets en cours</div>
-        </div>
 
       </div>
-    </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="services">
-      <div class="container">
 
-        <div class="section-head">
-          <div class="eyebrow">Nos services</div>
-          <h2>Des solutions pour chaque étape de votre projet</h2>
-          <p>
-            Une offre de travaux pensée pour répondre aux besoins
-            des bâtiments, maisons, locaux et projets professionnels.
-          </p>
-        </div>
+      <div>
 
-        <div class="services-grid">
+        <h3>Services</h3>
 
-          <article class="service-card">
-            <div class="service-icon">🏠</div>
-            <h3>Construction</h3>
-            <p>
-              Construction de maisons, villas, bâtiments et différents
-              ouvrages selon les besoins du projet.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🔨</div>
-            <h3>Rénovation</h3>
-            <p>
-              Rénovation intérieure et extérieure, transformation
-              et remise à niveau des espaces.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>Peinture</h3>
-            <p>
-              Travaux de peinture intérieure et extérieure
-              avec préparation des supports.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">💧</div>
-            <h3>Étanchéité</h3>
-            <p>
-              Solutions d'étanchéité adaptées aux toitures,
-              terrasses et différentes surfaces.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🌡️</div>
-            <h3>Isolation</h3>
-            <p>
-              Travaux d'isolation visant à améliorer le confort
-              et les performances du bâtiment.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🧱</div>
-            <h3>Revêtements & sols</h3>
-            <p>
-              Préparation et réalisation de différents travaux
-              de sols et revêtements.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🧹</div>
-            <h3>Nettoyage</h3>
-            <p>
-              Services de nettoyage et entretien adaptés
-              aux espaces professionnels et résidentiels.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">📋</div>
-            <h3>Suivi des travaux</h3>
-            <p>
-              Organisation, coordination et suivi des différentes
-              phases du projet.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- REALISATIONS -->
-    <section id="realisations">
-      <div class="container">
-
-        <div class="section-head">
-          <div class="eyebrow">Réalisations</div>
-          <h2>Des projets réalisés avec attention</h2>
-          <p>
-            Quelques univers de travaux représentés par TARCI.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-
-          <article class="project">
-            <img
-              src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png"
-              alt="Construction TARCI"
-            >
-            <div class="project-overlay">
-              <h3>Construction</h3>
-              <span>Ouvrages & bâtiments</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <img
-              src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png"
-              alt="Rénovation TARCI"
-            >
-            <div class="project-overlay">
-              <h3>Rénovation</h3>
-              <span>Intérieur & extérieur</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <img
-              src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-hero-bg.png"
-              alt="Travaux TARCI"
-            >
-            <div class="project-overlay">
-              <h3>Travaux professionnels</h3>
-              <span>Solutions adaptées</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section id="expertise" class="expertise">
-      <div class="container">
-
-        <div class="section-head">
-          <div class="eyebrow">Notre expertise</div>
-          <h2>Une équipe au service du chantier</h2>
-          <p>
-            TARCI réunit des compétences techniques et opérationnelles
-            pour accompagner les différentes phases des travaux.
-          </p>
-        </div>
-
-        <div class="expertise-grid">
-
-          <div class="expertise-card">
-            <h3>Ingénierie & technique</h3>
-            <p>
-              Analyse des besoins, organisation technique et accompagnement
-              des choix liés au projet.
-            </p>
-          </div>
-
-          <div class="expertise-card">
-            <h3>Préparation des travaux</h3>
-            <p>
-              Préparation des différentes interventions et coordination
-              des ressources nécessaires.
-            </p>
-          </div>
-
-          <div class="expertise-card">
-            <h3>Suivi de chantier</h3>
-            <p>
-              Contrôle de l'avancement et coordination des différentes
-              étapes d'exécution.
-            </p>
-          </div>
-
-          <div class="expertise-card">
-            <h3>Finitions</h3>
-            <p>
-              Attention portée aux finitions et à la présentation
-              finale des espaces réalisés.
-            </p>
-          </div>
-
-          <div class="expertise-card">
-            <h3>Rénovation</h3>
-            <p>
-              Adaptation des espaces existants aux nouveaux besoins
-              du client.
-            </p>
-          </div>
-
-          <div class="expertise-card">
-            <h3>Entretien & nettoyage</h3>
-            <p>
-              Solutions d'entretien et de nettoyage pour maintenir
-              les espaces propres et fonctionnels.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section>
-      <div class="container">
-
-        <div class="section-head">
-          <div class="eyebrow">Équipe TARCI</div>
-          <h2>Des compétences complémentaires</h2>
-          <p>
-            Une organisation qui associe compétences techniques
-            et savoir-faire opérationnel.
-          </p>
-        </div>
-
-        <div class="team-grid">
-
-          <div class="team-card">
-            <div class="team-photo">👷</div>
-            <div class="team-card-content">
-              <h3>Équipe technique</h3>
-              <p>Ingénierie & travaux</p>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <div class="team-photo">📐</div>
-            <div class="team-card-content">
-              <h3>Étude & préparation</h3>
-              <p>Préparation des projets</p>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <div class="team-photo">🏗️</div>
-            <div class="team-card-content">
-              <h3>Équipe chantier</h3>
-              <p>Exécution & suivi</p>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <div class="team-photo">🧹</div>
-            <div class="team-card-content">
-              <h3>Nettoyage</h3>
-              <p>Entretien professionnel</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PHASES -->
-    <section class="phases">
-      <div class="container">
-
-        <div class="section-head">
-          <div class="eyebrow">Notre méthode</div>
-          <h2>De l'idée à la réalisation</h2>
-          <p>
-            Une méthode simple et structurée pour avancer sereinement
-            dans votre projet.
-          </p>
-        </div>
-
-        <div class="phases-grid">
-
-          <div class="phase">
-            <div class="phase-number">01</div>
-            <h3>Écoute</h3>
-            <p>
-              Comprendre votre besoin, vos objectifs et les contraintes
-              du projet.
-            </p>
-          </div>
-
-          <div class="phase">
-            <div class="phase-number">02</div>
-            <h3>Étude</h3>
-            <p>
-              Analyser les travaux nécessaires et définir une approche
-              adaptée.
-            </p>
-          </div>
-
-          <div class="phase">
-            <div class="phase-number">03</div>
-            <h3>Réalisation</h3>
-            <p>
-              Organiser les interventions et réaliser les travaux
-              conformément au projet.
-            </p>
-          </div>
-
-          <div class="phase">
-            <div class="phase-number">04</div>
-            <h3>Suivi</h3>
-            <p>
-              Accompagner l'avancement et assurer le suivi jusqu'à
-              la finalisation.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="why">
-      <div class="container why-grid">
-
-        <div>
-          <div class="eyebrow">Pourquoi TARCI</div>
-          <h2>Un partenaire pour vos projets de travaux</h2>
-          <p>
-            Notre objectif est de proposer une organisation claire,
-            une communication directe et un accompagnement professionnel.
-          </p>
-
-          <div class="why-list">
-
-            <div class="why-item">
-              <span>✓</span>
-              <div>
-                <h3>Écoute du client</h3>
-                <p>
-                  Vos besoins restent au centre de la préparation
-                  et de la réalisation.
-                </p>
-              </div>
-            </div>
-
-            <div class="why-item">
-              <span>✓</span>
-              <div>
-                <h3>Organisation</h3>
-                <p>
-                  Les étapes sont structurées pour faciliter le suivi
-                  du projet.
-                </p>
-              </div>
-            </div>
-
-            <div class="why-item">
-              <span>✓</span>
-              <div>
-                <h3>Suivi</h3>
-                <p>
-                  Une attention particulière portée à l'avancement
-                  des travaux.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="why-box">
-          <h3>Votre projet commence ici</h3>
-          <p>
-            Construction, rénovation, peinture, étanchéité,
-            isolation ou nettoyage : contactez TARCI pour discuter
-            de votre besoin.
-          </p>
-
-          <a href="#contact" class="btn btn-primary">
-            Demander un devis
-          </a>
-        </div>
+        <a href="#services">Construction</a>
+        <a href="#services">Villas & maisons</a>
+        <a href="#services">Rénovation</a>
+        <a href="#services">Aménagement</a>
+        <a href="#services">Peinture</a>
+        <a href="#services">Étanchéité</a>
 
       </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-      <div class="container">
 
-        <div class="section-head">
-          <div class="eyebrow">FAQ</div>
-          <h2>Questions fréquentes</h2>
-        </div>
+      <div>
 
-        <div class="faq-list">
+        <h3>Contact</h3>
 
-          <details>
-            <summary>Dans quelles zones TARCI intervient-elle ?</summary>
-            <p>
-              TARCI est basée à Marrakech et accompagne les projets
-              selon leur nature et leur localisation.
-            </p>
-          </details>
-
-          <details>
-            <summary>Quels types de travaux proposez-vous ?</summary>
-            <p>
-              Construction, rénovation, peinture, étanchéité,
-              isolation, revêtements, nettoyage et suivi des travaux.
-            </p>
-          </details>
-
-          <details>
-            <summary>Comment demander un devis ?</summary>
-            <p>
-              Vous pouvez nous contacter par téléphone, WhatsApp,
-              email ou utiliser le formulaire de contact ci-dessous.
-            </p>
-          </details>
-
-          <details>
-            <summary>Est-il possible de discuter d'un projet personnalisé ?</summary>
-            <p>
-              Oui. Chaque projet peut être étudié selon ses besoins,
-              ses contraintes et les travaux souhaités.
-            </p>
-          </details>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <div class="container cta-inner">
-
-        <div>
-          <h2>Vous avez un projet ?</h2>
-          <p>
-            Parlons ensemble de vos travaux et de vos besoins.
-          </p>
-        </div>
-
-        <a href="#contact" class="btn btn-primary">
-          Contactez TARCI
+        <a href="tel:+212678774597">
+          0678 77 45 97
         </a>
 
-      </div>
-    </section>
+        <a href="tel:+212676289076">
+          0676 28 90 76
+        </a>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <div class="container contact-grid">
+        <a href="mailto:tarcitravaux@gmail.com">
+          tarcitravaux@gmail.com
+        </a>
 
-        <div class="contact-info">
+        <p>
+          Marrakech, Maroc
+        </p>
 
-          <div class="eyebrow">Contact</div>
-
-          <h2>Parlons de votre projet</h2>
-
-          <p>
-            Décrivez-nous votre besoin. Notre équipe pourra vous
-            orienter vers la solution adaptée.
-          </p>
-
-          <div class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <strong>Téléphone</strong>
-              <a href="tel:+212678774597">0678 77 45 97</a><br>
-              <a href="tel:+212676289076">0676 28 90 76</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">💬</div>
-            <div>
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/212678774597" target="_blank">
-                Écrire sur WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:tarcitravaux@gmail.com">
-                tarcitravaux@gmail.com
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <strong>Adresse</strong>
-              Marrakech, Maroc
-            </div>
-          </div>
-
-        </div>
-
-        <form
-          class="contact-form"
-          action="mailto:tarcitravaux@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
-
-          <div class="form-grid">
-
-            <div class="field">
-              <label for="name">Nom complet</label>
-              <input
-                id="name"
-                name="Nom"
-                type="text"
-                placeholder="Votre nom"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="phone">Téléphone</label>
-              <input
-                id="phone"
-                name="Téléphone"
-                type="tel"
-                placeholder="Votre numéro"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input
-                id="email"
-                name="Email"
-                type="email"
-                placeholder="Votre email"
-              >
-            </div>
-
-            <div class="field">
-              <label for="service">Service</label>
-              <select id="service" name="Service">
-                <option value="">Choisir</option>
-                <option>Construction</option>
-                <option>Rénovation</option>
-                <option>Peinture</option>
-                <option>Étanchéité</option>
-                <option>Isolation</option>
-                <option>Revêtements & sols</option>
-                <option>Nettoyage</option>
-                <option>Autre</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="message">Votre projet</label>
-              <textarea
-                id="message"
-                name="Message"
-                placeholder="Décrivez votre projet..."
-                required
-              ></textarea>
-            </div>
-
-          </div>
-
-          <button type="submit" class="btn btn-blue">
-            Envoyer la demande
-          </button>
-
-        </form>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-          <img
-            class="footer-logo"
-            src="https://momedtarci-creator.github.io/tarci-marrakech/tarci-logo-sans-sarl.png"
-            alt="TARCI"
-          >
-
-          <p>
-            TARCI accompagne vos projets de construction,
-            rénovation et travaux professionnels à Marrakech.
-          </p>
-        </div>
-
-        <div>
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#apropos">À propos</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#services">Construction</a></li>
-            <li><a href="#services">Rénovation</a></li>
-            <li><a href="#services">Peinture</a></li>
-            <li><a href="#services">Étanchéité</a></li>
-            <li><a href="#services">Nettoyage</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+212678774597">0678 77 45 97</a></li>
-            <li><a href="tel:+212676289076">0676 28 90 76</a></li>
-            <li><a href="mailto:tarcitravaux@gmail.com">tarcitravaux@gmail.com</a></li>
-            <li>Marrakech, Maroc</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> TARCI. Tous droits réservés.</span>
-        <span>Construction • Rénovation • Travaux</span>
       </div>
 
     </div>
-  </footer>
 
-  <!-- WHATSAPP -->
-  <a
-    class="whatsapp"
-    href="https://wa.me/212678774597"
-    target="_blank"
-    aria-label="WhatsApp TARCI"
-  >
-    ☎
-  </a>
 
-  <script>
-    // MOBILE MENU
-    const menuBtn = document.getElementById("menuBtn");
-    const mainNav = document.getElementById("mainNav");
+    <div class="footer-bottom">
 
-    menuBtn.addEventListener("click", () => {
-      mainNav.classList.toggle("active");
+      <span>
+        © 2026 TARCI. Tous droits réservés.
+      </span>
+
+      <span>
+        Construction · Rénovation · Aménagement
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/212678774597"
+  target="_blank"
+  aria-label="WhatsApp">
+  W
+</a>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+
+  menuBtn.textContent =
+    navLinks.classList.contains("open")
+      ? "×"
+      : "☰";
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.textContent = "☰";
+  });
+
+});
+
+
+/* =====================================================
+   REALISATIONS FILTER
+===================================================== */
+
+const filters = document.querySelectorAll(".filter");
+const projects = document.querySelectorAll(".project");
+
+filters.forEach(filter => {
+
+  filter.addEventListener("click", () => {
+
+    filters.forEach(item => {
+      item.classList.remove("active");
     });
 
-    document.querySelectorAll("#mainNav a").forEach(link => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("active");
-      });
-    });
+    filter.classList.add("active");
 
-    // YEAR
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const category = filter.dataset.filter;
 
-    // COUNTERS
-    const counters = document.querySelectorAll(".stat-number");
+    projects.forEach(project => {
 
-    const counterObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-
-          const counter = entry.target;
-          const target = Number(counter.dataset.target);
-          let current = 0;
-
-          const duration = 1200;
-          const startTime = performance.now();
-
-          function update(time) {
-            const progress = Math.min((time - startTime) / duration, 1);
-
-            current = Math.floor(
-              progress * target
-            );
-
-            counter.textContent = current;
-
-            if (progress < 1) {
-              requestAnimationFrame(update);
-            } else {
-              counter.textContent = target;
-            }
-          }
-
-          requestAnimationFrame(update);
-          counterObserver.unobserve(counter);
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    counters.forEach(counter => {
-      counterObserver.observe(counter);
-    });
-
-    // LANGUAGE SELECT
-    const languageSelect = document.querySelector(".language");
-
-    languageSelect.addEventListener("change", function(){
-      if(this.value !== "FR"){
-        alert(
-          "La version " +
-          this.value +
-          " sera disponible prochainement."
-        );
-        this.value = "FR";
+      if(
+        category === "all" ||
+        project.dataset.category.includes(category)
+      ){
+        project.classList.remove("hide");
+      }else{
+        project.classList.add("hide");
       }
+
     });
-  </script>
+
+  });
+
+});
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+document.querySelectorAll(".faq-question").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const item = button.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(other => {
+
+      if(other !== item){
+        other.classList.remove("open");
+        other.querySelector(".faq-question span").textContent = "+";
+      }
+
+    });
+
+    item.classList.toggle("open");
+
+    button.querySelector("span").textContent =
+      item.classList.contains("open")
+        ? "−"
+        : "+";
+
+  });
+
+});
+
+
+/* =====================================================
+   FORM -> WHATSAPP
+===================================================== */
+
+const form = document.getElementById("projectForm");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name =
+    this.querySelector('[name="name"]').value;
+
+  const phone =
+    this.querySelector('[name="phone"]').value;
+
+  const email =
+    this.querySelector('[name="email"]').value;
+
+  const project =
+    this.querySelector('[name="project"]').value;
+
+  const message =
+    this.querySelector('[name="message"]').value;
+
+
+  const text =
+`Bonjour TARCI,
+
+Je souhaite demander des informations concernant mon projet.
+
+Nom : ${name}
+Téléphone : ${phone}
+Email : ${email}
+Type de projet : ${project}
+
+Demande :
+${message}`;
+
+
+  const url =
+    "https://wa.me/212678774597?text=" +
+    encodeURIComponent(text);
+
+  window.open(url, "_blank");
+
+});
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+document.getElementById("language")
+.addEventListener("change", function(){
+
+  const value = this.value;
+
+  if(value === "ar"){
+    alert("النسخة العربية قادمة. الموقع حالياً بالفرنسية.");
+  }
+
+  if(value === "en"){
+    alert("The English version is coming soon. The website is currently in French.");
+  }
+
+  if(value === "es"){
+    alert("La versión española llegará pronto. El sitio está actualmente en francés.");
+  }
+
+  if(value === "fr"){
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealObserver =
+new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("show");
+
+        revealObserver.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.12
+  }
+);
+
+
+document.querySelectorAll(".reveal")
+.forEach(element => {
+
+  revealObserver.observe(element);
+
+});
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+console.log(
+  "TARCI Marrakech - Construction & Travaux"
+);
+
+</script>
 
 </body>
 </html>
